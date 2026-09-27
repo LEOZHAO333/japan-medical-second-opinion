@@ -6,6 +6,7 @@ on:
       - 'automation/blogger-*'
     paths:
       - 'blogger/*.html'
+      - '.github/workflows/upload-blogger-draft.yml'
   workflow_dispatch:
     inputs:
       file:
@@ -26,19 +27,36 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 2
+          fetch-depth: 0
       - name: Select changed Blogger files
+        id: select
         shell: bash
         env:
           REQUESTED_FILE: ${{ inputs.file }}
         run: |
-          if [ -n "$REQUESTED_FILE" ]; then
+          set -euo pipefail
+          if [[ -n "$REQUESTED_FILE" ]]; then
+            if [[ ! "$REQUESTED_FILE" =~ ^blogger/[0-9]{4}-[0-9]{2}-[0-9]{2}-[a-z0-9-]+\.html$ ]]; then
+              echo "Input must be blogger/YYYY-MM-DD-lowercase-slug.html"
+              exit 1
+            fi
+            if [[ ! -f "$REQUESTED_FILE" ]]; then
+              echo "Requested Blogger file does not exist: $REQUESTED_FILE"
+              exit 1
+            fi
             printf '%s\n' "$REQUESTED_FILE" > /tmp/blogger-files.txt
           else
-            git diff --name-only --diff-filter=AM HEAD^ HEAD -- 'blogger/*.html' > /tmp/blogger-files.txt
+            git fetch origin main --no-tags
+            git diff --name-only --diff-filter=AM origin/main...HEAD -- 'blogger/*.html' > /tmp/blogger-files.txt
           fi
           sed -i '/^[[:space:]]*$/d' /tmp/blogger-files.txt
+          if [[ -s /tmp/blogger-files.txt ]]; then
+            echo "has_files=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_files=false" >> "$GITHUB_OUTPUT"
+          fi
       - name: Create or update Blogger drafts only
+        if: steps.select.outputs.has_files == 'true'
         env:
           BLOGGER_BLOG_ID: '2479327018222778135'
           BLOGGER_CLIENT_ID: ${{ secrets.BLOGGER_CLIENT_ID }}
