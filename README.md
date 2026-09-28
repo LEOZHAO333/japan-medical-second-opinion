@@ -8,6 +8,7 @@
 
 - JapanMed AI 官网：https://japanmedai.com
 - Notion 知识库：https://japanmedai.notion.site
+- 三层产品架构：[JAPANMED-AI-ARCHITECTURE.md](./JAPANMED-AI-ARCHITECTURE.md)
 - 内容索引：[CONTENT-INDEX.md](./CONTENT-INDEX.md)
 - 仓库分工：[REPOSITORY-MAP.md](./REPOSITORY-MAP.md)
 - BNCT专题：[BNCT-100-QA.md](./BNCT-100-QA.md)
