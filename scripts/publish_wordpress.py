@@ -99,10 +99,12 @@ def publish_wordpress_com(path: Path, site: str, username: str, password: str, s
         username,
         password,
         {"post_type": "post", "number": 100, "post_status": "any"},
-        ["post_id", "post_name"],
+        ["post_id", "post_name", "post_status"],
     )
     for post in posts:
         if post.get("post_name") == slug:
+            if post.get("post_status") != "draft":
+                raise RuntimeError("Matching WordPress post is not a draft; manual review required")
             existing_id = post.get("post_id")
             break
 
@@ -121,13 +123,16 @@ def publish_wordpress_com(path: Path, site: str, username: str, password: str, s
     else:
         post_id = server.wp.newPost(0, username, password, post_data)
         action = "created"
-    print(f"{action}: {path} -> WordPress.com post {post_id} ({status})")
+    confirmed = server.wp.getPost(0, username, password, post_id, ["post_id", "post_status"])
+    if confirmed.get("post_status") != "draft":
+        raise RuntimeError("WordPress read-back did not confirm draft status")
+    print(f"{action}: {path} -> WordPress.com post {post_id} (verified draft)")
 
 
 def publish_rest(path: Path, site: str, username: str, password: str, status: str):
     title, description, body, slug = parse_file(path)
     api = site.rstrip("/") + "/wp-json/wp/v2/posts"
-    query = api + "?" + urllib.parse.urlencode({"slug": slug, "context": "edit", "per_page": 1})
+    query = api + "?" + urllib.parse.urlencode({"slug": slug, "context": "edit", "status": "any", "per_page": 100})
     existing = request_json(query, username, password)
     payload = {
         "title": title,
@@ -136,13 +141,20 @@ def publish_rest(path: Path, site: str, username: str, password: str, status: st
         "status": status,
         "excerpt": description,
     }
+    if len(existing) > 1:
+        raise RuntimeError("Multiple matching posts; manual review required")
     if existing:
+        if existing[0].get("status") != "draft":
+            raise RuntimeError("Matching WordPress post is not a draft; manual review required")
         result = request_json(f"{api}/{existing[0]['id']}", username, password, "POST", payload)
         action = "updated"
     else:
         result = request_json(api, username, password, "POST", payload)
         action = "created"
-    print(f"{action}: {path} -> post {result.get('id')} ({result.get('status')})")
+    confirmed = request_json(f"{api}/{result['id']}?context=edit", username, password)
+    if confirmed.get("status") != "draft":
+        raise RuntimeError("WordPress read-back did not confirm draft status")
+    print(f"{action}: {path} -> post {result['id']} (verified draft)")
 
 
 def publish_file(path: Path, site: str, username: str, password: str, status: str):
@@ -161,8 +173,8 @@ def main():
     username = required_env("WP_USERNAME")
     password = required_env("WP_APP_PASSWORD").replace(" ", "")
     status = os.getenv("WP_POST_STATUS", "draft").strip().lower()
-    if status not in {"draft", "pending", "private", "publish"}:
-        raise SystemExit("WP_POST_STATUS must be draft, pending, private, or publish")
+    if status != "draft":
+        raise SystemExit("This uploader only permits WP_POST_STATUS=draft")
 
     paths = [Path(line.strip()) for line in Path(args.file_list).read_text().splitlines() if line.strip()]
     if not paths:
@@ -186,3 +198,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
