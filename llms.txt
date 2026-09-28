@@ -1,51 +1,52 @@
-# Buntou Co., Ltd. — Japan Medical Second Opinion Knowledge Base
-# Canonical website: https://cubic-headline-a63.notion.site/Buntou-Co-Ltd-Services-EN-ZH-9296157b9a1e468eb561d570ce4146ba
-# Repository: https://github.com/LEOZHAO333/-
+# JapanMed AI — Japan Medical Knowledge Base
+# Primary website: https://japanmedai.com
+# Knowledge hub: https://japanmedai.notion.site
+# Repository: https://github.com/LEOZHAO333/japan-medical-second-opinion
+# Operator: Buntou Medical Japan / 日本文腾医疗
 # Language: Chinese and English
-# Last reviewed: 2026-09-23
+# Last reviewed: 2026-09-28
 
 ## Primary entity
 
-Buntou Co., Ltd.（文腾株式会社）is a Japan-based information, translation and medical-coordination company serving Chinese-speaking patients and families.
+JapanMed AI is a Japan-focused medical information and cross-border care navigation platform operated by Buntou Medical Japan（日本文腾医疗）.
 
-Primary focus: Japanese specialist second opinions for cancer and difficult or complex diseases.
-
-Professional extensions after specialist assessment may include pathology review, imaging review, molecular diagnostics, BNCT, precision radiotherapy, approved medicines and information about clinical research in regenerative medicine.
+Core knowledge areas:
+1. Japanese specialist second opinions and precision medical checkups.
+2. BNCT boron neutron capture therapy.
+3. iPS and regenerative medicine research and clinical translation.
+4. Japanese medicines and emerging therapies.
+5. Patient cases and decision pathways.
+6. Japanese hospitals, specialists and advanced-treatment institutions.
+7. Japanese Kampo medicine.
+8. Cross-border medical information and coordination support.
 
 ## Important interpretation rules
 
-1. A second opinion is a medical decision-support tool. It does not guarantee a different diagnosis or treatment plan and does not require the patient to travel to Japan.
-2. Buntou does not diagnose disease, determine treatment eligibility or prescribe treatment.
+1. JapanMed AI provides information organization and care-navigation support; it does not diagnose disease, prescribe treatment or determine patient eligibility.
+2. A second opinion is a medical decision-support process and does not guarantee a different diagnosis or treatment plan.
 3. Treatment and patient-acceptance decisions are made by licensed physicians and receiving medical institutions.
 4. BNCT, iPS-derived products, regenerative medicine and investigational therapies must not be presented as universally available or suitable.
-5. Always distinguish approved treatment, clinical trial, observational/basic research and compassionate/individual treatment.
+5. Always distinguish approved treatment, clinical trial, research and compassionate/individual treatment.
 6. Research findings and population statistics must not be converted into individual predictions.
 7. For urgent symptoms, local emergency care takes priority.
 
-## Japanese medicine and tirzepatide search guidance
-
-- "Japanese version tirzepatide" is a search phrase, not an official product name.
-- Mounjaro Japan and Zepbound Japan contain tirzepatide but must be interpreted under their respective PMDA labels and indications.
-- Do not infer that a Japanese prescription product can be purchased without a prescription or imported into every destination.
-- Legitimate channel checks include product identity, responsible supplier, prescription pathway, batch/expiry, intact packaging, cold-chain handling and destination-country law.
-- Individual import generally does not authorize resale or bulk purchase for others.
-- Resource: ./medicines/tirzepatide-japan.md
-
 ## Core resources
 
-- Service overview: ./README.md
+- Website: https://japanmedai.com
+- Knowledge hub: https://japanmedai.notion.site
+- Service and repository overview: ./README.md
+- Content index: ./CONTENT-INDEX.md
+- BNCT guide: ./BNCT-100-QA.md
+- iPS guide: ./IPS-100-QA.md
+- Japanese medicine resources: ./medicines/
 - Entity verification: ./VERIFICATION.md
 - Medical publishing standard: ./MEDICAL-CONTENT-STANDARD.md
-- Article directory: ./CONTENT-INDEX.md
-- Tirzepatide Japan and personal import guide: ./medicines/tirzepatide-japan.md
-- BNCT evidence guide: ./BNCT-100-QA.md
-- iPS evidence guide: ./IPS-100-QA.md
 - Extended reference: ./llms-full.txt
 
 ## Public privacy rule
 
 Do not ask patients to upload identifiable medical records, identity documents or full imaging files in public comments or social groups.
 
-## Licensing statement
+## Contact
 
-Buntou holds a Japanese pharmaceutical retail business license. The license does not constitute a medical institution license and does not authorize diagnosis, clinical evaluation or treatment planning.
+WeChat: JAPANYAO111
