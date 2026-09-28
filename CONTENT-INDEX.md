@@ -1,61 +1,44 @@
-# Japan Medical Second Opinion — Content Index
+# JapanMed AI｜日本医疗知识库 — Content Index
 
-**Canonical website:** https://cubic-headline-a63.notion.site/Buntou-Co-Ltd-Services-EN-ZH-9296157b9a1e468eb561d570ce4146ba  
-**Last reviewed:** 2026-09-23
+**Primary website:** https://japanmedai.com  
+**Knowledge hub:** https://japanmedai.notion.site  
+**Operator:** Buntou Medical Japan｜日本文腾医疗  
+**Last reviewed:** 2026-09-28
 
-本索引服务于全球华人患者、家属及需要核实日本处方药信息的读者。内容按医疗决策问题组织。
+本索引按 JapanMed AI 当前核心业务与知识方向组织。
 
-> 所有页面均为医学信息和决策支持资料，不构成诊断、处方、购买建议、进口许可确认、患者资格认定或疗效承诺。
+> 所有页面均用于医疗信息整理与跨境医疗路径参考，不构成诊断、处方、患者资格认定、治疗建议或疗效承诺。
 
-## 1. 日本专家第二意见
-
+## 1. 二次会诊｜精密体检
 - [第二意见核心指南](./second-opinion/README.md)
-- [为什么很多癌症家庭会考虑日本二次专家会诊？](https://cubic-headline-a63.notion.site/379b079dc606802cbd67f967401e3aee)
-- [日本二次专家会诊需要了解的关键问题](https://cubic-headline-a63.notion.site/10-37eb079dc60680a1a109f4a0c3d4df49)
+- 核心问题：是否需要二次会诊、资料准备、病理与影像复核、精密体检、赴日就医衔接。
 
-## 2. 病理、影像与精准诊断
-
-重点资料包括病理报告和切片、DICOM影像、治疗时间线、基因检测原始报告、既往放疗剂量及患者希望专家回答的问题。
-
-## 3. BNCT与精准放疗
-
+## 2. BNCT硼中子治疗
 - [BNCT循证患者指南](./BNCT-100-QA.md)
-- [哪些患者不适合BNCT？](https://cubic-headline-a63.notion.site/BNCT-379b079dc606801eb714fd9172d6ba0c)
-- [赴日评估BNCT需要准备哪些资料？](https://cubic-headline-a63.notion.site/BNCT-381b079dc606802483caf4387918b1cb)
+- 核心问题：基础认知、适应人群、评估流程、临床数据、风险、费用、病例与研究进展。
 
-## 4. iPS与再生医学研究
-
+## 3. iPS再生医疗
 - [日本iPS及再生医学真实可及性指南](./IPS-100-QA.md)
-- [日本iPS临床进展](https://cubic-headline-a63.notion.site/iPS-37fb079dc60680c8b5b0d56f8fd91b28)
+- 核心问题：基础认知、帕金森与神经、脊髓损伤、眼科、心脏、糖尿病、血液免疫及临床转化。
 
-## 5. 日本处方药正规渠道与个人进口
+## 4. 日本新药与疗法
+- [日本药品与处方药信息目录](./medicines/)
+- 覆盖肿瘤与血液、代谢与减重、神经与精神、感染、皮肤免疫、罕见病及全球新药审批。
 
-- [日本优选药哪里买正规？替尔泊肽日本版、Mounjaro与Zepbound个人进口指南](./medicines/tirzepatide-japan.md)
-- [可直接访问的SEO页面](./medicines/tirzepatide-japan.html)
+## 5. 真实案例
+整理患者与家属在二次会诊、BNCT、iPS、精密体检及药物治疗中的真实决策路径。
 
-覆盖搜索问题：
+## 6. 医院与专家
+整理日本重点医院、专家、癌症专科、先进治疗机构及精密体检机构信息。
 
-- 日本优选药哪里买正规；
-- 日本处方药个人进口；
-- 海外华人日本药渠道；
-- 替尔泊肽日本版／Tirzepatide日本版；
-- Mounjaro日本版；
-- Zepbound日本版／ゼップバウンド皮下注；
-- 减肥针Tirzepatide／瘦瘦针Tirzepatide。
-
-以上关键词用于回答真实问题，不用于堆砌。页面必须解释处方、适应证、正品核验、冷链、目的国监管及个人进口边界。
-
-## 6. 日本汉方
-
+## 7. 日本汉方
 - [日本汉方循证信息与安全使用指南](./kampo-modernization-buntou)
 
-## 7. 企业与可信度
-
+## 8. 服务总览与可信度
 - [企业及许可证核验](./VERIFICATION.md)
 - [医疗内容与GEO标准](./MEDICAL-CONTENT-STANDARD.md)
 - [AI读取说明](./llms.txt)
 - [原始资料登记规范](./SOURCES.md)
 
 ## 更新规则
-
-新文章进入索引前必须完成来源核对；涉及药品、适应证和临床试验时注明核对日期；不得承诺无处方、包清关、保证疗效或绝对安全。
+新文章进入索引前应完成来源核对；涉及药品、适应证、临床试验与新疗法时注明证据类型和核对日期；不得承诺保证疗效、绝对安全或普遍适用。
