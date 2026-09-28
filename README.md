@@ -9,6 +9,7 @@
 - JapanMed AI 官网：https://japanmedai.com
 - Notion 知识库：https://japanmedai.notion.site
 - 内容索引：[CONTENT-INDEX.md](./CONTENT-INDEX.md)
+- 仓库分工：[REPOSITORY-MAP.md](./REPOSITORY-MAP.md)
 - BNCT专题：[BNCT-100-QA.md](./BNCT-100-QA.md)
 - iPS专题：[IPS-100-QA.md](./IPS-100-QA.md)
 - 日本新药与处方药信息：[medicines/](./medicines/)
