@@ -1,0 +1,58 @@
+name: Upload Blogger drafts
+
+on:
+  push:
+    branches:
+      - main
+      - 'automation/blogger-*'
+    paths:
+      - 'blogger/*.html'
+  workflow_dispatch:
+    inputs:
+      file:
+        description: 'Exact path: blogger/YYYY-MM-DD-lowercase-slug.html'
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: blogger-drafts
+  cancel-in-progress: false
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Select Blogger files
+        env:
+          REQUESTED_FILE: ${{ inputs.file }}
+          EVENT_NAME: ${{ github.event_name }}
+          BEFORE_SHA: ${{ github.event.before }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ "$EVENT_NAME" == "workflow_dispatch" ]]; then
+            printf '%s\n' "$REQUESTED_FILE" > /tmp/blogger-files.txt
+          elif [[ "$BEFORE_SHA" =~ ^0+$ ]]; then
+            git diff --name-only --diff-filter=AM origin/main...HEAD -- 'blogger/*.html' > /tmp/blogger-files.txt
+          else
+            git diff --name-only --diff-filter=AM "$BEFORE_SHA" HEAD -- 'blogger/*.html' > /tmp/blogger-files.txt
+          fi
+          python scripts/publish_blogger.py --file-list /tmp/blogger-files.txt --validate-only
+      - name: Create or update drafts and verify DRAFT status
+        env:
+          BLOGGER_BLOG_ID: ${{ secrets.BLOGGER_BLOG_ID }}
+          BLOGGER_CLIENT_ID: ${{ secrets.BLOGGER_CLIENT_ID }}
+          BLOGGER_CLIENT_SECRET: ${{ secrets.BLOGGER_CLIENT_SECRET }}
+          BLOGGER_REFRESH_TOKEN: ${{ secrets.BLOGGER_REFRESH_TOKEN }}
+        run: python scripts/publish_blogger.py --file-list /tmp/blogger-files.txt
