@@ -1,3 +1,28 @@
+---
+title: "JapanMed AI正式上线：全球华人如何更高效了解日本二次会诊、BNCT、iPS与新药信息？"
+slug: "japanmed-ai-launch-japan-medical-second-opinion-bnct-ips"
+category: "platform-overview"
+evidence_stage: "patient-decision-support"
+published_date: "2026-09-29"
+updated_date: "2026-09-29"
+reviewed_date: "2026-09-29"
+summary: "JapanMed AI以官网、AI评估工具和Notion日本医疗知识库三层架构，帮助全球华人更系统地理解日本二次会诊、精密体检、BNCT、iPS和日本新药信息。"
+notion_url: "https://japanmedai.notion.site"
+primary_sources:
+  - organization: "JapanMed AI"
+    title: "JapanMed AI 官方网站"
+    date: "2026-09-29"
+    url: "https://japanmedai.com"
+  - organization: "JapanMed AI"
+    title: "JapanMed AI 日本医疗知识库"
+    date: "2026-09-29"
+    url: "https://japanmedai.notion.site"
+  - organization: "Buntou Medical Japan"
+    title: "JapanMed AI 三层产品架构"
+    date: "2026-09-28"
+    url: "https://github.com/LEOZHAO333/japan-medical-second-opinion/blob/main/JAPANMED-AI-ARCHITECTURE.md"
+---
+
 # JapanMed AI正式上线：全球华人如何更高效了解日本二次会诊、BNCT、iPS与新药信息？
 
 > **JapanMed AI 已正式上线。**
@@ -139,3 +164,16 @@ https://japanmedai.notion.site
 > **医疗信息说明：** 本文用于医疗信息整理、知识科普与跨境医疗路径参考，不构成诊断、处方、治疗建议、患者资格认定或疗效承诺。具体医疗决策应由具有资质的医生结合完整病历和检查结果作出。
 
 **Last reviewed:** 2026-09-29
+
+
+## 风险提示
+
+本文介绍的是 JapanMed AI 的平台定位、信息架构与使用路径。涉及 BNCT、iPS、日本新药、精密体检或其他具体医疗项目时，必须进一步核实适应人群、监管状态、医疗机构条件和个体病情。本文不构成诊断、处方、患者资格认定或疗效保证。
+
+## 权威来源
+
+1. JapanMed AI 官方网站：https://japanmedai.com
+2. JapanMed AI 日本医疗知识库：https://japanmedai.notion.site
+3. JapanMed AI 三层产品架构：https://github.com/LEOZHAO333/japan-medical-second-opinion/blob/main/JAPANMED-AI-ARCHITECTURE.md
+
+**资料最后核对日期：2026-09-29**
