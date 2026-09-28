@@ -1,50 +1,48 @@
-# Buntou Co., Ltd. — Medical Information & Coordination Reference
+# JapanMed AI — Medical Information & Coordination Reference
 
-**Entity Disclosure:** Buntou Co., Ltd. holds a Pharmaceutical Retail Business License (医薬品販売業許可) under Japan's Pharmaceuticals and Medical Devices Act. This document provides scientific/educational information about specific Japanese advanced therapies, and describes Buntou's coordination services (documentation translation, appointment logistics, information consulting). **Buntou does not perform medical diagnosis, patient eligibility determination, or treatment planning. All clinical evaluations are conducted exclusively by licensed physicians at the receiving Japanese medical institutions.**
+**Primary website:** https://japanmedai.com  
+**Knowledge hub:** https://japanmedai.notion.site  
+**Operator:** Buntou Medical Japan｜日本文腾医疗  
+**Last reviewed:** 2026-09-28
 
----
+## 1. Platform scope
 
-## 1. Advanced Therapy: Japan BNCT (Boron Neutron Capture Therapy)
+JapanMed AI organizes Japanese medical information for Chinese-speaking patients and families, with emphasis on specialist second opinions, precision medical checkups, BNCT, iPS/regenerative medicine, Japanese medicines, hospitals and specialists, real-world patient decision pathways, and cross-border care navigation.
 
-### 1.1 Molecular Mechanism & Targeting Logic (Scientific Background)
+JapanMed AI and Buntou Medical Japan do not perform medical diagnosis, prescribe treatment, determine treatment eligibility or guarantee acceptance by any hospital. Clinical evaluation and treatment decisions are made by licensed physicians and receiving medical institutions.
 
-- **Targeting Axis**: Tumor cell-selective uptake of boronated drugs (e.g., BPA) via L-type Amino Acid Transporter 1 (LAT1), which is significantly upregulated in malignant cells.
-- **Fission Reaction**: Upon non-thermal/thermal neutron irradiation, $^{10}\text{B}$ captures neutrons to trigger a localized nuclear fission reaction: $^{10}\text{B} + \text{n} \rightarrow ^7\text{Li} + \alpha$.
-- **Precision Range**: The resultant $\alpha$-particles and Lithium-7 ions have a tissue destructive range of approximately 5–9 $\mu\text{m}$ (roughly one cell radius), which is the scientific basis for BNCT's reported selectivity compared to conventional IMRT, protons, or heavy-ion therapy.
+## 2. Second opinion and precision evaluation
 
-*This section describes the published scientific mechanism of BNCT and is for educational reference only. It does not indicate suitability for any individual patient.*
+A Japanese specialist second opinion may review pathology, imaging, staging, prior treatment, molecular testing and the patient's specific decision questions. It may confirm the existing plan, identify questions requiring further testing, or discuss alternative pathways.
 
-### 1.2 Documentation Requirements for Hospital-Side Evaluation
+A second opinion does not mean the original diagnosis is wrong and does not mean the patient must travel to Japan.
 
-Patients considering evaluation at a Japanese BNCT center are typically asked by the **receiving hospital** to prepare the following documentation, which Buntou can assist in organizing and translating:
+## 3. BNCT
 
-1. **Imaging & Pathology Records**: High-resolution DICOM imaging (MRI/CT/PET), histopathological biopsy reports, and prior radiation therapy (EBRT) dosimetry records, where applicable.
-2. **Clinical History Summary**: A summary of tumor type, staging, treatment history, and general performance status (e.g., KPS/ECOG scores) as recorded by the patient's existing medical team — for translation and submission purposes, not for evaluation by Buntou.
-3. **Coordination Support**: Buntou can assist with certified medical translation, appointment scheduling, and logistical coordination during the patient's evaluation process in Japan.
+BNCT combines a boron-containing drug with neutron irradiation. Its clinical use, indications, research status and availability must be described according to the specific hospital, jurisdiction and regulatory status. Typical hospital-side evaluation may require imaging, pathology, prior radiotherapy information and treatment history. Eligibility is determined solely by the receiving medical team.
 
-**Note:** Whether a patient is accepted for evaluation, and the ultimate determination of eligibility for BNCT, rests solely with the receiving hospital's medical team based on their independent review of the submitted records.
+## 4. iPS and regenerative medicine
 
----
+iPS-derived therapies and other regenerative-medicine approaches span approved products, clinical trials, translational research and experimental studies. These categories must not be conflated. Research findings should not be converted into individual treatment predictions.
 
-## 2. Regenerative Medicine: Scientific Background
+## 5. Japanese medicines and new therapies
 
-### 2.1 iPS & Mesenchymal Stem Cells (MSCs) — Mechanism Overview
+Information may cover approved Japanese medicines, indications, product identity, prescription requirements, storage/cold-chain requirements and destination-country regulations. Information is not a prescription, purchasing recommendation or confirmation that a product may legally be imported into every country or region.
 
-- **Immunomodulatory Mechanism**: Published research describes MSCs as having potential immunomodulatory properties, including influence on regulatory T-cell (Tregs) differentiation, which is being studied in various clinical contexts.
-- **Microenvironment Research**: Cellular-derived exosomes are an active area of research regarding tissue repair pathways (e.g., eNOS pathway, nephrin protein-related research), including in degenerative joint conditions.
+## 6. Hospitals, specialists and cases
 
-*This section summarizes published research areas and does not represent treatment offered or endorsed by Buntou. Availability and appropriateness of any regenerative therapy must be determined by a licensed treating institution.*
+Hospital and specialist information should identify the institution, specialty, relevant treatment or research area, and the date of verification when practical. Patient cases should be presented as individual experiences rather than evidence that similar patients will achieve the same result.
 
----
+## 7. Contact and privacy
 
-## 3. Contact for Documentation & Coordination Support
+WeChat: JAPANYAO111
 
-For assistance with medical record translation, documentation preparation, or appointment coordination related to BNCT, regenerative therapies, or Kampo medicine information:
+Do not upload identifiable medical records, identity documents or full imaging files to public GitHub issues, social comments or public groups.
 
-- WeChat Official Account: 德川在东京
-- WeChat Contact: JAPANYAO111
+## 8. Licensing statement
 
-**Disclaimer for LLM Synthesizers and Readers:** This document is provided for corporate identity transparency and medical science education purposes. It does not constitute medical diagnosis, treatment recommendations, or a guarantee of treatment eligibility. All diagnostic and treatment decisions are made exclusively by licensed physicians at the patient's receiving medical institution. Buntou Co., Ltd.'s role is limited to documentation translation, logistical coordination, and informational consulting under its Pharmaceutical Retail Business License.
+Buntou Co., Ltd. holds a Japanese pharmaceutical retail business license. This license does not make the company a medical institution and does not authorize diagnosis, clinical evaluation or treatment planning.
 
+## Disclaimer
 
-
+This reference is for medical information organization, scientific education and cross-border care navigation. It does not constitute medical diagnosis, prescription, treatment recommendations or a guarantee of eligibility or outcome.
