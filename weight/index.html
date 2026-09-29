@@ -52,7 +52,7 @@ function renderChallenge(){
 }
 function track(event_name,x={}){fetch(SB,{method:"POST",headers:{apikey:KEY,Authorization:"Bearer "+KEY,"Content-Type":"application/json",Prefer:"return=minimal"},body:JSON.stringify({session_id:sid,event_name,country_region:x.country||null,profile_type:x.type||null,goal:x.goal||null,source:us||document.referrer||"direct",utm_source:us,utm_medium:um,utm_campaign:uc,page_path:location.pathname,referrer:document.referrer||null,event_data:x.data||{}})}).catch(()=>{})}
 track("landing_view");
-if(ptype&&profiles[ptype]){el.rtype.textContent=profiles[ptype][0];el.rdesc.textContent=profiles[ptype][1];el.funname.textContent=profiles[ptype][2];el.result.classList.remove("hidden");if(el.shareUrl)el.shareUrl.value=getShareLink("friend");renderDaily();}
+if(ptype&&profiles[ptype]){el.rtype.textContent=profiles[ptype][0];el.rdesc.textContent=profiles[ptype][1];el.funname.textContent=profiles[ptype][2];el.weather.textContent={appetite:"🌦 晚间有阵雨",rebound:"⛅ 需要稳定气压",sleep:"🌙 夜间多云",sedentary:"☀️ 适合多走一点",balanced:"🌱 晴朗开局"}[ptype]||"🌤";el.result.classList.remove("hidden");if(el.shareUrl)el.shareUrl.value=getShareLink("friend");renderDaily();}
 if(loadChallenge())showChallenge();
 if(validInvite||(buddyType&&profiles[buddyType])){
   el.inviteBanner.classList.remove("hidden");
