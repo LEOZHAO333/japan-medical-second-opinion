@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 520" role="img" aria-label="JapanMedAI 日本医疗主视觉">
+<defs>
+ <linearGradient id="bg" x1="0" x2="1"><stop stop-color="#f9fdff"/><stop offset=".45" stop-color="#dcefff"/><stop offset="1" stop-color="#eef8ff"/></linearGradient>
+ <linearGradient id="fuji" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#8ec6f1"/><stop offset="1" stop-color="#d6edf9"/></linearGradient>
+ <radialGradient id="glow"><stop stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="1600" height="520" fill="url(#bg)"/>
+<circle cx="1240" cy="165" r="240" fill="url(#glow)"/>
+<g opacity=".95">
+ <path d="M0 365 L220 215 L360 360 Z" fill="#cde7f8"/><path d="M105 365 L310 115 L505 365 Z" fill="url(#fuji)"/>
+ <path d="M245 205 L310 115 L378 208 L348 195 L323 214 L303 194 L278 212 Z" fill="#fff"/>
+</g>
+<g opacity=".55" fill="#79aeda">
+ <rect x="520" y="292" width="26" height="100"/><rect x="560" y="258" width="36" height="134"/><rect x="612" y="312" width="22" height="80"/><rect x="650" y="235" width="42" height="157"/><rect x="713" y="280" width="30" height="112"/><rect x="760" y="220" width="48" height="172"/><rect x="830" y="300" width="25" height="92"/>
+</g>
+<g opacity=".2" stroke="#3f8ed0" fill="none">
+ <circle cx="1280" cy="260" r="170" stroke-width="2"/><ellipse cx="1280" cy="260" rx="170" ry="68"/><ellipse cx="1280" cy="260" rx="72" ry="170"/><path d="M1110 260h340M1280 90v340"/>
+</g>
+<g transform="translate(1340,92)" opacity=".8"><circle r="48" fill="#fff"/><path d="M-10-28h20v18h18v20H10v18h-20V10h-18v-20h18z" fill="#4e9bd7"/></g>
+<g fill="#f4afc2" opacity=".95">
+ <circle cx="55" cy="52" r="22"/><circle cx="87" cy="38" r="18"/><circle cx="105" cy="69" r="20"/><circle cx="35" cy="85" r="17"/>
+ <circle cx="1510" cy="430" r="20"/><circle cx="1542" cy="448" r="17"/><circle cx="1480" cy="457" r="16"/>
+</g>
+<g stroke="#8b6e66" stroke-width="5" opacity=".5"><path d="M0 0c55 55 85 60 145 80M1600 520c-42-44-70-58-130-70"/></g>
+<text x="800" y="135" text-anchor="middle" font-family="Arial,'PingFang SC','Microsoft YaHei',sans-serif" font-size="29" font-weight="700" fill="#16477d">JapanMed AI｜日本医疗知识库</text>
+<text x="800" y="198" text-anchor="middle" font-family="Arial,'PingFang SC','Microsoft YaHei',sans-serif" font-size="42" font-weight="700" fill="#123e70">日本医疗资源整合与跨境医疗信息平台</text>
+<text x="800" y="238" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#51779e">Buntou Medical Japan · 日本文腾医疗</text>
+<line x1="760" y1="264" x2="840" y2="264" stroke="#2f85c8" stroke-width="4" stroke-linecap="round"/>
+<text x="800" y="305" text-anchor="middle" font-family="Arial,'PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#466f97">二次专家会诊 ｜ BNCT ｜ iPS再生医疗 ｜ 日本优选特药</text>
+</svg>
