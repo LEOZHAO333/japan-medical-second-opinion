@@ -24,7 +24,95 @@ body{margin:0;background:#f6f7f9;color:#17191c;font-family:-apple-system,BlinkMa
 const SB="https://pcuofvwabfjoumjahgsh.supabase.co/rest/v1/jw_weight_events",KEY="sb_publishable_MoVlOTrEIZqqbHlmg_L5KA_Q3fm8YaV",sid=crypto.randomUUID(),qsp=new URLSearchParams(location.search),us=qsp.get("utm_source"),um=qsp.get("utm_medium"),uc=qsp.get("utm_campaign"),src=us||qsp.get("source")||document.referrer||"direct";
 function track(event_name,x={}){fetch(SB,{method:"POST",headers:{apikey:KEY,Authorization:"Bearer "+KEY,"Content-Type":"application/json",Prefer:"return=minimal"},body:JSON.stringify({session_id:sid,event_name,country_region:x.country||null,profile_type:x.type||null,goal:x.goal||null,source:String(src).slice(0,100),utm_source:us,utm_medium:um,utm_campaign:uc,page_path:location.pathname,referrer:document.referrer||null,event_data:x.data||{}}),keepalive:true}).catch(()=>{})}track("landing_view");
 const profiles={appetite:["食欲驱动型","重点先找出深夜进食、压力、睡眠和食物环境等触发因素。"],rebound:["反复反弹型","重点从快速掉秤转向长期维持与复胖触发因素。"],sleep:["作息紊乱型","先稳定睡眠窗口、夜间进食与日常节律。"],sedentary:["久坐低活动型","增加日常步行、站立和规律力量训练。"],balanced:["起步规划型","先明确目标、时间范围和可持续方案。"]};
-let qi=0,ans=[],ptype="",goal="",started=false;const qs=[...document.querySelectorAll(".q")];function draw(){qs.forEach((q,i)=>q.classList.toggle("on",i===qi));prev.style.display=qi?"block":"none";next.textContent=qi===qs.length-1?"查看结果":"下一步"}document.querySelectorAll(".opt").forEach(o=>o.onclick=()=>{o.parentElement.querySelectorAll(".opt").forEach(x=>x.classList.remove("on"));o.classList.add("on");ans[qi]=o.dataset.k;if(!started){started=true;track("quiz_started")}});prev.onclick=()=>{if(qi){qi--;draw()}};next.onclick=()=>{if(!ans[qi])return alert("请选择一个答案");if(qi<qs.length-1){qi++;draw()}else{const s={appetite:0,rebound:0,sleep:0,sedentary:0,balanced:0};ans.forEach(x=>s[x]++);ptype=Object.keys(s).sort((a,b)=>s[b]-s[a])[0];rtype.textContent=profiles[ptype][0];radvice.textContent=profiles[ptype][1];quiz.style.display="none";result.style.display="block";track("quiz_completed",{type:profiles[ptype][0],data:{answers:ans}})}};continue.onclick=()=>step2.style.display="block";document.querySelectorAll(".goal").forEach(g=>g.onclick=()=>{document.querySelectorAll(".goal").forEach(x=>x.classList.remove("on"));g.classList.add("on");goal=g.textContent});generate.onclick=()=>{const c=country.value;if(!c||!goal)return alert("请选择国家/地区和主要需求");const t=profiles[ptype][0],id="JW-"+Date.now().toString().slice(-6);ptitle.textContent=t+" × "+goal;tags.innerHTML=[c,t,goal,us||"直接访问"].map(x=>'<span class="tag">'+x+'</span>').join("");padvice.textContent=profiles[ptype][1];summary.textContent="【JapanMedAI Weight 咨询摘要】\n线索编号："+id+"\n所在国家/地区："+c+"\n减重类型："+t+"\n当前最想解决："+goal+"\n来源："+(us||"直接访问")+"\n\n我希望进一步了解适合自己的体重管理方向。";profile.style.display="block";track("profile_generated",{country:c,type:t,goal,data:{lead_id:id}})};copy.onclick=async()=>{track("summary_copied",{country:country.value,type:profiles[ptype]?.[0],goal});try{await navigator.clipboard.writeText(summary.textContent);copy.textContent="已复制"}catch(e){prompt("请复制：",summary.textContent)}};wa.onclick=()=>track("whatsapp_intent",{country:country.value,type:profiles[ptype]?.[0],goal});wx.onclick=()=>track("wechat_intent",{country:country.value,type:profiles[ptype]?.[0],goal});
-function calcBMI(){const H=+h.value,W=+w.value,T=+tw.value;if(!H||!W||!T)return alert("请完整填写");const b=W/((H/100)**2),tb=T/((H/100)**2),loss=(W-T)/W*100;calcbox.style.display="block";calcbox.textContent="当前 BMI："+b.toFixed(1)+" ｜ 目标 BMI："+tb.toFixed(1)+" ｜ 计划减重比例："+loss.toFixed(1)+"%";track("medical_tool_view")}
-function makeCampaign(){}draw();
+
+const el={
+  quiz:document.getElementById("quiz"), result:document.getElementById("result"),
+  prev:document.getElementById("prev"), next:document.getElementById("next"),
+  continueBtn:document.getElementById("continue"), step2:document.getElementById("step2"),
+  country:document.getElementById("country"), generate:document.getElementById("generate"),
+  rtype:document.getElementById("rtype"), radvice:document.getElementById("radvice"),
+  profile:document.getElementById("profile"), ptitle:document.getElementById("ptitle"),
+  tags:document.getElementById("tags"), padvice:document.getElementById("padvice"),
+  summary:document.getElementById("summary"), copy:document.getElementById("copy"),
+  wa:document.getElementById("wa"), wx:document.getElementById("wx"),
+  h:document.getElementById("h"), w:document.getElementById("w"), tw:document.getElementById("tw"),
+  calcbox:document.getElementById("calcbox")
+};
+
+let qi=0,ans=[],ptype="",goal="",started=false;
+const qs=[...document.querySelectorAll(".q")];
+
+function draw(){
+  qs.forEach((q,i)=>q.classList.toggle("on",i===qi));
+  el.prev.style.display=qi?"block":"none";
+  el.next.textContent=qi===qs.length-1?"查看结果":"下一步";
+}
+
+document.querySelectorAll(".opt").forEach(o=>{
+  o.addEventListener("click",()=>{
+    o.parentElement.querySelectorAll(".opt").forEach(x=>x.classList.remove("on"));
+    o.classList.add("on");
+    ans[qi]=o.dataset.k;
+    if(!started){started=true;track("quiz_started");}
+  });
+});
+
+el.prev.addEventListener("click",()=>{ if(qi){qi--;draw();} });
+el.next.addEventListener("click",()=>{
+  if(!ans[qi]) return alert("请选择一个答案");
+  if(qi<qs.length-1){ qi++; draw(); return; }
+  const s={appetite:0,rebound:0,sleep:0,sedentary:0,balanced:0};
+  ans.forEach(x=>s[x]++);
+  ptype=Object.keys(s).sort((a,b)=>s[b]-s[a])[0];
+  el.rtype.textContent=profiles[ptype][0];
+  el.radvice.textContent=profiles[ptype][1];
+  el.quiz.style.display="none";
+  el.result.style.display="block";
+  track("quiz_completed",{type:profiles[ptype][0],data:{answers:ans}});
+  el.result.scrollIntoView({behavior:"smooth"});
+});
+
+el.continueBtn.addEventListener("click",()=>{
+  el.step2.style.display="block";
+  el.step2.scrollIntoView({behavior:"smooth"});
+});
+
+document.querySelectorAll(".goal").forEach(g=>{
+  g.addEventListener("click",()=>{
+    document.querySelectorAll(".goal").forEach(x=>x.classList.remove("on"));
+    g.classList.add("on"); goal=g.textContent;
+  });
+});
+
+el.generate.addEventListener("click",()=>{
+  const c=el.country.value;
+  if(!c||!goal) return alert("请选择国家/地区和主要需求");
+  const t=profiles[ptype][0],id="JW-"+Date.now().toString().slice(-6);
+  el.ptitle.textContent=t+" × "+goal;
+  el.tags.innerHTML=[c,t,goal,us||"直接访问"].map(x=>'<span class="tag">'+x+'</span>').join("");
+  el.padvice.textContent=profiles[ptype][1];
+  el.summary.textContent="【JapanMedAI Weight 咨询摘要】\n线索编号："+id+"\n所在国家/地区："+c+"\n减重类型："+t+"\n当前最想解决："+goal+"\n来源："+(us||"直接访问")+"\n\n我希望进一步了解适合自己的体重管理方向。";
+  el.profile.style.display="block";
+  track("profile_generated",{country:c,type:t,goal,data:{lead_id:id}});
+  el.profile.scrollIntoView({behavior:"smooth"});
+});
+
+el.copy.addEventListener("click",async()=>{
+  track("summary_copied",{country:el.country.value,type:profiles[ptype]?.[0],goal});
+  try{ await navigator.clipboard.writeText(el.summary.textContent); el.copy.textContent="已复制"; }
+  catch(e){ prompt("请复制：",el.summary.textContent); }
+});
+el.wa.addEventListener("click",()=>track("whatsapp_intent",{country:el.country.value,type:profiles[ptype]?.[0],goal}));
+el.wx.addEventListener("click",()=>track("wechat_intent",{country:el.country.value,type:profiles[ptype]?.[0],goal}));
+
+function calcBMI(){
+  const H=+el.h.value,W=+el.w.value,T=+el.tw.value;
+  if(!H||!W||!T) return alert("请完整填写");
+  const b=W/((H/100)**2),tb=T/((H/100)**2),loss=(W-T)/W*100;
+  el.calcbox.style.display="block";
+  el.calcbox.textContent="当前 BMI："+b.toFixed(1)+" ｜ 目标 BMI："+tb.toFixed(1)+" ｜ 计划减重比例："+loss.toFixed(1)+"%";
+  track("medical_tool_view");
+}
+window.calcBMI=calcBMI;
+draw();
 </script></body></html>
