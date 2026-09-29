@@ -1,17 +1,87 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>JapanMedAI Second Opinion｜癌症与疑难病二次专家会诊预评估</title><meta name="description" content="面向癌症、复发、治疗选择困难和疑难病患者的结构化二次专家会诊预评估工具。"><link rel="stylesheet" href="/assets/jmai.css"></head><body><div class="top"><div class="wrap nav"><a class="brand" href="/">JapanMed AI<small>日本医疗资源整合与跨境医疗信息平台</small></a><div class="navlinks"><a class="mainlink" href="/">JapanMedAI 主站</a></div></div></div><div class="wrap pagehead"><span class="eyebrow">JapanMedAI Second Opinion</span><h1>现在还有哪些问题，值得再请一位专家重新看一次？</h1><p class="lead">面向癌症、复发病情和疑难疾病。这个工具不替你做治疗决定，它先帮你把“病情阶段、既往治疗、资料完整度、最想问的问题”整理清楚。</p></div><main class="wrap quiz"><section class="card panel" id="soQuiz"><div class="progress"><i id="sobar"></i></div><div class="q on" data-step="0"><h2>1. 你现在最接近哪个阶段？</h2><div class="opts"><div class="opt">刚确诊，还在决定治疗方案</div><div class="opt">正在治疗，但想确认方案是否合理</div><div class="opt">治疗后复发 / 进展</div><div class="opt">医生说选择已经不多</div><div class="opt">属于疑难病，希望重新梳理诊断和方案</div></div></div><div class="q" data-step="1"><h2>2. 已经做过哪些治疗？</h2><p class="help">支持多选。</p><div class="opts"><div class="opt">手术</div><div class="opt">放疗</div><div class="opt">化疗</div><div class="opt">靶向治疗</div><div class="opt">免疫治疗</div><div class="opt">质子 / 重离子</div><div class="opt">其他局部治疗</div><div class="opt">尚未开始系统治疗</div></div></div><div class="q" data-step="2"><h2>3. 目前有哪些资料？</h2><p class="help">支持多选。资料完整度往往直接影响二次会诊效率。</p><div class="opts"><div class="opt">病理报告</div><div class="opt">近期 CT / MRI / PET-CT 报告</div><div class="opt">影像原始 DICOM</div><div class="opt">出院小结 / 治疗经过</div><div class="opt">基因 / 分子检测</div><div class="opt">当前用药清单</div><div class="opt">资料还比较散</div></div></div><div class="q" data-step="3"><h2>4. 你最想解决什么问题？</h2><div class="opts"><div class="opt">现有方案是不是合理</div><div class="opt">复发后还有没有其他选择</div><div class="opt">是否值得做日本二次专家会诊</div><div class="opt">是否值得赴日治疗</div><div class="opt">是否适合 BNCT / 精准放疗</div><div class="opt">是否需要重新看病理 / 分子结果</div><div class="opt">想了解日本新药 / 临床研究</div></div></div><div class="row"><button class="btn soft hidden" id="soprev">上一步</button><button class="btn" id="sonext">下一步</button></div></section><section class="card panel result hidden" id="soResult"><span class="kicker">结构化结果</span><h2>你的下一步不是“马上找新疗法”，而是先把关键资料和核心问题整理完整</h2><p class="lead" id="soLead"></p><div class="fun"><div class="funbox"><span class="kicker">资料准备</span><b id="docScore"></b></div><div class="funbox"><span class="kicker">建议动作</span><b>先整理 → 再判断</b></div></div><div class="notice" id="soSummary" style="margin-top:14px;white-space:pre-line"></div><div class="row"><button class="btn alt" id="soCopy">复制会诊摘要</button><a class="btn" href="#contact" id="soConsult">进入人工咨询</a></div></section><section class="card librarycta"><div><span class="kicker">KNOWLEDGE LIBRARY</span><h2 style="margin:6px 0">先把问题弄懂，再决定是否行动</h2><p class="help">后续内容库将围绕复发、病理复核、基因检测、治疗选择、BNCT、日本专家会诊等独立主题持续扩展。</p></div><a class="btn alt" href="/">了解 JapanMedAI</a></section><section class="card panel contactPanel" id="contact"><span class="kicker">CONTACT</span><h2>咨询入口</h2><p class="help">建议只先提交病情摘要和问题清单。完整病历、影像与身份资料应通过后续安全渠道传输，不要直接放在公开页面。</p><div class="contactGrid"><div class="contactItem"><h3>WhatsApp</h3><img class="qr" src="/weight/assets/whatsapp.png" alt="WhatsApp二维码"><p class="small">海外用户优先｜德川 Japan</p></div><div class="contactItem"><h3>微信</h3><img class="qr" src="/weight/assets/wechat.png" alt="微信二维码"><p class="small">统一咨询微信：JAPANYAO111</p></div><div class="contactItem emailItem"><h3>Email</h3><div class="emailIcon">✉</div><a class="btn alt" href="mailto:wenteng33333@gmail.com?subject=JapanMedAI%20Second%20Opinion%20%E4%BA%8C%E6%AC%A1%E4%BC%9A%E8%AF%8A%E5%92%A8%E8%AF%A2">wenteng33333@gmail.com</a><p class="small">适合发送初步病情摘要与问题清单</p></div></div></section><p class="mainBack"><a href="/">← JapanMedAI 主站</a></p></main><footer class="footer"><div class="wrap"><span class="footerBrand">JapanMed AI · Buntou Medical Japan｜日本文腾医疗</span><br>工具用于信息整理与初步分流，不构成诊断、处方或疗效承诺。</div></footer><script>
+<!doctype html><html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JapanMedAI Second Opinion｜癌症与疑难病二次专家会诊预评估</title>
+<meta name="description" content="3分钟结构化整理癌症、复发、治疗选择困难和疑难病患者的病情阶段、既往治疗、资料完整度与核心问题。">
+<link rel="stylesheet" href="/assets/jmai.css"></head><body>
+<div class="top"><div class="wrap nav"><a class="brand" href="/">JapanMed AI<small>日本医疗资源整合与跨境医疗信息平台</small></a><div class="navlinks"><a class="mainlink" href="/">JapanMedAI 主站</a></div></div></div>
+
+<div class="wrap pagehead soHead">
+<span class="eyebrow">JapanMedAI Second Opinion</span>
+<h1>我现在还有没有更好的治疗选择？</h1>
+<p class="lead">面向癌症、复发、治疗选择困难及疑难病患者。用3分钟整理当前治疗阶段、既往治疗、现有资料和最希望专家回答的问题。</p>
+<div class="chips"><span class="chip">约3分钟</span><span class="chip">无需注册</span><span class="chip">不自动推荐治疗方案</span></div>
+<div class="actions"><a class="btn" href="#soQuiz">开始3分钟预评估</a></div>
+</div>
+
+<main class="wrap quiz">
+<section class="soScenarios">
+<span class="kicker">WHEN A SECOND OPINION MAY HELP</span><h2>这些时候，值得重新请一位专家看看</h2>
+<div class="scenarioGrid">
+<div class="card scenario"><b>刚确诊</b><span>想确认诊断与治疗方向是否合理。</span></div>
+<div class="card scenario"><b>正在治疗</b><span>想确认当前方案是否还有需要补充或调整的地方。</span></div>
+<div class="card scenario"><b>复发 / 进展</b><span>希望重新了解还有哪些治疗路径值得讨论。</span></div>
+<div class="card scenario"><b>选择已经很少</b><span>希望重新评估病理、影像、分子结果或其他可能。</span></div>
+<div class="card scenario"><b>疑难病</b><span>诊断或治疗方向长期不明确，希望重新梳理。</span></div>
+</div>
+</section>
+
+<section class="card panel" id="soQuiz"><span class="kicker">3-MINUTE ASSESSMENT</span><div class="progress"><i id="sobar"></i></div>
+<div class="q on" data-step="0"><h2>1. 你现在最接近哪个阶段？</h2><div class="opts"><div class="opt">刚确诊，还在决定治疗方案</div><div class="opt">正在治疗，但想确认方案是否合理</div><div class="opt">治疗后复发 / 进展</div><div class="opt">医生说选择已经不多</div><div class="opt">属于疑难病，希望重新梳理诊断和方案</div></div></div>
+<div class="q" data-step="1"><h2>2. 已经做过哪些治疗？</h2><p class="help">支持多选。</p><div class="opts"><div class="opt">手术</div><div class="opt">放疗</div><div class="opt">化疗</div><div class="opt">靶向治疗</div><div class="opt">免疫治疗</div><div class="opt">质子 / 重离子</div><div class="opt">其他局部治疗</div><div class="opt">尚未开始系统治疗</div></div></div>
+<div class="q" data-step="2"><h2>3. 目前有哪些资料？</h2><p class="help">支持多选。资料完整度往往直接影响二次会诊效率。</p><div class="opts"><div class="opt">病理报告</div><div class="opt">近期 CT / MRI / PET-CT 报告</div><div class="opt">影像原始 DICOM</div><div class="opt">出院小结 / 治疗经过</div><div class="opt">基因 / 分子检测</div><div class="opt">当前用药清单</div><div class="opt">资料还比较散</div></div></div>
+<div class="q" data-step="3"><h2>4. 你最希望专家回答什么？</h2><p class="help">支持多选。</p><div class="opts"><div class="opt">现有方案是不是合理</div><div class="opt">复发后还有没有其他选择</div><div class="opt">是否值得做日本二次专家会诊</div><div class="opt">是否值得赴日治疗</div><div class="opt">是否可能涉及 BNCT / 精准放疗</div><div class="opt">是否需要重新看病理 / 分子结果</div><div class="opt">是否存在日本新药 / 临床研究</div></div></div>
+<div class="row"><button class="btn soft hidden" id="soprev">上一步</button><button class="btn" id="sonext">下一步</button></div>
+</section>
+
+<section class="card panel result hidden" id="soResult">
+<span class="kicker">YOUR STRUCTURED RESULT</span><h2>先把关键资料和核心问题整理完整，再决定下一步</h2>
+<p class="lead" id="soLead"></p>
+<div class="resultGrid">
+<div class="funbox"><span class="kicker">当前阶段</span><b id="stageResult">—</b></div>
+<div class="funbox"><span class="kicker">资料完整度</span><b id="docScore">—</b></div>
+<div class="funbox"><span class="kicker">核心问题</span><b id="questionResult">—</b></div>
+</div>
+<div class="docChecklist"><h3>二次会诊建议资料清单</h3><div class="checkGrid">
+<span>✓ 病理报告 / 病理资料</span><span>✓ 近期影像报告</span><span>✓ 影像原始 DICOM</span><span>✓ 既往治疗时间线</span><span>✓ 当前用药清单</span><span>✓ 基因 / 分子检测（如有）</span>
+</div></div>
+<div class="notice" id="soSummary" style="margin-top:14px;white-space:pre-line"></div>
+<div class="row"><button class="btn alt" id="soCopy">复制会诊摘要</button><a class="btn" href="#contact" id="soConsult">进入人工咨询</a></div>
+</section>
+
+<section class="card panel" id="soRecommendations">
+<span class="kicker">RECOMMENDED READING</span><h2>先把问题弄懂，再决定是否行动</h2>
+<p class="help">完成评估后，这里会根据你选择的问题优先显示更相关的阅读方向。</p>
+<div class="recommendGrid" id="recommendGrid">
+<a class="recommendCard" href="/BNCT-100-QA.html"><b>BNCT 100问</b><span>了解什么是 BNCT、目前应用到哪里，以及研究与常规治疗如何区分。</span></a>
+<a class="recommendCard" href="/second-opinion/"><b>日本二次专家会诊</b><span>为什么病理、影像和治疗时间线会影响第二意见的价值。</span></a>
+<a class="recommendCard" href="/"><b>日本医疗知识库</b><span>继续了解日本新药、精准放疗、再生医疗与跨境就医信息。</span></a>
+</div>
+</section>
+
+<section class="card panel contactPanel" id="contact"><span class="kicker">CONTACT</span><h2>咨询入口</h2>
+<p class="help">建议先发送病情摘要和希望咨询的问题。完整病历、影像及身份资料请通过后续安全渠道传输，不要直接放在公开页面。</p>
+<div class="contactGrid">
+<div class="contactItem"><h3>WhatsApp</h3><img class="qr" src="/weight/assets/whatsapp.png" alt="WhatsApp二维码"><p class="small">海外用户优先｜德川 Japan</p></div>
+<div class="contactItem"><h3>微信</h3><img class="qr" src="/weight/assets/wechat.png" alt="微信二维码"><p class="small">东京文腾医疗～德川<br>JAPANYAO111</p></div>
+<div class="contactItem emailItem"><h3>Email</h3><div class="emailIcon">✉</div><a class="btn alt" href="mailto:wenteng33333@gmail.com?subject=JapanMedAI%20Second%20Opinion%20%E4%BA%8C%E6%AC%A1%E4%BC%9A%E8%AF%8A%E5%92%A8%E8%AF%A2">wenteng33333@gmail.com</a><p class="small">适合发送初步病情摘要与问题清单</p></div>
+</div></section>
+<p class="mainBack"><a href="/">← JapanMedAI 主站</a></p>
+</main>
+<footer class="footer"><div class="wrap"><span class="footerBrand">JapanMed AI · Buntou Medical Japan｜日本文腾医疗</span><br>工具用于信息整理与初步分流，不构成诊断、处方或疗效承诺。</div></footer>
+<script>
 (function(){
 const SB="https://pcuofvwabfjoumjahgsh.supabase.co/rest/v1/jmai_second_opinion_events",KEY="sb_publishable_MoVlOTrEIZqqbHlmg_L5KA_Q3fm8YaV";
 const sid=(window.crypto&&crypto.randomUUID)?crypto.randomUUID():String(Date.now());
 const qs=[...document.querySelectorAll("#soQuiz .q")],answers=Array.from({length:4},()=>[]);
 const qsp=new URLSearchParams(location.search),us=qsp.get("utm_source"),um=qsp.get("utm_medium"),uc=qsp.get("utm_campaign");
 let st=0;
-const el={prev:document.getElementById("soprev"),next:document.getElementById("sonext"),bar:document.getElementById("sobar"),result:document.getElementById("soResult"),docScore:document.getElementById("docScore"),lead:document.getElementById("soLead"),summary:document.getElementById("soSummary"),copy:document.getElementById("soCopy"),consult:document.getElementById("soConsult")};
+const el={prev:document.getElementById("soprev"),next:document.getElementById("sonext"),bar:document.getElementById("sobar"),result:document.getElementById("soResult"),docScore:document.getElementById("docScore"),stage:document.getElementById("stageResult"),question:document.getElementById("questionResult"),lead:document.getElementById("soLead"),summary:document.getElementById("soSummary"),copy:document.getElementById("soCopy"),consult:document.getElementById("soConsult")};
 function track(event_name,data={}){fetch(SB,{method:"POST",headers:{apikey:KEY,Authorization:"Bearer "+KEY,"Content-Type":"application/json",Prefer:"return=minimal"},body:JSON.stringify({session_id:sid,event_name,source:us||document.referrer||"direct",utm_source:us,utm_medium:um,utm_campaign:uc,page_path:location.pathname,referrer:document.referrer||null,event_data:data})}).catch(()=>{})}
 track("landing_view");
 function draw(){qs.forEach((q,i)=>q.classList.toggle("on",i===st));el.prev.classList.toggle("hidden",st===0);el.next.textContent=st===3?"生成我的整理结果":"下一步";el.bar.style.width=((st+1)/4*100)+"%";}
 document.querySelectorAll("#soQuiz .opt").forEach(o=>o.addEventListener("click",()=>{o.classList.toggle("on");track("quiz_started");}));
 el.prev.addEventListener("click",()=>{if(st){st--;draw();}});
-el.next.addEventListener("click",()=>{const sel=[...qs[st].querySelectorAll(".opt.on")].map(x=>x.textContent.trim());if(!sel.length)return alert("请至少选择一项");answers[st]=sel;if(st<3){st++;draw();return;}const docs=answers[2].filter(x=>x!=="资料还比较散").length;el.docScore.textContent=docs>=5?"资料较完整":docs>=3?"基本可整理":"建议先补资料";el.lead.textContent="你当前最重要的不是从网上再找几十种治疗，而是先把已有资料、既往治疗和最想问的问题变成一份清晰摘要。这样专家更容易判断哪些问题值得重新讨论。";el.summary.textContent="【JapanMedAI 二次会诊预评估摘要】\n当前阶段："+answers[0].join("、")+"\n既往治疗："+answers[1].join("、")+"\n现有资料："+answers[2].join("、")+"\n最想解决："+answers[3].join("、")+"\n\n下一步：先整理病理、近期影像、治疗时间线和核心问题，再判断是否需要日本专家二次会诊。";el.result.classList.remove("hidden");track("quiz_completed");track("result_generated",{docs_count:docs});el.result.scrollIntoView({behavior:"smooth"});});
+el.next.addEventListener("click",()=>{const sel=[...qs[st].querySelectorAll(".opt.on")].map(x=>x.textContent.trim());if(!sel.length)return alert("请至少选择一项");answers[st]=sel;if(st<3){st++;draw();return;}const docs=answers[2].filter(x=>x!=="资料还比较散").length;el.docScore.textContent=docs>=5?"资料较完整":docs>=3?"基本可整理":"建议先补资料";el.stage.textContent=answers[0][0]||"—";el.question.textContent=answers[3][0]||"—";el.lead.textContent="你当前最重要的不是从网上再找几十种治疗，而是先把已有资料、既往治疗和最想问的问题变成一份清晰摘要。这样专家更容易判断哪些问题值得重新讨论。";el.summary.textContent="【JapanMedAI 二次会诊预评估摘要】\n当前阶段："+answers[0].join("、")+"\n既往治疗："+answers[1].join("、")+"\n现有资料："+answers[2].join("、")+"\n最想解决："+answers[3].join("、")+"\n\n下一步：先整理病理、近期影像、治疗时间线和核心问题，再判断是否需要日本专家二次会诊。";el.result.classList.remove("hidden");track("quiz_completed");track("result_generated",{docs_count:docs});el.result.scrollIntoView({behavior:"smooth"});});
 el.copy.addEventListener("click",async()=>{try{await navigator.clipboard.writeText(el.summary.textContent);el.copy.textContent="✓ 已复制";}catch(e){prompt("请复制：",el.summary.textContent);}track("summary_copied");});
 el.consult.addEventListener("click",()=>track("consult_intent"));
 draw();
