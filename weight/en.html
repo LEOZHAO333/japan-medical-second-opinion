@@ -27,7 +27,7 @@ function localDay(){const d=new Date();return d.getFullYear()+"-"+String(d.getMo
 function loadChallenge(){try{return JSON.parse(localStorage.getItem(challengeKey)||"null");}catch(e){return null;}}
 function saveChallenge(s){try{localStorage.setItem(challengeKey,JSON.stringify(s));}catch(e){}}
 let challengeOpenTracked=false;
-function showChallenge(){if(!el.challenge)return;el.challenge.classList.remove("hidden");if(!challengeOpenTracked){track("challenge_opened",{type:ptype&&profiles[ptype]?profiles[ptype][0]:null});challengeOpenTracked=true;}renderChallenge();}
+function showChallenge(){if(!el.challenge)return;const saved=loadChallenge();if(!ptype&&saved&&saved.type&&profiles[saved.type])ptype=saved.type;el.challenge.classList.remove("hidden");if(!challengeOpenTracked){track("challenge_opened",{type:ptype&&profiles[ptype]?profiles[ptype][0]:null});challengeOpenTracked=true;}renderChallenge();}
 function renderChallenge(){
   if(!el.challenge)return;
   let s=loadChallenge();
