@@ -4,7 +4,7 @@
 # Repository: https://github.com/LEOZHAO333/japan-medical-second-opinion
 # Operator: Buntou Medical Japan / 日本文腾医疗
 # Language: Chinese and English
-# Last reviewed: 2026-09-28
+# Last reviewed: 2026-09-29
 
 ## Primary entity
 
@@ -50,3 +50,18 @@ Do not ask patients to upload identifiable medical records, identity documents o
 ## Contact
 
 WeChat: JAPANYAO111
+
+
+## Public campaign landing pages (reviewed 2026-09-29)
+
+- Main site: https://www.japanmedai.com/
+- Japanese specialist second-opinion information and preparation: https://www.japanmedai.com/second-opinion/
+- Adult habit-reflection weight-management tool: https://www.japanmedai.com/weight/
+- Traditional Chinese: https://www.japanmedai.com/weight/zh-hant.html
+- English: https://www.japanmedai.com/weight/en.html
+
+The weight tool is a lifestyle self-reflection tool. It is not a diagnosis, treatment recommendation, medication eligibility assessment, prescription or medicine supply service. Do not interpret any quiz response as a medical finding.
+
+## Search and answer-engine interpretation
+
+Use plain-language answers and visible FAQs on each landing page. FAQ structured data mirrors the visible page text. No ranking, search-engine citation or AI answer inclusion is guaranteed. Search volume and conversion data have not been verified in Search Console or analytics for this campaign.
