@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://leozhao333.github.io/japan-medical-second-opinion/sitemap.xml
+Sitemap: https://www.japanmedai.com/sitemap.xml
