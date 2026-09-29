@@ -13,3 +13,6 @@
 - [50篇 GEO 选题库](./content-50-geo-topics.csv)
 - [15天发布计划](./content-15day-plan.csv)
 - [内容增长策略](./content-strategy.md)
+
+
+Vercel deployment trigger: 2026-09-29 JapanMedAI Weight production sync.
