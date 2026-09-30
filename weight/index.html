@@ -99,11 +99,18 @@ async function shareChallenge(kind){
   const u=getShareLink(kind);
   el.challengeShareUrl.value=u;
   el.challengeShareBox.classList.remove("hidden");
-  el.challengeShareUrl.focus();el.challengeShareUrl.select();
+  el.challengeShareBox.scrollIntoView({behavior:"smooth",block:"center"});
   track("share_intent",{data:{kind}});
-  if(navigator.share){try{await navigator.share({title:"JapanMedAI Weight｜7天轻挑战",text:"来和我一起开始7天轻挑战 😄 每个人的进度保存在自己的设备："+u,url:u});return;}catch(e){/* The visible link below remains available if sharing is canceled. */}}
-  try{await navigator.clipboard.writeText(u);el.challengeShareHelp.textContent="邀请链接已复制。朋友打开后先做60秒测试，再在自己的设备开始；你们的进度分别保存。";track("share_link_copied",{data:{kind}});alert("挑战邀请链接已复制，可以粘贴发送给朋友。");}
-  catch(e){el.challengeShareHelp.textContent="链接已选中。若没有自动复制，请使用 Ctrl+C（Mac 使用 Command+C）复制后发送给朋友。";}
+  try{
+    await navigator.clipboard.writeText(u);
+    el.copyChallengeShare.textContent="已复制 ✓";
+    el.challengeShareHelp.textContent="邀请链接已复制，可直接粘贴发送给朋友。朋友打开后会先做60秒测试，再在自己的设备开始挑战。";
+    track("share_link_copied",{data:{kind}});
+  }catch(e){
+    el.challengeShareUrl.focus();
+    el.challengeShareUrl.select();
+    el.challengeShareHelp.textContent="邀请链接已显示并选中。请长按复制；电脑可使用 Ctrl+C（Mac 使用 Command+C）。";
+  }
 }
 if(el.copyChallengeShare)el.copyChallengeShare.addEventListener("click",async()=>{
   const u=el.challengeShareUrl.value;
