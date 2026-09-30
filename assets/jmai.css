@@ -28,3 +28,56 @@
 .challengeDone h3{font-size:25px;margin:0 0 8px}.challengeDone p{color:var(--muted);line-height:1.7}
 #completeTask:disabled{opacity:.68;cursor:default}
 @media(max-width:560px){.challengeTop{align-items:stretch}.challengeRing{min-width:90px;width:90px;height:90px;border-width:7px}.challengeRing b{font-size:21px}.challengeDay p{font-size:19px}.challengeDots{gap:5px}.challengeDots i{height:32px;border-radius:9px;font-size:13px}}
+
+
+/* Weight responsive experience V2 */
+.weightPage .weightHead{max-width:980px;padding-top:50px}
+.weightPage main.quiz{max-width:920px}
+.weightPage main.quiz>.panel,.weightPage main.quiz>.card{scroll-margin-top:90px}
+.weightPage .weightHead .actions .btn{min-height:52px;padding:15px 27px;font-size:17px}
+.weightPage .q h2{line-height:1.28}
+.weightPage .opt,.weightPage .goal{transition:border-color .18s ease,background .18s ease,transform .18s ease}
+.weightPage .opt:active,.weightPage .goal:active{transform:scale(.99)}
+.weightPage .shareline input{min-height:48px}
+.weightPage button,.weightPage .btn,.weightPage .opt,.weightPage .goal{touch-action:manipulation}
+@media(min-width:851px){
+  .weightPage .weightHead h1{max-width:900px}
+  .weightPage .weightHead .lead{max-width:820px}
+  .weightPage main.quiz>.panel{padding:34px 38px}
+}
+@media(max-width:680px){
+  .weightPage .wrap{padding-left:16px;padding-right:16px}
+  .weightPage .top .nav{min-height:60px}
+  .weightPage .brand{font-size:21px}
+  .weightPage .brand small{display:none}
+  .weightPage .weightHead{padding-top:22px;padding-bottom:2px}
+  .weightPage .lang{gap:6px}
+  .weightPage .lang a{padding:7px 9px;font-size:13px}
+  .weightPage .weightSubtitle{font-size:14px;line-height:1.5}
+  .weightPage .weightHead h1{font-size:34px;line-height:1.14;letter-spacing:-.7px;margin:12px 0}
+  .weightPage .weightHead .lead{font-size:16.5px;line-height:1.65;margin:0}
+  .weightPage .weightHead .actions{margin-top:18px}
+  .weightPage .weightHead .actions .btn{width:100%;min-height:54px;font-size:17px}
+  .weightPage .weightHead .chips{margin-top:12px}
+  .weightPage .weightHead .chip{width:100%;font-size:12px;line-height:1.45;text-align:center;padding:9px 10px}
+  .weightPage main.quiz{padding-top:14px;padding-bottom:42px}
+  .weightPage main.quiz>.panel{padding:21px 16px;border-radius:18px}
+  .weightPage .q h2{font-size:24px}
+  .weightPage .help{font-size:14px}
+  .weightPage .opt,.weightPage .goal{min-height:54px;padding:15px 14px;display:flex;align-items:center;line-height:1.45}
+  .weightPage .row{display:grid;grid-template-columns:1fr;gap:9px}
+  .weightPage .row .btn{width:100%;min-height:50px}
+  .weightPage .sharebox{padding:14px 12px}
+  .weightPage .shareline{gap:8px}
+  .weightPage .shareline input{width:100%;font-size:14px}
+  .weightPage .challengeTop{display:grid;grid-template-columns:1fr auto;gap:12px}
+  .weightPage .challengeRing{min-width:82px;width:82px;height:82px}
+  .weightPage .challengeDay{padding:17px 14px}
+  .weightPage .result h2{font-size:31px}
+  .weightPage input,.weightPage select,.weightPage button{font-size:16px}
+}
+@media(max-width:380px){
+  .weightPage .weightHead h1{font-size:30px}
+  .weightPage .challengeTop{grid-template-columns:1fr}
+  .weightPage .challengeRing{justify-self:start}
+}
