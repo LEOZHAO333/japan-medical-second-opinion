@@ -1,0 +1,72 @@
+name: 内容制作任务
+description: 为公众号、官网、WordPress、Blogger、Facebook 或 X 建立可追踪的内容任务
+title: "[内容] "
+labels: ["content"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        国内与海外内容必须分别确定受众、语言、渠道、落地页和指标。GitHub 只保存公开内容，不保存患者资料。
+  - type: dropdown
+    id: market
+    attributes:
+      label: 市场
+      options:
+        - 国内
+        - 欧美及海外华人
+    validations:
+      required: true
+  - type: dropdown
+    id: topic
+    attributes:
+      label: 内容方向
+      options:
+        - 日本专家第二意见
+        - BNCT／精准放疗
+        - iPS／再生医疗
+        - 日本新药／慢病科普
+        - 科学体重管理
+        - 日本医疗流程
+    validations:
+      required: true
+  - type: dropdown
+    id: channel
+    attributes:
+      label: 首发渠道
+      options:
+        - 微信公众号
+        - 官网／WordPress
+        - Blogger
+        - Facebook
+        - X
+        - 其他
+    validations:
+      required: true
+  - type: input
+    id: question
+    attributes:
+      label: 用户的具体问题
+      placeholder: 例如：复发头颈癌做过放疗后，日本专家还会复核什么？
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: 已核验的一手来源
+      description: 每行一个直接链接，并写明机构与日期。
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 验收条件
+      value: |
+        - [ ] 直接回答用户问题
+        - [ ] 标明证据或监管阶段
+        - [ ] 有风险与局限说明
+        - [ ] 有3至5个FAQ
+        - [ ] 有权威来源与核对日期
+        - [ ] 无患者资料、绝对化疗效或恐惧营销
+        - [ ] 国内与海外版本没有机械互译
+    validations:
+      required: true
