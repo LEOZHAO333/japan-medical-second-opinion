@@ -1,0 +1,50 @@
+name: 官网或互动工具故障
+description: 记录官网、减重测试、第二意见自查、分享或多语言页面问题
+title: "[网站故障] "
+labels: ["bug", "website"]
+body:
+  - type: input
+    id: url
+    attributes:
+      label: 发生问题的公开页面
+      placeholder: https://...
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: 设备与浏览器
+      placeholder: iPhone / 微信内置浏览器；Windows / Chrome
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      placeholder: 1. 打开页面 2. 点击…… 3. 出现……
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 预期结果与实际结果
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: 影响程度
+      options:
+        - 阻断：入口无法使用
+        - 严重：主要功能失败
+        - 一般：部分设备或版式问题
+        - 轻微：文案或视觉问题
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 隐私确认
+      options:
+        - label: 截图和描述已遮挡姓名、联系方式、病历、账户及其他敏感信息。
+          required: true
