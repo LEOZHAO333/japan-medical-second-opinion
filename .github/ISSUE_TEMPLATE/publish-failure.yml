@@ -1,0 +1,43 @@
+name: 草稿上传或自动化失败
+description: 记录 WordPress、Blogger、Actions 或内容校验失败
+title: "[自动化故障] "
+labels: ["automation", "needs-triage"]
+body:
+  - type: dropdown
+    id: platform
+    attributes:
+      label: 失败环节
+      options:
+        - 医学内容校验
+        - WordPress 草稿上传
+        - Blogger 草稿上传
+        - 公开链接检查
+        - 其他 GitHub Actions
+    validations:
+      required: true
+  - type: input
+    id: run
+    attributes:
+      label: GitHub Actions 运行链接
+      placeholder: https://github.com/.../actions/runs/...
+    validations:
+      required: true
+  - type: input
+    id: file
+    attributes:
+      label: 相关文件路径
+      placeholder: wordpress/YYYY-MM-DD-slug.html
+  - type: textarea
+    id: error
+    attributes:
+      label: 错误摘要
+      description: 只粘贴必要日志；不得粘贴密码、Token、Secret、患者资料或完整环境变量。
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: 安全确认
+      options:
+        - label: 日志已检查，不含 Secret、账户凭据或患者资料。
+          required: true
