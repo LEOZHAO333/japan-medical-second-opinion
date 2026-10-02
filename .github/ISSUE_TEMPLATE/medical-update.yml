@@ -1,0 +1,74 @@
+name: 日本医疗官方更新
+description: 记录来自政府、监管机构、医院、大学、企业公告或原始论文的可核实更新
+title: "[医疗更新] "
+labels: ["medical-update", "needs-verification"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        仅记录公开资料。不得粘贴患者病历、身份信息、联系方式或未经授权的内部资料。
+  - type: dropdown
+    id: market
+    attributes:
+      label: 目标市场
+      options:
+        - 国内中文用户
+        - 欧美及海外华人
+        - 两者分别改编
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: 一手来源链接
+      placeholder: https://...
+    validations:
+      required: true
+  - type: input
+    id: dates
+    attributes:
+      label: 发布日期与事件日期
+      placeholder: 发布 YYYY-MM-DD；事件 YYYY-MM-DD
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: 核心变化
+      description: 用三至五句话说明发生了什么，避免宣传语。
+    validations:
+      required: true
+  - type: dropdown
+    id: stage
+    attributes:
+      label: 证据或监管阶段
+      options:
+        - 已获批治疗
+        - 临床试验
+        - 观察性研究
+        - 基础或临床前研究
+        - 个案或特殊使用
+        - 待核实
+    validations:
+      required: true
+  - type: textarea
+    id: population
+    attributes:
+      label: 适用患者范围与限制
+      description: 写清疾病、分型、检测、治疗线次、国家标签及不能外推之处。
+    validations:
+      required: true
+  - type: textarea
+    id: second_opinion
+    attributes:
+      label: 与日本专家第二意见的关系
+      description: 说明专家可能复核的病理、影像、分期、检测、既往治疗或风险。
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: 提交确认
+      options:
+        - label: 我确认内容来自公开来源，且未包含任何患者个人资料。
+          required: true
+        - label: 我已明确区分获批治疗、临床试验、研究和个案治疗。
+          required: true
