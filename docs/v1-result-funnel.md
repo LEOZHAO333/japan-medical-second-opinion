@@ -80,3 +80,33 @@ roll back; the additive event-name support is compatible with older clients.
 Review receipt: task `P0-20261006-RESULTS`; known unresolved P0 = 0; production
 release = HOLD pending code review and release decision. Claude-3 review has not
 been received. There is no new L4 treatment article in this patch.
+
+## 2026-10-08 follow-up
+
+Continue PR #58; do not open a duplicate. Founder accepted proceeding with the
+two proposed primary CTA labels. Simplified Chinese now uses
+`获取我的资料准备清单` and `获取我的7天轻量行动清单`.
+The destination stays an in-page copyable checklist, with no contact gate.
+
+Read-only inspection on 2026-10-08 confirmed both production INSERT policies
+already allow `result_viewed` and `next_step_clicked`; no additional schema or
+policy change was performed. Five Node tests passed again. The previous eight
+Chromium checks above are dated 2026-10-06: do not describe them as fresh checks.
+The retained local Chromium executables were truncated and could not launch;
+fresh hosted-preview interaction checks are tracked separately below.
+
+### Claude-3 review handoff
+
+- Task: P0-20261006-RESULTS / PR #58.
+- Scope: result-page explanations, three next steps, one primary checklist CTA,
+  shared funnel events, clipboard fallback, existing challenge invite repair.
+- Review: event privacy and session attribution; restored-result denominator;
+  visible-result exposure; clipboard/mobile behavior; anonymous insert-only RLS.
+- Source: PR diff and this document. If private links cannot be read, use the
+  full diff; never infer behavior from filenames or the PR title.
+- Requested receipt: task ID, P0/P1/P2 counts, blocking reasons, review head SHA,
+  and any Founder decision. No Claude review or Approved status is claimed.
+- Release: HOLD until the outstanding review/release decision is recorded.
+
+This is a software/product change. The October 5 medical article remains
+pending professional review; its status is unaffected by this PR.
