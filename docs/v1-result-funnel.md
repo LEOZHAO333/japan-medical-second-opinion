@@ -95,6 +95,13 @@ Chromium checks above are dated 2026-10-06: do not describe them as fresh checks
 The retained local Chromium executables were truncated and could not launch;
 fresh hosted-preview interaction checks are tracked separately below.
 
+Hosted preview verification on 2026-10-08: the browser reached Vercel login,
+and the connected Vercel protected-fetch tool returned 403 at
+`read_protection_bypass`. The current connection does not authorize this
+deployment/project/team. No login, access-control change or protection disable
+was attempted. Therefore fresh hosted-preview UI verification is blocked,
+not passed. The source and database capability checks do not prove deployment.
+
 ### Claude-3 review handoff
 
 - Task: P0-20261006-RESULTS / PR #58.
