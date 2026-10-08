@@ -57,7 +57,7 @@ test('refresh preserves browser-tab session and first source; idle creates a new
 
 test('payload includes version and CTA, but excludes answers, summaries and referrer query', async () => {
   const b = browser({ referrer: 'https://www.threads.com/post/abc?private=do-not-store' });
-  await b.create().track('next_step_clicked', { cta_id: 'plan_v1', cta_position: 'result_primary', diagnosis: 'private', summary: 'private', docs_count: 4, profile_type: 'private' });
+  await b.create().track('next_step_clicked', { cta_id: 'plan_v1', cta_position: 'result_primary', diagnosis: 'private', summary: 'private', docs_count: 4, profile_type: 'private', ref: 'private-inviter' });
   const { body, init } = b.requests[0];
   assert.equal(body.source, 'threads');
   assert.equal(body.event_data.page_version, 'v1-next-step-20261006');
@@ -84,4 +84,49 @@ test('trackOnce deduplicates and permits retry after rejected writes', async () 
   assert.equal((await af.trackOnce('result_viewed')).ok, false);
   await af.trackOnce('result_viewed');
   assert.equal(failed.requests.length, 2);
+});
+
+test('AI source whitelist records the group and canonical platform without widening other UTM fields', async () => {
+  for (const [raw, platform] of [
+    ['chatgpt.com', 'chatgpt'], ['perplexity.ai', 'perplexity'],
+    ['copilot.microsoft.com', 'copilot'], ['gemini.google.com', 'gemini'],
+    [' ChatGPT.COM ', 'chatgpt']
+  ]) {
+    const b = browser({ url: 'https://www.japanmedai.com/weight/?utm_source=' + encodeURIComponent(raw) + '&utm_campaign=v1_geo_01&utm_medium=foo.example' });
+    const a = b.create();
+    await a.track('landing_view');
+    assert.equal(b.requests[0].body.source, 'ai_assistant');
+    assert.equal(b.requests[0].body.utm_source, platform);
+    assert.equal(b.requests[0].body.utm_campaign, 'v1_geo_01');
+    assert.equal(b.requests[0].body.utm_medium, null);
+    const refresh = browser({ storage: b.storage });
+    await refresh.create().track('result_viewed');
+    assert.equal(refresh.requests[0].body.session_id, a.sessionId);
+    assert.equal(refresh.requests[0].body.source, 'ai_assistant');
+    assert.equal(refresh.requests[0].body.utm_source, platform);
+  }
+});
+
+test('unrecognized dotted sources and AI lookalikes remain external_campaign', async () => {
+  for (const raw of ['foo.example', 'copilot.com', 'chatgpt.com.evil.example', 'https://chatgpt.com', 'chatgpt.com/private']) {
+    const b = browser({ url: 'https://www.japanmedai.com/weight/?utm_source=' + encodeURIComponent(raw) });
+    await b.create().track('landing_view');
+    assert.equal(b.requests[0].body.source, 'external_campaign');
+    assert.equal(b.requests[0].body.utm_source, null);
+    assert.equal(JSON.stringify(b.requests[0].body).includes(raw), false);
+  }
+});
+
+test('AI referrers use the exact hostname whitelist without overriding an explicit unknown campaign', async () => {
+  const b = browser({ referrer: 'https://chatgpt.com/c/example?private=do-not-store' });
+  await b.create().track('landing_view');
+  assert.equal(b.requests[0].body.source, 'ai_assistant');
+  assert.equal(b.requests[0].body.utm_source, null);
+  assert.equal(b.requests[0].body.referrer, 'https://chatgpt.com');
+  const unknown = browser({ url: 'https://www.japanmedai.com/weight/?utm_source=foo.example', referrer: 'https://chatgpt.com/' });
+  await unknown.create().track('landing_view');
+  assert.equal(unknown.requests[0].body.source, 'external_campaign');
+  const lookalike = browser({ referrer: 'https://chatgpt.com.evil.example/' });
+  await lookalike.create().track('landing_view');
+  assert.equal(lookalike.requests[0].body.source, 'external_referral');
 });

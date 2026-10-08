@@ -77,7 +77,7 @@ roll back; the additive event-name support is compatible with older clients.
 - These are software checks, not evidence of medical review, mainland access,
   mobile native-share support, real-user conversion or consultation counts.
 
-Review receipt: task `P0-20261006-RESULTS`; known unresolved P0 = 0; production
+Historical receipt (2026-10-06): task `P0-20261006-RESULTS`; known unresolved P0 = 0; production
 release = HOLD pending code review and release decision. Claude-3 review has not
 been received. There is no new L4 treatment article in this patch.
 
@@ -112,8 +112,73 @@ not passed. The source and database capability checks do not prove deployment.
 - Source: PR diff and this document. If private links cannot be read, use the
   full diff; never infer behavior from filenames or the PR title.
 - Requested receipt: task ID, P0/P1/P2 counts, blocking reasons, review head SHA,
-  and any Founder decision. No Claude review or Approved status is claimed.
+  and any Founder decision. At this handoff no Claude review had been received;
+  the subsequently supplied receipt is recorded below. No Approved status is claimed.
 - Release: HOLD until the outstanding review/release decision is recorded.
 
 This is a software/product change. The October 5 medical article remains
 pending professional review; its status is unaffected by this PR.
+
+## Claude-3 receipt and incremental correction · 2026-10-08
+
+User supplied the Claude-3 technical receipt for head `8a6e237`:
+P0 = 0; P1 = 1 (AI-source attribution regression); P2 = 4.
+Claude reported eight local Chromium checks across the four pages at 390px and
+1440px, and five existing Node tests passed. These are reviewer-reported local
+checks of that head, not GPT reruns or production-deployment evidence.
+Conclusion: correct the P1 before release. Founder accepted all five dispositions;
+no remaining Founder decision was requested. The correction needs a new review.
+
+### AI attribution whitelist
+
+Only these exact source names are normalized (case-insensitive, outer whitespace
+trimmed):
+
+| Input utm_source | source | Stored utm_source |
+| --- | --- | --- |
+| chatgpt.com | ai_assistant | chatgpt |
+| perplexity.ai | ai_assistant | perplexity |
+| copilot.microsoft.com | ai_assistant | copilot |
+| gemini.google.com | ai_assistant | gemini |
+
+Other dotted UTM source values, including `foo.example`, remain
+`external_campaign` with `utm_source=null`. The general tag filter stays strict;
+campaign/medium/content fields are not broadened to accept dots or free text.
+When no explicit source exists, only the same exact referrer hostnames identify
+the group; platform evidence remains in the domain-only referrer. Lookalikes
+and subdomains are not added to the whitelist. First-source session attribution
+is retained; old rows are not rewritten or retrospectively assigned AI sources.
+
+`ai_assistant` 标签只说明“这次访问是从 AI 助手的链接点进来的”，
+不能证明文章被 AI 引用了，更不能当作 GEO 效果的直接证据。
+This describes the recorded source signal: UTM parameters can be manually set,
+and a missing referrer does not prove absence of AI-origin traffic.
+
+### Accepted P2 dispositions
+
+- Invitation `ref` is intentionally not uploaded. Measure aggregate invitation
+  visits only; no inviter-to-visitor relation, per-inviter yield, or cross-device
+  identity is claimed. Do not restore `ref` to the analytics whitelist.
+- Wrap the existing additive SQL script in `BEGIN` / `COMMIT` for atomic execution.
+  The previously applied database change is not rerun for this source correction.
+- Traditional Chinese primary label: `取得我的7天輕量行動清單`.
+- English primary label remains: `Get my 7-day small-action plan`.
+
+### Incremental validation and release
+
+Eight Node tests passed after the correction: the five existing tests plus AI
+whitelist/canonical platform, unknown dotted/lookalike rejection, and exact-host
+referrer attribution. Privacy tests also cover omission of invitation `ref`.
+All fetches in these tests are mocked; no production event is written.
+The incremental patch changes no questionnaire, treatment copy, event names or
+database permissions. Hosted UI/production status is not verified by these tests.
+
+After release, perform UI checks only with `?jmai_qa=1`; retain exclusion and do
+not clear the QA marker to generate test events. Observe real traffic with
+read-only aggregate queries for `result_viewed` and `next_step_clicked` under
+the same tool/page version. No events yet means awaiting evidence, not proven
+failure or success. Do not manufacture production events to complete acceptance.
+
+Release remains HOLD pending Claude-3 incremental review and release decision.
+This patch is pushed to PR #58 only; no merge or production publish is authorized
+by this handoff. The protected-preview limitation above remains separately recorded.

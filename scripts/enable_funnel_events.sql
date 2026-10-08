@@ -1,5 +1,6 @@
 -- Additive event support. Preserve anonymous insert-only access and all existing events.
 -- Apply once as a reviewed Supabase migration before deploying the new clients.
+BEGIN;
 ALTER TABLE public.jw_weight_events DROP CONSTRAINT jw_weight_events_event_name_check;
 ALTER TABLE public.jw_weight_events ADD CONSTRAINT jw_weight_events_event_name_check CHECK (
   event_name IN ('landing_view','quiz_started','quiz_completed','profile_generated',
@@ -28,3 +29,4 @@ ALTER POLICY anon_insert_second_opinion_events ON public.jmai_second_opinion_eve
     'summary_copied','consult_intent','library_intent','main_site_intent',
     'result_viewed','next_step_clicked')
 );
+COMMIT;

@@ -17,6 +17,18 @@
     // Campaign identifiers must never contain answers or free text.
     return /^[a-z0-9_-]{1,80}$/i.test(value || "") ? value : null;
   }
+  function aiSource(value) {
+    switch (String(value || "").toLowerCase().trim()) {
+      case "chatgpt.com": return "chatgpt";
+      case "perplexity.ai": return "perplexity";
+      case "copilot.microsoft.com": return "copilot";
+      case "gemini.google.com": return "gemini";
+      default: return null;
+    }
+  }
+  function sourceTag(value) {
+    return aiSource(value) || tag(value);
+  }
   function normalizeSource(raw, referrer) {
     const value = String(raw || "").toLowerCase().trim();
     const host = hostOf(referrer);
@@ -26,6 +38,7 @@
     if (["wechat_official", "mp"].includes(value)) return "wechat_official";
     if (["wechat", "weixin", "wechat_group"].includes(value) || /(^|\.)weixin\.qq\.com$/.test(host)) return "wechat";
     if (["friend", "buddy", "challenge", "challenge_done", "return"].includes(value)) return "friend_referral";
+    if (aiSource(value) || (!value && aiSource(host))) return "ai_assistant";
     if (value) return tag(value) || "external_campaign";
     if (!host) return "direct";
     if (host === w.location.hostname.toLowerCase()) return "internal";
@@ -61,7 +74,7 @@
     function newAttribution() {
       return {
         source: normalizeSource(params.get("utm_source"), referrer),
-        utm_source: tag(params.get("utm_source")),
+        utm_source: sourceTag(params.get("utm_source")),
         utm_medium: tag(params.get("utm_medium")),
         utm_campaign: tag(params.get("utm_campaign")),
         utm_content: tag(params.get("utm_content")),
