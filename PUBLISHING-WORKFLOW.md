@@ -7,6 +7,16 @@ Each verified GEO article has one canonical content body and two distribution re
 1. Notion page for the public service website;
 2. Markdown file in this repository for transparent version history and AI discovery.
 
+## Canonical public identity
+
+Every outward-facing JapanMed AI channel must carry the same official identity wherever the platform permits profile links, an About section, a bio, or a post footer:
+
+- **Website:** https://JapanMedAI.com
+- **WeChat Official Account:** 德川在东京
+- **Short signature:** `JapanMedAI.com｜微信公众号：德川在东京`
+
+Apply this to WordPress, Blogger, Notion public pages and all social/distribution platforms such as Facebook, X, Threads, LinkedIn, Medium and future external channels. Prefer a persistent profile/About link first; use the fixed short signature in article/post footers when appropriate. Do not replace the official website with a temporary landing-page URL.
+
 ## Daily flow
 
 1. Select one non-duplicative second-opinion topic.
@@ -19,6 +29,7 @@ Each verified GEO article has one canonical content body and two distribution re
 8. Record the Notion URL in front matter.
 9. Update the article registry, index and sitemap after editorial review.
 10. Run automated compliance checks.
+11. Confirm the outward-facing version includes the canonical website and WeChat Official Account identity.
 
 ## Failure handling
 
