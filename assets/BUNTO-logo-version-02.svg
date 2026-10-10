@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 1000" role="img" aria-labelledby="title desc">
+  <title id="title">BUNTO.CO Logo — Version 02</title>
+  <desc id="desc">Editable circular logo with a fine navy ring, a large gold sun behind a straight torii gate, reflected water lines, and BUNTO.CO curved along the lower arc.</desc>
+  <defs>
+    <path id="bunto-arc" d="M 196 686 A 370 370 0 0 0 804 686" />
+  </defs>
+  <circle cx="500" cy="500" r="465" fill="none" stroke="#0B3768" stroke-width="17" />
+
+  <circle cx="500" cy="317" r="188" fill="#C9A24E" />
+
+  <g fill="#0B3768">
+    <path d="M 208 248 L 286 287 Q 500 330 714 287 L 792 248 L 762 302 Q 500 360 238 302 Z" />
+    <path d="M 271 333 L 729 333 L 729 374 L 271 374 Z" />
+    <path d="M 342 338 L 389 338 L 389 586 L 342 586 Z" />
+    <path d="M 611 338 L 658 338 L 658 586 L 611 586 Z" />
+    <path d="M 325 578 L 406 578 L 406 601 L 325 601 Z" />
+    <path d="M 594 578 L 675 578 L 675 601 L 594 601 Z" />
+  </g>
+
+  <!-- Fine gold inlays on the gate -->
+  <g fill="#C9A24E">
+    <rect x="305" y="345" width="42" height="13" rx="2" />
+    <rect x="653" y="345" width="42" height="13" rx="2" />
+    <rect x="414" y="345" width="172" height="13" rx="2" />
+  </g>
+
+  <!-- Horizontal water reflections -->
+  <path d="M 124 620 Q 310 604 500 619 Q 690 604 876 620 Q 691 633 500 629 Q 309 633 124 620 Z" fill="#0B3768" />
+  <ellipse cx="500" cy="649" rx="102" ry="20" fill="#C9A24E" />
+  <path d="M 205 674 Q 500 652 795 674 Q 500 697 205 674 Z" fill="#0B3768" />
+  <ellipse cx="500" cy="711" rx="76" ry="15" fill="#C9A24E" />
+  <path d="M 323 740 Q 500 724 677 740 Q 500 759 323 740 Z" fill="#0B3768" />
+
+  <text fill="#0B3768" font-family="Georgia, 'Times New Roman', serif" font-size="67" font-weight="600" letter-spacing="7">
+    <textPath href="#bunto-arc" xlink:href="#bunto-arc" startOffset="50%" text-anchor="middle">BUNTO.CO</textPath>
+  </text>
+</svg>
