@@ -99,7 +99,7 @@
 (function () {
   "use strict";
 
-  const LOGO = "/assets/BUNTO-logo-version-02.png";
+  const LOGO = "/assets/bunto-official-logo.png";
   const WECHAT_ID = "JAPANYAO111";
   const CODE_STORE_KEY = "jmai_content_code_v1";
 

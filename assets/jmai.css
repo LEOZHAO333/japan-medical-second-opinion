@@ -2,7 +2,7 @@
 
 /* PR #62: Founder-locked website contact + brand overrides. */
 .brand{display:flex!important;align-items:center;gap:10px}
-.brand::before{content:"";display:block;width:54px;height:54px;flex:0 0 54px;background:url("/assets/BUNTO-logo-version-02.png") center/contain no-repeat}
+.brand::before{content:"";display:block;width:54px;height:54px;flex:0 0 54px;background:url("/assets/bunto-official-logo.png") center/contain no-repeat}
 
 /* WhatsApp is not a public frontend contact channel. Hide it before JS executes and even if JS fails. */
 .contactItem:has(img[src*="whatsapp"]){display:none!important}
