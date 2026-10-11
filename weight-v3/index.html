@@ -31,4 +31,5 @@ el.generate.addEventListener("click",()=>{const c=el.country.value;if(!c||!goal)
 el.copy.addEventListener("click",async()=>{track("summary_copied",{country:el.country.value,type:profiles[ptype]?.[0],goal});try{await navigator.clipboard.writeText(el.summary.textContent);el.copy.textContent="已复制";}catch(e){prompt("请复制：",el.summary.textContent);}});
 el.wa&&el.wa.addEventListener("click",()=>track("whatsapp_intent",{country:el.country.value,type:profiles[ptype]?.[0],goal}));el.wx.addEventListener("click",()=>track("wechat_intent",{country:el.country.value,type:profiles[ptype]?.[0],goal}));
 function calcBMI(){const H=+el.h.value,W=+el.w.value,T=+el.tw.value;if(!H||!W||!T)return alert("请完整填写");const b=W/((H/100)**2),tb=T/((H/100)**2),loss=(W-T)/W*100;el.calcbox.style.display="block";el.calcbox.textContent="当前 BMI："+b.toFixed(1)+" ｜ 目标 BMI："+tb.toFixed(1)+" ｜ 计划减重比例："+loss.toFixed(1)+"%";track("medical_tool_view");}window.calcBMI=calcBMI;draw();
-</script></body></html>
+</script><script src="/assets/jmai-analytics.js"></script>
+</body></html>

@@ -102,6 +102,20 @@
   const LOGO = "/assets/bunto-official-logo.png";
   const WECHAT_ID = "JAPANYAO111";
   const CODE_STORE_KEY = "jmai_content_code_v1";
+  const LANG = (document.documentElement.lang || "").toLowerCase();
+  const T = LANG.indexOf("en") === 0 ? {
+    btn: "Copy WeChat ID ", done: "✓ WeChat ID copied", copied: "WeChat ID copied: ", manual: "Please copy the WeChat ID manually: ",
+    withCode: "When adding us, please write this code in the request note: ",
+    noCode: "When adding us, please write the code you saw in the video or post (e.g. H07) in the request note; if none, write \"website\"."
+  } : LANG.indexOf("zh-hant") === 0 ? {
+    btn: "複製微信號 ", done: "✓ 微信號已複製", copied: "微信號已複製：", manual: "請手動複製微信號 ",
+    withCode: "添加好友時請備註來源口令：",
+    noCode: "添加好友時請在驗證信息裡備註你在影片或貼文中看到的口令（例如 H07）；沒有口令就備註「官網」"
+  } : {
+    btn: "复制微信号 ", done: "✓ 微信号已复制", copied: "微信号已复制：", manual: "请手动复制微信号 ",
+    withCode: "添加好友时请备注来源口令：",
+    noCode: "添加好友时请在验证信息里备注你在视频或帖子中看到的口令（例如 H07）；没有口令就备注“官网”"
+  };
 
   function cleanCode(value) {
     const code = String(value || "").trim().toUpperCase();
@@ -129,9 +143,18 @@
       document.body.appendChild(toast);
     }
     toast.textContent = message;
+    /* Pages without jmai.css (e.g. weight-v3): minimal inline styling so the toast is visible. */
+    const styled = getComputedStyle(toast).position === "fixed";
+    if (!styled) {
+      toast.style.cssText = "position:fixed;left:50%;bottom:22px;transform:translateX(-50%);z-index:10001;max-width:92vw;padding:13px 17px;border-radius:14px;background:#10233f;color:#fff;font-weight:700;line-height:1.55;box-shadow:0 14px 42px rgba(16,35,63,.24)";
+    }
     toast.classList.add("on");
+    if (!styled) toast.style.display = "block";
     clearTimeout(showToast.timer);
-    showToast.timer = setTimeout(function () { toast.classList.remove("on"); }, 4200);
+    showToast.timer = setTimeout(function () {
+      toast.classList.remove("on");
+      if (!styled) toast.style.display = "none";
+    }, 4200);
   }
 
   function patchBranding() {
@@ -174,18 +197,12 @@
     const code = urlCode || "官网";
     /* No code in URL: ask the visitor (non-blocking) to write the code they saw in the
        friend-request note; customer service records it. No prompt()/alert() dialogs. */
-    const ask = urlCode
-      ? "添加好友时请备注来源口令：" + urlCode
-      : "添加好友时请在验证信息里备注你在视频或帖子中看到的口令（例如 H07）；没有口令就备注“官网”";
-    if (copied) {
-      showToast("微信号已复制：" + WECHAT_ID + "。" + ask);
-    } else {
-      showToast("请手动复制微信号 " + WECHAT_ID + "。" + ask);
-    }
+    const ask = urlCode ? T.withCode + urlCode : T.noCode;
+    showToast((copied ? T.copied : T.manual) + WECHAT_ID + (LANG.indexOf("en") === 0 ? ". " : "。") + ask);
 
     if (button && copied) {
       const old = button.textContent;
-      button.textContent = "✓ 微信号已复制";
+      button.textContent = T.done;
       setTimeout(function () { button.textContent = old; }, 1800);
     }
 
@@ -195,19 +212,19 @@
 
   function patchContacts() {
     /* Defense in depth: CSS hides WhatsApp before render; JS removes it when available. */
-    document.querySelectorAll(".contactItem").forEach(function (item) {
+    document.querySelectorAll(".contactItem, .contact").forEach(function (item) {
       const title = item.querySelector("h3");
       if (title && title.textContent.trim().toLowerCase() === "whatsapp") item.remove();
     });
 
-    document.querySelectorAll(".contactItem").forEach(function (item) {
+    document.querySelectorAll(".contactItem, .contact").forEach(function (item) {
       const title = item.querySelector("h3");
       const name = title ? title.textContent.trim().toLowerCase() : "";
       if (!title || !["微信", "wechat"].includes(name) || item.querySelector(".jmaiWechatCopy")) return;
       const button = document.createElement("button");
       button.type = "button";
       button.className = "btn alt jmaiWechatCopy";
-      button.textContent = "复制微信号 " + WECHAT_ID;
+      button.textContent = T.btn + WECHAT_ID;
       button.addEventListener("click", function () { copyWechat(button); });
       item.appendChild(button);
     });
