@@ -1,0 +1,38 @@
+name: PR62 finalize locked logo
+on:
+  push:
+    branches: [website-final-logo-wechat-attribution-v1]
+permissions:
+  contents: write
+jobs:
+  finalize:
+    if: ${{ github.actor != 'github-actions[bot]' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: website-final-logo-wechat-attribution-v1
+      - name: Rebuild Founder-locked PNG and verify SHA-256
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat .pr62/logo.part00 .pr62/logo.part01 .pr62/logo.part02 .pr62/logo.tail00 > /tmp/logo.b64
+          base64 --decode /tmp/logo.b64 > assets/BUNTO-logo-version-02.png
+          actual="$(sha256sum assets/BUNTO-logo-version-02.png | awk '{print $1}')"
+          expected="1922ef92cebbeae2ddb07eab97352b7ce468f419d34e73629ef364473ef9c982"
+          echo "logo_sha256=$actual"
+          test "$actual" = "$expected"
+      - name: Remove obsolete vector and temporary staging files
+        shell: bash
+        run: |
+          rm -f assets/BUNTO-logo-version-02.svg
+          rm -rf .pr62
+          rm -f .github/workflows/pr62-logo-finalize.yml
+      - name: Commit verified locked PNG
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Use Founder-locked Version 02 PNG asset"
+          git push origin HEAD:website-final-logo-wechat-attribution-v1
