@@ -170,11 +170,17 @@
       ta.remove();
     }
 
-    const code = getContentCode() || "官网";
+    const urlCode = getContentCode();
+    const code = urlCode || "官网";
+    /* No code in URL: ask the visitor (non-blocking) to write the code they saw in the
+       friend-request note; customer service records it. No prompt()/alert() dialogs. */
+    const ask = urlCode
+      ? "添加好友时请备注来源口令：" + urlCode
+      : "添加好友时请在验证信息里备注你在视频或帖子中看到的口令（例如 H07）；没有口令就备注“官网”";
     if (copied) {
-      showToast("微信号已复制：" + WECHAT_ID + "。添加好友时请备注来源口令：" + code);
+      showToast("微信号已复制：" + WECHAT_ID + "。" + ask);
     } else {
-      showToast("请手动复制微信号 " + WECHAT_ID + "，添加好友时备注来源口令：" + code);
+      showToast("请手动复制微信号 " + WECHAT_ID + "。" + ask);
     }
 
     if (button && copied) {
@@ -184,7 +190,7 @@
     }
 
     const a = contactAnalytics();
-    if (a) a.track("wechat_click", { source_code: code });
+    if (a) a.track("wechat_click", { source_code: code, code_from_url: !!urlCode });
   }
 
   function patchContacts() {
