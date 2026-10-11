@@ -99,7 +99,7 @@
 (function () {
   "use strict";
 
-  const LOGO = "/assets/BUNTO-logo-version-02.svg";
+  const LOGO = "/assets/BUNTO-logo-version-02.png";
   const WECHAT_ID = "JAPANYAO111";
   const CODE_STORE_KEY = "jmai_content_code_v1";
 
@@ -118,37 +118,23 @@
     try { return cleanCode(sessionStorage.getItem(CODE_STORE_KEY)); } catch (_) { return ""; }
   }
 
-  function rememberContentCode(code) {
-    const safe = cleanCode(code);
-    if (!safe) return "";
-    try { sessionStorage.setItem(CODE_STORE_KEY, safe); } catch (_) {}
-    return safe;
-  }
-
-  function injectStyles() {
-    if (document.getElementById("jmai-final-brand-style")) return;
-    const style = document.createElement("style");
-    style.id = "jmai-final-brand-style";
-    style.textContent = [
-      ".brand{display:flex!important;align-items:center;gap:10px}",
-      ".jmaiBrandLogo{width:54px;height:54px;object-fit:contain;flex:0 0 54px}",
-      ".jmaiBrandText{display:block}",
-      ".contactGrid.jmaiContactTwo{grid-template-columns:repeat(2,minmax(0,1fr))}",
-      ".jmaiWechatCopy{margin-top:10px;width:100%}",
-      "@media(max-width:560px){.jmaiBrandLogo{width:46px;height:46px;flex-basis:46px}.contactGrid.jmaiContactTwo{grid-template-columns:1fr}}"
-    ].join("");
-    document.head.appendChild(style);
+  function showToast(message) {
+    let toast = document.getElementById("jmaiToast");
+    if (!toast) {
+      toast = document.createElement("div");
+      toast.id = "jmaiToast";
+      toast.className = "jmaiToast";
+      toast.setAttribute("role", "status");
+      toast.setAttribute("aria-live", "polite");
+      document.body.appendChild(toast);
+    }
+    toast.textContent = message;
+    toast.classList.add("on");
+    clearTimeout(showToast.timer);
+    showToast.timer = setTimeout(function () { toast.classList.remove("on"); }, 4200);
   }
 
   function patchBranding() {
-    document.querySelectorAll("a.brand").forEach(function (brand) {
-      if (brand.querySelector(".jmaiBrandLogo")) return;
-      const img = document.createElement("img");
-      img.src = LOGO;
-      img.alt = "BUNTO.CO 文腾株式会社";
-      img.className = "jmaiBrandLogo";
-      brand.insertBefore(img, brand.firstChild);
-    });
     document.querySelectorAll("img.footerLogo").forEach(function (img) {
       img.src = LOGO;
       img.alt = "BUNTO.CO 文腾株式会社";
@@ -167,7 +153,7 @@
     }
   }
 
-  async function copyWechatAndPrompt(button) {
+  async function copyWechat(button) {
     let copied = false;
     try {
       await navigator.clipboard.writeText(WECHAT_ID);
@@ -184,58 +170,60 @@
       ta.remove();
     }
 
-    if (!copied) {
-      window.prompt("请复制微信号：", WECHAT_ID);
-    }
-
-    let code = getContentCode();
-    if (!code) {
-      const entered = window.prompt("微信号已复制。请填写你在视频或帖子中看到的来源口令（例如 H07），添加好友时一并备注：", "");
-      code = rememberContentCode(entered);
-    }
-
-    if (code) {
-      window.alert("微信号已复制：" + WECHAT_ID + "\n添加好友时请在验证信息中备注来源口令：" + code);
+    const code = getContentCode() || "官网";
+    if (copied) {
+      showToast("微信号已复制：" + WECHAT_ID + "。添加好友时请备注来源口令：" + code);
     } else {
-      window.alert("微信号已复制：" + WECHAT_ID + "\n添加好友时，请备注你在视频或帖子中看到的来源口令，便于我们识别咨询来源。");
+      showToast("请手动复制微信号 " + WECHAT_ID + "，添加好友时备注来源口令：" + code);
     }
 
-    if (button) {
+    if (button && copied) {
       const old = button.textContent;
       button.textContent = "✓ 微信号已复制";
       setTimeout(function () { button.textContent = old; }, 1800);
     }
 
     const a = contactAnalytics();
-    if (a) a.track("wechat_click", { source_code: code || null });
+    if (a) a.track("wechat_click", { source_code: code });
   }
 
   function patchContacts() {
+    /* Defense in depth: CSS hides WhatsApp before render; JS removes it when available. */
     document.querySelectorAll(".contactItem").forEach(function (item) {
       const title = item.querySelector("h3");
       if (title && title.textContent.trim().toLowerCase() === "whatsapp") item.remove();
     });
 
-    document.querySelectorAll(".contactGrid").forEach(function (grid) {
-      grid.classList.add("jmaiContactTwo");
-    });
-
     document.querySelectorAll(".contactItem").forEach(function (item) {
       const title = item.querySelector("h3");
-      if (!title || title.textContent.trim() !== "微信" || item.querySelector(".jmaiWechatCopy")) return;
+      const name = title ? title.textContent.trim().toLowerCase() : "";
+      if (!title || !["微信", "wechat"].includes(name) || item.querySelector(".jmaiWechatCopy")) return;
       const button = document.createElement("button");
       button.type = "button";
       button.className = "btn alt jmaiWechatCopy";
       button.textContent = "复制微信号 " + WECHAT_ID;
-      button.addEventListener("click", function () { copyWechatAndPrompt(button); });
+      button.addEventListener("click", function () { copyWechat(button); });
       item.appendChild(button);
     });
   }
 
+  function bindAttributionEvents() {
+    const a = contactAnalytics();
+    if (!a) return;
+
+    document.querySelectorAll('a[href^="mailto:"]').forEach(function (link) {
+      link.addEventListener("click", function () { a.track("email_click"); });
+    });
+
+    document.querySelectorAll('a[href="/second-opinion/"],a[href^="/second-opinion/?"],a[href^="/second-opinion/#"]').forEach(function (link) {
+      link.addEventListener("click", function () { a.track("second_opinion_click"); });
+    });
+  }
+
   function init() {
-    injectStyles();
     patchBranding();
     patchContacts();
+    bindAttributionEvents();
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
