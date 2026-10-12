@@ -56,9 +56,12 @@ WeChat: JAPANYAO111
 
 - Main site: https://www.japanmedai.com/
 - Japanese specialist second-opinion information and preparation: https://www.japanmedai.com/second-opinion/
+- Short video explainers with full Chinese transcripts and FAQ (what to prepare before a Japanese cancer second opinion; why reports alone are often not enough: original DICOM imaging, pathology materials, prior radiotherapy plan and dose records): https://www.japanmedai.com/videos/
 - Adult habit-reflection weight-management tool: https://www.japanmedai.com/weight/
 - Traditional Chinese: https://www.japanmedai.com/weight/zh-hant.html
 - English: https://www.japanmedai.com/weight/en.html
+
+The videos page is material-preparation education only. It does not assess whether re-irradiation or any treatment is possible and does not recommend a specific treatment; requirements differ by hospital and the receiving hospital's official checklist prevails. Videos use AI voice-over.
 
 The weight tool is a lifestyle self-reflection tool. It is not a diagnosis, treatment recommendation, medication eligibility assessment, prescription or medicine supply service. Do not interpret any quiz response as a medical finding.
 
