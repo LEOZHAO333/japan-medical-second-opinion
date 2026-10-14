@@ -7,12 +7,29 @@ published_date: "2026-10-14"
 updated_date: "2026-10-14"
 reviewed_date: "2026-10-14"
 summary: "解释复发头颈癌第二意见为何常需要既往放疗计划：不是只看曾经照过多少Gy，而是要了解照射范围、重要器官既往受量、复发位置与旧照射区的关系，以及现有资料能支持多精细的累积剂量评估。"
-notion_url: ""
+notion_url: "https://app.notion.com/p/3f9b079dc6068125a2a2d46adacd4f36?pvs=204"
+author: "德川在東京内容团队（文腾株式会社）"
+medical_review_status: "待专业人员审核"
+content_date: "2026-10-14"
+queue_number: 4
+founder_publication_approval: "2026-10-14；经营者批准，不等于专业医学复核"
 primary_sources:
-  - "https://www.jastro.or.jp/medicalpersonnel/guideline/jastro/"
-  - "https://pubmed.ncbi.nlm.nih.gov/42372755/"
-  - "https://pubmed.ncbi.nlm.nih.gov/41643699/"
-  - "https://pubmed.ncbi.nlm.nih.gov/41318002/"
+  - org: "JASTRO"
+    title: "Radiotherapy Treatment Planning Guidelines 2024; IMRT guidance 2026"
+    date: "2024-11-22; 2026-06-26"
+    url: "https://www.jastro.or.jp/medicalpersonnel/guideline/jastro/"
+  - org: "The Lancet Oncology; ReCOG/ESTRO/ASTRO"
+    title: "Reirradiation for recurrent head and neck squamous cell carcinoma: international expert consensus recommendations"
+    date: "2026-07"
+    url: "https://pubmed.ncbi.nlm.nih.gov/42372755/"
+  - org: "The Lancet Oncology; ReCOG"
+    title: "Consensus on standards for dose evaluation and reporting in patients with multiple courses of radiation therapy"
+    date: "2026-02"
+    url: "https://pubmed.ncbi.nlm.nih.gov/41643699/"
+  - org: "Radiotherapy and Oncology; ESTRO"
+    title: "Cumulative dose evaluation in clinical reirradiation—Consensus guidance on technical considerations"
+    date: "2025-11-27 (online); 2026-01 (issue)"
+    url: "https://pubmed.ncbi.nlm.nih.gov/41318002/"
 ---
 
 # 为什么复发头颈癌做第二意见时，日本专家通常需要看原来的放疗计划？
@@ -66,6 +83,10 @@ primary_sources:
 
 不会。2026年发表的头颈癌再照射国际专家共识指出，再照射决策还涉及患者选择、影像、靶区、治疗计划、剂量累积和毒性管理等多个维度。旧放疗计划是关键输入之一，不是单独的“资格证明”。手术可行性、复发范围、远处转移、既往毒性、身体状态和治疗目标都要一起考虑。
 
+## 日本的治疗状态与本文证据阶段
+
+本文引用的是日本放疗计划指南与国际专家共识，属于临床实践指导，不是新药获批公告，也不是证明某项疗法有效的临床试验。国际共识主要讨论复发或第二原发头颈部鳞状细胞癌，不能直接外推到所有头颈肿瘤；具体机构在日本能否提供再照射，以及采用何种方案，仍需逐案确认。
+
 ## FAQ
 
 ### 只有放疗出院小结，没有DICOM-RT，还能做第二意见吗？
@@ -88,12 +109,14 @@ primary_sources:
 
 本文仅用于医学教育和资料准备，不构成个体再照射资格判断、剂量建议或治疗推荐。再照射可能涉及严重毒性风险，累积剂量评估也存在方法和资料带来的不确定性。任何具体治疗决定都应由放射肿瘤科及相关多学科团队结合完整资料判断。
 
+JapanMedAI.com｜微信公众号：德川在东京
+
 ## 权威来源
 
-1. 日本放射线肿瘤学会（JASTRO），JASTRO公认ガイドライン；其中包括《放射線治療計画ガイドライン2024年版》及2026年IMRT相关指南：https://www.jastro.or.jp/medicalpersonnel/guideline/jastro/
-2. Biau J, et al. *Reirradiation for recurrent head and neck squamous cell carcinoma: international expert consensus recommendations...* Lancet Oncology, 2026 Jul. PubMed：https://pubmed.ncbi.nlm.nih.gov/42372755/
-3. Paradis KC, et al. ReCOG consensus on standards for dose evaluation and reporting in patients with multiple courses of radiation therapy. Lancet Oncology, 2026 Feb. PubMed：https://pubmed.ncbi.nlm.nih.gov/41643699/
-4. ESTRO Reirradiation Focus Group. *Cumulative dose evaluation in clinical reirradiation—Consensus guidance on technical considerations.* PubMed：https://pubmed.ncbi.nlm.nih.gov/41318002/
+1. 日本放射线肿瘤学会（JASTRO），JASTRO公认ガイドライン；其中包括《放射線治療計画ガイドライン2024年版》（2024-11-22发布）及2026年IMRT相关指南（2026-06-26发布）；日本临床实践指南：https://www.jastro.or.jp/medicalpersonnel/guideline/jastro/
+2. Biau J, et al. *Reirradiation for recurrent head and neck squamous cell carcinoma: international expert consensus recommendations...* Lancet Oncology, 2026 Jul；国际专家共识，复发或第二原发头颈部鳞状细胞癌，非疗效试验。PubMed：https://pubmed.ncbi.nlm.nih.gov/42372755/
+3. Paradis KC, et al. ReCOG consensus on standards for dose evaluation and reporting in patients with multiple courses of radiation therapy. Lancet Oncology, 2026 Feb；多疗程放疗剂量评估的国际专家共识，非疗效试验。PubMed：https://pubmed.ncbi.nlm.nih.gov/41643699/
+4. ESTRO Reirradiation Focus Group. *Cumulative dose evaluation in clinical reirradiation—Consensus guidance on technical considerations.* Radiotherapy and Oncology, 2026 Jan（2025-11-27在线发表）；技术专家共识，非疗效试验。PubMed：https://pubmed.ncbi.nlm.nih.gov/41318002/
 
 **来源核对日期：2026年10月14日。**
 
