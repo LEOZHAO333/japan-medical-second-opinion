@@ -1,0 +1,129 @@
+---
+title: "为什么复发头颈癌做第二意见时，日本专家通常需要看原来的放疗计划？"
+slug: "recurrent-head-neck-cancer-prior-radiotherapy-plan-second-opinion"
+category: "日本专家第二意见"
+evidence_stage: "决策支持；再照射涉及累积剂量与风险评估，待专业人员审核"
+published_date: "2026-10-14"
+updated_date: "2026-10-14"
+reviewed_date: "2026-10-14"
+summary: "解释复发头颈癌第二意见为何常需要既往放疗计划：不是只看曾经照过多少Gy，而是要了解照射范围、重要器官既往受量、复发位置与旧照射区的关系，以及现有资料能支持多精细的累积剂量评估。"
+notion_url: "https://app.notion.com/p/3f9b079dc6068125a2a2d46adacd4f36?pvs=204"
+author: "德川在東京内容团队（文腾株式会社）"
+medical_review_status: "待专业人员审核"
+content_date: "2026-10-14"
+queue_number: 4
+founder_publication_approval: "2026-10-14；经营者批准，不等于专业医学复核"
+primary_sources:
+  - org: "JASTRO"
+    title: "Radiotherapy Treatment Planning Guidelines 2024; IMRT guidance 2026"
+    date: "2024-11-22; 2026-06-26"
+    url: "https://www.jastro.or.jp/medicalpersonnel/guideline/jastro/"
+  - org: "The Lancet Oncology; ReCOG/ESTRO/ASTRO"
+    title: "Reirradiation for recurrent head and neck squamous cell carcinoma: international expert consensus recommendations"
+    date: "2026-07"
+    url: "https://pubmed.ncbi.nlm.nih.gov/42372755/"
+  - org: "The Lancet Oncology; ReCOG"
+    title: "Consensus on standards for dose evaluation and reporting in patients with multiple courses of radiation therapy"
+    date: "2026-02"
+    url: "https://pubmed.ncbi.nlm.nih.gov/41643699/"
+  - org: "Radiotherapy and Oncology; ESTRO"
+    title: "Cumulative dose evaluation in clinical reirradiation—Consensus guidance on technical considerations"
+    date: "2025-11-27 (online); 2026-01 (issue)"
+    url: "https://pubmed.ncbi.nlm.nih.gov/41318002/"
+---
+
+# 为什么复发头颈癌做第二意见时，日本专家通常需要看原来的放疗计划？
+
+**直接答案：**因为“以前做过放疗”只说明治疗史，不能告诉专家哪些组织真正照过、各部位大约接受了多少剂量，也不能回答复发灶与旧照射区是否重叠。复发头颈癌如果要重新讨论局部治疗，尤其涉及再次放疗时，原来的放疗计划、计划CT、剂量分布和治疗记录，能帮助专家更接近真实地评估累积照射范围与不确定性。资料越完整，判断通常越具体；资料不全时也不是一定不能评估，但结论往往会更保守。
+
+**适用范围：**既往接受过头颈部放疗、现在出现局部或区域复发，需要重新讨论手术、再次放疗或其他局部治疗方向的患者。本文只解释资料为什么重要，不判断个人能否再次放疗，也不把任何累计剂量数字当作自动门槛。
+
+**作者：**德川在東京内容团队（文腾株式会社）  
+**医学审核状态：**待专业人员审核  
+**核对日期：**2026年10月14日
+
+## 为什么“总共照了多少Gy”还不够？
+
+放疗并不是把同样的剂量平均照到整个头颈部。治疗计划会根据肿瘤位置和周围正常组织设计不同的剂量分布。同样写着“做过放疗”，真正接受较高剂量的区域、重要器官的受量以及低剂量覆盖范围都可能不同。
+
+国际再照射共识近年反复强调：重新照射时，累积剂量评估需要结合既往剂量信息、影像配准、解剖变化和资料完整程度；有条件时可以进行更精细的三维剂量累积，资料不足时则只能采用较简化的方法，并把不确定性明确写出来。日本放射线肿瘤学会也持续发布放射治疗计划与IMRT相关指南，说明“计划本身”是放疗安全实施的重要基础。
+
+## 日本专家通常想从旧计划里确认什么？
+
+### 1. 复发灶和旧照射区到底重叠多少
+
+如果新的复发位置就在过去高剂量区域内，和发生在旧照射边缘或较低剂量区域，风险评估并不一样。只看现在的CT或MRI，无法完整还原过去的剂量分布。
+
+### 2. 周围重要器官以前接受过多少照射
+
+头颈部周围有脊髓、脑干、颈动脉、下颌骨、唾液腺、吞咽相关结构等多个需要保护的组织。再次考虑放疗时，专家关注的不是一个“总剂量数字”，而是不同器官过去和现在可能承受的累积负担，以及这些估算本身有多大不确定性。
+
+### 3. 当年的计划能否和今天的影像对上
+
+几年后复发时，患者可能已经做过手术、重建，体重和解剖结构也可能变化。国际共识提出，可根据资料条件使用刚性或形变图像配准等方法辅助剂量映射，但任何方法都有误差，所以旧的计划CT、剂量文件和当前影像越完整，越有利于专家判断“能算到什么程度”。
+
+### 4. “不能再放疗”到底依据什么
+
+第二意见不是为了证明原医生错了。重新查看旧计划的价值，是把一句“以前照过了”拆成可以核对的问题：过去照了哪里？哪些器官已经接近可接受风险边界？新病灶在哪里？距离上次治疗多久？现在的组织损伤和全身状态怎样？复核后完全可能仍然得到“不建议再次放疗”的结论，这同样是有价值的信息。
+
+## 最值得准备哪些旧放疗资料？
+
+如果原医院可以提供，优先询问以下资料：
+
+- 放疗治疗总结：治疗部位、日期、总剂量与分割方式；
+- 原计划CT；
+- DICOM-RT相关文件，例如RTPLAN、RTDOSE、RTSTRUCT；
+- 剂量分布图或剂量体积资料；
+- 当时的靶区和重要器官勾画信息；
+- 放疗后重要复查影像和目前最新CT、MRI或PET-CT原始数据。
+
+不同医院需要的格式并不完全相同。不要为了“资料齐全”自己重写或推算缺失剂量；拿不到完整DICOM-RT时，应如实说明现有资料，由接诊机构判断还能做到哪一级别的评估。
+
+## 这份资料会直接决定能不能再次放疗吗？
+
+不会。2026年发表的头颈癌再照射国际专家共识指出，再照射决策还涉及患者选择、影像、靶区、治疗计划、剂量累积和毒性管理等多个维度。旧放疗计划是关键输入之一，不是单独的“资格证明”。手术可行性、复发范围、远处转移、既往毒性、身体状态和治疗目标都要一起考虑。
+
+## 日本的治疗状态与本文证据阶段
+
+本文引用的是日本放疗计划指南与国际专家共识，属于临床实践指导，不是新药获批公告，也不是证明某项疗法有效的临床试验。国际共识主要讨论复发或第二原发头颈部鳞状细胞癌，不能直接外推到所有头颈肿瘤；具体机构在日本能否提供再照射，以及采用何种方案，仍需逐案确认。
+
+## FAQ
+
+### 只有放疗出院小结，没有DICOM-RT，还能做第二意见吗？
+可以先提交现有资料，但专家能评估到多细，取决于资料质量。只有总剂量和文字记录时，通常无法像拥有计划CT与三维剂量文件那样精细地重建过去的照射分布。
+
+### 原医院说资料太久找不到了怎么办？
+先确认还能取得哪些版本，例如治疗总结、纸质剂量记录、计划截图或旧影像。不要自行补写缺失数据；把“缺什么”列清楚，本身就能帮助第二意见判断不确定性。
+
+### 以前已经做过高剂量放疗，就一定不能再照吗？
+不能这样简单判断。同一个总剂量数字并不能代替照射范围、器官受量、治疗间隔和当前病情的综合评估；是否再次放疗必须由有经验的放疗团队个体化判断。
+
+### 看了旧计划，就一定能找到新的局部治疗吗？
+不能保证。复核可能支持进一步评估，也可能确认现有方案已经是更稳妥的选择。第二意见的价值是减少信息盲区，而不是承诺出现新疗法。
+
+## 下一步行动
+
+如果准备日本第二意见，可以先把“旧放疗资料”单独列成一组：治疗总结、计划CT、DICOM-RT、剂量分布和治疗日期；再与病理、当前影像和治疗时间线一起核对缺项。正式提交什么格式，以目标医院清单为准。
+
+## 风险提示
+
+本文仅用于医学教育和资料准备，不构成个体再照射资格判断、剂量建议或治疗推荐。再照射可能涉及严重毒性风险，累积剂量评估也存在方法和资料带来的不确定性。任何具体治疗决定都应由放射肿瘤科及相关多学科团队结合完整资料判断。
+
+JapanMedAI.com｜微信公众号：德川在东京
+
+## 权威来源
+
+1. 日本放射线肿瘤学会（JASTRO），JASTRO公认ガイドライン；其中包括《放射線治療計画ガイドライン2024年版》（2024-11-22发布）及2026年IMRT相关指南（2026-06-26发布）；日本临床实践指南：https://www.jastro.or.jp/medicalpersonnel/guideline/jastro/
+2. Biau J, et al. *Reirradiation for recurrent head and neck squamous cell carcinoma: international expert consensus recommendations...* Lancet Oncology, 2026 Jul；国际专家共识，复发或第二原发头颈部鳞状细胞癌，非疗效试验。PubMed：https://pubmed.ncbi.nlm.nih.gov/42372755/
+3. Paradis KC, et al. ReCOG consensus on standards for dose evaluation and reporting in patients with multiple courses of radiation therapy. Lancet Oncology, 2026 Feb；多疗程放疗剂量评估的国际专家共识，非疗效试验。PubMed：https://pubmed.ncbi.nlm.nih.gov/41643699/
+4. ESTRO Reirradiation Focus Group. *Cumulative dose evaluation in clinical reirradiation—Consensus guidance on technical considerations.* Radiotherapy and Oncology, 2026 Jan（2025-11-27在线发表）；技术专家共识，非疗效试验。PubMed：https://pubmed.ncbi.nlm.nih.gov/41318002/
+
+**来源核对日期：2026年10月14日。**
+
+## 备选标题
+
+1. 为什么复发头颈癌做第二意见时，日本专家通常需要看原来的放疗计划？（推荐）
+2. 头颈癌复发后想再评估放疗，为什么“以前照过多少Gy”还不够？
+3. 被告知“不能再放疗”，日本专家为什么还要找旧放疗计划？
+4. 复发头颈癌二次会诊：旧放疗计划里到底要看什么？
+5. DICOM-RT为什么重要？复发头颈癌再评估前先找这几类放疗资料
