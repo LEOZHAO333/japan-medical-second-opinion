@@ -42,6 +42,11 @@ jobs:
           sed -i '/^[[:space:]]*$/d' /tmp/wordpress-files.txt
           echo "count=$(wc -l < /tmp/wordpress-files.txt)" >> "$GITHUB_OUTPUT"
 
+      - name: Add JapanMed public footer
+        if: steps.files.outputs.count != '0'
+        run: |
+          python3 scripts/add_external_footer.py --file-list /tmp/wordpress-files.txt
+
       - name: Publish or update WordPress drafts
         if: steps.files.outputs.count != '0'
         env:

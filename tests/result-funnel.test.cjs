@@ -9,7 +9,7 @@ function browser({ url = 'https://www.japanmedai.com/weight/', storage = new Map
   const requests = [];
   let now = 1791248400000;
   const window = {
-    location: new URL(url), document: { referrer, documentElement: { lang: 'zh-CN' } },
+    location: new URL(url), document: { referrer, documentElement: { lang: 'zh-CN' }, readyState: 'complete', querySelectorAll: () => [], getElementById: () => null, addEventListener() {} },
     navigator: { webdriver: automated, userAgent: 'Browser' }, crypto: { randomUUID },
     sessionStorage: {
       getItem(key) { if (blockedStorage) throw new Error('blocked'); return storage.get(key) || null; },
@@ -17,7 +17,8 @@ function browser({ url = 'https://www.japanmedai.com/weight/', storage = new Map
     },
     fetch: async (url, init) => { requests.push({ url, init, body: JSON.parse(init.body) }); return response; }
   };
-  vm.runInNewContext(code, { window, URL, URLSearchParams, Date: { now: () => now } });
+  // The #62 contact/source-code module in the same file reads the global document and location.
+  vm.runInNewContext(code, { window, document: window.document, location: window.location, URL, URLSearchParams, Date: { now: () => now } });
   const create = () => window.JMAIAnalytics.create({ table: 'jw_weight_events', scope: 'weight', sessionKey: 'jmai_weight_sid_v1', pageVersion: 'v1-next-step-20261006' });
   return { create, requests, storage, advance: ms => { now += ms; } };
 }
@@ -129,4 +130,18 @@ test('AI referrers use the exact hostname whitelist without overriding an explic
   const lookalike = browser({ referrer: 'https://chatgpt.com.evil.example/' });
   await lookalike.create().track('landing_view');
   assert.equal(lookalike.requests[0].body.source, 'external_referral');
+});
+
+test('#62 WeChat source code passes the whitelist; free text does not', async () => {
+  const b = browser();
+  const a = b.create();
+  await a.track('wechat_click', { source_code: 'G6A', code_from_url: true });
+  await a.track('wechat_click', { source_code: '官网', code_from_url: false });
+  await a.track('wechat_click', { source_code: 'my phone 0900', code_from_url: 'yes' });
+  assert.equal(b.requests[0].body.event_data.source_code, 'G6A');
+  assert.equal(b.requests[0].body.event_data.code_from_url, true);
+  assert.equal(b.requests[1].body.event_data.source_code, '官网');
+  assert.equal(b.requests[1].body.event_data.code_from_url, false);
+  assert.equal(b.requests[2].body.event_data.source_code, undefined);
+  assert.equal(b.requests[2].body.event_data.code_from_url, undefined);
 });

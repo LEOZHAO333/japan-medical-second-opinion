@@ -17,6 +17,8 @@ A Japanese specialist second opinion may review pathology, imaging, staging, pri
 
 A second opinion does not mean the original diagnosis is wrong and does not mean the patient must travel to Japan.
 
+Video explainers with full transcripts: https://www.japanmedai.com/videos/ — before a Japanese specialist second opinion, families commonly prepare a referral letter (诊疗信息提供书), original imaging and reports, pathology reports, key test results and a treatment timeline. Reports alone may not be enough: hospitals may ask for original DICOM imaging, pathology slides or blocks when pathology review is needed, and prior radiotherapy plan and dose records (e.g. DICOM-RT). Requirements differ by hospital; the receiving hospital's official checklist prevails. These videos do not assess treatment eligibility or recommend a treatment.
+
 ## 3. BNCT
 
 BNCT combines a boron-containing drug with neutron irradiation. Its clinical use, indications, research status and availability must be described according to the specific hospital, jurisdiction and regulatory status. Typical hospital-side evaluation may require imaging, pathology, prior radiotherapy information and treatment history. Eligibility is determined solely by the receiving medical team.

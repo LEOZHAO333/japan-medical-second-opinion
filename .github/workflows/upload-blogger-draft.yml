@@ -49,6 +49,8 @@ jobs:
             git diff --name-only --diff-filter=AM "$BEFORE_SHA" HEAD -- 'blogger/*.html' > /tmp/blogger-files.txt
           fi
           python scripts/publish_blogger.py --file-list /tmp/blogger-files.txt --validate-only
+      - name: Add JapanMed public footer
+        run: python3 scripts/add_external_footer.py --file-list /tmp/blogger-files.txt
       - name: Create or update drafts and verify DRAFT status
         env:
           BLOGGER_BLOG_ID: ${{ secrets.BLOGGER_BLOG_ID }}
