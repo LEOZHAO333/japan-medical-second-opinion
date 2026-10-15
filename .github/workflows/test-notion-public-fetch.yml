@@ -17,20 +17,38 @@ jobs:
         with:
           ref: seo/notion-30x6-sync
           fetch-depth: 0
-      - name: Fetch one public Notion page with browser-like HTTP
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install browser
+        run: |
+          python -m pip install --disable-pip-version-check playwright
+          python -m playwright install --with-deps chromium
+      - name: Render one public Notion page
         run: |
           mkdir -p .notion-test
-          curl -L --retry 5 --retry-delay 3 --fail \
-            -A 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/155 Safari/537.36' \
-            'https://japanmedai.notion.site/379b079dc60680d9bd37db9fd91a0ea1' \
-            -o .notion-test/sample.html
-          test -s .notion-test/sample.html
-          wc -c .notion-test/sample.html
-          grep -o '日本BNCT硼中子治疗到底是什么[^<]*' .notion-test/sample.html | head -1 || true
+          python - <<'PY'
+          from pathlib import Path
+          from playwright.sync_api import sync_playwright
+
+          url='https://japanmedai.notion.site/379b079dc60680d9bd37db9fd91a0ea1'
+          with sync_playwright() as p:
+              browser=p.chromium.launch(headless=True)
+              page=browser.new_page(viewport={"width":1440,"height":1200}, user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/155 Safari/537.36')
+              page.goto(url, wait_until='domcontentloaded', timeout=120000)
+              page.wait_for_timeout(20000)
+              text=page.locator('body').inner_text(timeout=30000)
+              Path('.notion-test/sample.txt').write_text(text, encoding='utf-8')
+              print('chars=', len(text))
+              print(text[:1500])
+              assert '日本BNCT硼中子治疗到底是什么' in text, 'target title not rendered'
+              assert len(text) > 1200, 'rendered content too short'
+              browser.close()
+          PY
       - name: Commit test output
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add .notion-test/sample.html
-          git commit -m 'Verify public Notion HTML fetch' || exit 0
+          git add .notion-test/sample.txt
+          git commit -m 'Verify rendered public Notion content' || exit 0
           git push origin HEAD:seo/notion-30x6-sync
