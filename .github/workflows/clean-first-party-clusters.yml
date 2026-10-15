@@ -1,0 +1,70 @@
+name: Polish first-party S-grade clusters
+
+on:
+  push:
+    branches:
+      - seo/notion-30x6-sgrade
+
+permissions:
+  contents: write
+
+jobs:
+  polish:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: seo/notion-30x6-sgrade
+          fetch-depth: 0
+      - name: Remove internal workflow wording from public pages
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          cats=['bnct','ips','checkup','medicines','hospitals','kampo']
+          for cat in cats:
+              hub=Path(cat)/'index.html'
+              h=hub.read_text(encoding='utf-8')
+              h=h.replace('首批同步Notion主知识库30个高频主题，按SEO/GEO一方主域标准整理。','精选30个高频决策主题，按医学信息与搜索可读性标准整理。')
+              h=h.replace('首批30个主题来自 JapanMed AI Notion 主知识库；官网作为SEO/GEO主阵地进行一方发布和结构化整理。','围绕患者和家属常见的真实决策问题，提供直接答案、适用边界与下一步资料准备入口。')
+              hub.write_text(h,encoding='utf-8')
+              for i in range(1,31):
+                  p=Path(cat)/f'{i:03d}'/'index.html'
+                  t=p.read_text(encoding='utf-8')
+                  t=t.replace('Notion主库同步整理｜官网核对：2026-10-15｜医学专业复核：待必要时进一步确认','JapanMedAI医学信息整理｜资料核对：2026-10-15｜医学专业复核：待必要时进一步确认')
+                  t=t.replace('为什么官网版和原Notion标题的表达可能不同？','这类医疗信息应该怎么使用？')
+                  t=t.replace('官网版按SEO/GEO与医疗合规标准重新整理，会弱化绝对化、承诺式或容易误解的表达，并保留原选题的核心搜索意图。','建议先用它理解关键概念、证据阶段和需要向医生确认的问题，再结合自己的病理、影像、既往治疗和接诊机构要求做个体化判断。')
+                  t=t.replace('JapanMed AI Notion 主知识库「','JapanMedAI医疗知识库「')
+                  t=t.replace('」分类。官网版采用一方主域重新组织，保留原主题搜索意图，同时按医疗SEO/GEO标准增加适用边界、风险提示、结构化数据和站内路径。','」专题。内容依据公开医学资料与既有知识库主题整理，并明确适用边界、风险提示和进一步就医路径。')
+                  p.write_text(t,encoding='utf-8')
+          PY
+      - name: Validate public-facing wording and technical structure
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          cats=['bnct','ips','checkup','medicines','hospitals','kampo']
+          total=0
+          for cat in cats:
+              h=(Path(cat)/'index.html').read_text(encoding='utf-8')
+              assert 'Notion' not in h, cat
+              assert h.count('<h3>') == 30, cat
+              for i in range(1,31):
+                  p=Path(cat)/f'{i:03d}'/'index.html'
+                  t=p.read_text(encoding='utf-8')
+                  assert 'Notion' not in t, p
+                  assert '"@type":"MedicalWebPage"' in t
+                  assert '"@type":"BreadcrumbList"' in t
+                  assert '"@type":"FAQPage"' in t
+                  assert f'<link rel="canonical" href="https://www.japanmedai.com/{cat}/{i:03d}/">' in t
+                  total += 1
+          assert total==180
+          print('Public copy and technical structure validated for',total,'pages')
+          PY
+      - name: Commit polished pages
+        run: |
+          if git diff --quiet; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Polish 180 first-party medical topic pages"
+          git push origin HEAD:seo/notion-30x6-sgrade
