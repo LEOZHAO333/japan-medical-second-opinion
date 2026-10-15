@@ -1,0 +1,28 @@
+name: Build SEO 300 baseline
+on:
+  push:
+    branches: [seo/gsc-governance-v1]
+    paths:
+      - '.github/workflows/build-seo-300-baseline.yml'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: seo/gsc-governance-v1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Build baseline and cannibalization precheck
+        run: python scripts/build_seo_300_baseline.py
+      - name: Commit outputs and remove one-off workflow
+        run: |
+          rm .github/workflows/build-seo-300-baseline.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/seo-300-baseline.tsv docs/seo-cannibalization-precheck.tsv .github/workflows/build-seo-300-baseline.yml
+          git commit -m 'Build 300-page SEO monitoring baseline [skip ci]'
+          git push
