@@ -1,0 +1,33 @@
+name: Align refined FAQ intent
+
+on:
+  push:
+    branches:
+      - seo/dedupe-intent-refine
+
+permissions:
+  contents: write
+
+jobs:
+  align:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: seo/dedupe-intent-refine
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Align all visible FAQs and FAQPage schema
+        run: python scripts/align_refined_faq.py
+      - name: Remove one-off helpers
+        run: rm -f scripts/align_refined_faq.py .github/workflows/align-refined-faq.yml
+      - name: Commit final QA batch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Align FAQ search intent across 180 refined pages"
+          git push origin HEAD:seo/dedupe-intent-refine
