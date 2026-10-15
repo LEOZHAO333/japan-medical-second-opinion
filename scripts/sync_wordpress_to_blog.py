@@ -10,6 +10,12 @@ SRC_DIR = Path("wordpress")
 DEST_DIR = Path("blog")
 BASE_URL = "https://www.japanmedai.com/blog/"
 
+# JapanMedicalBlog is the advanced-human-medicine English content stream.
+# Veterinary material belongs to a separate editorial line and must not be mirrored here.
+EXCLUDED_SOURCES = {
+    "2026-10-03-japan-pet-medicine-guide-richongtong.html",
+}
+
 TITLE_RE = re.compile(r"<title>(.*?)</title>", re.I | re.S)
 DESC_RE = re.compile(r'<meta\s+name=["\']description["\']\s+content=["\'](.*?)["\']\s*/?>', re.I | re.S)
 CANONICAL_RE = re.compile(r'<link\s+rel=["\']canonical["\'][^>]*>', re.I)
@@ -43,7 +49,7 @@ def article_record(source: Path, text: str) -> dict[str, str]:
         "date": date_match.group(1) if date_match else "",
         "title": clean_text(title_match.group(1)) if title_match else source.stem,
         "url": f"/blog/{source.name}",
-        "category": "Japan Medical Blog",
+        "category": "日本先进医疗英文版",
         "description": clean_text(desc_match.group(1)) if desc_match else "",
     }
 
@@ -53,6 +59,8 @@ def main() -> None:
     records: list[dict[str, str]] = []
 
     for source in sorted(SRC_DIR.glob("*.html")):
+        if source.name in EXCLUDED_SOURCES:
+            continue
         normalized = normalize_for_blog(source)
         target = DEST_DIR / source.name
         target.write_text(normalized, encoding="utf-8")
@@ -64,7 +72,7 @@ def main() -> None:
         encoding="utf-8",
     )
 
-    print(f"Synced {len(records)} WordPress source files into {DEST_DIR}/")
+    print(f"Synced {len(records)} advanced-medical WordPress source files into {DEST_DIR}/")
 
 
 if __name__ == "__main__":
