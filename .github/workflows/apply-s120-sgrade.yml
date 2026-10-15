@@ -1,0 +1,58 @@
+name: Apply S120 S-grade expansion
+
+on:
+  push:
+    branches: [seo/s120-sgrade-batch]
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: seo/s120-sgrade-batch
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build both logical batches
+        run: python scripts/add_s120_sgrade_pages.py
+      - name: Final QA
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          cats=['bnct','checkup','hospitals','ips','medicines','kampo']
+          total=0
+          for c in cats:
+              files=[]
+              for i in range(31,51):
+                  p=Path(c)/f'{i:03d}'/'index.html'
+                  assert p.exists(), p
+                  s=p.read_text(encoding='utf-8')
+                  assert 'MedicalWebPage' in s and 'FAQPage' in s
+                  assert '权威证据与官方核对' in s
+                  assert f'https://www.japanmedai.com/{c}/{i:03d}/' in s
+                  files.append(p)
+              assert len(files)==20
+              total+=len(files)
+              hub=(Path(c)/'index.html').read_text(encoding='utf-8')
+              for i in range(31,51): assert f'/{c}/{i:03d}/' in hub
+          assert total==120
+          sm=Path('sitemap.xml').read_text(encoding='utf-8')
+          for c in cats:
+              for i in range(31,51): assert f'https://www.japanmedai.com/{c}/{i:03d}/' in sm
+          print('Final QA OK: 120 pages, 6 hubs, sitemap')
+          PY
+      - name: Remove one-off workflow before final commit
+        run: rm .github/workflows/apply-s120-sgrade.yml
+      - name: Commit complete two-batch result once
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Add 120 S-grade medical Q&A pages in two batches [skip ci]"
+          git push origin HEAD:seo/s120-sgrade-batch
