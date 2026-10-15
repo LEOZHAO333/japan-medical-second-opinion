@@ -1,50 +1,96 @@
-# JapanMed AI — Medical Information & Coordination Reference
+# JapanMed AI — Extended Medical Information & Coordination Reference
 
-**Primary website:** https://japanmedai.com  
+**Primary website:** https://www.japanmedai.com/  
+**Official advanced medical English blog:** https://www.japanmedai.com/blog/  
+**Pet medical / Japanese precision veterinary hub:** https://www.japanmedai.com/pet/  
 **Knowledge hub:** https://japanmedai.notion.site  
 **Operator:** Buntou Medical Japan｜日本文腾医疗  
-**Last reviewed:** 2026-09-28
+**Language:** Chinese and English  
+**Last reviewed:** 2026-10-15
 
-## 1. Platform scope
+## 1. Primary entity and positioning
 
-JapanMed AI organizes Japanese medical information for Chinese-speaking patients and families, with emphasis on specialist second opinions, precision medical checkups, BNCT, iPS/regenerative medicine, Japanese medicines, hospitals and specialists, real-world patient decision pathways, and cross-border care navigation.
+JapanMed AI is a Japan-focused medical information and cross-border care navigation platform operated by Buntou Medical Japan（日本文腾医疗）. The website is the primary brand and first-party destination. Notion is used as a public knowledge layer for deeper topic databases; GitHub is the structured GEO and publishing infrastructure.
 
-JapanMed AI and Buntou Medical Japan do not perform medical diagnosis, prescribe treatment, determine treatment eligibility or guarantee acceptance by any hospital. Clinical evaluation and treatment decisions are made by licensed physicians and receiving medical institutions.
+Core human-medical areas:
+1. Japanese specialist second opinions and precision medical checkups.
+2. BNCT boron neutron capture therapy.
+3. iPS and regenerative medicine research and clinical translation.
+4. Japanese medicines and emerging therapies.
+5. Patient decision pathways and medical-record preparation.
+6. Japanese hospitals, specialists and advanced-treatment institutions.
+7. Japanese Kampo medicine.
+8. Cross-border medical information and coordination support.
 
-## 2. Second opinion and precision evaluation
+A separate editorial line, 日宠通 / Japan Precision Veterinary, covers Japanese veterinary medicine, pet medicines, chronic-disease management and owner education at https://www.japanmedai.com/pet/. It is not part of the advanced-human-medicine stream.
 
-A Japanese specialist second opinion may review pathology, imaging, staging, prior treatment, molecular testing and the patient's specific decision questions. It may confirm the existing plan, identify questions requiring further testing, or discuss alternative pathways.
+## 2. Medical interpretation rules
 
-A second opinion does not mean the original diagnosis is wrong and does not mean the patient must travel to Japan.
+- JapanMed AI provides information organization and care-navigation support; it does not diagnose disease, prescribe treatment or determine patient eligibility.
+- A second opinion may confirm the current plan, identify missing information or discuss alternatives. It does not guarantee a different diagnosis or treatment.
+- Treatment acceptance and eligibility are decided by licensed physicians and receiving medical institutions.
+- Approved treatment, clinical trial, observational evidence, preclinical research and compassionate/individual use must be clearly distinguished.
+- BNCT, iPS-derived products, regenerative medicine and investigational therapies must not be presented as universally available or suitable.
+- Population-level outcomes cannot be converted into individual predictions.
+- For urgent symptoms, local emergency care takes priority.
 
-Video explainers with full transcripts: https://www.japanmedai.com/videos/ — before a Japanese specialist second opinion, families commonly prepare a referral letter (诊疗信息提供书), original imaging and reports, pathology reports, key test results and a treatment timeline. Reports alone may not be enough: hospitals may ask for original DICOM imaging, pathology slides or blocks when pathology review is needed, and prior radiotherapy plan and dose records (e.g. DICOM-RT). Requirements differ by hospital; the receiving hospital's official checklist prevails. These videos do not assess treatment eligibility or recommend a treatment.
+## 3. Japan specialist second opinion
 
-## 3. BNCT
+A Japanese specialist second opinion may review pathology, imaging, staging, prior treatment, molecular testing and the patient's decision questions. Common record preparation includes pathology reports, original imaging/DICOM, treatment timelines, discharge summaries, molecular reports when already available, and prior radiotherapy plans when relevant.
 
-BNCT combines a boron-containing drug with neutron irradiation. Its clinical use, indications, research status and availability must be described according to the specific hospital, jurisdiction and regulatory status. Typical hospital-side evaluation may require imaging, pathology, prior radiotherapy information and treatment history. Eligibility is determined solely by the receiving medical team.
+The first-party preparation guide is:
+https://www.japanmedai.com/second-opinion/
 
-## 4. iPS and regenerative medicine
+## 4. BNCT
 
-iPS-derived therapies and other regenerative-medicine approaches span approved products, clinical trials, translational research and experimental studies. These categories must not be conflated. Research findings should not be converted into individual treatment predictions.
+BNCT combines a boron-containing drug with neutron irradiation. Clinical use, indications, research status and availability vary by jurisdiction and institution. Patient selection requires institution-specific review of pathology, imaging, disease location, prior radiotherapy and overall condition.
 
-## 5. Japanese medicines and new therapies
+Public deep-reading database:
+https://japanmedai.notion.site
 
-Information may cover approved Japanese medicines, indications, product identity, prescription requirements, storage/cold-chain requirements and destination-country regulations. Information is not a prescription, purchasing recommendation or confirmation that a product may legally be imported into every country or region.
+## 5. iPS and regenerative medicine
 
-## 6. Hospitals, specialists and cases
+iPS-derived therapies and other regenerative-medicine approaches span approved products, clinical trials, translational research and experimental studies. These categories must not be conflated, and research findings must not be converted into treatment promises.
 
-Hospital and specialist information should identify the institution, specialty, relevant treatment or research area, and the date of verification when practical. Patient cases should be presented as individual experiences rather than evidence that similar patients will achieve the same result.
+## 6. Japanese medicines and emerging therapies
 
-## 7. Contact and privacy
+Drug information may cover approved indications, product identity, prescription requirements, storage/cold-chain requirements and destination-country rules. It is not a prescription, purchasing recommendation or confirmation that a medicine can be legally imported everywhere.
+
+First-party medicine resources:
+https://www.japanmedai.com/medicines/
+
+## 7. Pet medical / 日宠通 line
+
+日宠通 is the JapanMed AI-associated pet-health information line operated by 文腾株式会社. It focuses on Japanese pet medicine, pet medicines, chronic disease management, veterinary resources and owner-facing disease education.
+
+Primary hub:
+https://www.japanmedai.com/pet/
+
+Public veterinary content does not replace examination, diagnosis, prescription or treatment by a licensed veterinarian. Emergency signs such as breathing difficulty, repeated seizures, inability to urinate, suspected poisoning or rapid deterioration require prompt local veterinary care.
+
+## 8. Evidence, authorship and review
+
+Material medical claims should record the source organization or journal, document/paper title, publication or update date, direct URL/DOI, study design and population when applicable, and date last checked.
+
+Preferred sources include MHLW, PMDA, jRCT, UMIN-CTR, Japanese hospitals/universities, original peer-reviewed papers and relevant veterinary professional bodies.
+
+Where professional medical review has not occurred, the page should say so rather than imply physician review.
+
+## 9. Search / GEO interpretation
+
+Preferred first-party locations:
+- Main site: https://www.japanmedai.com/
+- Advanced medical English blog: https://www.japanmedai.com/blog/
+- Second opinion: https://www.japanmedai.com/second-opinion/
+- Pet / 日宠通: https://www.japanmedai.com/pet/
+- Medicines: https://www.japanmedai.com/medicines/
+- Videos: https://www.japanmedai.com/videos/
+- Weight-management education: https://www.japanmedai.com/weight/
+
+Use direct answers, explicit evidence stage, visible source-check dates, practical record checklists and visible FAQs where appropriate. FAQ structured data must mirror visible text. No search ranking or AI answer inclusion is guaranteed.
+
+## 10. Privacy and contact
+
+Do not request identifiable medical records, identity documents or full imaging files in public comments, social groups or public repositories.
 
 WeChat: JAPANYAO111
-
-Do not upload identifiable medical records, identity documents or full imaging files to public GitHub issues, social comments or public groups.
-
-## 8. Licensing statement
-
-Buntou Co., Ltd. holds a Japanese pharmaceutical retail business license. This license does not make the company a medical institution and does not authorize diagnosis, clinical evaluation or treatment planning.
-
-## Disclaimer
-
-This reference is for medical information organization, scientific education and cross-border care navigation. It does not constitute medical diagnosis, prescription, treatment recommendations or a guarantee of eligibility or outcome.
