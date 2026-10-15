@@ -1,0 +1,81 @@
+name: Build Notion 30x6 S-grade clusters
+
+on:
+  push:
+    branches:
+      - seo/notion-30x6-sgrade
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: seo/notion-30x6-sgrade
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build six 30-page clusters
+        run: python scripts/build_notion_sgrade_clusters.py
+      - name: Keep hub article cards title-only
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          for cat in ['bnct','ips','checkup','medicines','hospitals','kampo']:
+              p=Path(cat)/'index.html'
+              t=p.read_text(encoding='utf-8')
+              t=re.sub(r'<span class="kicker">\d{2}</span>', '', t)
+              p.write_text(t, encoding='utf-8')
+          PY
+      - name: Validate S-grade structure
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          cats=['bnct','ips','checkup','medicines','hospitals','kampo']
+          total=0
+          for cat in cats:
+              hub=Path(cat)/'index.html'
+              assert hub.exists(), hub
+              h=hub.read_text(encoding='utf-8')
+              assert h.count('<h3>') == 30, (cat,h.count('<h3>'))
+              assert not re.search(r'<span class="kicker">\d{2}</span>',h), cat
+              sm=(Path(cat)/'sitemap.xml').read_text(encoding='utf-8')
+              assert sm.count('<url>') == 31, (cat,sm.count('<url>'))
+              for i in range(1,31):
+                  p=Path(cat)/f'{i:03d}'/'index.html'
+                  assert p.exists(), p
+                  t=p.read_text(encoding='utf-8')
+                  url=f'https://www.japanmedai.com/{cat}/{i:03d}/'
+                  assert f'<link rel="canonical" href="{url}">' in t, p
+                  assert '"@type":"MedicalWebPage"' in t, p
+                  assert '"@type":"BreadcrumbList"' in t, p
+                  assert '"@type":"FAQPage"' in t, p
+                  assert 'Notion主库同步整理' in t, p
+                  total += 1
+          root=Path('sitemap.xml').read_text(encoding='utf-8')
+          for cat in cats:
+              assert f'https://www.japanmedai.com/{cat}/030/' in root, cat
+          robots=Path('robots.txt').read_text(encoding='utf-8')
+          for cat in cats:
+              assert f'Sitemap: https://www.japanmedai.com/{cat}/sitemap.xml' in robots, cat
+          assert total == 180, total
+          print('Validated',total,'first-party S-grade pages')
+          PY
+      - name: Commit generated pages
+        run: |
+          if git diff --quiet && [ -z "$(git status --porcelain)" ]; then
+            echo "No generated changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Generate 180 Notion-derived S-grade first-party pages"
+          git push origin HEAD:seo/notion-30x6-sgrade
