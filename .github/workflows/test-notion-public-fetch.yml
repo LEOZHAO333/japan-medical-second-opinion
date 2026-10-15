@@ -24,31 +24,49 @@ jobs:
         run: |
           python -m pip install --disable-pip-version-check playwright
           python -m playwright install --with-deps chromium
-      - name: Render one public Notion page
+      - name: Read BNCT public database view
         run: |
           mkdir -p .notion-test
           python - <<'PY'
+          import json,re
           from pathlib import Path
+          from urllib.parse import urljoin
           from playwright.sync_api import sync_playwright
 
-          url='https://japanmedai.notion.site/379b079dc60680d9bd37db9fd91a0ea1'
+          url='https://japanmedai.notion.site/379b079dc6068060b529e37ef490d25a?v=379b079dc6068008b4f7000c4dafd95b'
           with sync_playwright() as p:
               browser=p.chromium.launch(headless=True)
-              page=browser.new_page(viewport={"width":1440,"height":1200}, user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/155 Safari/537.36')
+              page=browser.new_page(viewport={"width":1440,"height":1600}, user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/155 Safari/537.36')
               page.goto(url, wait_until='domcontentloaded', timeout=120000)
-              page.wait_for_timeout(20000)
-              text=page.locator('body').inner_text(timeout=30000)
-              Path('.notion-test/sample.txt').write_text(text, encoding='utf-8')
-              print('chars=', len(text))
-              print(text[:1500])
-              assert '日本BNCT硼中子治疗到底是什么' in text, 'target title not rendered'
-              assert len(text) > 1200, 'rendered content too short'
+              page.wait_for_timeout(12000)
+              for _ in range(12):
+                  page.mouse.wheel(0,1800)
+                  page.wait_for_timeout(500)
+              items=[]; seen=set()
+              for a in page.locator('a').all():
+                  try:
+                      href=a.get_attribute('href') or ''
+                      txt=' '.join((a.inner_text() or '').split())
+                  except Exception:
+                      continue
+                  m=re.search(r'([0-9a-f]{32})',href.replace('-',''),re.I)
+                  if not m or not txt:
+                      continue
+                  pid=m.group(1).lower()
+                  if pid in seen or pid=='379b079dc6068060b529e37ef490d25a':
+                      continue
+                  seen.add(pid)
+                  items.append({'id':pid,'title':txt[:240],'href':urljoin('https://japanmedai.notion.site',href)})
+              Path('.notion-test/view-items.json').write_text(json.dumps(items,ensure_ascii=False,indent=2),encoding='utf-8')
+              print('items',len(items))
+              print(json.dumps(items[:40],ensure_ascii=False,indent=2))
+              assert len(items)>=30, f'expected >=30 page links, got {len(items)}'
               browser.close()
           PY
       - name: Commit test output
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add .notion-test/sample.txt
-          git commit -m 'Verify rendered public Notion content' || exit 0
+          git add .notion-test/view-items.json
+          git commit -m 'Verify public Notion database view extraction' || exit 0
           git push origin HEAD:seo/notion-30x6-sync
