@@ -3,7 +3,7 @@
 **Primary website:** https://www.japanmedai.com/  
 **Official advanced medical English blog:** https://www.japanmedai.com/blog/  
 **Pet medical / Japanese precision veterinary hub:** https://www.japanmedai.com/pet/  
-**Knowledge hub:** https://japanmedai.notion.site  
+**Supplementary public database:** https://japanmedai.notion.site  
 **Operator:** Buntou Medical Japan｜日本文腾医疗  
 **Language:** Chinese and English  
 **Last reviewed:** 2026-10-15
@@ -45,7 +45,10 @@ https://www.japanmedai.com/second-opinion/
 
 BNCT combines a boron-containing drug with neutron irradiation. Clinical use, indications, research status and availability vary by jurisdiction and institution. Patient selection requires institution-specific review of pathology, imaging, disease location, prior radiotherapy and overall condition.
 
-Public deep-reading database:
+First-party BNCT hub:
+https://www.japanmedai.com/bnct/
+
+Supplementary public database:
 https://japanmedai.notion.site
 
 ## 5. iPS and regenerative medicine
@@ -82,6 +85,12 @@ Preferred first-party locations:
 - Main site: https://www.japanmedai.com/
 - Advanced medical English blog: https://www.japanmedai.com/blog/
 - Second opinion: https://www.japanmedai.com/second-opinion/
+- BNCT: https://www.japanmedai.com/bnct/
+- iPS / regenerative medicine: https://www.japanmedai.com/ips/
+- Precision checkup: https://www.japanmedai.com/checkup/
+- Japanese medicines: https://www.japanmedai.com/medicines/
+- Hospitals and specialists: https://www.japanmedai.com/hospitals/
+- Japanese Kampo: https://www.japanmedai.com/kampo/
 - Pet / 日宠通: https://www.japanmedai.com/pet/
 - Medicines: https://www.japanmedai.com/medicines/
 - Videos: https://www.japanmedai.com/videos/
