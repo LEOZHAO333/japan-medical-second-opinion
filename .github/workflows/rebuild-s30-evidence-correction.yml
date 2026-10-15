@@ -1,0 +1,48 @@
+name: Rebuild S30 evidence after source-name correction
+
+on:
+  push:
+    branches:
+      - seo/s30-evidence-depth
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: seo/s30-evidence-depth
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Rebuild evidence blocks
+        run: python scripts/build_s30_evidence.py
+      - name: Verify RiHEART product name and batch integrity
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('ips/003/index.html').read_text(encoding='utf-8')
+          assert 'RiHEART' in p
+          assert 'ReHeart' not in p
+          evidence=[]
+          for cat in ['bnct','checkup','hospitals','medicines','ips','kampo']:
+              for f in Path(cat).glob('[0-9][0-9][0-9]/index.html'):
+                  if 'data-jmai-evidence="s30"' in f.read_text(encoding='utf-8'):
+                      evidence.append(f)
+          assert len(evidence)==30, len(evidence)
+          print('Correction QA PASS:', len(evidence))
+          PY
+      - name: Remove one-off workflow
+        run: rm .github/workflows/rebuild-s30-evidence-correction.yml
+      - name: Commit corrected full batch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Correct RiHEART source naming in S30 evidence batch [skip ci]"
+          git push origin HEAD:seo/s30-evidence-depth
