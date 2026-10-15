@@ -1,0 +1,39 @@
+name: Apply S30 search entry optimization
+
+on:
+  push:
+    branches:
+      - seo/s30-search-entry-layer
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: seo/s30-search-entry-layer
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Optimize S30 search entry layer
+        run: python scripts/optimize_s30_search_entry.py
+      - name: Final batch QA
+        run: python scripts/optimize_s30_search_entry.py
+      - name: Remove one-off workflow before final commit
+        run: rm -f .github/workflows/apply-s30-search-entry.yml
+      - name: Commit complete batch once
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m "Optimize S30 search entry titles, snippets and hubs [skip ci]"
+          git push origin HEAD:seo/s30-search-entry-layer
