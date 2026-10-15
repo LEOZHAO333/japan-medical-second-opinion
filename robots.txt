@@ -4,3 +4,9 @@ Allow: /
 Sitemap: https://www.japanmedai.com/sitemap.xml
 Sitemap: https://www.japanmedai.com/blog/sitemap.xml
 Sitemap: https://www.japanmedai.com/pet/sitemap.xml
+Sitemap: https://www.japanmedai.com/bnct/sitemap.xml
+Sitemap: https://www.japanmedai.com/ips/sitemap.xml
+Sitemap: https://www.japanmedai.com/checkup/sitemap.xml
+Sitemap: https://www.japanmedai.com/medicines/sitemap.xml
+Sitemap: https://www.japanmedai.com/hospitals/sitemap.xml
+Sitemap: https://www.japanmedai.com/kampo/sitemap.xml
