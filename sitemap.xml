@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.japanmedai.com/</loc><lastmod>2026-09-29</lastmod></url>
-  <url><loc>https://www.japanmedai.com/medicines/tirzepatide-japan.html</loc><lastmod>2026-09-28</lastmod></url>
-  <url><loc>https://www.japanmedai.com/weight/</loc><lastmod>2026-09-29</lastmod></url>
-  <url><loc>https://www.japanmedai.com/weight-v3/</loc><lastmod>2026-09-29</lastmod></url>
-  <url><loc>https://www.japanmedai.com/weight/library.html</loc><lastmod>2026-09-29</lastmod></url>
+  <url><loc>https://www.japanmedai.com/</loc><lastmod>2026-10-15</lastmod></url>
+  <url><loc>https://www.japanmedai.com/en/</loc><lastmod>2026-10-15</lastmod></url>
+  <url><loc>https://www.japanmedai.com/zh-hant/</loc><lastmod>2026-10-15</lastmod></url>
+  <url><loc>https://www.japanmedai.com/medicines/tirzepatide-japan.html</loc><lastmod>2026-10-15</lastmod></url>
+  <url><loc>https://www.japanmedai.com/weight/</loc><lastmod>2026-10-15</lastmod></url>
+  <url><loc>https://www.japanmedai.com/weight/library.html</loc><lastmod>2026-10-15</lastmod></url>
   <url><loc>https://www.japanmedai.com/weight/articles/article-001.html</loc><lastmod>2026-09-29</lastmod></url>
   <url><loc>https://www.japanmedai.com/weight/articles/article-002.html</loc><lastmod>2026-09-29</lastmod></url>
   <url><loc>https://www.japanmedai.com/weight/articles/article-003.html</loc><lastmod>2026-09-29</lastmod></url>
@@ -55,7 +56,7 @@
   <url><loc>https://www.japanmedai.com/weight/articles/article-048.html</loc><lastmod>2026-09-29</lastmod></url>
   <url><loc>https://www.japanmedai.com/weight/articles/article-049.html</loc><lastmod>2026-09-29</lastmod></url>
   <url><loc>https://www.japanmedai.com/weight/articles/article-050.html</loc><lastmod>2026-09-29</lastmod></url>
-  <url><loc>https://www.japanmedai.com/second-opinion/</loc><lastmod>2026-09-29</lastmod></url>
+  <url><loc>https://www.japanmedai.com/second-opinion/</loc><lastmod>2026-10-15</lastmod></url>
   <url><loc>https://www.japanmedai.com/videos/</loc><lastmod>2026-10-13</lastmod></url>
   <url><loc>https://www.japanmedai.com/weight/zh-hant.html</loc><lastmod>2026-09-29</lastmod></url>
   <url><loc>https://www.japanmedai.com/weight/en.html</loc><lastmod>2026-09-29</lastmod></url>
