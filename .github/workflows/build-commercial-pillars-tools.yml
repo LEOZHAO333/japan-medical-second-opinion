@@ -1,0 +1,42 @@
+name: Build commercial pillars and tools
+on:
+  push:
+    branches: [seo/commercial-pillars-tools-v1]
+    paths:
+      - scripts/build_commercial_pillars_tools.py
+      - .github/workflows/build-commercial-pillars-tools.yml
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: seo/commercial-pillars-tools-v1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build pages and tools
+        run: python scripts/build_commercial_pillars_tools.py
+      - name: QA
+        run: |
+          test -f bnct/recurrent-head-neck/index.html
+          test -f bnct/gbm/index.html
+          test -f second-opinion/cancer/index.html
+          test -f hospitals/international-patient/index.html
+          test -f medicines/indication-check/index.html
+          test -f tools/bnct-records/index.html
+          test -f tools/second-opinion-records/index.html
+          test -f tools/hospital-readiness/index.html
+          test -f tools/medicine-indication/index.html
+          grep -q 'bnct/recurrent-head-neck' sitemap.xml
+          grep -q 'medicines/indication-check' sitemap.xml
+      - name: Remove one-off workflow and commit completed batch
+        run: |
+          rm .github/workflows/build-commercial-pillars-tools.yml
+          git config user.name 'LEOZHAO333'
+          git config user.email 'zhaoxuliang33333@gmail.com'
+          git add -A
+          git commit -m 'Build commercial medical pillars and self-check tools'
+          git push origin seo/commercial-pillars-tools-v1
