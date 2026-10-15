@@ -1,0 +1,54 @@
+name: Apply S30 evidence-aligned direct answers
+
+on:
+  push:
+    branches:
+      - seo/s30-direct-answer-evidence
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: seo/s30-direct-answer-evidence
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Align all S30 top answers to verified evidence
+        run: python scripts/align_s30_direct_answers.py
+      - name: Final batch integrity check
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          roots=['bnct','checkup','hospitals','medicines','ips','kampo']
+          pages=[]
+          for r in roots:
+              pages += list(Path(r).glob('[0-9][0-9][0-9]/index.html'))
+          s30=[]
+          for p in pages:
+              t=p.read_text(encoding='utf-8')
+              if 'data-jmai-evidence="s30"' in t:
+                  s30.append(p)
+                  assert '<div class="answer">' in t
+                  assert '判断边界：' in t
+                  assert '"@type":"FAQPage"' in t
+                  assert '"@type":"MedicalWebPage"' in t
+          assert len(s30)==30, len(s30)
+          print('Final integrity PASS:', len(s30), 'S30 pages')
+          PY
+      - name: Remove one-off workflow before final commit
+        run: rm .github/workflows/apply-s30-direct-answer-evidence.yml
+      - name: Commit complete batch once
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Align S30 direct answers with authoritative evidence [skip ci]"
+          git push origin HEAD:seo/s30-direct-answer-evidence
