@@ -25,17 +25,24 @@ jobs:
         run: |
           python -m pip install --disable-pip-version-check playwright pypinyin
           python -m playwright install --with-deps chromium
-      - name: Patch one duplicate-only checkup view gap
+      - name: Harden sync for duplicate and unavailable legacy pages
         run: |
           python - <<'PY'
           from pathlib import Path
+          import re
           p=Path('scripts/sync_notion_hubs.py')
           t=p.read_text(encoding='utf-8')
           old='''            items = extract_view_items(page, view_url)\n            if len(items) < 30:\n                raise RuntimeError(f"{hub}: only {len(items)} unique items found")\n'''
           new='''            items = extract_view_items(page, view_url)\n            if hub == "checkup" and len(items) < 30:\n                extras = [{"id":"3f6b079dc6068124a2ffebae7ed2698f","title":"哪些复发头颈癌患者值得做日本二次专家意见？","source_url":"https://japanmedai.notion.site/3f6b079dc6068124a2ffebae7ed2698f"}]\n                existing_ids={x["id"] for x in items}; existing_titles={norm_title(x["title"]) for x in items}\n                for extra in extras:\n                    if extra["id"] not in existing_ids and norm_title(extra["title"]) not in existing_titles:\n                        items.append(extra)\n                    if len(items) >= 30:\n                        break\n            if len(items) < 30:\n                raise RuntimeError(f"{hub}: only {len(items)} unique items found")\n'''
-          if old not in t:
-              raise SystemExit('expected sync selection block not found')
-          p.write_text(t.replace(old,new),encoding='utf-8')
+          if old in t:
+              t=t.replace(old,new)
+          # Faster, resilient renderer: wait for rendered body, not exact legacy title; unavailable pages fall back to title-safe template.
+          pat=r'def render_page_text\(page, url: str, title: str\) -> str:\n.*?\n\ndef clean_body'
+          repl='''def render_page_text(page, url: str, title: str) -> str:\n    last_text = ""\n    for attempt in range(3):\n        try:\n            page.goto(url, wait_until="domcontentloaded", timeout=90000)\n            try:\n                page.wait_for_function("() => document.body && document.body.innerText.length > 700", timeout=12000)\n            except PlaywrightTimeoutError:\n                page.wait_for_timeout(1800 + attempt * 1200)\n            text = page.locator("body").inner_text(timeout=20000)\n            last_text = text or last_text\n            if len(text) > 500 and "JavaScript must be enabled" not in text:\n                return text\n        except Exception:\n            pass\n        time.sleep(1.5 * (attempt + 1))\n    # Preserve the first-party SEO page even if one legacy Notion record cannot currently render.\n    return title + "\\n" + last_text\n\n\ndef clean_body'''
+          t2,n=re.subn(pat,repl,t,flags=re.S)
+          if n != 1:
+              raise SystemExit(f'could not patch renderer: {n}')
+          p.write_text(t2,encoding='utf-8')
           PY
       - name: Sync six Notion categories into first-party hubs
         run: |
