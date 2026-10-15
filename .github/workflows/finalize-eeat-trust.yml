@@ -1,0 +1,29 @@
+name: Finalize E-E-A-T trust layer
+on:
+  push:
+    branches: [seo/eeat-trust-v1]
+    paths:
+      - 'scripts/finalize_eeat_trust.py'
+      - '.github/workflows/finalize-eeat-trust.yml'
+permissions:
+  contents: write
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: seo/eeat-trust-v1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Finalize trust layer and QA
+        run: python scripts/finalize_eeat_trust.py
+      - name: Commit prepared trust layer without production merge
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          rm -f scripts/finalize_eeat_trust.py .github/workflows/finalize-eeat-trust.yml
+          git add -A
+          git commit -m "Finalize E-E-A-T trust layer for next deployment" || exit 0
+          git push origin seo/eeat-trust-v1
