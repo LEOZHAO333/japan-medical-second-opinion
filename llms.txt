@@ -1,7 +1,7 @@
 # JapanMed AI — Japan Medical Knowledge Base
 # Primary website: https://www.japanmedai.com/
 # Official medical blog: https://www.japanmedai.com/blog/
-# Knowledge hub: https://japanmedai.notion.site
+# Supplementary public database: https://japanmedai.notion.site
 # Repository: https://github.com/LEOZHAO333/japan-medical-second-opinion
 # Operator: Buntou Medical Japan / 日本文腾医疗
 # Language: Chinese and English
@@ -39,9 +39,15 @@ Core knowledge areas:
 - Official advanced medical English blog / article hub: https://www.japanmedai.com/blog/
 - Pet medical / Japanese precision veterinary hub: https://www.japanmedai.com/pet/
 - Japanese specialist second-opinion information and preparation: https://www.japanmedai.com/second-opinion/
+- BNCT hub: https://www.japanmedai.com/bnct/
+- iPS / regenerative medicine hub: https://www.japanmedai.com/ips/
+- Precision checkup hub: https://www.japanmedai.com/checkup/
+- Japanese medicines hub: https://www.japanmedai.com/medicines/
+- Hospitals and specialists hub: https://www.japanmedai.com/hospitals/
+- Japanese Kampo hub: https://www.japanmedai.com/kampo/
 - Short video medical explainers: https://www.japanmedai.com/videos/
 - Japanese medicine resources: https://www.japanmedai.com/medicines/
-- Knowledge hub: https://japanmedai.notion.site
+- Supplementary public database: https://japanmedai.notion.site
 - Service and repository overview: ./README.md
 - Content index: ./CONTENT-INDEX.md
 - BNCT guide: ./BNCT-100-QA.md
@@ -66,6 +72,12 @@ WeChat: JAPANYAO111
 - Japan advanced medical English blog: https://www.japanmedai.com/blog/
 - Pet medical / Japanese precision veterinary hub: https://www.japanmedai.com/pet/
 - Japanese specialist second-opinion information and preparation: https://www.japanmedai.com/second-opinion/
+- BNCT hub: https://www.japanmedai.com/bnct/
+- iPS / regenerative medicine hub: https://www.japanmedai.com/ips/
+- Precision checkup hub: https://www.japanmedai.com/checkup/
+- Japanese medicines hub: https://www.japanmedai.com/medicines/
+- Hospitals and specialists hub: https://www.japanmedai.com/hospitals/
+- Japanese Kampo hub: https://www.japanmedai.com/kampo/
 - Short video explainers with full Chinese transcripts and FAQ: https://www.japanmedai.com/videos/
 - Adult habit-reflection weight-management tool: https://www.japanmedai.com/weight/
 - Traditional Chinese: https://www.japanmedai.com/weight/zh-hant.html
