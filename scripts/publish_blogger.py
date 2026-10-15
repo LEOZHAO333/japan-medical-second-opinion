@@ -14,6 +14,43 @@ API = "https://www.googleapis.com/blogger/v3"
 TOKEN_URL = "https://oauth2.googleapis.com/token"
 
 
+# Only fixed error codes may reach logs. Google response text can echo credentials.
+SAFE_ERROR_CODES = frozenset({
+    "invalid_grant", "invalid_client", "invalid_request", "invalid_scope",
+    "unauthorized_client", "access_denied", "unsupported_grant_type",
+    "badRequest", "invalid", "invalidArgument", "forbidden", "notFound",
+    "accessNotConfigured", "insufficientPermissions", "authError",
+    "rateLimitExceeded", "userRateLimitExceeded", "quotaExceeded",
+    "RESOURCE_EXHAUSTED", "PERMISSION_DENIED", "INVALID_ARGUMENT",
+    "UNAUTHENTICATED", "NOT_FOUND",
+})
+
+
+def safe_http_error(error, url, method):
+    operation = "oauth_token_refresh" if url == TOKEN_URL else "blogger_api"
+    code = "unclassified"
+    try:
+        payload = json.loads(error.read(16384))
+        detail = payload.get("error") if isinstance(payload, dict) else None
+        candidates = [detail] if isinstance(detail, str) else []
+        if isinstance(detail, dict):
+            candidates.append(detail.get("status"))
+            errors = detail.get("errors", [])
+            if isinstance(errors, list):
+                candidates.extend(item.get("reason") for item in errors if isinstance(item, dict))
+        code = next((item for item in candidates if isinstance(item, str) and item in SAFE_ERROR_CODES), code)
+    except (ValueError, TypeError, OSError):
+        pass
+    hint = "Check the request and existing blog access."
+    if operation == "oauth_token_refresh":
+        hint = "Check existing OAuth authorization and that the refresh token belongs to the configured client."
+        if code == "invalid_grant":
+            hint = "Google rejected the refresh grant; reauthorize the existing account/client. No Blogger write was attempted."
+        elif code == "invalid_client":
+            hint = "Google rejected the configured OAuth client credentials. No Blogger write was attempted."
+    return RuntimeError(f"{operation} failed: HTTP {error.code}; code={code}; method={method or 'GET'}. {hint}")
+
+
 def request_json(url, *, token=None, data=None, form=False, method=None, etag=None):
     headers = {"Accept": "application/json"}
     if token:
@@ -27,8 +64,8 @@ def request_json(url, *, token=None, data=None, form=False, method=None, etag=No
         with urlopen(Request(url, data=data, headers=headers, method=method), timeout=45) as response:
             return json.load(response)
     except HTTPError as error:
-        # Never print response bodies, request headers or OAuth credentials.
-        raise RuntimeError(f"Blogger/Google request failed: HTTP {error.code}. Check Actions secrets, OAuth authorization and blog access.") from None
+        # Never print arbitrary response text, URLs, headers, bodies or credentials.
+        raise safe_http_error(error, url, method) from None
     except URLError:
         raise RuntimeError("Blogger/Google connection failed. Check connectivity and retry.") from None
 
