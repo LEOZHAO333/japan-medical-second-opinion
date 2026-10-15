@@ -1,4 +1,4 @@
-name: Test Notion Public Fetch
+name: Sync Notion Hubs to JapanMedAI
 
 on:
   push:
@@ -9,9 +9,10 @@ permissions:
   contents: write
 
 jobs:
-  test:
+  sync:
     if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
+    timeout-minutes: 75
     steps:
       - uses: actions/checkout@v4
         with:
@@ -20,53 +21,52 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.13'
-      - name: Install browser
+      - name: Install browser and helpers
         run: |
-          python -m pip install --disable-pip-version-check playwright
+          python -m pip install --disable-pip-version-check playwright pypinyin
           python -m playwright install --with-deps chromium
-      - name: Read BNCT public database view
+      - name: Sync six Notion categories into first-party hubs
         run: |
-          mkdir -p .notion-test
+          rm -rf .notion-test
+          python scripts/sync_notion_hubs.py
+      - name: Validate S-grade first-party output
+        run: |
           python - <<'PY'
-          import json,re
           from pathlib import Path
-          from urllib.parse import urljoin
-          from playwright.sync_api import sync_playwright
-
-          url='https://japanmedai.notion.site/379b079dc6068060b529e37ef490d25a?v=379b079dc6068008b4f7000c4dafd95b'
-          with sync_playwright() as p:
-              browser=p.chromium.launch(headless=True)
-              page=browser.new_page(viewport={"width":1440,"height":1600}, user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/155 Safari/537.36')
-              page.goto(url, wait_until='domcontentloaded', timeout=120000)
-              page.wait_for_timeout(12000)
-              for _ in range(12):
-                  page.mouse.wheel(0,1800)
-                  page.wait_for_timeout(500)
-              items=[]; seen=set()
-              for a in page.locator('a').all():
-                  try:
-                      href=a.get_attribute('href') or ''
-                      txt=' '.join((a.inner_text() or '').split())
-                  except Exception:
-                      continue
-                  m=re.search(r'([0-9a-f]{32})',href.replace('-',''),re.I)
-                  if not m or not txt:
-                      continue
-                  pid=m.group(1).lower()
-                  if pid in seen or pid=='379b079dc6068060b529e37ef490d25a':
-                      continue
-                  seen.add(pid)
-                  items.append({'id':pid,'title':txt[:240],'href':urljoin('https://japanmedai.notion.site',href)})
-              Path('.notion-test/view-items.json').write_text(json.dumps(items,ensure_ascii=False,indent=2),encoding='utf-8')
-              print('items',len(items))
-              print(json.dumps(items[:40],ensure_ascii=False,indent=2))
-              assert len(items)>=30, f'expected >=30 page links, got {len(items)}'
-              browser.close()
+          import json,re
+          hubs=['bnct','ips','checkup','medicines','hospitals','kampo']
+          manifest=json.loads(Path('notion-hub-sync-manifest.json').read_text(encoding='utf-8'))
+          assert set(manifest)==set(hubs)
+          for hub in hubs:
+              items=manifest[hub]
+              assert len(items)==30, (hub,len(items))
+              index=Path(hub)/'index.html'
+              assert index.exists(), index
+              body=index.read_text(encoding='utf-8')
+              assert f'https://www.japanmedai.com/{hub}/' in body
+              assert 'ItemList' in body and 'CollectionPage' in body
+              article_files=[]
+              for item in items:
+                  p=Path(hub)/f"{item['slug']}.html"
+                  assert p.exists(), p
+                  t=p.read_text(encoding='utf-8')
+                  assert f'https://www.japanmedai.com/{hub}/{item["slug"]}.html' in t
+                  assert '<link rel="canonical"' in t
+                  assert 'application/ld+json' in t
+                  assert 'S级核对清单' in t
+                  assert '医学审核：待专业复核' in t
+                  article_files.append(p)
+              assert len(article_files)==30
+          sm=Path('sitemap-hubs.xml').read_text(encoding='utf-8')
+          assert sm.count('<url>')==186, sm.count('<url>')
+          robots=Path('robots.txt').read_text(encoding='utf-8')
+          assert 'https://www.japanmedai.com/sitemap-hubs.xml' in robots
+          print('Validation passed: 6 hubs x 30 first-party articles = 180 pages')
           PY
-      - name: Commit test output
+      - name: Commit synchronized website content
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add .notion-test/view-items.json
-          git commit -m 'Verify public Notion database view extraction' || exit 0
+          git add -A
+          git commit -m 'Sync six Notion knowledge hubs into JapanMedAI main domain' || exit 0
           git push origin HEAD:seo/notion-30x6-sync
