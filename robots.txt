@@ -3,3 +3,4 @@ Allow: /
 
 Sitemap: https://www.japanmedai.com/sitemap.xml
 Sitemap: https://www.japanmedai.com/blog/sitemap.xml
+Sitemap: https://www.japanmedai.com/pet/sitemap.xml
