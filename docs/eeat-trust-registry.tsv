@@ -1,0 +1,9 @@
+path	role	public_status
+/trust/	信任中心总入口	prepared_not_production
+/about/	平台与主体说明	prepared_not_production
+/editorial-policy/	编辑政策	prepared_not_production
+/medical-review/	医学复核政策	prepared_not_production
+/sources/	来源与证据标准	prepared_not_production
+/corrections/	纠错政策	prepared_not_production
+/authors/	作者与审核状态	prepared_not_production
+/privacy/	隐私政策	prepared_not_production
