@@ -1,0 +1,35 @@
+name: Apply index weight optimization
+
+on:
+  push:
+    branches:
+      - seo/s30-search-entry-layer
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: seo/s30-search-entry-layer
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Apply index and internal weight optimization
+        run: python scripts/optimize_index_weight.py
+      - name: Final QA
+        run: python scripts/optimize_index_weight.py
+      - name: Remove one-off workflow before final commit
+        run: rm -f .github/workflows/apply-index-weight.yml
+      - name: Commit complete batch once
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Optimize index discovery and internal authority flow [skip ci]"
+          git push origin HEAD:seo/s30-search-entry-layer
