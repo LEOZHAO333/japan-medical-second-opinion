@@ -1,0 +1,1094 @@
+{
+  "bnct": [
+    {
+      "id": "379b079dc60680d9bd37db9fd91a0ea1",
+      "title": "日本BNCT硼中子治疗到底是什么？把“硼”送进癌细胞后发生了什么：10微米级精准杀伤机制、真实数据与适合人群",
+      "source_url": "https://japanmedai.notion.site/379b079dc60680d9bd37db9fd91a0ea1",
+      "slug": "ri-ben-bnct-peng-zhong-zi-zhi-liao-dao-di-shi-shen-me-ba-peng-song-jin-a-1a0ea1"
+    },
+    {
+      "id": "379b079dc60680ba8327f52c7b1335f0",
+      "title": "BNCT与传统放疗有什么区别？",
+      "source_url": "https://japanmedai.notion.site/379b079dc60680ba8327f52c7b1335f0",
+      "slug": "bnct-yu-chuan-tong-fang-liao-you-shen-me-qu-bie-1335f0"
+    },
+    {
+      "id": "379b079dc6068044a805fb4d81a3e766",
+      "title": "BNCT与传统放疗有什么区别？很多人理解错了",
+      "source_url": "https://japanmedai.notion.site/379b079dc6068044a805fb4d81a3e766",
+      "slug": "bnct-yu-chuan-tong-fang-liao-you-shen-me-qu-bie-hen-duo-ren-li-jie-cuo-l-a3e766"
+    },
+    {
+      "id": "379b079dc60680aba908d0b5c325c9a3",
+      "title": "BNCT到底是什么？为什么被称为癌症精准核打击？",
+      "source_url": "https://japanmedai.notion.site/379b079dc60680aba908d0b5c325c9a3",
+      "slug": "bnct-dao-di-shi-shen-me-wei-shen-me-bei-cheng-wei-ai-zheng-jing-zhun-he--25c9a3"
+    },
+    {
+      "id": "37bb079dc60680bd9d39de2c5da9ac51",
+      "title": "BNCT到底是什么治疗？",
+      "source_url": "https://japanmedai.notion.site/37bb079dc60680bd9d39de2c5da9ac51",
+      "slug": "bnct-dao-di-shi-shen-me-zhi-liao-a9ac51"
+    },
+    {
+      "id": "37fb079dc606807b9d9bf85d39e0d3f3",
+      "title": "BNCT和伽玛刀哪个更先进？一文看懂微观核爆与宏观烧灼的区别",
+      "source_url": "https://japanmedai.notion.site/37fb079dc606807b9d9bf85d39e0d3f3",
+      "slug": "bnct-he-ga-ma-dao-na-ge-geng-xian-jin-yi-wen-kan-dong-wei-guan-he-bao-yu-e0d3f3"
+    },
+    {
+      "id": "37bb079dc60680fe90e7cf08cc7a1e44",
+      "title": "BNCT和伽玛刀有什么区别？",
+      "source_url": "https://japanmedai.notion.site/37bb079dc60680fe90e7cf08cc7a1e44",
+      "slug": "bnct-he-ga-ma-dao-you-shen-me-qu-bie-7a1e44"
+    },
+    {
+      "id": "37bb079dc60680dbad16de8ea19f5905",
+      "title": "BNCT和重离子治疗有什么区别？",
+      "source_url": "https://japanmedai.notion.site/37bb079dc60680dbad16de8ea19f5905",
+      "slug": "bnct-he-zhong-li-zi-zhi-liao-you-shen-me-qu-bie-9f5905"
+    },
+    {
+      "id": "37fb079dc60680ba80afcde086c875c2",
+      "title": "BNCT对复发GBM最大的价值是什么？细胞级选择性与生存尊严的平衡",
+      "source_url": "https://japanmedai.notion.site/37fb079dc60680ba80afcde086c875c2",
+      "slug": "bnct-dui-fu-fa-gbm-zui-da-de-jia-zhi-shi-shen-me-xi-bao-ji-xuan-ze-xing--c875c2"
+    },
+    {
+      "id": "37fb079dc606801ea58ac4410bcc567d",
+      "title": "BNCT属于放疗吗？一文看懂它与传统放疗的本质区别",
+      "source_url": "https://japanmedai.notion.site/37fb079dc606801ea58ac4410bcc567d",
+      "slug": "bnct-shu-yu-fang-liao-ma-yi-wen-kan-dong-ta-yu-chuan-tong-fang-liao-de-b-cc567d"
+    },
+    {
+      "id": "381b079dc6068020be6edfa0a2fd5f8d",
+      "title": "BNCT属于放疗吗？和传统放疗有什么区别？",
+      "source_url": "https://japanmedai.notion.site/381b079dc6068020be6edfa0a2fd5f8d",
+      "slug": "bnct-shu-yu-fang-liao-ma-he-chuan-tong-fang-liao-you-shen-me-qu-bie-fd5f8d"
+    },
+    {
+      "id": "381b079dc60680d19941dfcbb8ab3ebd",
+      "title": "BNCT是什么？为什么复发脑瘤患者越来越关注它？",
+      "source_url": "https://japanmedai.notion.site/381b079dc60680d19941dfcbb8ab3ebd",
+      "slug": "bnct-shi-shen-me-wei-shen-me-fu-fa-nao-liu-huan-zhe-yue-lai-yue-guan-zhu-ab3ebd"
+    },
+    {
+      "id": "381b079dc6068050a794c330456c2646",
+      "title": "BNCT治疗脑室管膜瘤的原理是什么？",
+      "source_url": "https://japanmedai.notion.site/381b079dc6068050a794c330456c2646",
+      "slug": "bnct-zhi-liao-nao-shi-guan-mo-liu-de-yuan-li-shi-shen-me-6c2646"
+    },
+    {
+      "id": "37fb079dc6068079b1cbeb2622c0d620",
+      "title": "前沿解读：BNCT能治疗胶质母细胞瘤吗？原理与适应症精准剖析",
+      "source_url": "https://japanmedai.notion.site/37fb079dc6068079b1cbeb2622c0d620",
+      "slug": "qian-yan-jie-du-bnct-neng-zhi-liao-jiao-zhi-mu-xi-bao-liu-ma-yuan-li-yu--c0d620"
+    },
+    {
+      "id": "37fb079dc60680fdba00f66ffc108758",
+      "title": "前沿靶向放疗BNCT到底是什么？为什么脑癌患者视其为新希望？",
+      "source_url": "https://japanmedai.notion.site/37fb079dc60680fdba00f66ffc108758",
+      "slug": "qian-yan-ba-xiang-fang-liao-bnct-dao-di-shi-shen-me-wei-shen-me-nao-ai-h-108758"
+    },
+    {
+      "id": "379b079dc606802e8c49fdb1251d223a",
+      "title": "台湾BNCT与日本BNCT有什么区别？",
+      "source_url": "https://japanmedai.notion.site/379b079dc606802e8c49fdb1251d223a",
+      "slug": "tai-wan-bnct-yu-ri-ben-bnct-you-shen-me-qu-bie-1d223a"
+    },
+    {
+      "id": "379b079dc60680ecb697eafba665b549",
+      "title": "台湾BNCT和日本BNCT有什么区别？患者最关心的问题",
+      "source_url": "https://japanmedai.notion.site/379b079dc60680ecb697eafba665b549",
+      "slug": "tai-wan-bnct-he-ri-ben-bnct-you-shen-me-qu-bie-huan-zhe-zui-guan-xin-de--65b549"
+    },
+    {
+      "id": "37bb079dc60680a0ad21e5b7334c0843",
+      "title": "日本BNCT治疗流程是什么？",
+      "source_url": "https://japanmedai.notion.site/37bb079dc60680a0ad21e5b7334c0843",
+      "slug": "ri-ben-bnct-zhi-liao-liu-cheng-shi-shen-me-4c0843"
+    },
+    {
+      "id": "37fb079dc6068061a630ca071c011090",
+      "title": "深度硬核对比：BNCT和质子治疗到底有哪些本质区别？",
+      "source_url": "https://japanmedai.notion.site/37fb079dc6068061a630ca071c011090",
+      "slug": "shen-du-ying-he-dui-bi-bnct-he-zhi-zi-zhi-liao-dao-di-you-na-xie-ben-zhi-011090"
+    },
+    {
+      "id": "37eb079dc606803488c6c23cb3f000a7",
+      "title": "被称为“癌症定向爆破”的BNCT，到底是什么黑科技？",
+      "source_url": "https://japanmedai.notion.site/37eb079dc606803488c6c23cb3f000a7",
+      "slug": "bei-cheng-wei-ai-zheng-ding-xiang-bao-po-de-bnct-dao-di-shi-shen-me-hei--f000a7"
+    },
+    {
+      "id": "37fb079dc6068069b0a8e1b54bda3d98",
+      "title": "高能科普：BNCT治疗脑癌的底层物理与生物学原理",
+      "source_url": "https://japanmedai.notion.site/37fb079dc6068069b0a8e1b54bda3d98",
+      "slug": "gao-neng-ke-pu-bnct-zhi-liao-nao-ai-de-di-ceng-wu-li-yu-sheng-wu-xue-yua-da3d98"
+    },
+    {
+      "id": "379b079dc606806cab63d97d2b4d9a12",
+      "title": "哪些癌症最适合BNCT治疗？",
+      "source_url": "https://japanmedai.notion.site/379b079dc606806cab63d97d2b4d9a12",
+      "slug": "na-xie-ai-zheng-zui-shi-he-bnct-zhi-liao-4d9a12"
+    },
+    {
+      "id": "37ab079dc606803883c3cc6cd1708749",
+      "title": "BNCT / 重粒子线：各自更适合哪一类复发癌？一次把话说清楚",
+      "source_url": "https://japanmedai.notion.site/37ab079dc606803883c3cc6cd1708749",
+      "slug": "bnct-zhong-li-zi-xian-ge-zi-geng-shi-he-na-yi-lei-fu-fa-ai-yi-ci-ba-hua--708749"
+    },
+    {
+      "id": "379b079dc60680399f08f8432155f4d0",
+      "title": "BNCT不是治疗——是日本用26年临床数据、2000余例患者换来的精准放疗革命",
+      "source_url": "https://japanmedai.notion.site/379b079dc60680399f08f8432155f4d0",
+      "slug": "bnct-bu-shi-zhi-liao-shi-ri-ben-yong-26-nian-lin-chuang-shu-ju-2000-yu-l-55f4d0"
+    },
+    {
+      "id": "37fb079dc606808d9be6d023e48972e5",
+      "title": "BNCT会影响认知与记忆力吗？捍卫晚期脑瘤患者的大脑尊严",
+      "source_url": "https://japanmedai.notion.site/37fb079dc606808d9be6d023e48972e5",
+      "slug": "bnct-hui-ying-xiang-ren-zhi-yu-ji-yi-li-ma-han-wei-wan-qi-nao-liu-huan-z-8972e5"
+    },
+    {
+      "id": "379b079dc606808ebecec3c0030412ec",
+      "title": "BNCT到底适不适合你？答案没那么简单",
+      "source_url": "https://japanmedai.notion.site/379b079dc606808ebecec3c0030412ec",
+      "slug": "bnct-dao-di-shi-bu-shi-he-ni-da-an-mei-na-me-jian-dan-0412ec"
+    },
+    {
+      "id": "37eb079dc606805886a4de9a94b95c43",
+      "title": "BNCT到底适不适合自己？日本专家会诊是关键第一步",
+      "source_url": "https://japanmedai.notion.site/37eb079dc606805886a4de9a94b95c43",
+      "slug": "bnct-dao-di-shi-bu-shi-he-zi-ji-ri-ben-zhuan-jia-hui-zhen-shi-guan-jian--b95c43"
+    },
+    {
+      "id": "379b079dc6068070b040dfb000b1b838",
+      "title": "BNCT对脑瘤患者意味着什么？",
+      "source_url": "https://japanmedai.notion.site/379b079dc6068070b040dfb000b1b838",
+      "slug": "bnct-dui-nao-liu-huan-zhe-yi-wei-zhe-shen-me-b1b838"
+    },
+    {
+      "id": "37ab079dc606809e9597e5cd0030bbfb",
+      "title": "BNCT是不是抗癌新希望？患者决策指南（2026版）",
+      "source_url": "https://japanmedai.notion.site/37ab079dc606809e9597e5cd0030bbfb",
+      "slug": "bnct-shi-bu-shi-kang-ai-xin-xi-wang-huan-zhe-jue-ce-zhi-nan-2026-ban-30bbfb"
+    },
+    {
+      "id": "37ab079dc606806689f9fd06b51f5b4e",
+      "title": "BNCT治疗适合脑瘤吗？日本临床给出答案",
+      "source_url": "https://japanmedai.notion.site/37ab079dc606806689f9fd06b51f5b4e",
+      "slug": "bnct-zhi-liao-shi-he-nao-liu-ma-ri-ben-lin-chuang-gei-chu-da-an-1f5b4e"
+    }
+  ],
+  "ips": [
+    {
+      "id": "379b079dc60680609eafca1a622bcc48",
+      "title": "iPS和普通干细胞有什么不同？为什么说它解决了医学史上最难的伦理难题？",
+      "source_url": "https://japanmedai.notion.site/379b079dc60680609eafca1a622bcc48",
+      "slug": "ips-he-pu-tong-gan-xi-bao-you-shen-me-bu-tong-wei-shen-me-shuo-ta-jie-ju-2bcc48"
+    },
+    {
+      "id": "379b079dc60680fdacd2d80b28191f67",
+      "title": "日本 iPS 干细胞治疗帕金森：到底在“补”什么？——从多巴胺神经前体细胞的制造，到脑内功能重建的临床证据",
+      "source_url": "https://japanmedai.notion.site/379b079dc60680fdacd2d80b28191f67",
+      "slug": "ri-ben-ips-gan-xi-bao-zhi-liao-pa-jin-sen-dao-di-zai-bu-shen-me-cong-duo-191f67"
+    },
+    {
+      "id": "379b079dc60680a3a93bdd803dadba83",
+      "title": "1型糖尿病患者终身打胰岛素——iPS胰岛细胞移植让他第一次不用注射，这是什么原理？",
+      "source_url": "https://japanmedai.notion.site/379b079dc60680a3a93bdd803dadba83",
+      "slug": "1-xing-tang-niao-bing-huan-zhe-zhong-shen-da-yi-dao-su-ips-yi-dao-xi-bao-adba83"
+    },
+    {
+      "id": "37cb079dc606805fa5b4e5776ff5eea6",
+      "title": "iPS-NK细胞是什么？日本最看好的下一代抗癌技术",
+      "source_url": "https://japanmedai.notion.site/37cb079dc606805fa5b4e5776ff5eea6",
+      "slug": "ips-nk-xi-bao-shi-shen-me-ri-ben-zui-kan-hao-de-xia-yi-dai-kang-ai-ji-sh-f5eea6"
+    },
+    {
+      "id": "379b079dc606807e9063df89cd321482",
+      "title": "日本 iPS 干细胞治疗帕金森：它到底在“补”什么？——从多巴胺神经前体细胞到 PET 功能验证的最新进展",
+      "source_url": "https://japanmedai.notion.site/379b079dc606807e9063df89cd321482",
+      "slug": "ri-ben-ips-gan-xi-bao-zhi-liao-pa-jin-sen-ta-dao-di-zai-bu-shen-me-cong--321482"
+    },
+    {
+      "id": "37cb079dc60680e0828fc9a4989e052a",
+      "title": "诺奖技术iPS干细胞到底是什么？3分钟看懂未来医学",
+      "source_url": "https://japanmedai.notion.site/37cb079dc60680e0828fc9a4989e052a",
+      "slug": "nuo-jiang-ji-shu-ips-gan-xi-bao-dao-di-shi-shen-me-3-fen-zhong-kan-dong--9e052a"
+    },
+    {
+      "id": "379b079dc606802f94fbdc11c10b1e89",
+      "title": "全球第一例iPS临床不是帕金森，是一位视网膜变性的老人——2014年她看到了什么？2026年进展如何？",
+      "source_url": "https://japanmedai.notion.site/379b079dc606802f94fbdc11c10b1e89",
+      "slug": "quan-qiu-di-yi-li-ips-lin-chuang-bu-shi-pa-jin-sen-shi-yi-wei-shi-wang-m-0b1e89"
+    },
+    {
+      "id": "37cb079dc606803dba5df4e803ac5862",
+      "title": "iPS治疗帕金森病效果如何？日本临床数据怎么看",
+      "source_url": "https://japanmedai.notion.site/37cb079dc606803dba5df4e803ac5862",
+      "slug": "ips-zhi-liao-pa-jin-sen-bing-xiao-guo-ru-he-ri-ben-lin-chuang-shu-ju-zen-ac5862"
+    },
+    {
+      "id": "37cb079dc60680ab9029e9425358664a",
+      "title": "iPS能修复神经损伤吗？科学家真正想解决的是“断开的线路”",
+      "source_url": "https://japanmedai.notion.site/37cb079dc60680ab9029e9425358664a",
+      "slug": "ips-neng-xiu-fu-shen-jing-sun-shang-ma-ke-xue-jia-zhen-zheng-xiang-jie-j-58664a"
+    },
+    {
+      "id": "379b079dc60680e8a61bd1beda91fce9",
+      "title": "帕金森不是\"慢慢变差\"的宿命——iPS干细胞把多巴胺神经元\"种\"回大脑，这位患者术后能站立了",
+      "source_url": "https://japanmedai.notion.site/379b079dc60680e8a61bd1beda91fce9",
+      "slug": "pa-jin-sen-bu-shi-man-man-bian-cha-de-su-ming-ips-gan-xi-bao-ba-duo-ba-a-91fce9"
+    },
+    {
+      "id": "37cb079dc606803e9c65e74ac987358e",
+      "title": "日本帕金森病iPS治疗走到哪一步了？",
+      "source_url": "https://japanmedai.notion.site/37cb079dc606803e9c65e74ac987358e",
+      "slug": "ri-ben-pa-jin-sen-bing-ips-zhi-liao-zou-dao-na-yi-bu-le-87358e"
+    },
+    {
+      "id": "37cb079dc6068015ab68c9d7cc9d738e",
+      "title": "日本首例成功：iPS真的能让帕金森患者重获新生吗？",
+      "source_url": "https://japanmedai.notion.site/37cb079dc6068015ab68c9d7cc9d738e",
+      "slug": "ri-ben-shou-li-cheng-gong-ips-zhen-de-neng-rang-pa-jin-sen-huan-zhe-chon-9d738e"
+    },
+    {
+      "id": "379b079dc6068043949efff5c131c07c",
+      "title": "车祸后瘫痪了4年，接受iPS神经干细胞移植后，他能感觉到脚趾了——脊髓损伤治疗最新进展",
+      "source_url": "https://japanmedai.notion.site/379b079dc6068043949efff5c131c07c",
+      "slug": "che-huo-hou-tan-huan-le-4-nian-jie-shou-ips-shen-jing-gan-xi-bao-yi-zhi--31c07c"
+    },
+    {
+      "id": "37cb079dc60680699630c1f102c684dc",
+      "title": "iPS能治疗脊髓损伤吗？日本为什么把它当重点项目",
+      "source_url": "https://japanmedai.notion.site/37cb079dc60680699630c1f102c684dc",
+      "slug": "ips-neng-zhi-liao-ji-sui-sun-shang-ma-ri-ben-wei-shen-me-ba-ta-dang-zhon-c684dc"
+    },
+    {
+      "id": "380b079dc6068057b02ccd6ffe588da9",
+      "title": "全球首款！日本干细胞药 Stemirac 上市！脊髓损伤瘫痪有救了吗？真实答案",
+      "source_url": "https://japanmedai.notion.site/380b079dc6068057b02ccd6ffe588da9",
+      "slug": "quan-qiu-shou-kuan-ri-ben-gan-xi-bao-yao-stemirac-shang-shi-ji-sui-sun-s-588da9"
+    },
+    {
+      "id": "37cb079dc60680d082cfe626f002da2d",
+      "title": "瘫痪后还能站起来吗？日本iPS研究带来希望",
+      "source_url": "https://japanmedai.notion.site/37cb079dc60680d082cfe626f002da2d",
+      "slug": "tan-huan-hou-hai-neng-zhan-qi-lai-ma-ri-ben-ips-yan-jiu-dai-lai-xi-wang-02da2d"
+    },
+    {
+      "id": "37cb079dc60680fe960dd924d0333a27",
+      "title": "瘫痪患者站起来还有希望吗？日本iPS脊髓损伤治疗迎来重大突破",
+      "source_url": "https://japanmedai.notion.site/37cb079dc60680fe960dd924d0333a27",
+      "slug": "tan-huan-huan-zhe-zhan-qi-lai-hai-you-xi-wang-ma-ri-ben-ips-ji-sui-sun-s-333a27"
+    },
+    {
+      "id": "37cb079dc60680529590ede21da6f019",
+      "title": "iPS能治疗失明吗？日本研究正在改写部分失明患者的未来",
+      "source_url": "https://japanmedai.notion.site/37cb079dc60680529590ede21da6f019",
+      "slug": "ips-neng-zhi-liao-shi-ming-ma-ri-ben-yan-jiu-zheng-zai-gai-xie-bu-fen-sh-a6f019"
+    },
+    {
+      "id": "37cb079dc60680f68ed1fa2ed84aa8ee",
+      "title": "iPS能治疗视网膜疾病吗？日本为什么最早把它推向临床",
+      "source_url": "https://japanmedai.notion.site/37cb079dc60680f68ed1fa2ed84aa8ee",
+      "slug": "ips-neng-zhi-liao-shi-wang-mo-ji-bing-ma-ri-ben-wei-shen-me-zui-zao-ba-t-4aa8ee"
+    },
+    {
+      "id": "37cb079dc60680f5be48cb32b85ae039",
+      "title": "失明有望彻底治愈？iPS未来真的能“长出新眼睛”吗？",
+      "source_url": "https://japanmedai.notion.site/37cb079dc60680f5be48cb32b85ae039",
+      "slug": "shi-ming-you-wang-che-di-zhi-yu-ips-wei-lai-zhen-de-neng-zhang-chu-xin-y-5ae039"
+    },
+    {
+      "id": "37cb079dc60680aebdfec93802850c63",
+      "title": "失明真的能治好吗？日本iPS眼科研究值得关注",
+      "source_url": "https://japanmedai.notion.site/37cb079dc60680aebdfec93802850c63",
+      "slug": "shi-ming-zhen-de-neng-zhi-hao-ma-ri-ben-ips-yan-ke-yan-jiu-zhi-de-guan-z-850c63"
+    },
+    {
+      "id": "37cb079dc606805da7d3eaf795851c95",
+      "title": "iPS能治疗心力衰竭吗？日本正在挑战“不换心脏也能活”",
+      "source_url": "https://japanmedai.notion.site/37cb079dc606805da7d3eaf795851c95",
+      "slug": "ips-neng-zhi-liao-xin-li-shuai-jie-ma-ri-ben-zheng-zai-tiao-zhan-bu-huan-851c95"
+    },
+    {
+      "id": "37cb079dc60680c3bd0ac2716ea36d15",
+      "title": "心肌坏死无法恢复？iPS干细胞给出新的答案",
+      "source_url": "https://japanmedai.notion.site/37cb079dc60680c3bd0ac2716ea36d15",
+      "slug": "xin-ji-huai-si-wu-fa-hui-fu-ips-gan-xi-bao-gei-chu-xin-de-da-an-a36d15"
+    },
+    {
+      "id": "379b079dc60680179df0c68a9bb9c247",
+      "title": "心肌细胞死了就永远没了——直到日本科学家用iPS造出了\"心脏补丁\"，贴在受损的心脏上",
+      "source_url": "https://japanmedai.notion.site/379b079dc60680179df0c68a9bb9c247",
+      "slug": "xin-ji-xi-bao-si-le-jiu-yong-yuan-mei-le-zhi-dao-ri-ben-ke-xue-jia-yong--b9c247"
+    },
+    {
+      "id": "37cb079dc60680e98375d80e2c37a504",
+      "title": "iPS能治疗糖尿病吗？胰岛再生时代正在靠近",
+      "source_url": "https://japanmedai.notion.site/37cb079dc60680e98375d80e2c37a504",
+      "slug": "ips-neng-zhi-liao-tang-niao-bing-ma-yi-dao-zai-sheng-shi-dai-zheng-zai-k-37a504"
+    },
+    {
+      "id": "37cb079dc60680d99674ea2441ae65e5",
+      "title": "iPS联合免疫治疗：癌症治疗的下一次革命？",
+      "source_url": "https://japanmedai.notion.site/37cb079dc60680d99674ea2441ae65e5",
+      "slug": "ips-lian-he-mian-yi-zhi-liao-ai-zheng-zhi-liao-de-xia-yi-ci-ge-ming-ae65e5"
+    },
+    {
+      "id": "37cb079dc60680689b52c9883c572f57",
+      "title": "iPS能替代免疫治疗吗？答案可能出乎很多人意料",
+      "source_url": "https://japanmedai.notion.site/37cb079dc60680689b52c9883c572f57",
+      "slug": "ips-neng-ti-dai-mian-yi-zhi-liao-ma-da-an-ke-neng-chu-hu-hen-duo-ren-yi--572f57"
+    },
+    {
+      "id": "37cb079dc6068027a10ae75353a66ef3",
+      "title": "iPS能治疗红斑狼疮、类风湿吗？自身免疫疾病迎来新方向",
+      "source_url": "https://japanmedai.notion.site/37cb079dc6068027a10ae75353a66ef3",
+      "slug": "ips-neng-zhi-liao-hong-ban-lang-chuang-lei-feng-shi-ma-zi-shen-mian-yi-j-a66ef3"
+    },
+    {
+      "id": "380b079dc6068083b60ff43ca1fbd8e1",
+      "title": "日本长寿医疗秘诀揭晓：超精密体检+干细胞技术+血液净化，让你活到100岁",
+      "source_url": "https://japanmedai.notion.site/380b079dc6068083b60ff43ca1fbd8e1",
+      "slug": "ri-ben-chang-shou-yi-liao-mi-jue-jie-xiao-chao-jing-mi-ti-jian-gan-xi-ba-fbd8e1"
+    },
+    {
+      "id": "379b079dc6068057861feef98ad99a7e",
+      "title": "献血不够用、血型不匹配、保存期只有5天——日本iPS\"工厂\"正在用细胞技术，重新定义血小板的未来",
+      "source_url": "https://japanmedai.notion.site/379b079dc6068057861feef98ad99a7e",
+      "slug": "xian-xie-bu-gou-yong-xue-xing-bu-pi-pei-bao-cun-qi-zhi-you-5-tian-ri-ben-d99a7e"
+    }
+  ],
+  "checkup": [
+    {
+      "id": "37bb079dc60680248610ed57437af292",
+      "title": "为什么一定要做日本专家二次会诊？这个40多岁患者的亲生经历给出答案",
+      "source_url": "https://japanmedai.notion.site/37bb079dc60680248610ed57437af292",
+      "slug": "wei-shen-me-yi-ding-yao-zuo-ri-ben-zhuan-jia-er-ci-hui-zhen-zhe-ge-40-du-7af292"
+    },
+    {
+      "id": "379b079dc606802cbd67f967401e3aee",
+      "title": "为什么很多癌症家庭，会选择日本二次专家会诊？",
+      "source_url": "https://japanmedai.notion.site/379b079dc606802cbd67f967401e3aee",
+      "slug": "wei-shen-me-hen-duo-ai-zheng-jia-ting-hui-xuan-ze-ri-ben-er-ci-zhuan-jia-1e3aee"
+    },
+    {
+      "id": "380b079dc606802e968ef44054099f61",
+      "title": "为什么日本体检报告要等3到4周？拆解其背后严谨到令人发指的“三审机制”",
+      "source_url": "https://japanmedai.notion.site/380b079dc606802e968ef44054099f61",
+      "slug": "wei-shen-me-ri-ben-ti-jian-bao-gao-yao-deng-3-dao-4-zhou-chai-jie-qi-bei-099f61"
+    },
+    {
+      "id": "37ab079dc60680e89b6ff894e38ac97e",
+      "title": "为什么日本癌症筛查常常能比中国早5–10年发现？不是体质差异，而是40年“制度级早筛”把癌症拦在无症状阶段",
+      "source_url": "https://japanmedai.notion.site/37ab079dc60680e89b6ff894e38ac97e",
+      "slug": "wei-shen-me-ri-ben-ai-zheng-shai-cha-chang-chang-neng-bi-zhong-guo-zao-5-8ac97e"
+    },
+    {
+      "id": "37eb079dc60680e79868de7125d696b1",
+      "title": "为什么有人花钱做日本二次会诊？真正价值远超你的想象",
+      "source_url": "https://japanmedai.notion.site/37eb079dc60680e79868de7125d696b1",
+      "slug": "wei-shen-me-you-ren-hua-qian-zuo-ri-ben-er-ci-hui-zhen-zhen-zheng-jia-zh-d696b1"
+    },
+    {
+      "id": "381b079dc60680f19d14fe577c615af7",
+      "title": "为什么越来越多复发性脑室管膜瘤患者选择赴日二次会诊？",
+      "source_url": "https://japanmedai.notion.site/381b079dc60680f19d14fe577c615af7",
+      "slug": "wei-shen-me-yue-lai-yue-duo-fu-fa-xing-nao-shi-guan-mo-liu-huan-zhe-xuan-615af7"
+    },
+    {
+      "id": "380b079dc606806aa1b2f0da5ff4ab78",
+      "title": "拒绝流水线走过场：为什么海外中产和高净值人群都在疯狂组团去日本做精密体检？",
+      "source_url": "https://japanmedai.notion.site/380b079dc606806aa1b2f0da5ff4ab78",
+      "slug": "ju-jue-liu-shui-xian-zou-guo-chang-wei-shen-me-hai-wai-zhong-chan-he-gao-f4ab78"
+    },
+    {
+      "id": "37eb079dc60680a1a109f4a0c3d4df49",
+      "title": "日本二次专家会诊是什么？癌症患者必须了解的10个关键问题",
+      "source_url": "https://japanmedai.notion.site/37eb079dc60680a1a109f4a0c3d4df49",
+      "slug": "ri-ben-er-ci-zhuan-jia-hui-zhen-shi-shen-me-ai-zheng-huan-zhe-bi-xu-liao-d4df49"
+    },
+    {
+      "id": "37eb079dc60680eebb7ed555f5a3ab39",
+      "title": "日本二次会诊不是治病？很多患者都理解错了",
+      "source_url": "https://japanmedai.notion.site/37eb079dc60680eebb7ed555f5a3ab39",
+      "slug": "ri-ben-er-ci-hui-zhen-bu-shi-zhi-bing-hen-duo-huan-zhe-dou-li-jie-cuo-le-a3ab39"
+    },
+    {
+      "id": "37bb079dc606805e9593d1b3e91fc297",
+      "title": "日本癌症专家二次会诊有多大价值？真实数据：近一半患者方案被改变",
+      "source_url": "https://japanmedai.notion.site/37bb079dc606805e9593d1b3e91fc297",
+      "slug": "ri-ben-ai-zheng-zhuan-jia-er-ci-hui-zhen-you-duo-da-jia-zhi-zhen-shi-shu-1fc297"
+    },
+    {
+      "id": "37eb079dc6068099ac6fea44cdfd1b3c",
+      "title": "出现这5种情况，建议尽快申请日本二次专家会诊",
+      "source_url": "https://japanmedai.notion.site/37eb079dc6068099ac6fea44cdfd1b3c",
+      "slug": "chu-xian-zhe-5-zhong-qing-kuang-jian-yi-jin-kuai-shen-qing-ri-ben-er-ci--fd1b3c"
+    },
+    {
+      "id": "37eb079dc60680bc8c8ff3456bb176e6",
+      "title": "日本二次专家会诊申请全流程公开：其实比你想象的简单",
+      "source_url": "https://japanmedai.notion.site/37eb079dc60680bc8c8ff3456bb176e6",
+      "slug": "ri-ben-er-ci-zhuan-jia-hui-zhen-shen-qing-quan-liu-cheng-gong-kai-qi-shi-b176e6"
+    },
+    {
+      "id": "380b079dc6068001b2c2e0fe1ffa111e",
+      "title": "【奢华体验篇】国际化医疗的最高标准：去日本圣路加国际医院体检与就医是种怎样的顶奢体验？",
+      "source_url": "https://japanmedai.notion.site/380b079dc6068001b2c2e0fe1ffa111e",
+      "slug": "she-hua-ti-yan-pian-guo-ji-hua-yi-liao-de-zui-gao-biao-zhun-qu-ri-ben-sh-fa111e"
+    },
+    {
+      "id": "380b079dc606805f827ce48782da425f",
+      "title": "5毫米的生死线：日本精密体检是如何将“超早期癌症”强行揪出来的？",
+      "source_url": "https://japanmedai.notion.site/380b079dc606805f827ce48782da425f",
+      "slug": "5-hao-mi-de-sheng-si-xian-ri-ben-jing-mi-ti-jian-shi-ru-he-jiang-chao-za-da425f"
+    },
+    {
+      "id": "380b079dc6068088b18fe42d93ec9807",
+      "title": "2026跨境健康资产配置：这五类急需通过日本精密体检锁死健康红线的核心人群",
+      "source_url": "https://japanmedai.notion.site/380b079dc6068088b18fe42d93ec9807",
+      "slug": "2026-kua-jing-jian-kang-zi-chan-pei-zhi-zhe-wu-lei-ji-xu-tong-guo-ri-ben-ec9807"
+    },
+    {
+      "id": "380b079dc606801eb423e97da668c05c",
+      "title": "体检发现肿瘤先别慌！无缝衔接日本大学附属医院“教授级专门医”的闭环救命指南",
+      "source_url": "https://japanmedai.notion.site/380b079dc606801eb423e97da668c05c",
+      "slug": "ti-jian-fa-xian-zhong-liu-xian-bie-huang-wu-feng-xian-jie-ri-ben-da-xue--68c05c"
+    },
+    {
+      "id": "37db079dc6068053a9e9dd824bb7e863",
+      "title": "体检发现脂肪肝怎么办？日本医生的管理思路值得参考",
+      "source_url": "https://japanmedai.notion.site/37db079dc6068053a9e9dd824bb7e863",
+      "slug": "ti-jian-fa-xian-zhi-fang-gan-zen-me-ban-ri-ben-yi-sheng-de-guan-li-si-lu-b7e863"
+    },
+    {
+      "id": "37db079dc606809d95f7fa78fe1dd5d2",
+      "title": "体检正常却总是不舒服？日本医生这样解释“亚健康”！",
+      "source_url": "https://japanmedai.notion.site/37db079dc606809d95f7fa78fe1dd5d2",
+      "slug": "ti-jian-zheng-chang-que-zong-shi-bu-shu-fu-ri-ben-yi-sheng-zhe-yang-jie--1dd5d2"
+    },
+    {
+      "id": "37bb079dc6068050b7eae6b4190dc9bf",
+      "title": "你每年体检，却还是查出晚期？真正的癌症筛查是另一回事",
+      "source_url": "https://japanmedai.notion.site/37bb079dc6068050b7eae6b4190dc9bf",
+      "slug": "ni-mei-nian-ti-jian-que-hai-shi-cha-chu-wan-qi-zhen-zheng-de-ai-zheng-sh-0dc9bf"
+    },
+    {
+      "id": "380b079dc60680e3ac31d0d895e3c0ca",
+      "title": "国际化医疗的最高标准：去日本圣路加国际医院体检与就医是种怎样的奢华体验？",
+      "source_url": "https://japanmedai.notion.site/380b079dc60680e3ac31d0d895e3c0ca",
+      "slug": "guo-ji-hua-yi-liao-de-zui-gao-biao-zhun-qu-ri-ben-sheng-lu-jia-guo-ji-yi-e3c0ca"
+    },
+    {
+      "id": "380b079dc60680568737dfba00100e5a",
+      "title": "差的不只是设备！一文扒光中日精密体检在“筛查颗粒度”上的代际差异",
+      "source_url": "https://japanmedai.notion.site/380b079dc60680568737dfba00100e5a",
+      "slug": "cha-de-bu-zhi-shi-she-bei-yi-wen-ba-guang-zhong-ri-jing-mi-ti-jian-zai-s-100e5a"
+    },
+    {
+      "id": "380b079dc60680999dbee9d3c8ec0197",
+      "title": "性价比之王！日本精密体检为何让欧美医疗望尘莫及？",
+      "source_url": "https://japanmedai.notion.site/380b079dc60680999dbee9d3c8ec0197",
+      "slug": "xing-jia-bi-zhi-wang-ri-ben-jing-mi-ti-jian-wei-he-rang-ou-mei-yi-liao-w-ec0197"
+    },
+    {
+      "id": "380b079dc6068089af9cc5cc5dcedf8c",
+      "title": "拦截无预警心脏猝死：日本心血管精密筛查是如何用“微积分算法”锁死心梗红线的？",
+      "source_url": "https://japanmedai.notion.site/380b079dc6068089af9cc5cc5dcedf8c",
+      "slug": "lan-jie-wu-yu-jing-xin-zang-cu-si-ri-ben-xin-xue-guan-jing-mi-shai-cha-s-cedf8c"
+    },
+    {
+      "id": "380b079dc606805fb19ddbd3620e3577",
+      "title": "日本体检和国内体检差在哪？90%的人忽略了这一点",
+      "source_url": "https://japanmedai.notion.site/380b079dc606805fb19ddbd3620e3577",
+      "slug": "ri-ben-ti-jian-he-guo-nei-ti-jian-cha-zai-na-90-de-ren-hu-lve-le-zhe-yi--0e3577"
+    },
+    {
+      "id": "379b079dc6068043b117e137bc09b619",
+      "title": "日本胃癌长期治疗结果不是运气——是这套坚持了40年、覆盖全国的筛查体系，每年救下10万条命",
+      "source_url": "https://japanmedai.notion.site/379b079dc6068043b117e137bc09b619",
+      "slug": "ri-ben-wei-ai-chang-qi-zhi-liao-jie-guo-bu-shi-yun-qi-shi-zhe-tao-jian-c-09b619"
+    },
+    {
+      "id": "380b079dc60680e58e40e3a216c31721",
+      "title": "日本高端体检：东京圣路加国际医院的卓越优势与独特特色",
+      "source_url": "https://japanmedai.notion.site/380b079dc60680e58e40e3a216c31721",
+      "slug": "ri-ben-gao-duan-ti-jian-dong-jing-sheng-lu-jia-guo-ji-yi-yuan-de-zhuo-yu-c31721"
+    },
+    {
+      "id": "389b079dc6068005ac1cf198d3f80cc2",
+      "title": "欧盟EMA正式批准：阿茨海默症早期血液筛查进入临床，准确率高达90%",
+      "source_url": "https://japanmedai.notion.site/389b079dc6068005ac1cf198d3f80cc2",
+      "slug": "ou-meng-ema-zheng-shi-pi-zhun-a-ci-hai-mo-zheng-zao-qi-xue-ye-shai-cha-j-f80cc2"
+    },
+    {
+      "id": "37bb079dc60680fdbd77ffc7c7114280",
+      "title": "肺结节开刀？真实记录一名国内患者的经历，中日精密体检的惊人差异",
+      "source_url": "https://japanmedai.notion.site/37bb079dc60680fdbd77ffc7c7114280",
+      "slug": "fei-jie-jie-kai-dao-zhen-shi-ji-lu-yi-ming-guo-nei-huan-zhe-de-jing-li-z-114280"
+    },
+    {
+      "id": "37bb079dc606803ba3d0e98e12481979",
+      "title": "少走弯路的关键一步：日本癌症专家为何坚持二次会诊",
+      "source_url": "https://japanmedai.notion.site/37bb079dc606803ba3d0e98e12481979",
+      "slug": "shao-zou-wan-lu-de-guan-jian-yi-bu-ri-ben-ai-zheng-zhuan-jia-wei-he-jian-481979"
+    },
+    {
+      "id": "3f6b079dc6068124a2ffebae7ed2698f",
+      "title": "哪些复发头颈癌患者值得做日本二次专家意见？",
+      "source_url": "https://japanmedai.notion.site/3f6b079dc6068124a2ffebae7ed2698f",
+      "slug": "na-xie-fu-fa-tou-jing-ai-huan-zhe-zhi-de-zuo-ri-ben-er-ci-zhuan-jia-yi-j-d2698f"
+    }
+  ],
+  "medicines": [
+    {
+      "id": "37ab079dc606808aa4eaf7d42045c557",
+      "title": "“癌王”晚期终于迎来新希望？澳洲批准OncoSil创新疗法，但真正影响治疗选择的或许是AI",
+      "source_url": "https://japanmedai.notion.site/37ab079dc606808aa4eaf7d42045c557",
+      "slug": "ai-wang-wan-qi-zhong-yu-ying-lai-xin-xi-wang-ao-zhou-pi-zhun-oncosil-chu-45c557"
+    },
+    {
+      "id": "380b079dc6068084ac98f29636621add",
+      "title": "2026免疫学前沿：日本CAR-T活体药物的全面合规升级与多靶点突破",
+      "source_url": "https://japanmedai.notion.site/380b079dc6068084ac98f29636621add",
+      "slug": "2026-mian-yi-xue-qian-yan-ri-ben-car-t-huo-ti-yao-wu-de-quan-mian-he-gui-621add"
+    },
+    {
+      "id": "380b079dc606803e8a8dd50764ebb724",
+      "title": "2026年3月日本抗癌新药批准上市",
+      "source_url": "https://japanmedai.notion.site/380b079dc606803e8a8dd50764ebb724",
+      "slug": "2026-nian-3-yue-ri-ben-kang-ai-xin-yao-pi-zhun-shang-shi-ebb724"
+    },
+    {
+      "id": "380b079dc60680babf1fcd7c8d84d892",
+      "title": "Lazertinib日本获批！非小细胞肺癌治疗迎来新革命",
+      "source_url": "https://japanmedai.notion.site/380b079dc60680babf1fcd7c8d84d892",
+      "slug": "lazertinib-ri-ben-huo-pi-fei-xiao-xi-bao-fei-ai-zhi-liao-ying-lai-xin-ge-84d892"
+    },
+    {
+      "id": "37ab079dc6068074bc4ee7857c3687aa",
+      "title": "不是 CAR-T，日本正在押注的免疫治疗新路线曝光",
+      "source_url": "https://japanmedai.notion.site/37ab079dc6068074bc4ee7857c3687aa",
+      "slug": "bu-shi-car-t-ri-ben-zheng-zai-ya-zhu-de-mian-yi-zhi-liao-xin-lu-xian-bao-3687aa"
+    },
+    {
+      "id": "380b079dc606805fa973f846aaa3b542",
+      "title": "世界级创新药背后的日本力量：从抗癌到罕见病的全面突破",
+      "source_url": "https://japanmedai.notion.site/380b079dc606805fa973f846aaa3b542",
+      "slug": "shi-jie-ji-chuang-xin-yao-bei-hou-de-ri-ben-li-liang-cong-kang-ai-dao-ha-a3b542"
+    },
+    {
+      "id": "37ab079dc60680b8ba85fdf08e271ac5",
+      "title": "从“无药可治”到“精准靶向”，三阴性乳腺癌终于迎来转机！",
+      "source_url": "https://japanmedai.notion.site/37ab079dc60680b8ba85fdf08e271ac5",
+      "slug": "cong-wu-yao-ke-zhi-dao-jing-zhun-ba-xiang-san-yin-xing-ru-xian-ai-zhong--271ac5"
+    },
+    {
+      "id": "384b079dc60680b48c75c707cfba7d7a",
+      "title": "儿童脑室管膜瘤有免疫治疗方案吗？美国 CAR-T 治脑瘤到底进展到了哪一步？",
+      "source_url": "https://japanmedai.notion.site/384b079dc60680b48c75c707cfba7d7a",
+      "slug": "er-tong-nao-shi-guan-mo-liu-you-mian-yi-zhi-liao-fang-an-ma-mei-guo-car--ba7d7a"
+    },
+    {
+      "id": "37eb079dc6068010b9a6df030637ccdd",
+      "title": "全球肺癌治疗重点国家有哪些？日本为何长期位居第一梯队",
+      "source_url": "https://japanmedai.notion.site/37eb079dc6068010b9a6df030637ccdd",
+      "slug": "quan-qiu-fei-ai-zhi-liao-zhong-dian-guo-jia-you-na-xie-ri-ben-wei-he-cha-37ccdd"
+    },
+    {
+      "id": "37ab079dc60680df8adfe1eb82a76220",
+      "title": "全球首创！华人团队冲破罕见病壁垒，肯尼迪病迎来首款靶向药",
+      "source_url": "https://japanmedai.notion.site/37ab079dc60680df8adfe1eb82a76220",
+      "slug": "quan-qiu-shou-chuang-hua-ren-tuan-dui-chong-po-han-jian-bing-bi-lei-ken--a76220"
+    },
+    {
+      "id": "384b079dc606802ca627d6fc86019f14",
+      "title": "全球首款！FDA批准全新 siRNA 靶向药——家族性乳糜微粒血综合症终于有救了！",
+      "source_url": "https://japanmedai.notion.site/384b079dc606802ca627d6fc86019f14",
+      "slug": "quan-qiu-shou-kuan-fda-pi-zhun-quan-xin-sirna-ba-xiang-yao-jia-zu-xing-r-019f14"
+    },
+    {
+      "id": "384b079dc606808a9e4bc341ba2e6547",
+      "title": "化疗对复发性脑室管膜瘤作用大吗？为什么 90% 的病友最后都放弃了化疗？",
+      "source_url": "https://japanmedai.notion.site/384b079dc606808a9e4bc341ba2e6547",
+      "slug": "hua-liao-dui-fu-fa-xing-nao-shi-guan-mo-liu-zuo-yong-da-ma-wei-shen-me-9-2e6547"
+    },
+    {
+      "id": "3f3b079dc606810ebd34ca80dea7345f",
+      "title": "医生说不能再放疗了，复发头颈癌真的没有局部治疗机会了吗？",
+      "source_url": "https://japanmedai.notion.site/3f3b079dc606810ebd34ca80dea7345f",
+      "slug": "yi-sheng-shuo-bu-neng-zai-fang-liao-le-fu-fa-tou-jing-ai-zhen-de-mei-you-a7345f"
+    },
+    {
+      "id": "384b079dc60680d2812cede6f9c27afa",
+      "title": "吃靶向药能治好脑室管膜瘤吗？一网打尽目前全球在研的靶向靶点！",
+      "source_url": "https://japanmedai.notion.site/384b079dc60680d2812cede6f9c27afa",
+      "slug": "chi-ba-xiang-yao-neng-zhi-hao-nao-shi-guan-mo-liu-ma-yi-wang-da-jin-mu-q-c27afa"
+    },
+    {
+      "id": "3ebb079dc6068186a131ec458de7c02f",
+      "title": "基因检测查出突变，为什么还不能用靶向药？日本第二意见看这三关",
+      "source_url": "https://japanmedai.notion.site/3ebb079dc6068186a131ec458de7c02f",
+      "slug": "ji-yin-jian-ce-cha-chu-tu-bian-wei-shen-me-hai-bu-neng-yong-ba-xiang-yao-e7c02f"
+    },
+    {
+      "id": "384b079dc60680928024f55fc8315348",
+      "title": "对于无法通过手术切除的局部癌症，有哪些治疗选择？",
+      "source_url": "https://japanmedai.notion.site/384b079dc60680928024f55fc8315348",
+      "slug": "dui-yu-wu-fa-tong-guo-shou-shu-qie-chu-de-ju-bu-ai-zheng-you-na-xie-zhi--315348"
+    },
+    {
+      "id": "387b079dc606801ebb43e72c1d4e4fc9",
+      "title": "打破儿童颅内肿瘤放化疗噩梦！口服靶向新药 Ojemda（托沃拉非尼）获批，精准狙击 BRAF 突变低级别胶质瘤",
+      "source_url": "https://japanmedai.notion.site/387b079dc606801ebb43e72c1d4e4fc9",
+      "slug": "da-po-er-tong-lu-nei-zhong-liu-fang-hua-liao-e-meng-kou-fu-ba-xiang-xin--4e4fc9"
+    },
+    {
+      "id": "380b079dc606803ebf8ac4704d9543eb",
+      "title": "抗癌不是拼命，是选对药！日本实用癌种用药指南（实战版）",
+      "source_url": "https://japanmedai.notion.site/380b079dc606803ebf8ac4704d9543eb",
+      "slug": "kang-ai-bu-shi-pin-ming-shi-xuan-dui-yao-ri-ben-shi-yong-ai-zhong-yong-y-9543eb"
+    },
+    {
+      "id": "387b079dc606809aafbcc8ca4ecbe428",
+      "title": "攻克极罕见恶性血癌！艾伯维同类首创靶向 CD123 ADC 新药 Decnupaz 获加速批准上市",
+      "source_url": "https://japanmedai.notion.site/387b079dc606809aafbcc8ca4ecbe428",
+      "slug": "gong-ke-ji-han-jian-e-xing-xue-ai-ai-bo-wei-tong-lei-shou-chuang-ba-xian-cbe428"
+    },
+    {
+      "id": "380b079dc606808ebd31dc5351e46b60",
+      "title": "日本原研抗癌药仑伐替尼：为什么成为晚期甲状腺癌的重要选择？",
+      "source_url": "https://japanmedai.notion.site/380b079dc606808ebd31dc5351e46b60",
+      "slug": "ri-ben-yuan-yan-kang-ai-yao-lun-fa-ti-ni-wei-shen-me-cheng-wei-wan-qi-ji-e46b60"
+    },
+    {
+      "id": "380b079dc60680149fcdc882652fe8bc",
+      "title": "日本大鹏制药小分子原研药——FGFR2融合基因阳性胆囊癌新药上市",
+      "source_url": "https://japanmedai.notion.site/380b079dc60680149fcdc882652fe8bc",
+      "slug": "ri-ben-da-peng-zhi-yao-xiao-fen-zi-yuan-yan-yao-fgfr2-rong-he-ji-yin-yan-2fe8bc"
+    },
+    {
+      "id": "380b079dc60680ebb137e11802242fa1",
+      "title": "日本小野制药原研药——Opdivo：癌症免疫治疗的里程碑",
+      "source_url": "https://japanmedai.notion.site/380b079dc60680ebb137e11802242fa1",
+      "slug": "ri-ben-xiao-ye-zhi-yao-yuan-yan-yao-opdivo-ai-zheng-mian-yi-zhi-liao-de--242fa1"
+    },
+    {
+      "id": "37ab079dc606802091cdd14d049a549c",
+      "title": "日本远程会诊打开癌症治疗新通道",
+      "source_url": "https://japanmedai.notion.site/37ab079dc606802091cdd14d049a549c",
+      "slug": "ri-ben-yuan-cheng-hui-zhen-da-kai-ai-zheng-zhi-liao-xin-tong-dao-9a549c"
+    },
+    {
+      "id": "37fb079dc606808ab9e2c8e3b07d618e",
+      "title": "构筑严谨的生命通道：日本前沿肿瘤治疗技术与规范化医疗译介",
+      "source_url": "https://japanmedai.notion.site/37fb079dc606808ab9e2c8e3b07d618e",
+      "slug": "gou-zhu-yan-jin-de-sheng-ming-tong-dao-ri-ben-qian-yan-zhong-liu-zhi-lia-7d618e"
+    },
+    {
+      "id": "37db079dc60680f8b8aed5218956efb6",
+      "title": "减肥药到底该不该用？日本医生给出了这样的答案",
+      "source_url": "https://japanmedai.notion.site/37db079dc60680f8b8aed5218956efb6",
+      "slug": "jian-fei-yao-dao-di-gai-bu-gai-yong-ri-ben-yi-sheng-gei-chu-le-zhe-yang--56efb6"
+    },
+    {
+      "id": "387b079dc6068083bcc1e395d2fb9602",
+      "title": "打破日本罕见病僵局！首款长链脂肪酸代谢紊乱（LC-FAOD）新药三庚酸甘油酯正式获批",
+      "source_url": "https://japanmedai.notion.site/387b079dc6068083bcc1e395d2fb9602",
+      "slug": "da-po-ri-ben-han-jian-bing-jiang-ju-shou-kuan-zhang-lian-zhi-fang-suan-d-fb9602"
+    },
+    {
+      "id": "380b079dc60680188b25f5cc2421cfb5",
+      "title": "日本糖尿病治疗真相：DPP-4使用率全球最高，中国医生却很少首选？越猛降糖越危险！",
+      "source_url": "https://japanmedai.notion.site/380b079dc60680188b25f5cc2421cfb5",
+      "slug": "ri-ben-tang-niao-bing-zhi-liao-zhen-xiang-dpp-4-shi-yong-lv-quan-qiu-zui-21cfb5"
+    },
+    {
+      "id": "37ab079dc6068077bd37cc36bbf486cb",
+      "title": "FDA 首度批准：在家“脑刺激”治抑郁，不用药也能见效！",
+      "source_url": "https://japanmedai.notion.site/37ab079dc6068077bd37cc36bbf486cb",
+      "slug": "fda-shou-du-pi-zhun-zai-jia-nao-ci-ji-zhi-yi-yu-bu-yong-yao-ye-neng-jian-f486cb"
+    },
+    {
+      "id": "380b079dc60680ebab62cae46d29696c",
+      "title": "Selumetinib日本获批！神经纤维瘤病1型治疗迎来新曙光",
+      "source_url": "https://japanmedai.notion.site/380b079dc60680ebab62cae46d29696c",
+      "slug": "selumetinib-ri-ben-huo-pi-shen-jing-xian-wei-liu-bing-1-xing-zhi-liao-yi-29696c"
+    },
+    {
+      "id": "379b079dc60680bfb126c331245e22ad",
+      "title": "为什么越来越多中国家庭选择赴日治疗ADHD？",
+      "source_url": "https://japanmedai.notion.site/379b079dc60680bfb126c331245e22ad",
+      "slug": "wei-shen-me-yue-lai-yue-duo-zhong-guo-jia-ting-xuan-ze-fu-ri-zhi-liao-ad-5e22ad"
+    }
+  ],
+  "hospitals": [
+    {
+      "id": "380b079dc606807daf45dfcb7ee2f182",
+      "title": "【深层起底】日本私立医学界的第一底牌：天皇家族与顶级名流为何将健康托付给庆应医院？",
+      "source_url": "https://japanmedai.notion.site/380b079dc606807daf45dfcb7ee2f182",
+      "slug": "shen-ceng-qi-di-ri-ben-si-li-yi-xue-jie-de-di-yi-di-pai-tian-huang-jia-z-e2f182"
+    },
+    {
+      "id": "380b079dc60680c9ad16e9a0c8bfc598",
+      "title": "亚洲排名第一的医院——东京大学附属医院",
+      "source_url": "https://japanmedai.notion.site/380b079dc60680c9ad16e9a0c8bfc598",
+      "slug": "ya-zhou-pai-ming-di-yi-de-yi-yuan-dong-jing-da-xue-fu-shu-yi-yuan-bfc598"
+    },
+    {
+      "id": "380b079dc606801989d3d0eff74e0b09",
+      "title": "全球癌症患者的绝境灯塔：一文读懂日本国立癌症研究中心的硬核控癌武器库",
+      "source_url": "https://japanmedai.notion.site/380b079dc606801989d3d0eff74e0b09",
+      "slug": "quan-qiu-ai-zheng-huan-zhe-de-jue-jing-deng-ta-yi-wen-du-dong-ri-ben-guo-4e0b09"
+    },
+    {
+      "id": "380b079dc60680c2bc85c5a165e44dad",
+      "title": "器官移植与极限外科的优势学科：起底大阪大学附属医院的硬核王牌学科",
+      "source_url": "https://japanmedai.notion.site/380b079dc60680c2bc85c5a165e44dad",
+      "slug": "qi-guan-yi-zhi-yu-ji-xian-wai-ke-de-you-shi-xue-ke-qi-di-da-ban-da-xue-f-e44dad"
+    },
+    {
+      "id": "380b079dc6068073b514e0b9a7214311",
+      "title": "器官移植与极限外科的无敵王者：起底大阪大学附属医院的硬核王牌学科",
+      "source_url": "https://japanmedai.notion.site/380b079dc6068073b514e0b9a7214311",
+      "slug": "qi-guan-yi-zhi-yu-ji-xian-wai-ke-de-wu-di-wang-zhe-qi-di-da-ban-da-xue-f-214311"
+    },
+    {
+      "id": "380b079dc606807ab258f165bbba2c15",
+      "title": "庆应义塾大学医院：日本医疗的卓越典范",
+      "source_url": "https://japanmedai.notion.site/380b079dc606807ab258f165bbba2c15",
+      "slug": "qing-ying-yi-shu-da-xue-yi-yuan-ri-ben-yi-liao-de-zhuo-yue-dian-fan-ba2c15"
+    },
+    {
+      "id": "380b079dc606800789fee444421b166c",
+      "title": "揭秘日本癌研有明医院：为何成为全球癌症患者的希望之光？",
+      "source_url": "https://japanmedai.notion.site/380b079dc606800789fee444421b166c",
+      "slug": "jie-mi-ri-ben-ai-yan-you-ming-yi-yuan-wei-he-cheng-wei-quan-qiu-ai-zheng-1b166c"
+    },
+    {
+      "id": "380b079dc60680b88d70e70201f01a25",
+      "title": "攻克重症的终极底牌：为什么海外高净值人群跨境医疗首选日本大学附属医院？",
+      "source_url": "https://japanmedai.notion.site/380b079dc60680b88d70e70201f01a25",
+      "slug": "gong-ke-zhong-zheng-de-zhong-ji-di-pai-wei-shen-me-hai-wai-gao-jing-zhi--f01a25"
+    },
+    {
+      "id": "380b079dc60680d29d37f3062fe9bd39",
+      "title": "日本兵库医科大学附属医院：癌症、心脏、脑神经的海外医疗新选择",
+      "source_url": "https://japanmedai.notion.site/380b079dc60680d29d37f3062fe9bd39",
+      "slug": "ri-ben-bing-ku-yi-ke-da-xue-fu-shu-yi-yuan-ai-zheng-xin-zang-nao-shen-ji-e9bd39"
+    },
+    {
+      "id": "380b079dc60680f18f00e5643483c64b",
+      "title": "日本私立医学界的第一底牌：天皇家族与顶级名流为何将健康托付给庆应医院？",
+      "source_url": "https://japanmedai.notion.site/380b079dc60680f18f00e5643483c64b",
+      "slug": "ri-ben-si-li-yi-xue-jie-de-di-yi-di-pai-tian-huang-jia-zu-yu-ding-ji-min-83c64b"
+    },
+    {
+      "id": "380b079dc606800487c6fced4bd7c8ee",
+      "title": "日本第一，全球16强：東京大学附属医院的医疗奇迹",
+      "source_url": "https://japanmedai.notion.site/380b079dc606800487c6fced4bd7c8ee",
+      "slug": "ri-ben-di-yi-quan-qiu-16-qiang-dong-jing-da-xue-fu-shu-yi-yuan-de-yi-lia-d7c8ee"
+    },
+    {
+      "id": "380b079dc6068004b1d5fdc4eaa0e3b7",
+      "title": "癌研究会有明医院——日本乃至全球癌症治疗领域的标杆",
+      "source_url": "https://japanmedai.notion.site/380b079dc6068004b1d5fdc4eaa0e3b7",
+      "slug": "ai-yan-jiu-hui-you-ming-yi-yuan-ri-ben-nai-zhi-quan-qiu-ai-zheng-zhi-lia-a0e3b7"
+    },
+    {
+      "id": "380b079dc60680b6a4f5f3753ab2fc94",
+      "title": "终极救命指南】全球癌症患者的绝境灯塔：一文读懂日本国立癌症研究中心的硬核控癌武器库",
+      "source_url": "https://japanmedai.notion.site/380b079dc60680b6a4f5f3753ab2fc94",
+      "slug": "zhong-ji-jiu-ming-zhi-nan-quan-qiu-ai-zheng-huan-zhe-de-jue-jing-deng-ta-b2fc94"
+    },
+    {
+      "id": "3f6b079dc6068124a2ffebae7ed2698f",
+      "title": "哪些复发头颈癌患者值得做日本二次专家意见？",
+      "source_url": "https://japanmedai.notion.site/3f6b079dc6068124a2ffebae7ed2698f",
+      "slug": "na-xie-fu-fa-tou-jing-ai-huan-zhe-zhi-de-zuo-ri-ben-er-ci-zhuan-jia-yi-j-d2698f"
+    },
+    {
+      "id": "37eb079dc60680dea213f27d42c654a0",
+      "title": "CT和病理报告，日本专家会重新审核吗？答案很重要",
+      "source_url": "https://japanmedai.notion.site/37eb079dc60680dea213f27d42c654a0",
+      "slug": "ct-he-bing-li-bao-gao-ri-ben-zhuan-jia-hui-chong-xin-shen-he-ma-da-an-he-c654a0"
+    },
+    {
+      "id": "37eb079dc60680d8a0e7d913bea7796c",
+      "title": "PET-CT价值有多大？日本专家最看重哪些信息？",
+      "source_url": "https://japanmedai.notion.site/37eb079dc60680d8a0e7d913bea7796c",
+      "slug": "pet-ct-jia-zhi-you-duo-da-ri-ben-zhuan-jia-zui-kan-zhong-na-xie-xin-xi-a7796c"
+    },
+    {
+      "id": "37eb079dc60680a89b5ae74985b56863",
+      "title": "一个医生看病VS一群专家看病，差距到底有多大？",
+      "source_url": "https://japanmedai.notion.site/37eb079dc60680a89b5ae74985b56863",
+      "slug": "yi-ge-yi-sheng-kan-bing-vs-yi-qun-zhuan-jia-kan-bing-cha-ju-dao-di-you-d-b56863"
+    },
+    {
+      "id": "37bb079dc60680aba07bdc4a4a685130",
+      "title": "一次远程会诊，让他免去化疗！日本专家精准方案救回肺癌患者",
+      "source_url": "https://japanmedai.notion.site/37bb079dc60680aba07bdc4a4a685130",
+      "slug": "yi-ci-yuan-cheng-hui-zhen-rang-ta-mian-qu-hua-liao-ri-ben-zhuan-jia-jing-685130"
+    },
+    {
+      "id": "37eb079dc606804680eafe22d808d4b3",
+      "title": "不是最有名的专家最好，而是最对症的专家最好",
+      "source_url": "https://japanmedai.notion.site/37eb079dc606804680eafe22d808d4b3",
+      "slug": "bu-shi-zui-you-ming-de-zhuan-jia-zui-hao-er-shi-zui-dui-zheng-de-zhuan-j-08d4b3"
+    },
+    {
+      "id": "37eb079dc606803f9a6fcb1df229fc37",
+      "title": "两位专家说法不同，到底该听谁的？",
+      "source_url": "https://japanmedai.notion.site/37eb079dc606803f9a6fcb1df229fc37",
+      "slug": "liang-wei-zhuan-jia-shuo-fa-bu-tong-dao-di-gai-ting-shei-de-29fc37"
+    },
+    {
+      "id": "37bb079dc6068085b656eb950c6c5aaa",
+      "title": "中国癌症误诊率高？日本医生这样看",
+      "source_url": "https://japanmedai.notion.site/37bb079dc6068085b656eb950c6c5aaa",
+      "slug": "zhong-guo-ai-zheng-wu-zhen-lv-gao-ri-ben-yi-sheng-zhe-yang-kan-6c5aaa"
+    },
+    {
+      "id": "37ab079dc60680a38531e522efa3d232",
+      "title": "为什么中国癌症误诊/漏诊更常见，而日本更容易早期发现？真相不在“医生更聪明”，而在制度设计",
+      "source_url": "https://japanmedai.notion.site/37ab079dc60680a38531e522efa3d232",
+      "slug": "wei-shen-me-zhong-guo-ai-zheng-wu-zhen-lou-zhen-geng-chang-jian-er-ri-be-a3d232"
+    },
+    {
+      "id": "3f9b079dc6068125a2a2d46adacd4f36",
+      "title": "为什么复发头颈癌做第二意见时，日本专家通常需要看原来的放疗计划？",
+      "source_url": "https://japanmedai.notion.site/3f9b079dc6068125a2a2d46adacd4f36",
+      "slug": "wei-shen-me-fu-fa-tou-jing-ai-zuo-di-er-yi-jian-shi-ri-ben-zhuan-jia-ton-cd4f36"
+    },
+    {
+      "id": "37eb079dc60680e5a6adce7980317a2a",
+      "title": "乳腺癌治疗方案这么多，日本专家会诊还有必要吗？",
+      "source_url": "https://japanmedai.notion.site/37eb079dc60680e5a6adce7980317a2a",
+      "slug": "ru-xian-ai-zhi-liao-fang-an-zhe-me-duo-ri-ben-zhuan-jia-hui-zhen-hai-you-317a2a"
+    },
+    {
+      "id": "37eb079dc60680708a77f5a8b273afc6",
+      "title": "乳腺癌治疗迎来革命，日本专家重点推荐哪些方向？",
+      "source_url": "https://japanmedai.notion.site/37eb079dc60680708a77f5a8b273afc6",
+      "slug": "ru-xian-ai-zhi-liao-ying-lai-ge-ming-ri-ben-zhuan-jia-zhong-dian-tui-jia-73afc6"
+    },
+    {
+      "id": "37eb079dc60680cf8f98e9527f49bce5",
+      "title": "免疫治疗到底是奇迹还是神话？日本专家给出客观答案",
+      "source_url": "https://japanmedai.notion.site/37eb079dc60680cf8f98e9527f49bce5",
+      "slug": "mian-yi-zhi-liao-dao-di-shi-qi-ji-hai-shi-shen-hua-ri-ben-zhuan-jia-gei--49bce5"
+    },
+    {
+      "id": "389b079dc6068041b8dce23c689eb6fb",
+      "title": "医学专家夏季警示：写字楼职业人群泌尿系结石激增，这3个习惯是元凶",
+      "source_url": "https://japanmedai.notion.site/389b079dc6068041b8dce23c689eb6fb",
+      "slug": "yi-xue-zhuan-jia-xia-ji-jing-shi-xie-zi-lou-zhi-ye-ren-qun-mi-niao-xi-ji-9eb6fb"
+    },
+    {
+      "id": "37eb079dc60680669e84c165888da25c",
+      "title": "医生说不能开刀，日本专家会不会有不同看法？",
+      "source_url": "https://japanmedai.notion.site/37eb079dc60680669e84c165888da25c",
+      "slug": "yi-sheng-shuo-bu-neng-kai-dao-ri-ben-zhuan-jia-hui-bu-hui-you-bu-tong-ka-8da25c"
+    },
+    {
+      "id": "37eb079dc606803d9df6eda7341360ba",
+      "title": "同样是专家会诊，日本和国内到底差在哪？很多患者看完才明白",
+      "source_url": "https://japanmedai.notion.site/37eb079dc606803d9df6eda7341360ba",
+      "slug": "tong-yang-shi-zhuan-jia-hui-zhen-ri-ben-he-guo-nei-dao-di-cha-zai-na-hen-1360ba"
+    },
+    {
+      "id": "37eb079dc60680038260e69c308baefa",
+      "title": "同样是日本专家，为何有人收费几千，有人收费上万？",
+      "source_url": "https://japanmedai.notion.site/37eb079dc60680038260e69c308baefa",
+      "slug": "tong-yang-shi-ri-ben-zhuan-jia-wei-he-you-ren-shou-fei-ji-qian-you-ren-s-8baefa"
+    }
+  ],
+  "kampo": [
+    {
+      "id": "379b079dc60680e78c81ecc43e01c325",
+      "title": "日本汉方的优势，到底强在哪里？——从“成分指纹图谱”到“临床双盲试验”，一文讲清楚",
+      "source_url": "https://japanmedai.notion.site/379b079dc60680e78c81ecc43e01c325",
+      "slug": "ri-ben-han-fang-de-you-shi-dao-di-qiang-zai-na-li-cong-cheng-fen-zhi-wen-01c325"
+    },
+    {
+      "id": "379b079dc60680129ea8ceca2ab2a24c",
+      "title": "日本漢方和中国中成药，到底差在哪里？——一位在中日两国都看过病的患者，说了一句让人深思的话",
+      "source_url": "https://japanmedai.notion.site/379b079dc60680129ea8ceca2ab2a24c",
+      "slug": "ri-ben-han-fang-he-zhong-guo-zhong-cheng-yao-dao-di-cha-zai-na-li-yi-wei-b2a24c"
+    },
+    {
+      "id": "379b079dc60680cc8ebeef0662b2e75d",
+      "title": "从感冒到癌症，从失眠到不孕——日本漢方的148个医保处方覆盖了多少种病？答案超出你的想象",
+      "source_url": "https://japanmedai.notion.site/379b079dc60680cc8ebeef0662b2e75d",
+      "slug": "cong-gan-mao-dao-ai-zheng-cong-shi-mian-dao-bu-yun-ri-ben-han-fang-de-14-b2e75d"
+    },
+    {
+      "id": "379b079dc6068041a43ef337bdec4511",
+      "title": "中药也能做双盲随机试验？日本回答：不只能做，148个处方全部做了——这才是漢方进入医保的真正理由",
+      "source_url": "https://japanmedai.notion.site/379b079dc6068041a43ef337bdec4511",
+      "slug": "zhong-yao-ye-neng-zuo-shuang-mang-sui-ji-shi-yan-ri-ben-hui-da-bu-zhi-ne-ec4511"
+    },
+    {
+      "id": "379b079dc60680ff8ebec8e2f5bb4858",
+      "title": "\"疏肝理气\"不是玄学——日本科学家把桂枝茯苓丸的分子机理写进了Nature子刊，这才是真正的中药现代化",
+      "source_url": "https://japanmedai.notion.site/379b079dc60680ff8ebec8e2f5bb4858",
+      "slug": "shu-gan-li-qi-bu-shi-xuan-xue-ri-ben-ke-xue-jia-ba-gui-zhi-fu-ling-wan-d-bb4858"
+    },
+    {
+      "id": "382b079dc60680bf8d9ed3a868bf7eeb",
+      "title": "2026最新版：日本处方级汉方148方主治疾病速查表（收藏必备）",
+      "source_url": "https://japanmedai.notion.site/382b079dc60680bf8d9ed3a868bf7eeb",
+      "slug": "2026-zui-xin-ban-ri-ben-chu-fang-ji-han-fang-148-fang-zhu-zhi-ji-bing-su-bf7eeb"
+    },
+    {
+      "id": "37db079dc60680f99bcde01ca3a40220",
+      "title": "同样源自中医，日本汉方为何能进入医院和医保？3分钟看懂汉方的前世今生",
+      "source_url": "https://japanmedai.notion.site/37db079dc60680f99bcde01ca3a40220",
+      "slug": "tong-yang-yuan-zi-zhong-yi-ri-ben-han-fang-wei-he-neng-jin-ru-yi-yuan-he-a40220"
+    },
+    {
+      "id": "379b079dc60680f9a087d3fb5640fbfb",
+      "title": "在日本，中药是医生写在处方单上的正规治疗——148个漢方处方纳入医保，这在全球具有代表性",
+      "source_url": "https://japanmedai.notion.site/379b079dc60680f9a087d3fb5640fbfb",
+      "slug": "zai-ri-ben-zhong-yao-shi-yi-sheng-xie-zai-chu-fang-dan-shang-de-zheng-gu-40fbfb"
+    },
+    {
+      "id": "382b079dc60680efb448cab12e7e78b0",
+      "title": "日本汉方148方与中国中成药对照表（高频版）",
+      "source_url": "https://japanmedai.notion.site/382b079dc60680efb448cab12e7e78b0",
+      "slug": "ri-ben-han-fang-148-fang-yu-zhong-guo-zhong-cheng-yao-dui-zhao-biao-gao--7e78b0"
+    },
+    {
+      "id": "37fb079dc6068064a796c5a93b6a5416",
+      "title": "日本汉方为什么在欧美高认知华人圈越来越“被认可”？关键不是玄学，而是“标准化+循证+可追溯”的现代药物体系（适合谁、怎么选、风险禁忌）",
+      "source_url": "https://japanmedai.notion.site/37fb079dc6068064a796c5a93b6a5416",
+      "slug": "ri-ben-han-fang-wei-shen-me-zai-ou-mei-gao-ren-zhi-hua-ren-quan-yue-lai--6a5416"
+    },
+    {
+      "id": "37db079dc6068065b411c5b00655e7c9",
+      "title": "汉方不是玄学！日本用数十年研究证明了这些疗效",
+      "source_url": "https://japanmedai.notion.site/37db079dc6068065b411c5b00655e7c9",
+      "slug": "han-fang-bu-shi-xuan-xue-ri-ben-yong-shu-shi-nian-yan-jiu-zheng-ming-lia-55e7c9"
+    },
+    {
+      "id": "379b079dc606809ab928f10c29d3e171",
+      "title": "腰酸、夜尿多、总觉得累——中医说这是\"肾虚\"，日本汉方已有1800年的处方，现在纳入医保了",
+      "source_url": "https://japanmedai.notion.site/379b079dc606809ab928f10c29d3e171",
+      "slug": "yao-suan-ye-niao-duo-zong-jue-de-lei-zhong-yi-shuo-zhe-shi-shen-xu-ri-be-d3e171"
+    },
+    {
+      "id": "37db079dc6068014b021ebd7412650a0",
+      "title": "连日本医保都买单！汉方药凭什么获得国家认可？",
+      "source_url": "https://japanmedai.notion.site/37db079dc6068014b021ebd7412650a0",
+      "slug": "lian-ri-ben-yi-bao-dou-mai-dan-han-fang-yao-ping-shen-me-huo-de-guo-jia--2650a0"
+    },
+    {
+      "id": "380b079dc606802487beee3253bdbb9d",
+      "title": "2026独家收藏：148款日本处方级汉方全名录！为什么去日本买药一定要认准“合规通道”？",
+      "source_url": "https://japanmedai.notion.site/380b079dc606802487beee3253bdbb9d",
+      "slug": "2026-du-jia-shou-cang-148-kuan-ri-ben-chu-fang-ji-han-fang-quan-ming-lu--bdbb9d"
+    },
+    {
+      "id": "382b079dc606802da656d4f2a9df5a13",
+      "title": "2026独家收藏：日本医生最常开的50种汉方名录！看看有没有你的“万能方”？",
+      "source_url": "https://japanmedai.notion.site/382b079dc606802da656d4f2a9df5a13",
+      "slug": "2026-du-jia-shou-cang-ri-ben-yi-sheng-zui-chang-kai-de-50-zhong-han-fang-df5a13"
+    },
+    {
+      "id": "383b079dc60680dba1ffffcbeaf2f116",
+      "title": "收藏！日本汉方津村编号对照表，看病再也不怕看不懂处方",
+      "source_url": "https://japanmedai.notion.site/383b079dc60680dba1ffffcbeaf2f116",
+      "slug": "shou-cang-ri-ben-han-fang-jin-cun-bian-hao-dui-zhao-biao-kan-bing-zai-ye-f2f116"
+    },
+    {
+      "id": "379b079dc60680e7952bcaee59dfd9e8",
+      "title": "上了年纪睡不好觉，睡眠浅、多梦、早醒——日本老人靠这两种漢方，不吃安眠药也睡得沉",
+      "source_url": "https://japanmedai.notion.site/379b079dc60680e7952bcaee59dfd9e8",
+      "slug": "shang-le-nian-ji-shui-bu-hao-jue-shui-mian-qian-duo-meng-zao-xing-ri-ben-dfd9e8"
+    },
+    {
+      "id": "37db079dc60680d983bacfbcae8b75f2",
+      "title": "失眠患者最关心的问题：汉方能完全代替安眠药吗？",
+      "source_url": "https://japanmedai.notion.site/37db079dc60680d983bacfbcae8b75f2",
+      "slug": "shi-mian-huan-zhe-zui-guan-xin-de-wen-ti-han-fang-neng-wan-quan-dai-ti-a-8b75f2"
+    },
+    {
+      "id": "37db079dc606803996c1e32ce2b648af",
+      "title": "情绪低落、容易发脾气，日本汉方能帮忙吗？",
+      "source_url": "https://japanmedai.notion.site/37db079dc606803996c1e32ce2b648af",
+      "slug": "qing-xu-di-luo-rong-yi-fa-pi-qi-ri-ben-han-fang-neng-bang-mang-ma-b648af"
+    },
+    {
+      "id": "379b079dc606809982a0cbea522c4784",
+      "title": "更年期潮热盗汗、情绪崩溃、睡不着——日本女性不靠激素，靠这两种漢方平稳过渡",
+      "source_url": "https://japanmedai.notion.site/379b079dc606809982a0cbea522c4784",
+      "slug": "geng-nian-qi-chao-re-dao-han-qing-xu-beng-kui-shui-bu-zhe-ri-ben-nv-xing-2c4784"
+    },
+    {
+      "id": "37db079dc606806f96d5f6a3a43a4883",
+      "title": "气血不足、失眠心烦？日本女性最爱的汉方竟是它！",
+      "source_url": "https://japanmedai.notion.site/37db079dc606806f96d5f6a3a43a4883",
+      "slug": "qi-xue-bu-zu-shi-mian-xin-fan-ri-ben-nv-xing-zui-ai-de-han-fang-jing-shi-3a4883"
+    },
+    {
+      "id": "37db079dc606809e8ca3c0a219075992",
+      "title": "睡不深、总做梦、半夜醒？日本汉方这样改善睡眠质量",
+      "source_url": "https://japanmedai.notion.site/37db079dc606809e8ca3c0a219075992",
+      "slug": "shui-bu-shen-zong-zuo-meng-ban-ye-xing-ri-ben-han-fang-zhe-yang-gai-shan-075992"
+    },
+    {
+      "id": "37db079dc60680fbaa9bfa4b035c406c",
+      "title": "睡不着不一定吃安眠药！日本精神科医生常开的汉方曝光",
+      "source_url": "https://japanmedai.notion.site/37db079dc60680fbaa9bfa4b035c406c",
+      "slug": "shui-bu-zhe-bu-yi-ding-chi-an-mian-yao-ri-ben-jing-shen-ke-yi-sheng-chan-5c406c"
+    },
+    {
+      "id": "379b079dc60680a7b5f7fc184fbb5ced",
+      "title": "血脂高、肚子大、脂肪肝三件套——日本医生用\"大柴胡汤\"从肝胆代谢根源调理，不只是降数字",
+      "source_url": "https://japanmedai.notion.site/379b079dc60680a7b5f7fc184fbb5ced",
+      "slug": "xue-zhi-gao-du-zi-da-zhi-fang-gan-san-jian-tao-ri-ben-yi-sheng-yong-da-c-bb5ced"
+    },
+    {
+      "id": "379b079dc60680c2a407dad127b8fb11",
+      "title": "饭后肚子胀、吃什么都没胃口、大便不规律——日本消化科最常开的一剂漢方，三期临床证明它真的管用",
+      "source_url": "https://japanmedai.notion.site/379b079dc60680c2a407dad127b8fb11",
+      "slug": "fan-hou-du-zi-zhang-chi-shen-me-dou-mei-wei-kou-da-bian-bu-gui-lv-ri-ben-b8fb11"
+    },
+    {
+      "id": "379b079dc606807f8fd0d13738d3d757",
+      "title": "中老年人护肝不能只靠\"不喝酒\"——日本肝科医生每天给患者开的漢方，比护肝片管用得多",
+      "source_url": "https://japanmedai.notion.site/379b079dc606807f8fd0d13738d3d757",
+      "slug": "zhong-lao-nian-ren-hu-gan-bu-neng-zhi-kao-bu-he-jiu-ri-ben-gan-ke-yi-she-d3d757"
+    },
+    {
+      "id": "379b079dc606805385e2c056f2e9b72a",
+      "title": "为什么日本老人很少生大病？——他们用一种叫\"补中益气汤\"的漢方，每天给免疫系统\"充电\"",
+      "source_url": "https://japanmedai.notion.site/379b079dc606805385e2c056f2e9b72a",
+      "slug": "wei-shen-me-ri-ben-lao-ren-hen-shao-sheng-da-bing-ta-men-yong-yi-zhong-j-e9b72a"
+    },
+    {
+      "id": "384b079dc606806e97eee26771a81afb",
+      "title": "惊呆！日本研究证实：这几种汉方能帮助延缓脑退化",
+      "source_url": "https://japanmedai.notion.site/384b079dc606806e97eee26771a81afb",
+      "slug": "jing-dai-ri-ben-yan-jiu-zheng-shi-zhe-ji-zhong-han-fang-neng-bang-zhu-ya-a81afb"
+    },
+    {
+      "id": "37db079dc6068019aea9c3fdf061a729",
+      "title": "日本三甲医院都在开汉方药？真相可能颠覆你的认知",
+      "source_url": "https://japanmedai.notion.site/37db079dc6068019aea9c3fdf061a729",
+      "slug": "ri-ben-san-jia-yi-yuan-dou-zai-kai-han-fang-yao-zhen-xiang-ke-neng-dian--61a729"
+    },
+    {
+      "id": "37db079dc60680c3bee2ea001a6e51f4",
+      "title": "日本老人为何比年轻人更爱汉方？这几种补气养血方最受欢迎！",
+      "source_url": "https://japanmedai.notion.site/37db079dc60680c3bee2ea001a6e51f4",
+      "slug": "ri-ben-lao-ren-wei-he-bi-nian-qing-ren-geng-ai-han-fang-zhe-ji-zhong-bu--6e51f4"
+    }
+  ]
+}

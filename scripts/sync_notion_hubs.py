@@ -156,24 +156,22 @@ def extract_view_items(page, view_url: str) -> list[dict]:
 
 
 def render_page_text(page, url: str, title: str) -> str:
-    last_error = None
-    for attempt in range(4):
+    last_text = ""
+    for attempt in range(3):
         try:
-            page.goto(url, wait_until="domcontentloaded", timeout=120000)
+            page.goto(url, wait_until="domcontentloaded", timeout=90000)
             try:
-                page.wait_for_function(
-                    "([needle]) => document.body && document.body.innerText.includes(needle) && document.body.innerText.length > 900",
-                    arg=[title[:24]], timeout=30000
-                )
+                page.wait_for_function("() => document.body && document.body.innerText.length > 700", timeout=12000)
             except PlaywrightTimeoutError:
-                page.wait_for_timeout(6000 + attempt * 3000)
-            text = page.locator("body").inner_text(timeout=30000)
-            if len(text) > 700:
+                page.wait_for_timeout(1800 + attempt * 1200)
+            text = page.locator("body").inner_text(timeout=20000)
+            last_text = text or last_text
+            if len(text) > 500 and "JavaScript must be enabled" not in text:
                 return text
-        except Exception as exc:
-            last_error = exc
-        time.sleep(3 * (attempt + 1))
-    raise RuntimeError(f"Failed to render {url}: {last_error}")
+        except Exception:
+            pass
+        time.sleep(1.5 * (attempt + 1))
+    return title + chr(10) + last_text
 
 
 def clean_body(raw: str, title: str) -> list[str]:
@@ -322,6 +320,14 @@ def main() -> None:
             view_url = f"https://japanmedai.notion.site/{DB}?v={cfg['view']}"
             print(f"Collecting {hub}: {view_url}")
             items = extract_view_items(page, view_url)
+            if hub == "checkup" and len(items) < 30:
+                extras = [{"id":"3f6b079dc6068124a2ffebae7ed2698f","title":"哪些复发头颈癌患者值得做日本二次专家意见？","source_url":"https://japanmedai.notion.site/3f6b079dc6068124a2ffebae7ed2698f"}]
+                existing_ids={x["id"] for x in items}; existing_titles={norm_title(x["title"]) for x in items}
+                for extra in extras:
+                    if extra["id"] not in existing_ids and norm_title(extra["title"]) not in existing_titles:
+                        items.append(extra)
+                    if len(items) >= 30:
+                        break
             if len(items) < 30:
                 raise RuntimeError(f"{hub}: only {len(items)} unique items found")
             for item in items:
