@@ -1,0 +1,55 @@
+name: Apply S30 evidence depth batch
+
+on:
+  push:
+    branches:
+      - seo/s30-evidence-depth
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: seo/s30-evidence-depth
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Apply S30 evidence depth upgrade
+        run: python scripts/build_s30_evidence.py
+      - name: Independent batch checks
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json,re
+          root=Path('.')
+          marker='data-jmai-evidence="s30"'
+          pages=[]
+          for cat in ['bnct','checkup','hospitals','medicines','ips','kampo']:
+              pages += list((root/cat).glob('[0-9][0-9][0-9]/index.html'))
+          evidence=[p for p in pages if marker in p.read_text(encoding='utf-8')]
+          assert len(evidence)==30, len(evidence)
+          assert (root/'docs/s30-evidence-registry.tsv').exists()
+          for p in evidence:
+              t=p.read_text(encoding='utf-8')
+              assert t.count('JMAI_EVIDENCE_START')==1
+              assert '<h2>权威证据与官方核对</h2>' in t
+              assert 'target="_blank" rel="noopener noreferrer"' in t
+              assert '"citation":[' in t
+              assert 'FAQPage' in t and 'MedicalWebPage' in t and 'rel="canonical"' in t
+          print('Independent QA PASS:',len(evidence),'S30 pages')
+          PY
+      - name: Remove one-off workflow before final batch commit
+        run: rm .github/workflows/apply-s30-evidence-depth.yml
+      - name: Commit complete batch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Deepen S30 pages with authoritative evidence [skip ci]"
+          git push origin HEAD:seo/s30-evidence-depth
