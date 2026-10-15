@@ -362,3 +362,25 @@
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
   else init();
 })();
+/* JMAI_INTERNAL_LINK_TRACKING_V1
+   Tracks only anonymous navigation metadata (no free text, medical answers or contact fields). */
+(function () {
+  "use strict";
+  document.addEventListener("click", function (event) {
+    var link = event.target && event.target.closest ? event.target.closest("[data-jmai-track]") : null;
+    if (!link) return;
+    try {
+      var tracker = window.JMAIAnalytics && window.JMAIAnalytics.create({
+        table: "jmai_site_events",
+        scope: "site",
+        pageVersion: "topic-cluster-v2"
+      });
+      if (!tracker) return;
+      tracker.track("internal_link_click", {
+        kind: link.getAttribute("data-jmai-track") || "internal",
+        cta_id: link.getAttribute("data-jmai-id") || "internal_link",
+        cta_position: link.getAttribute("data-jmai-position") || "body"
+      });
+    } catch (_) {}
+  }, { passive: true });
+})();
