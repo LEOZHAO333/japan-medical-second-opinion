@@ -1,0 +1,133 @@
+{
+  "bnct/001": {
+    "facts": [
+      "日本PMDA现行资料将ボロファラン（10B）/Steboronine用于BNCT的适应证列为“切除不能的局部进展或局部复发头颈癌”。既往放疗史本身不是单独的自动排除条件，但仍需重新评估局部解剖、既往受量和关键器官风险。",
+      "JHN002 II期试验中，复发鳞癌组全部患者既往接受过放疗，中位既往剂量为65.5 Gy（范围59.4–76.0 Gy）。这说明“做过高剂量放疗”不能单独替代个体可行性判断。",
+      "关西BNCT共同医疗中心的头颈癌适用确认资料明确要求提供既往放疗史，并包括照射记录及DICOM-RT的RT Structure、RT Plan、RT Dose、RT Image和RT Treatment Record。"
+    ],
+    "sources": [
+      ["PMDA｜Steboronine 医疗用医药品信息","https://www.pmda.go.jp/PmdaSearch/rdDetail/iyaku/4291453A1027_1"],
+      ["JHN002 Phase II｜Radiotherapy and Oncology / PubMed","https://pubmed.ncbi.nlm.nih.gov/33186684/"],
+      ["关西BNCT共同医疗中心｜头颈癌BNCT适用确认申请资料","https://www.ompu.ac.jp/kbmc/bnct_2/dfidm000000059o4-att/a1701934618026.pdf"]
+    ],
+    "boundary": "既往放疗剂量只是判断的一部分，不能根据“70Gy”这个单一数字直接得出能做或不能做BNCT的结论。"
+  },
+  "bnct/004": {
+    "facts": [
+      "PMDA现行药品资料显示，Steboronine（borofalan 10B）的日本适应证是切除不能的局部进展或局部复发头颈癌。",
+      "PMDA对NeuCure BNCT系统的审查资料同样将其批准用途限定在与Steboronine合用、用于切除不能的局部进展/复发头颈癌。",
+      "其他癌种即使已经出现临床试验、医师主导研究或个案报道，也必须与日本已批准适应证分开表达。"
+    ],
+    "sources": [
+      ["PMDA｜Steboronine 医疗用医药品信息","https://www.pmda.go.jp/PmdaSearch/rdDetail/iyaku/4291453A1027_1"],
+      ["PMDA｜NeuCure BNCT System 审查信息","https://www.pmda.go.jp/files/000282738.pdf"],
+      ["关西BNCT共同医疗中心｜受诊与研究入口","https://www.ompu.ac.jp/kbmc/bnct/copy_of_index.html"]
+    ],
+    "boundary": "“研究中”“机构开展研究”与“日本已批准临床适应证”不是同一层级。"
+  },
+  "bnct/010": {
+    "facts": [
+      "JHN002 II期试验共入组21例头颈癌患者，总体客观缓解率（ORR）为71%；复发鳞癌组2年总生存率为58%。",
+      "日本真实世界研究纳入69例、72次治疗，报告ORR为80.5%，1年总生存率为75.4%。",
+      "2026年发表的系统评价/Meta分析纳入7项研究、361例局部复发头颈癌患者，合并ORR约70%，2年总生存率约45%。不同研究人群、既往治疗和随访长度不同，不能把这些数字直接用于个人预后预测。"
+    ],
+    "sources": [
+      ["JHN002 Phase II｜PubMed","https://pubmed.ncbi.nlm.nih.gov/33186684/"],
+      ["日本真实世界BNCT研究｜PubMed","https://pubmed.ncbi.nlm.nih.gov/38826090/"],
+      ["2026局部复发头颈癌BNCT Meta分析｜PubMed","https://pubmed.ncbi.nlm.nih.gov/41455578/"]
+    ],
+    "boundary": "ORR、OS等属于群体层面的研究结果，不能转换成某位患者的个人成功率。"
+  },
+  "bnct/011": {
+    "facts": [
+      "Steboronine于2020年在日本上市，PMDA现行适应证仍为切除不能的局部进展或局部复发头颈癌。",
+      "关西BNCT共同医疗中心设有头颈癌BNCT受诊入口，同时把复发胶质母细胞瘤等其他方向单列为临床研究/试验信息，临床应用与研究入口被明确区分。",
+      "具体医院是否接诊，还会受病理、病灶位置、既往治疗、影像和治疗计划可行性影响。"
+    ],
+    "sources": [
+      ["PMDA｜Steboronine 医疗用医药品信息","https://www.pmda.go.jp/PmdaSearch/rdDetail/iyaku/4291453A1027_1"],
+      ["关西BNCT共同医疗中心｜BNCT受诊入口","https://www.ompu.ac.jp/kbmc/bnct/copy_of_index.html"],
+      ["关西BNCT共同医疗中心｜官网","https://www.ompu.ac.jp/kbmc/index.html"]
+    ],
+    "boundary": "“日本已经临床应用”不等于所有复发头颈癌患者都符合某家机构的实际接诊条件。"
+  },
+  "bnct/016": {
+    "facts": [
+      "BNCT在日本的批准对象是切除不能的局部进展或局部复发头颈癌；既往放疗后的再照射场景，需要重新核对既往照射资料和关键器官受量。",
+      "QST医院2026年公开的头颈部重粒子线适应信息显示，保险诊疗重点覆盖特定非鳞癌、黏膜恶性黑色素瘤、部分部位鳞癌等，并强调病灶范围、远处转移和可照射范围等条件。",
+      "因此BNCT与重粒子不是按“哪一种更强”排序，而是先按病理类型、病灶位置、既往放疗和当前可实现的治疗目标做匹配。"
+    ],
+    "sources": [
+      ["PMDA｜Steboronine 医疗用医药品信息","https://www.pmda.go.jp/PmdaSearch/rdDetail/iyaku/4291453A1027_1"],
+      ["QST医院｜头颈部癌重粒子线治疗适应","https://www.qst.go.jp/site/hospital/doctor-disease-guide05.html"],
+      ["关西BNCT共同医疗中心｜BNCT适用确认资料","https://www.ompu.ac.jp/kbmc/bnct_2/dfidm000000059o4-att/a1701934618026.pdf"]
+    ],
+    "boundary": "不同粒子/中子治疗的适应证和剂量约束不同，不能只看技术名称做选择。"
+  },
+  "bnct/017": {
+    "facts": [
+      "2026年发表的复发头颈癌第二次BNCT可行性研究显示，第二疗程的反应率约70%，但晚期3级及以上毒性发生率为60.6%，作者认为临床获益有限，应仅在没有替代治疗且经过严格筛选的患者中考虑。",
+      "这类结果说明“第一次有效”不能自动推导出“第二次仍适合”。再次治疗必须重新评估既往BNCT剂量、累计器官受量、组织恢复情况和替代方案。",
+      "PMDA安全资料也持续更新BNCT相关严重不良反应风险，重复治疗更需要由有经验团队判断。"
+    ],
+    "sources": [
+      ["2026第二次BNCT可行性研究｜PubMed","https://pubmed.ncbi.nlm.nih.gov/42490531/"],
+      ["PMDA｜Borofalan安全性调查结果","https://www.pmda.go.jp/files/000251540.pdf"],
+      ["PMDA｜Steboronine 医疗用医药品信息","https://www.pmda.go.jp/PmdaSearch/rdDetail/iyaku/4291453A1027_1"]
+    ],
+    "boundary": "重复BNCT属于高风险个体化决策，不能以第一次治疗反应代替第二次治疗的风险评估。"
+  },
+  "bnct/021": {
+    "facts": [
+      "PMDA在2023年安全性修订中要求将咽喉水肿列入临床重要不良反应，并提到日本已有与气道阻塞相关的报告。",
+      "全国上市后监测纳入162例患者，较常见的急性治疗相关不良事件包括高淀粉酶血症84.0%、口腔炎51.2%、唾液腺炎50.6%和脱发49.4%；晚期事件中还报告了吞咽困难等。",
+      "风险判断不仅看“不良反应名称”，还要结合肿瘤与黏膜、咽喉、下颌骨、神经等关键结构的空间关系和累计剂量。"
+    ],
+    "sources": [
+      ["PMDA｜Borofalan安全性调查结果","https://www.pmda.go.jp/files/000251540.pdf"],
+      ["全国上市后监测｜PubMed","https://pubmed.ncbi.nlm.nih.gov/38473231/"],
+      ["PMDA｜Steboronine 医疗用医药品信息","https://www.pmda.go.jp/PmdaSearch/rdDetail/iyaku/4291453A1027_1"]
+    ],
+    "boundary": "不良事件发生率受人群、病灶部位和既往治疗影响，不能用总体比例预测个人一定发生或不会发生。"
+  },
+  "bnct/022": {
+    "facts": [
+      "判断BNCT“靠不靠谱”时，应先确认三个层级：日本是否已批准、目标机构是否实际开展、该癌种/病情是否在批准范围或研究范围。",
+      "PMDA现行资料可以核对Steboronine和BNCT设备的批准适应证；医院官网则用于核对当前接诊与研究项目。",
+      "疗效判断应优先参考原始临床试验、真实世界研究和系统评价，而不是只看宣传案例。"
+    ],
+    "sources": [
+      ["PMDA｜Steboronine 医疗用医药品信息","https://www.pmda.go.jp/PmdaSearch/rdDetail/iyaku/4291453A1027_1"],
+      ["PMDA｜NeuCure BNCT System 审查信息","https://www.pmda.go.jp/files/000282738.pdf"],
+      ["关西BNCT共同医疗中心｜受诊入口","https://www.ompu.ac.jp/kbmc/bnct/copy_of_index.html"],
+      ["JHN002 Phase II｜PubMed","https://pubmed.ncbi.nlm.nih.gov/33186684/"]
+    ],
+    "boundary": "“有设备”“有论文”或“有患者案例”都不能单独等同于某位患者已获得治疗资格。"
+  },
+  "bnct/024": {
+    "facts": [
+      "关西BNCT共同医疗中心的头颈癌适用确认表要求提供病理、CT/MRI/PET等影像、血液/生化检查、手术记录和放疗史。",
+      "对于既往放疗，中心明确列出DICOM-RT资料：RT Structure Set、RT Plan、RT Dose、RT Image和RT Treatment Record。",
+      "其适用判定流程还说明，最新影像DICOM是制作初步治疗计划、判断肿瘤位置/大小和线量可行性的关键资料。"
+    ],
+    "sources": [
+      ["关西BNCT共同医疗中心｜头颈癌BNCT适用确认申请资料","https://www.ompu.ac.jp/kbmc/bnct_2/dfidm000000059o4-att/a1701934618026.pdf"],
+      ["关西BNCT共同医疗中心｜BNCT治疗适用判定流程","https://www.ompu.ac.jp/kbmc/bnct_2/dfidm000000059o4-att/a80ksc00000003fp.pdf"],
+      ["关西BNCT共同医疗中心｜受诊入口","https://www.ompu.ac.jp/kbmc/bnct/copy_of_index.html"]
+    ],
+    "boundary": "资料清单用于提高预审效率，不代表资料齐全后就一定被接诊或一定适合BNCT。"
+  },
+  "bnct/029": {
+    "facts": [
+      "PMDA审查资料强调，候选患者应由充分理解临床研究数据和疗效/安全性的医生进行选择。",
+      "实际机构预审会综合病理、最新影像、既往手术、血液检查和放疗历史，而不是仅凭癌种名称判断。",
+      "对局部治疗而言，还需要同时考虑病灶是否局限、与关键器官距离、远处转移、全身状态和是否存在更合适的标准治疗。"
+    ],
+    "sources": [
+      ["PMDA｜Borofalan 审查报告","https://www.pmda.go.jp/files/000237990.pdf"],
+      ["关西BNCT共同医疗中心｜头颈癌BNCT适用确认申请资料","https://www.ompu.ac.jp/kbmc/bnct_2/dfidm000000059o4-att/a1701934618026.pdf"],
+      ["关西BNCT共同医疗中心｜BNCT治疗适用判定流程","https://www.ompu.ac.jp/kbmc/bnct_2/dfidm000000059o4-att/a80ksc00000003fp.pdf"]
+    ],
+    "boundary": "不存在仅凭病名即可确认BNCT适应性的“7项打勾表”；真正结论必须由治疗机构结合原始资料完成。"
+  }
+}
