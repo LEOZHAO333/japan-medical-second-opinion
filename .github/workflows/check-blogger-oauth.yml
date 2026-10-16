@@ -1,0 +1,39 @@
+name: Check Blogger OAuth
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'scripts/publish_blogger.py'
+      - '.github/workflows/check-blogger-oauth.yml'
+      - 'blogger/README.md'
+  schedule:
+    - cron: '17 2 * * 1'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: blogger-oauth-check
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify Blogger OAuth and blog access
+        env:
+          BLOGGER_BLOG_ID: ${{ secrets.BLOGGER_BLOG_ID }}
+          BLOGGER_CLIENT_ID: ${{ secrets.BLOGGER_CLIENT_ID }}
+          BLOGGER_CLIENT_SECRET: ${{ secrets.BLOGGER_CLIENT_SECRET }}
+          BLOGGER_REFRESH_TOKEN: ${{ secrets.BLOGGER_REFRESH_TOKEN }}
+        run: python scripts/publish_blogger.py --auth-check

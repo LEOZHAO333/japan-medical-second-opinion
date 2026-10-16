@@ -27,10 +27,25 @@ def request_json(url, *, token=None, data=None, form=False, method=None, etag=No
         with urlopen(Request(url, data=data, headers=headers, method=method), timeout=45) as response:
             return json.load(response)
     except HTTPError as error:
-        # Never print response bodies, request headers or OAuth credentials.
-        raise RuntimeError(f"Blogger/Google request failed: HTTP {error.code}. Check Actions secrets, OAuth authorization and blog access.") from None
+        # Never print response bodies, request headers or credentials.
+        raise RuntimeError(
+            f"Blogger API request failed: HTTP {error.code}. Check Blogger account access and blog ID."
+        ) from None
     except URLError:
-        raise RuntimeError("Blogger/Google connection failed. Check connectivity and retry.") from None
+        raise RuntimeError("Blogger connection failed. Check connectivity and retry.") from None
+
+
+def _oauth_error_code(error):
+    """Return only Google's OAuth error code; never expose descriptions or secrets."""
+    try:
+        payload = json.loads(error.read(4096).decode("utf-8", "replace"))
+    except (ValueError, OSError, UnicodeDecodeError):
+        return ""
+    if not isinstance(payload, dict):
+        return ""
+    code = str(payload.get("error") or "")
+    allowed = {"invalid_grant", "invalid_client", "unauthorized_client", "invalid_request"}
+    return code if code in allowed else ""
 
 
 def access_token():
@@ -38,15 +53,76 @@ def access_token():
     missing = [name for name in required if not os.getenv(name, "").strip()]
     if missing:
         raise ValueError("Missing Actions secrets: " + ", ".join(missing))
-    result = request_json(TOKEN_URL, form=True, method="POST", data={
-        "client_id": os.environ[required[0]].strip(),
-        "client_secret": os.environ[required[1]].strip(),
-        "refresh_token": os.environ[required[2]].strip(),
+
+    form = {
+        "client_id": os.environ["BLOGGER_CLIENT_ID"].strip(),
+        "client_secret": os.environ["BLOGGER_CLIENT_SECRET"].strip(),
+        "refresh_token": os.environ["BLOGGER_REFRESH_TOKEN"].strip(),
         "grant_type": "refresh_token",
-    })
+    }
+    request = Request(
+        TOKEN_URL,
+        data=urlencode(form).encode("utf-8"),
+        headers={
+            "Accept": "application/json",
+            "Content-Type": "application/x-www-form-urlencoded",
+        },
+        method="POST",
+    )
+    try:
+        with urlopen(request, timeout=45) as response:
+            result = json.load(response)
+    except HTTPError as error:
+        code = _oauth_error_code(error)
+        if code == "invalid_grant":
+            raise RuntimeError(
+                "Google OAuth refresh failed: invalid_grant. The refresh token is expired, revoked, "
+                "or no longer valid. If the OAuth consent app is in Testing, move it to In production, "
+                "generate a new refresh token with Blogger scope, and replace BLOGGER_REFRESH_TOKEN."
+            ) from None
+        if code == "invalid_client":
+            raise RuntimeError(
+                "Google OAuth refresh failed: invalid_client. Check that BLOGGER_CLIENT_ID and "
+                "BLOGGER_CLIENT_SECRET belong to the same OAuth client used to create the refresh token."
+            ) from None
+        if code == "unauthorized_client":
+            raise RuntimeError(
+                "Google OAuth refresh failed: unauthorized_client. Re-authorize Blogger access with the "
+                "configured OAuth client and replace BLOGGER_REFRESH_TOKEN."
+            ) from None
+        if code == "invalid_request":
+            raise RuntimeError(
+                "Google OAuth refresh failed: invalid_request. Check the OAuth client credentials and "
+                "refresh-token configuration."
+            ) from None
+        raise RuntimeError(
+            f"Google OAuth token refresh failed: HTTP {error.code}. Re-authorize Blogger access and "
+            "replace BLOGGER_REFRESH_TOKEN if needed."
+        ) from None
+    except URLError:
+        raise RuntimeError("Google OAuth connection failed. Check connectivity and retry.") from None
+
     if not result.get("access_token"):
         raise RuntimeError("Google did not return an access token")
     return result["access_token"]
+
+
+def blog_id_from_env():
+    blog_id = os.getenv("BLOGGER_BLOG_ID", "").strip()
+    if not re.fullmatch(r"[0-9]+", blog_id):
+        raise ValueError("Set Actions secret BLOGGER_BLOG_ID to the numeric blog ID")
+    return blog_id
+
+
+def verify_auth():
+    blog_id = blog_id_from_env()
+    token = access_token()
+    blog = request_json(f"{API}/blogs/{blog_id}", token=token)
+    if str(blog.get("id") or "") != blog_id:
+        raise RuntimeError("Blogger authentication succeeded but the configured blog could not be verified")
+    query = urlencode({"status": "draft", "view": "ADMIN", "maxResults": 1, "fetchBodies": "false"})
+    request_json(f"{API}/blogs/{blog_id}/posts?{query}", token=token)
+    print("Blogger OAuth and draft access verified.")
 
 
 def parse_post(filename):
@@ -93,6 +169,7 @@ def upload(filename, blog_id, token):
                 matches.append(post)
     if len(matches) > 1:
         raise ValueError("Multiple matching drafts exist; manual review required")
+
     base = f"{API}/blogs/{blog_id}/posts"
     body = {"kind": "blogger#post", "blog": {"id": blog_id}, "title": title, "content": content}
     if matches:
@@ -101,11 +178,14 @@ def upload(filename, blog_id, token):
             raise ValueError("Matched post is no longer DRAFT; stopping")
         if not current.get("etag"):
             raise ValueError("Missing draft ETag; refusing unguarded update")
-        result = request_json(f"{base}/{current['id']}", token=token, data=body, method="PUT", etag=current["etag"])
+        result = request_json(
+            f"{base}/{current['id']}", token=token, data=body, method="PUT", etag=current["etag"]
+        )
         action = "Updated"
     else:
         result = request_json(base + "?isDraft=true", token=token, data=body, method="POST")
         action = "Created"
+
     if result.get("status") != "DRAFT" or not result.get("id"):
         raise RuntimeError("Blogger response did not confirm DRAFT; inspect Blogger before retrying")
     confirmed = request_json(f"{base}/{result['id']}?view=ADMIN", token=token)
@@ -119,10 +199,25 @@ def upload(filename, blog_id, token):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--file-list", required=True)
+    parser.add_argument("--file-list")
     parser.add_argument("--validate-only", action="store_true")
+    parser.add_argument("--auth-check", action="store_true")
     args = parser.parse_args()
-    files = list(dict.fromkeys(line.strip() for line in Path(args.file_list).read_text().splitlines() if line.strip()))
+
+    if args.auth_check:
+        if args.validate_only:
+            raise ValueError("--auth-check cannot be combined with --validate-only")
+        verify_auth()
+        return
+
+    if not args.file_list:
+        raise ValueError("--file-list is required unless --auth-check is used")
+
+    files = list(
+        dict.fromkeys(
+            line.strip() for line in Path(args.file_list).read_text().splitlines() if line.strip()
+        )
+    )
     for filename in files:
         parse_post(filename)
     if args.validate_only:
@@ -131,9 +226,8 @@ def main():
     if not files:
         print("No changed Blogger HTML files")
         return
-    blog_id = os.getenv("BLOGGER_BLOG_ID", "").strip()
-    if not re.fullmatch(r"[0-9]+", blog_id):
-        raise ValueError("Set Actions secret BLOGGER_BLOG_ID to the numeric blog ID")
+
+    blog_id = blog_id_from_env()
     token = access_token()
     for filename in files:
         upload(filename, blog_id, token)

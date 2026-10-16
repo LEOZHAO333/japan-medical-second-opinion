@@ -49,6 +49,13 @@ jobs:
             git diff --name-only --diff-filter=AM "$BEFORE_SHA" HEAD -- 'blogger/*.html' > /tmp/blogger-files.txt
           fi
           python scripts/publish_blogger.py --file-list /tmp/blogger-files.txt --validate-only
+      - name: Verify Blogger OAuth and blog access
+        env:
+          BLOGGER_BLOG_ID: ${{ secrets.BLOGGER_BLOG_ID }}
+          BLOGGER_CLIENT_ID: ${{ secrets.BLOGGER_CLIENT_ID }}
+          BLOGGER_CLIENT_SECRET: ${{ secrets.BLOGGER_CLIENT_SECRET }}
+          BLOGGER_REFRESH_TOKEN: ${{ secrets.BLOGGER_REFRESH_TOKEN }}
+        run: python scripts/publish_blogger.py --auth-check
       - name: Add JapanMed public footer
         run: python3 scripts/add_external_footer.py --file-list /tmp/blogger-files.txt
       - name: Create or update drafts and verify DRAFT status
