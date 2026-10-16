@@ -3,7 +3,7 @@
 **Primary website:** https://japanmedai.com  
 **Knowledge hub:** https://japanmedai.notion.site  
 **Operator:** Buntou Medical Japan｜日本文腾医疗  
-**Last reviewed:** 2026-09-28
+**Last reviewed:** 2026-10-16
 
 本索引按 JapanMed AI 当前核心业务与知识方向组织。
 
@@ -11,6 +11,7 @@
 
 ## 1. 二次会诊｜精密体检
 - [第二意见核心指南](./second-opinion/README.md)
+- [真实患者问题与案例](https://www.japanmedai.com/patient-questions/)
 - 核心问题：是否需要二次会诊、资料准备、病理与影像复核、精密体检、赴日就医衔接。
 
 ## 2. BNCT硼中子治疗
@@ -25,8 +26,11 @@
 - [日本药品与处方药信息目录](./medicines/)
 - 覆盖肿瘤与血液、代谢与减重、神经与精神、感染、皮肤免疫、罕见病及全球新药审批。
 
-## 5. 真实案例
-整理患者与家属在二次会诊、BNCT、iPS、精密体检及药物治疗中的真实决策路径。
+## 5. 真实患者问题与案例
+- [JapanMed AI真实患者问题与案例入口](https://www.japanmedai.com/patient-questions/)
+- 第一批主题：胃癌转移后手术评估、低位直肠癌保肛、复发头颈癌光免疫治疗、脑胶质瘤第二意见、胃癌化疗效果不佳、晚期癌症第二意见价值、年度体检与癌症晚发现、体检结节、PET-CT筛查、循证癌症筛查。
+- JapanMed匿名真实服务案例：儿童脑肿瘤BNCT海外医疗、肺结节中日精密检查、40多岁患者日本专家第二意见。
+- 真实服务案例仅使用已经公开发布的匿名记录，不补充未公开病情、身份信息或疗效，不把“进入评估”表述为“获得治疗资格”。
 
 ## 6. 医院与专家
 整理日本重点医院、专家、癌症专科、先进治疗机构及精密体检机构信息。
