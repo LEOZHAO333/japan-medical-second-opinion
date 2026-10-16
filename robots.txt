@@ -10,3 +10,4 @@ Sitemap: https://www.japanmedai.com/checkup/sitemap.xml
 Sitemap: https://www.japanmedai.com/medicines/sitemap.xml
 Sitemap: https://www.japanmedai.com/hospitals/sitemap.xml
 Sitemap: https://www.japanmedai.com/kampo/sitemap.xml
+Sitemap: https://www.japanmedai.com/patient-questions/sitemap.xml
