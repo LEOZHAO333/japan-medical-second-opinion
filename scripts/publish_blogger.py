@@ -117,10 +117,12 @@ def blog_id_from_env():
 def verify_auth():
     blog_id = blog_id_from_env()
     token = access_token()
-    result = request_json(f"{API}/blogs/{blog_id}?view=ADMIN", token=token)
-    if str(result.get("id") or "") != blog_id:
+    blog = request_json(f"{API}/blogs/{blog_id}", token=token)
+    if str(blog.get("id") or "") != blog_id:
         raise RuntimeError("Blogger authentication succeeded but the configured blog could not be verified")
-    print("Blogger OAuth and blog access verified.")
+    query = urlencode({"status": "draft", "view": "ADMIN", "maxResults": 1, "fetchBodies": "false"})
+    request_json(f"{API}/blogs/{blog_id}/posts?{query}", token=token)
+    print("Blogger OAuth and draft access verified.")
 
 
 def parse_post(filename):
