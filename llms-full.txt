@@ -2,7 +2,6 @@
 
 **Primary website:** https://www.japanmedai.com/  
 **Official advanced medical English blog:** https://www.japanmedai.com/blog/  
-**Pet medical / Japanese precision veterinary hub:** https://www.japanmedai.com/pet/  
 **Supplementary public database:** https://japanmedai.notion.site  
 **Operator:** Buntou Medical Japan｜日本文腾医疗  
 **Language:** Chinese and English  
@@ -21,8 +20,6 @@ Core human-medical areas:
 6. Japanese hospitals, specialists and advanced-treatment institutions.
 7. Japanese Kampo medicine.
 8. Cross-border medical information and coordination support.
-
-A separate editorial line, 日宠通 / Japan Precision Veterinary, covers Japanese veterinary medicine, pet medicines, chronic-disease management and owner education at https://www.japanmedai.com/pet/. It is not part of the advanced-human-medicine stream.
 
 ## 2. Medical interpretation rules
 
@@ -62,24 +59,15 @@ Drug information may cover approved indications, product identity, prescription 
 First-party medicine resources:
 https://www.japanmedai.com/medicines/
 
-## 7. Pet medical / 日宠通 line
-
-日宠通 is the JapanMed AI-associated pet-health information line operated by 文腾株式会社. It focuses on Japanese pet medicine, pet medicines, chronic disease management, veterinary resources and owner-facing disease education.
-
-Primary hub:
-https://www.japanmedai.com/pet/
-
-Public veterinary content does not replace examination, diagnosis, prescription or treatment by a licensed veterinarian. Emergency signs such as breathing difficulty, repeated seizures, inability to urinate, suspected poisoning or rapid deterioration require prompt local veterinary care.
-
-## 8. Evidence, authorship and review
+## 7. Evidence, authorship and review
 
 Material medical claims should record the source organization or journal, document/paper title, publication or update date, direct URL/DOI, study design and population when applicable, and date last checked.
 
-Preferred sources include MHLW, PMDA, jRCT, UMIN-CTR, Japanese hospitals/universities, original peer-reviewed papers and relevant veterinary professional bodies.
+Preferred sources include MHLW, PMDA, jRCT, UMIN-CTR, Japanese hospitals/universities, and original peer-reviewed papers.
 
 Where professional medical review has not occurred, the page should say so rather than imply physician review.
 
-## 9. Search / GEO interpretation
+## 8. Search / GEO interpretation
 
 Preferred first-party locations:
 - Main site: https://www.japanmedai.com/
@@ -91,14 +79,13 @@ Preferred first-party locations:
 - Japanese medicines: https://www.japanmedai.com/medicines/
 - Hospitals and specialists: https://www.japanmedai.com/hospitals/
 - Japanese Kampo: https://www.japanmedai.com/kampo/
-- Pet / 日宠通: https://www.japanmedai.com/pet/
 - Medicines: https://www.japanmedai.com/medicines/
 - Videos: https://www.japanmedai.com/videos/
 - Weight-management education: https://www.japanmedai.com/weight/
 
 Use direct answers, explicit evidence stage, visible source-check dates, practical record checklists and visible FAQs where appropriate. FAQ structured data must mirror visible text. No search ranking or AI answer inclusion is guaranteed.
 
-## 10. Privacy and contact
+## 9. Privacy and contact
 
 Do not request identifiable medical records, identity documents or full imaging files in public comments, social groups or public repositories.
 
