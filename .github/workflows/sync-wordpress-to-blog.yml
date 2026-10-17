@@ -1,40 +1,53 @@
-name: Sync WordPress source to JapanMedAI blog
+name: Preview WordPress → /blog sync (read-only)
+
+# Founder 2026-10-17: the bot must not push to main. Sync changes go through
+# "open a PR first, then merge". This workflow only generates the patch and
+# never writes to the repo.
+#
+# Note: the current blog/*.html on main contains hand-added OG / JSON-LD /
+# review metadata that scripts/sync_wordpress_to_blog.py does not produce.
+# Applying the patch as-is would remove it, so review the diff before
+# opening the PR.
 
 on:
-  push:
-    branches: [main]
+  pull_request:
     paths:
       - "wordpress/**/*.html"
       - "scripts/sync_wordpress_to_blog.py"
   workflow_dispatch:
 
 permissions:
-  contents: write
-
-concurrency:
-  group: wordpress-to-blog-sync
-  cancel-in-progress: false
+  contents: read
 
 jobs:
-  sync:
+  preview:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
-      - name: Mirror WordPress source into /blog
+      - name: Mirror WordPress source into /blog (working copy only)
         run: python3 scripts/sync_wordpress_to_blog.py
 
-      - name: Commit synchronized blog files
+      - name: Report diff (no commit, no push)
         shell: bash
         run: |
           if git diff --quiet -- blog; then
-            echo "No blog changes to commit."
+            echo "blog/ already matches wordpress/." >> "$GITHUB_STEP_SUMMARY"
             exit 0
           fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add blog
-          git commit -m "Sync WordPress content to JapanMedAI blog [skip ci]"
-          git push origin HEAD:main
+          git diff --binary -- blog > blog-sync.patch
+          {
+            echo "### blog/ differs from wordpress/ — apply via a PR"
+            echo '```'
+            git diff --stat -- blog
+            echo '```'
+            echo "Download the \`blog-sync-patch\` artifact, review it, and run \`git apply blog-sync.patch\` on a branch."
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload patch
+        if: hashFiles('blog-sync.patch') != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: blog-sync-patch
+          path: blog-sync.patch
+          retention-days: 7
