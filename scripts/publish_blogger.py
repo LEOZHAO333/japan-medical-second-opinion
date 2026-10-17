@@ -5,6 +5,7 @@ import json
 import os
 import re
 import sys
+import time
 from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.parse import urlencode
@@ -12,6 +13,15 @@ from urllib.request import Request, urlopen
 
 API = "https://www.googleapis.com/blogger/v3"
 TOKEN_URL = "https://oauth2.googleapis.com/token"
+RETRYABLE_HTTP = {429, 500, 502, 503, 504}
+MAX_HTTP_ATTEMPTS = 6
+
+
+def _retry_delay(error, attempt):
+    retry_after = str(error.headers.get("Retry-After") or "").strip()
+    if retry_after.isdigit():
+        return min(max(int(retry_after), 1), 60)
+    return min(2 ** attempt, 30)
 
 
 def request_json(url, *, token=None, data=None, form=False, method=None, etag=None):
@@ -23,16 +33,38 @@ def request_json(url, *, token=None, data=None, form=False, method=None, etag=No
     if data is not None:
         headers["Content-Type"] = "application/x-www-form-urlencoded" if form else "application/json"
         data = (urlencode(data) if form else json.dumps(data)).encode("utf-8")
-    try:
-        with urlopen(Request(url, data=data, headers=headers, method=method), timeout=45) as response:
-            return json.load(response)
-    except HTTPError as error:
-        # Never print response bodies, request headers or credentials.
-        raise RuntimeError(
-            f"Blogger API request failed: HTTP {error.code}. Check Blogger account access and blog ID."
-        ) from None
-    except URLError:
-        raise RuntimeError("Blogger connection failed. Check connectivity and retry.") from None
+
+    for attempt in range(MAX_HTTP_ATTEMPTS):
+        try:
+            with urlopen(Request(url, data=data, headers=headers, method=method), timeout=45) as response:
+                return json.load(response)
+        except HTTPError as error:
+            if error.code in RETRYABLE_HTTP and attempt < MAX_HTTP_ATTEMPTS - 1:
+                wait = _retry_delay(error, attempt)
+                print(
+                    f"Blogger API HTTP {error.code}; retrying in {wait}s "
+                    f"({attempt + 2}/{MAX_HTTP_ATTEMPTS})",
+                    file=sys.stderr,
+                )
+                time.sleep(wait)
+                continue
+            # Never print response bodies, request headers or credentials.
+            raise RuntimeError(
+                f"Blogger API request failed: HTTP {error.code}. Check Blogger account access, quota and blog ID."
+            ) from None
+        except URLError:
+            if attempt < MAX_HTTP_ATTEMPTS - 1:
+                wait = min(2 ** attempt, 30)
+                print(
+                    f"Blogger connection failed; retrying in {wait}s "
+                    f"({attempt + 2}/{MAX_HTTP_ATTEMPTS})",
+                    file=sys.stderr,
+                )
+                time.sleep(wait)
+                continue
+            raise RuntimeError("Blogger connection failed after retries. Check connectivity and retry.") from None
+
+    raise RuntimeError("Blogger request failed after retries")
 
 
 def _oauth_error_code(error):
@@ -156,17 +188,25 @@ def all_posts(blog_id, token, status):
             break
 
 
-def upload(filename, blog_id, token):
-    title, content, marker = parse_post(filename)
-    matches = []
+def load_catalog(blog_id, token):
+    """Fetch existing posts once per batch instead of re-listing them for every source file."""
+    catalog = []
     for status in ("live", "scheduled", "draft"):
         for post in all_posts(blog_id, token, status):
-            if marker in post.get("content", "") or post.get("title") == title:
-                if status != "draft":
-                    raise ValueError(f"Matching {status} article exists; refusing to change or duplicate it: {filename}")
-                if "blogger-source:" in post.get("content", "") and marker not in post["content"]:
-                    raise ValueError("Same title belongs to a different source file; manual review required")
-                matches.append(post)
+            catalog.append((status, post))
+    return catalog
+
+
+def upload(filename, blog_id, token, catalog):
+    title, content, marker = parse_post(filename)
+    matches = []
+    for status, post in catalog:
+        if marker in post.get("content", "") or post.get("title") == title:
+            if status != "draft":
+                raise ValueError(f"Matching {status} article exists; refusing to change or duplicate it: {filename}")
+            if "blogger-source:" in post.get("content", "") and marker not in post["content"]:
+                raise ValueError("Same title belongs to a different source file; manual review required")
+            matches.append(post)
     if len(matches) > 1:
         raise ValueError("Multiple matching drafts exist; manual review required")
 
@@ -191,6 +231,16 @@ def upload(filename, blog_id, token):
     confirmed = request_json(f"{base}/{result['id']}?view=ADMIN", token=token)
     if confirmed.get("status") != "DRAFT":
         raise RuntimeError("Read-back did not confirm DRAFT; manual inspection required")
+
+    replaced = False
+    for index, (_, post) in enumerate(catalog):
+        if str(post.get("id") or "") == str(result["id"]):
+            catalog[index] = ("draft", confirmed)
+            replaced = True
+            break
+    if not replaced:
+        catalog.append(("draft", confirmed))
+
     print(f"{action}: {filename}; post_id={result['id']}; confirmed_status=DRAFT")
     if os.getenv("GITHUB_STEP_SUMMARY"):
         with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as summary:
@@ -229,8 +279,11 @@ def main():
 
     blog_id = blog_id_from_env()
     token = access_token()
-    for filename in files:
-        upload(filename, blog_id, token)
+    catalog = load_catalog(blog_id, token)
+    for index, filename in enumerate(files):
+        upload(filename, blog_id, token, catalog)
+        if index < len(files) - 1:
+            time.sleep(1)
 
 
 if __name__ == "__main__":
