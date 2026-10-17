@@ -7,6 +7,7 @@ on:
       - 'automation/blogger-*'
     paths:
       - 'blogger/*.html'
+      - 'blogger/batch-upload.txt'
   workflow_dispatch:
     inputs:
       file:
@@ -38,15 +39,26 @@ jobs:
           REQUESTED_FILE: ${{ inputs.file }}
           EVENT_NAME: ${{ github.event_name }}
           BEFORE_SHA: ${{ github.event.before }}
+          BATCH_MANIFEST: blogger/batch-upload.txt
         shell: bash
         run: |
           set -euo pipefail
           if [[ "$EVENT_NAME" == "workflow_dispatch" ]]; then
             printf '%s\n' "$REQUESTED_FILE" > /tmp/blogger-files.txt
-          elif [[ "$BEFORE_SHA" =~ ^0+$ ]]; then
-            git diff --name-only --diff-filter=AM origin/main...HEAD -- 'blogger/*.html' > /tmp/blogger-files.txt
           else
-            git diff --name-only --diff-filter=AM "$BEFORE_SHA" HEAD -- 'blogger/*.html' > /tmp/blogger-files.txt
+            changed=/tmp/blogger-changed.txt
+            if [[ "$BEFORE_SHA" =~ ^0+$ ]]; then
+              git diff --name-only --diff-filter=AM origin/main...HEAD > "$changed"
+            else
+              git diff --name-only --diff-filter=AM "$BEFORE_SHA" HEAD > "$changed"
+            fi
+
+            if grep -Fxq "$BATCH_MANIFEST" "$changed"; then
+              awk 'NF && $1 !~ /^#/ {print $1}' "$BATCH_MANIFEST" > /tmp/blogger-files.txt
+            else
+              grep -E '^blogger/[0-9]{4}-[0-9]{2}-[0-9]{2}-[a-z0-9-]+\.html$' "$changed" \
+                > /tmp/blogger-files.txt || true
+            fi
           fi
           python scripts/publish_blogger.py --file-list /tmp/blogger-files.txt --validate-only
       - name: Verify Blogger OAuth and blog access
