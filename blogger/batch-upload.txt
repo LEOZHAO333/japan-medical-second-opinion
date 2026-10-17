@@ -1,0 +1,13 @@
+# Blogger batch upload manifest.
+# Update the run marker and paths to retry a reviewed batch without editing article files.
+# run: 2026-10-17-oauth-recovery
+blogger/2026-10-16-advanced-cancer-second-opinion.html
+blogger/2026-10-16-annual-checkup-late-cancer.html
+blogger/2026-10-16-evidence-based-cancer-screening.html
+blogger/2026-10-16-gastric-cancer-chemo-biomarkers.html
+blogger/2026-10-16-glioma-second-opinion.html
+blogger/2026-10-16-head-neck-photoimmunotherapy.html
+blogger/2026-10-16-metastatic-gastric-cancer-surgery-second-opinion.html
+blogger/2026-10-16-nodule-after-checkup.html
+blogger/2026-10-16-pet-ct-screening.html
+blogger/2026-10-16-rectal-cancer-sphincter-preservation.html
