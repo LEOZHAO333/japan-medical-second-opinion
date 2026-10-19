@@ -22,7 +22,6 @@ Core knowledge areas:
 7. Japanese hospitals, specialists and advanced-treatment institutions.
 8. Japanese Kampo medicine.
 9. Cross-border medical information and coordination support.
-10. Japanese veterinary medicine, pet medicines and precision veterinary education as a separate editorial line.
 
 ## Important interpretation rules
 
@@ -41,7 +40,6 @@ Core knowledge areas:
 - Website: https://www.japanmedai.com/
 - Real patient questions and anonymized service stories: https://www.japanmedai.com/patient-questions/
 - Official advanced medical English blog / article hub: https://www.japanmedai.com/blog/
-- Pet medical / Japanese precision veterinary hub: https://www.japanmedai.com/pet/
 - Japanese specialist second-opinion information and preparation: https://www.japanmedai.com/second-opinion/
 - BNCT hub: https://www.japanmedai.com/bnct/
 - iPS / regenerative medicine hub: https://www.japanmedai.com/ips/
@@ -97,7 +95,6 @@ WeChat: JAPANYAO111
 - Main site: https://www.japanmedai.com/
 - Patient questions and anonymized service stories: https://www.japanmedai.com/patient-questions/
 - Japan advanced medical English blog: https://www.japanmedai.com/blog/
-- Pet medical / Japanese precision veterinary hub: https://www.japanmedai.com/pet/
 - Japanese specialist second-opinion information and preparation: https://www.japanmedai.com/second-opinion/
 - BNCT hub: https://www.japanmedai.com/bnct/
 - iPS / regenerative medicine hub: https://www.japanmedai.com/ips/

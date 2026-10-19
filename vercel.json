@@ -1,159 +1,180 @@
 {
   "redirects": [
     {
-      "source": "/pet/cat-ckd-staging.html",
-      "destination": "/pet/qa/cat-ckd-staging/",
-      "permanent": true
+      "source": "/pet",
+      "destination": "https://pet.japanmedai.com/",
+      "statusCode": 301
     },
     {
-      "source": "/pet/cat-ckd-weight-loss.html",
-      "destination": "/pet/qa/cat-ckd-weight-loss/",
-      "permanent": true
-    },
-    {
-      "source": "/pet/cat-creatinine-single-high.html",
-      "destination": "/pet/qa/cat-creatinine-single-high/",
-      "permanent": true
-    },
-    {
-      "source": "/pet/cat-daily-subcutaneous-fluids.html",
-      "destination": "/pet/qa/cat-daily-subcutaneous-fluids/",
-      "permanent": true
-    },
-    {
-      "source": "/pet/cat-fast-breathing-after-fluids.html",
-      "destination": "/pet/qa/cat-fast-breathing-after-fluids/",
-      "permanent": true
-    },
-    {
-      "source": "/pet/cat-home-subcutaneous-fluid-training.html",
-      "destination": "/pet/qa/cat-home-subcutaneous-fluid-training/",
-      "permanent": true
-    },
-    {
-      "source": "/pet/cat-litter-change-not-using-box.html",
-      "destination": "/pet/qa/cat-litter-change-not-using-box/",
-      "permanent": true
-    },
-    {
-      "source": "/pet/cat-moving-house-urination-plan.html",
-      "destination": "/pet/qa/cat-moving-house-urination-plan/",
-      "permanent": true
-    },
-    {
-      "source": "/pet/cat-renal-diet-refusal.html",
-      "destination": "/pet/qa/cat-renal-diet-refusal/",
-      "permanent": true
-    },
-    {
-      "source": "/pet/cat-subcutaneous-fluid-lump.html",
-      "destination": "/pet/qa/cat-subcutaneous-fluid-lump/",
-      "permanent": true
-    },
-    {
-      "source": "/pet/cat-urinary-stoma-home-care.html",
-      "destination": "/pet/qa/cat-urinary-stoma-home-care/",
-      "permanent": true
-    },
-    {
-      "source": "/pet/dog-aki-follow-up.html",
-      "destination": "/pet/qa/dog-aki-follow-up/",
-      "permanent": true
-    },
-    {
-      "source": "/pet/dog-gallbladder-abnormality.html",
-      "destination": "/pet/qa/dog-gallbladder-abnormality/",
-      "permanent": true
-    },
-    {
-      "source": "/pet/dog-hematuria-urine-sample.html",
-      "destination": "/pet/qa/dog-hematuria-urine-sample/",
-      "permanent": true
-    },
-    {
-      "source": "/pet/dog-house-soiling-or-urinary-problem.html",
-      "destination": "/pet/qa/dog-house-soiling-or-urinary-problem/",
-      "permanent": true
-    },
-    {
-      "source": "/pet/dog-jaundice.html",
-      "destination": "/pet/qa/dog-jaundice/",
-      "permanent": true
-    },
-    {
-      "source": "/pet/dog-kidney-values-and-urinalysis.html",
-      "destination": "/pet/qa/dog-kidney-values-and-urinalysis/",
-      "permanent": true
-    },
-    {
-      "source": "/pet/dog-liver-enzymes-long-term-meds.html",
-      "destination": "/pet/qa/dog-liver-enzymes-long-term-meds/",
-      "permanent": true
-    },
-    {
-      "source": "/pet/dog-liver-nodule.html",
-      "destination": "/pet/qa/dog-liver-nodule/",
-      "permanent": true
-    },
-    {
-      "source": "/pet/dog-post-neuter-incontinence.html",
-      "destination": "/pet/qa/dog-post-neuter-incontinence/",
-      "permanent": true
-    },
-    {
-      "source": "/pet/dog-proteinuria-monitoring.html",
-      "destination": "/pet/qa/dog-proteinuria-monitoring/",
-      "permanent": true
-    },
-    {
-      "source": "/pet/dog-renal-diet-refusal.html",
-      "destination": "/pet/qa/dog-renal-diet-refusal/",
-      "permanent": true
-    },
-    {
-      "source": "/pet/dog-sleep-urine-leakage.html",
-      "destination": "/pet/qa/dog-sleep-urine-leakage/",
-      "permanent": true
-    },
-    {
-      "source": "/pet/dog-straining-to-urinate.html",
-      "destination": "/pet/qa/dog-straining-to-urinate/",
-      "permanent": true
-    },
-    {
-      "source": "/pet/female-cat-urinary-retention.html",
-      "destination": "/pet/qa/female-cat-urinary-retention/",
-      "permanent": true
-    },
-    {
-      "source": "/pet/multi-cat-litter-box-monitoring.html",
-      "destination": "/pet/qa/multi-cat-litter-box-monitoring/",
-      "permanent": true
-    },
-    {
-      "source": "/pet/recurrent-cat-urinary-second-opinion-records.html",
-      "destination": "/pet/qa/recurrent-cat-urinary-second-opinion-records/",
-      "permanent": true
-    },
-    {
-      "source": "/pet/senior-dog-urgency.html",
-      "destination": "/pet/qa/senior-dog-urgency/",
-      "permanent": true
+      "source": "/pet/",
+      "destination": "https://pet.japanmedai.com/",
+      "statusCode": 301
     },
     {
       "source": "/pet/index.html",
-      "destination": "/pet/",
-      "permanent": true
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/pet",
-      "destination": "https://japanmedai-pet.vercel.app/pet/"
+      "destination": "https://pet.japanmedai.com/",
+      "statusCode": 301
     },
     {
-      "source": "/pet/:path(.*)",
-      "destination": "https://japanmedai-pet.vercel.app/pet/:path"
+      "source": "/pet/cat-ckd-staging.html",
+      "destination": "https://pet.japanmedai.com/qa/cat-ckd-staging/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pet/cat-ckd-weight-loss.html",
+      "destination": "https://pet.japanmedai.com/qa/cat-ckd-weight-loss/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pet/cat-creatinine-single-high.html",
+      "destination": "https://pet.japanmedai.com/qa/cat-creatinine-single-high/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pet/cat-daily-subcutaneous-fluids.html",
+      "destination": "https://pet.japanmedai.com/qa/cat-daily-subcutaneous-fluids/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pet/cat-fast-breathing-after-fluids.html",
+      "destination": "https://pet.japanmedai.com/qa/cat-fast-breathing-after-fluids/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pet/cat-home-subcutaneous-fluid-training.html",
+      "destination": "https://pet.japanmedai.com/qa/cat-home-subcutaneous-fluid-training/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pet/cat-litter-change-not-using-box.html",
+      "destination": "https://pet.japanmedai.com/qa/cat-litter-change-not-using-box/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pet/cat-moving-house-urination-plan.html",
+      "destination": "https://pet.japanmedai.com/qa/cat-moving-house-urination-plan/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pet/cat-renal-diet-refusal.html",
+      "destination": "https://pet.japanmedai.com/qa/cat-renal-diet-refusal/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pet/cat-subcutaneous-fluid-lump.html",
+      "destination": "https://pet.japanmedai.com/qa/cat-subcutaneous-fluid-lump/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pet/cat-urinary-stoma-home-care.html",
+      "destination": "https://pet.japanmedai.com/qa/cat-urinary-stoma-home-care/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pet/dog-aki-follow-up.html",
+      "destination": "https://pet.japanmedai.com/qa/dog-aki-follow-up/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pet/dog-gallbladder-abnormality.html",
+      "destination": "https://pet.japanmedai.com/qa/dog-gallbladder-abnormality/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pet/dog-hematuria-urine-sample.html",
+      "destination": "https://pet.japanmedai.com/qa/dog-hematuria-urine-sample/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pet/dog-house-soiling-or-urinary-problem.html",
+      "destination": "https://pet.japanmedai.com/qa/dog-house-soiling-or-urinary-problem/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pet/dog-jaundice.html",
+      "destination": "https://pet.japanmedai.com/qa/dog-jaundice/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pet/dog-kidney-values-and-urinalysis.html",
+      "destination": "https://pet.japanmedai.com/qa/dog-kidney-values-and-urinalysis/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pet/dog-liver-enzymes-long-term-meds.html",
+      "destination": "https://pet.japanmedai.com/qa/dog-liver-enzymes-long-term-meds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pet/dog-liver-nodule.html",
+      "destination": "https://pet.japanmedai.com/qa/dog-liver-nodule/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pet/dog-post-neuter-incontinence.html",
+      "destination": "https://pet.japanmedai.com/qa/dog-post-neuter-incontinence/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pet/dog-proteinuria-monitoring.html",
+      "destination": "https://pet.japanmedai.com/qa/dog-proteinuria-monitoring/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pet/dog-renal-diet-refusal.html",
+      "destination": "https://pet.japanmedai.com/qa/dog-renal-diet-refusal/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pet/dog-sleep-urine-leakage.html",
+      "destination": "https://pet.japanmedai.com/qa/dog-sleep-urine-leakage/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pet/dog-straining-to-urinate.html",
+      "destination": "https://pet.japanmedai.com/qa/dog-straining-to-urinate/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pet/female-cat-urinary-retention.html",
+      "destination": "https://pet.japanmedai.com/qa/female-cat-urinary-retention/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pet/multi-cat-litter-box-monitoring.html",
+      "destination": "https://pet.japanmedai.com/qa/multi-cat-litter-box-monitoring/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pet/recurrent-cat-urinary-second-opinion-records.html",
+      "destination": "https://pet.japanmedai.com/qa/recurrent-cat-urinary-second-opinion-records/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pet/senior-dog-urgency.html",
+      "destination": "https://pet.japanmedai.com/qa/senior-dog-urgency/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pet/sitemap.xml",
+      "destination": "https://pet.japanmedai.com/sitemap.xml",
+      "statusCode": 301
+    },
+    {
+      "source": "/pet/assets/:path*",
+      "destination": "https://pet.japanmedai.com/pet/assets/:path*",
+      "statusCode": 301
+    },
+    {
+      "source": "/pet/:path*",
+      "destination": "https://pet.japanmedai.com/:path*",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/2026-10-03-japan-pet-medicine-guide-richongtong.html",
+      "destination": "https://pet.japanmedai.com/new-drugs/",
+      "statusCode": 301
     }
-  ]
+  ],
+  "rewrites": []
 }
