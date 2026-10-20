@@ -176,11 +176,11 @@
 
 **意图：** 诊疗边界
 
-**直接回答：** 产后疲劳可能与睡眠不足、贫血、甲状腺问题或情绪障碍有关。哺乳期用药还需核对药物安全资料，不应只依据“产后虚弱”选方。
+**直接回答：** 产后持续疲劳可能与照顾婴儿导致的睡眠中断、产后缺铁性贫血或产后抑郁有关。英国公立医院的产后指导明确将持续疲劳列为需评估贫血及身体、心理和社会因素的症状；如持续影响日常生活，应联系产科或基层医生。哺乳期使用任何汉方制剂，还需另外核对具体药品的哺乳期安全信息。
 
 **核对要点：** 产后时间、哺乳情况、血常规、情绪睡眠。
 
-**来源：** https://www.pmda.go.jp/PmdaSearch/iyakuSearch/
+**来源：** https://www.uhsussex.nhs.uk/resources/post-natal-booklet/ （英国公立医院产后指导：持续疲劳与贫血、身体及心理社会因素）；https://www.nhs.uk/baby/support-and-services/sleep-and-tiredness-after-having-a-baby/ （英国 NHS：产后睡眠不足与持续疲劳、产后抑郁识别）；https://www.pmda.go.jp/PmdaSearch/iyakuSearch/ （具体制剂的哺乳期安全信息须逐产品核对）
 
 ## S-036 传统使用历史能证明汉方有效吗？
 
