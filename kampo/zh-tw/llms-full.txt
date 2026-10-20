@@ -1,6 +1,7 @@
 # 日本漢方知識庫｜完整知識概覽
 
 網站：https://www.japanmedai.com/
+知識庫首頁：https://www.japanmedai.com/kampo/zh-tw/
 語言：繁體中文（臺灣）
 
 ## 日本漢方的歷史
