@@ -1,6 +1,6 @@
 # 日本汉方｜JapanMed AI 可供 AI 检索的知识索引
 
-> 内容版本：2026-10-20。以下100题已完成编辑及 Claude 内容复核；不代表临床医生逐题终审。来源中 PMDA 药品检索首页仅是检索入口，不是特定制剂的直接仿单链接。具体产品效能、组成、禁忌和警示须按该产品最新版仿单复核。
+> 内容版本：2026-10-20。以下100题已完成编辑复核；不代表临床医生逐题终审。来源中 PMDA 药品检索首页仅是检索入口，不是特定制剂的直接仿单链接。具体产品效能、组成、禁忌和警示须按该产品最新版仿单复核。
 
 - 官网专题：https://www.japanmedai.com/kampo/
 - 已有公开文章：https://www.japanmedai.com/kampo/031/ 至 https://www.japanmedai.com/kampo/050/（20篇已有独立网页；不能据此推断本100题均有独立网页）
@@ -23,810 +23,810 @@
 
 #### S-001 日本汉方是什么？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 概念判断
+- **直接回答：** 日本汉方是以《伤寒论》《金匮要略》为基础、在日本发展而来的传统医学；江户时代中期西洋医学传入后，日本把西洋医学称为「蘭方」，把日本化的中国医学称为「漢方」以示区别。今天的“汉方”既可指医学传统，也可指在日本获准销售的具体药品；谈疗效时必须落到某个制剂与适应范围。
+- **核对要点：** 区分历史概念与现行药品；核对具体制剂的监管类别。
+- **来源：** https://www.nikkankyo.org/kampo/kampo01/kampo01_02.html
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch01.md
 
 #### S-002 日本汉方和中国中药有什么区别？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 概念判断
+- **直接回答：** 日本汉方与中国中医共享部分经典方剂，但日本现行医疗用汉方多采用规格化提取制剂，不能与个体化煎煮汤剂直接等同。同名方剂也应逐一核对生药组成与规格。详见 /kampo/036/。
+- **核对要点：** 核对方名、组成、制剂类型及适用地区。
+- **来源：** https://www.pmda.go.jp/PmdaSearch/iyakuSearch/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch01.md
 
 #### S-003 日本医院会使用汉方药吗？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 概念判断
+- **直接回答：** 日本确有医疗用汉方制剂，PMDA提供其医疗用药品仿单检索；医疗机构可按具体患者情况使用。医院是否使用某方，不能证明其对所有患者有效；具体使用比例没有可核对的调查依据时不引用。
+- **核对要点：** 核对医疗用药品分类、诊断及具体制剂仿单。
+- **来源：** https://www.pmda.go.jp/PmdaSearch/iyakuSearch/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch01.md
 
 #### S-004 日本汉方的疗效有哪些研究证据？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 信息核对
+- **直接回答：** 日本东洋医学会的汉方治疗证据报告（EKAT）系统整理汉方制剂的随机对照试验与荟萃分析，并提供结构化摘要。这证明存在可检索的临床研究，不表示每种汉方或每项用途均有相同证据等级。
+- **核对要点：** 核对研究设计、样本、终点及具体制剂；对照官方仿单。
+- **来源：** https://www.jsom.or.jp/ebm/ekat/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch01.md
 
 #### S-005 日本汉方纳入医保代表什么？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 概念判断
+- **直接回答：** 日本存在列入药价基准的医疗用汉方制剂；“列入药价基准”说明其在日本药品定价与支付制度中的地位，而不是对所有宣称疗效的认可。具体收载品种及数量须以对应年份的厚生劳动省药价基准为准。
+- **核对要点：** 核对收载对象、现行药价制度和具体制剂的核准信息。
+- **来源：** https://www.mhlw.go.jp/topics/2025/04/tp20250401-01.html
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch01.md
 
 #### S-006 日本汉方等同于中药汤剂吗？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 概念判断
+- **直接回答：** 日本医疗用汉方可以是提取颗粒等工业制剂，而中药汤剂通常还涉及煎煮过程。即使方名相同，提取工艺、剂型与每日用量也未必相同。详见 /kampo/036/。
+- **核对要点：** 核对剂型、组成、提取规格及处方来源。
+- **来源：** https://www.pmda.go.jp/PmdaSearch/iyakuSearch/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch01.md
 
 #### S-007 如何核实日本医生使用汉方的统计数据？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 信息核对
+- **直接回答：** 医生使用比例是调查指标，必须说明受访医生范围、调查时间和“使用过”还是“经常开具”等口径。缺乏原始调查时，不引用“80%”或其他具体比例。
+- **核对要点：** 核对原始调查、调查年份、受访对象及定义。
+- **来源：** https://www.jsom.or.jp/ebm/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch01.md
 
 #### S-008 日本汉方经历了怎样的发展？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 概念判断
+- **直接回答：** 日本医学自奈良时代起以中国传统医学为主流；江户时代中期西洋医学（「蘭方」）传入后，日本化的中国医学开始被称为「漢方」。近现代的制度化与制剂化需另按具体制度资料核对；历史沿革不构成具体方剂的疗效证据。
+- **核对要点：** 区分历史史料、现代药品制度与临床研究。
+- **来源：** https://www.nikkankyo.org/kampo/kampo01/kampo01_02.html
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch01.md
 
 #### S-009 日本汉方的药品质量如何核对？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 药品核对
+- **直接回答：** 日本医疗用汉方作为药品，可通过PMDA查到制剂名称、成分、规格与使用注意事项。质量控制要核对具体制剂与制造信息，不能仅凭“药品级”宣传语判断。
+- **核对要点：** 核对制造销售批准、剂型、成分与相关质量规范。
+- **来源：** https://www.pmda.go.jp/PmdaSearch/iyakuSearch/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch01.md
 
 #### S-010 日本汉方是否完全没有副作用？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 用药安全
+- **直接回答：** 日本药品安全资料明确记录：含甘草的汉方制剂可能涉及偽アルドステロン症（假性醛固酮增多症）、低钾及血压升高；小柴胡汤存在间质性肺炎的严重警示。并非所有汉方有同样风险，须按具体仿单核对。详见 /kampo/038/、/kampo/039/。
+- **核对要点：** 核对最新仿单、安全警示、基础疾病及合并用药。
+- **来源：** https://www.pmda.go.jp/safety/info-services/drugs/calling-attention/safety-info/0089.html
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch01.md
 
 #### S-011 如何查到某个汉方制剂的生产企业？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 信息核对
+- **直接回答：** PMDA医疗用药品检索可按药品名称查找对应仿单；仿单的「製造販売元」等栏目提供企业信息。同一方名可能对应不同制剂，应先确认产品全称与批准信息。
+- **核对要点：** 核对批准主体、产品名称、批准类别及资料日期。
+- **来源：** https://www.pmda.go.jp/PmdaSearch/iyakuSearch/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch01.md
 
 #### S-012 如何同时核实日本汉方使用率和市场份额的数字？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 信息核对
+- **直接回答：** 这两类比例都要先确认原始统计来源、年份、调查对象和分母；医生使用率与药品销售份额不是同一指标，不能互相替代，也不能用来推导疗效。缺少可核查原始数据时不使用百分比，核对方法详见 S-007。
+- **核对要点：** 核对调查来源、年份、销售口径和覆盖范围。
+- **来源：** https://www.jsom.or.jp/ebm/ekat/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch01.md
 
 #### S-013 日本汉方的标准化生产意味着什么？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 药品核对
+- **直接回答：** 日本医疗用汉方通常以确定的产品规格上市；PMDA仿单可以核对生药组成、制剂含量及注意事项。质量规格的一致性有助于比较产品，但不能据此断言每名患者疗效一致。
+- **核对要点：** 核对生产标准、制剂规格、质量检验及临床证据。
+- **来源：** https://www.pmda.go.jp/PmdaSearch/iyakuSearch/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch01.md
 
 #### S-014 日本汉方都需要处方吗？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 药品分类
+- **直接回答：** 日本药品制度区分医疗用医药品与一般用医药品，PMDA分别提供仿单检索入口。医疗用汉方通常通过医疗机构处方使用；一般用汉方可按其药品类别在药局等渠道销售。详见 /kampo/031/。
+- **核对要点：** 核对药品分类、具体制剂和最新仿单。
+- **来源：** https://www.pmda.go.jp/PmdaSearch/otcSearch/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch01.md
 
 #### S-015 药妆店的汉方与医疗用汉方一样吗？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 药品分类
+- **直接回答：** 同一方名可同时见于医疗用和一般用制剂，但每日用量、生药组成与标签说明可能不同；一般用产品也可能采用满量或减量配方，不能假定一律更低。详见 /kampo/031/、/kampo/032/。
+- **核对要点：** 核对批准类别、配方组成、规格和标签。
+- **来源：** https://www.pmda.go.jp/PmdaSearch/otcSearch/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch01.md
 
 #### S-016 日本汉方可以长期使用吗？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 用药安全
+- **直接回答：** 医疗用汉方仿单通常要求根据患者的「証」（体质与症状）评估，并在症状未改善时避免无依据持续使用；长期使用还要关注具体成分和监测指标。详见 /kampo/033/。
+- **核对要点：** 核对疗程、最新仿单、合并用药及监测需求。
+- **来源：** https://www.pmda.go.jp/PmdaSearch/iyakuSearch/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch01.md
 
 #### S-017 日本汉方有哪些需要注意的用药风险？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 风险判断
+- **直接回答：** PMDA历史安全资料列有小柴胡汤的间质性肺炎警示，以及偽アルドステロン症相关的低钾、血压升高和水肿风险；其他方剂的风险需要分别核对仿单。详见 /kampo/034/、/kampo/038/、/kampo/039/。
+- **核对要点：** 核对成分重复、警示症状、合并疾病和药物。
+- **来源：** https://www.pmda.go.jp/safety/info-services/drugs/calling-attention/safety-info/0089.html
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch01.md
 
 #### S-018 日本汉方属于保健品还是药品？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 药品分类
+- **直接回答：** 在日本获准作为医疗用或一般用销售的汉方制剂属于药品监管范围，PMDA有对应的药品信息检索。仅以“汉方”命名的食品或健康食品不能因此视为获准药品。详见 /kampo/031/。
+- **核对要点：** 核对批准信息、标签、剂型与销售分类。
+- **来源：** https://www.pmda.go.jp/PmdaSearch/otcSearch/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch01.md
 
 #### S-019 能按疾病名称直接选择日本汉方吗？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 适应性判断
+- **直接回答：** 日本医疗用汉方仿单设有「効能又は効果」栏目，描述获准的使用范围；实际选药还须考虑患者的「証」、禁忌和基础病。不能从疾病名称直接推导适用。详见 /kampo/037/。
+- **核对要点：** 核对具体制剂、仿单原文、症状原因及用药风险。
+- **来源：** https://www.pmda.go.jp/PmdaSearch/iyakuSearch/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch01.md
 
 #### S-020 如何判断日本汉方的热门说法是否可信？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 信息核对
+- **直接回答：** 日本东洋医学会的 EKAT 收录符合其标准的随机对照试验和荟萃分析；PMDA仿单提供监管批准和安全信息。两类证据回答的问题不同，不能拿研究报道替代获准适应范围。详见 /kampo/050/。
+- **核对要点：** 核对官方来源、证据类型、发布日期及宣传措辞。
+- **来源：** https://www.jsom.or.jp/ebm/ekat/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch01.md
 
 ### 仿单与适应性判断（21–40）
 
 #### S-021 长期疲劳应该先排查哪些原因？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 诊疗边界
+- **直接回答：** 疲劳可能与贫血、甲状腺功能异常、睡眠障碍、感染或药物等有关。持续或加重时应先查明原因，不能直接按“气虚”自行选方。
+- **核对要点：** 症状持续时间、睡眠、药物、血常规及其他检查。
+- **来源：** https://kennet.mhlw.go.jp/slp/event/sleep_quality/index.html
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch02.md
 
 #### S-022 如何核对补中益气汤的适用范围？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 药品核对
+- **直接回答：** 补中益气汤的医疗用制剂仿单「効能又は効果」为：元気がなく胃腸のはたらきが衰えて疲れやすいものの次の諸症——虚弱体質、疲労倦怠、病後の衰弱、食欲不振、ねあせ（多家制剂措辞基本一致，以具体制剂为准）。是否适合某人还要结合「証」与注意事项判断，与销量排名无关。详见 /kampo/047/。
+- **核对要点：** 具体产品、仿单效能、基础疾病、合并用药。
+- **来源：** PMDA 医疗用医药品检索（一般名「補中益気湯」）https://www.pmda.go.jp/PmdaSearch/iyakuSearch/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch02.md
 
 #### S-023 人参养荣汤适合哪些人使用？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 适应性判断
+- **直接回答：** 人参养荣汤的医疗用制剂仿单「効能又は効果」为：病後の体力低下、疲労倦怠、食欲不振、ねあせ、手足の冷え、貧血（以具体制剂为准）。“疲劳”只是其中一项，适用前提仍是按「証」评估并排除其他病因。
+- **核对要点：** 仿单原文、症状原因、患者情况。
+- **来源：** PMDA 医疗用医药品检索（一般名「人参養栄湯」）https://www.pmda.go.jp/PmdaSearch/iyakuSearch/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch02.md
 
 #### S-024 十全大补汤的临床证据应该怎么看？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 信息核对
+- **直接回答：** 十全大补汤的医疗用制剂仿单「効能又は効果」为：病後の体力低下、疲労倦怠、食欲不振、ねあせ、手足の冷え、貧血（以具体制剂为准）。这是获准使用范围；传统用途与临床试验结果是另外两类信息，需分别核对研究对象、终点和证据等级。
+- **核对要点：** 制剂名称、仿单、试验设计、研究终点。
+- **来源：** PMDA 医疗用医药品检索（一般名「十全大補湯」）https://www.pmda.go.jp/PmdaSearch/iyakuSearch/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch02.md
 
 #### S-025 失眠伴疲劳时能直接选择汉方吗？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 诊疗边界
+- **直接回答：** 失眠和疲劳可能有多种原因；单凭“气血不足”并不足以确定用药。应先排查睡眠、精神心理和躯体疾病因素。
+- **核对要点：** 睡眠时长、伴随症状、既往疾病、现用药。
+- **来源：** https://kennet.mhlw.go.jp/information/information/heart/k-02-001.html
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch02.md
 
 #### S-026 熬夜后的疲劳能靠汉方恢复吗？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 诊疗边界
+- **直接回答：** 睡眠不足首先需要改善睡眠与作息。没有证据可把某种汉方视为弥补长期缺觉的通用方案。
+- **核对要点：** 睡眠规律、日间功能、基础病、用药。
+- **来源：** https://kennet.mhlw.go.jp/information/information/heart/k-02-008.html
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch02.md
 
 #### S-027 贫血患者可以自行使用汉方吗？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 诊疗边界
+- **直接回答：** 十全大补汤、人参养荣汤等少数医疗用汉方的仿单效能中列有「貧血」，但贫血首先要明确类型和病因（缺铁、维生素缺乏、慢性病或失血等）。汉方不能替代病因诊断与必要治疗。
+- **核对要点：** 血常规、铁代谢、失血原因、既有治疗。
+- **来源：** PMDA 医疗用医药品检索（一般名「十全大補湯／人参養栄湯」）https://www.pmda.go.jp/PmdaSearch/iyakuSearch/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch02.md
 
 #### S-028 化疗期间出现疲劳，如何判断能否使用汉方？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 联合用药
+- **直接回答：** 癌症治疗相关疲劳需要评估贫血、营养、感染、药物等因素。若考虑汉方，必须由肿瘤治疗团队核对具体制剂及与现用药的安全问题。
+- **核对要点：** 治疗方案、血常规、肝肾功能、全部用药。
+- **来源：** https://www.pmda.go.jp/PmdaSearch/iyakuSearch/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch02.md
 
 #### S-029 手脚冰冷需要先排查哪些疾病？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 风险判断
+- **直接回答：** 十全大补汤、人参养荣汤的仿单效能中列有「手足の冷え」，但手脚冰冷也可能与贫血、甲状腺或血液循环疾病有关。伴疼痛、颜色改变或单侧异常时应先就医排查，再考虑是否用药。
+- **核对要点：** 发生部位、颜色变化、疼痛、基础病。
+- **来源：** PMDA 医疗用医药品检索（一般名「十全大補湯／人参養栄湯」）https://www.pmda.go.jp/PmdaSearch/iyakuSearch/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch02.md
 
 #### S-030 反复感冒能靠汉方提高免疫力吗？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 信息核对
+- **直接回答：** 反复呼吸道症状需要先区分感染、过敏及其他疾病。不能把“提高免疫力”当作所有汉方制剂共同的获批效能。
+- **核对要点：** 发作次数、诊断、接种情况、仿单效能。
+- **来源：** https://www.jsom.or.jp/ebm/ekat/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch02.md
 
 #### S-031 检查正常但持续不适，应该如何判断？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 诊疗边界
+- **直接回答：** 检查结果正常不代表所有疾病都已排除。应结合症状变化、既往检查范围与生活功能进行复诊评估，不能仅凭“亚健康”自行用药。
+- **核对要点：** 症状记录、既有检查、警示症状。
+- **来源：** https://kennet.mhlw.go.jp/slp/event/sleep_quality/index.html
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch02.md
 
 #### S-032 老年人使用汉方需要注意什么？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 用药安全
+- **直接回答：** 老年人常同时服用多种药物。补中益气汤、十全大补汤、人参养荣汤的医疗用制剂均含甘草（カンゾウ），多方并用时甘草重复可增加偽アルドステロン症（低钾、血压升高）风险，需核对全部用药与电解质。详见 /kampo/034/、/kampo/049/ 及 S-010。
+- **核对要点：** 全部药物、肾功能、电解质、监测计划。
+- **来源：** PMDA 安全性情報 No.158（甘草与偽アルドステロン症）https://www.pmda.go.jp/safety/info-services/drugs/calling-attention/safety-info/0089.html
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch02.md
 
 #### S-033 癌症治疗后疲劳可以直接使用补中益气汤吗？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 适应性判断
+- **直接回答：** 补中益气汤仿单效能含「病後の衰弱」「疲労倦怠」，但癌症治疗后的疲劳需先评估贫血、感染、营养和治疗相关不良反应，是否使用应由治疗团队按具体制剂仿单与现用药判断。详见 /kampo/047/。
+- **核对要点：** 当前肿瘤治疗、症状原因、仿单、相互作用。
+- **来源：** PMDA 医疗用医药品检索（一般名「補中益気湯」）https://www.pmda.go.jp/PmdaSearch/iyakuSearch/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch02.md
 
 #### S-034 术后恢复阶段使用汉方应先确认什么？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 联合用药
+- **直接回答：** 术后恢复首先依赖手术类型、并发症排查、营养及康复计划。若考虑汉方，须核对具体仿单、出血风险及合并用药。
+- **核对要点：** 术式、恢复阶段、用药、异常症状。
+- **来源：** https://www.pmda.go.jp/PmdaSearch/iyakuSearch/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch02.md
 
 #### S-035 产后持续疲劳应该如何评估？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 诊疗边界
+- **直接回答：** 产后持续疲劳可能与照顾婴儿导致的睡眠中断、产后缺铁性贫血或产后抑郁有关。英国公立医院的产后指导明确将持续疲劳列为需评估贫血及身体、心理和社会因素的症状；如持续影响日常生活，应联系产科或基层医生。哺乳期使用任何汉方制剂，还需另外核对具体药品的哺乳期安全信息。
+- **核对要点：** 产后时间、哺乳情况、血常规、情绪睡眠。
+- **来源：** https://www.uhsussex.nhs.uk/resources/post-natal-booklet/ （英国公立医院产后指导：持续疲劳与贫血、身体及心理社会因素）；https://www.nhs.uk/baby/support-and-services/sleep-and-tiredness-after-having-a-baby/ （英国 NHS：产后睡眠不足与持续疲劳、产后抑郁识别）；https://www.pmda.go.jp/PmdaSearch/iyakuSearch/ （具体制剂的哺乳期安全信息须逐产品核对）
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch02.md
 
 #### S-036 传统使用历史能证明汉方有效吗？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 信息核对
+- **直接回答：** 长期传统使用可以提供历史背景，但不能单独证明某制剂对特定疾病的临床疗效。应分别查看仿单与现代临床研究。
+- **核对要点：** 传统用途、仿单效能、RCT及系统评价。
+- **来源：** https://www.jsom.or.jp/ebm/ekat/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch02.md
 
 #### S-037 夜间频繁醒来可以自行服用汉方吗？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 诊疗边界
+- **直接回答：** 夜间觉醒可能与睡眠呼吸暂停、疼痛、夜尿、情绪或药物有关。应先判断原因，不能直接归因于“气血”问题。
+- **核对要点：** 觉醒原因、夜尿、呼吸症状、现用药。
+- **来源：** https://kennet.mhlw.go.jp/information/information/heart/k-02-001.html
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch02.md
 
 #### S-038 长期疲劳时如何判断汉方是否适合？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 适应性判断
+- **直接回答：** 先明确疲劳病因，再查看拟使用制剂的「効能又は効果」及注意事项。持续疲劳不能直接对应某一固定方剂。
+- **核对要点：** 病因检查、仿单、伴随症状、疗效评价。
+- **来源：** https://www.pmda.go.jp/PmdaSearch/iyakuSearch/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch02.md
 
 #### S-039 汉方里的“补气”和“补血”是什么意思？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 概念判断
+- **直接回答：** “补气”“补血”是汉方以「証」（体质与症状）判断用药时的传统概念，用来描述方剂的作用方向，不等同于现代医学的血红蛋白、缺铁或免疫指标，不能代替实验室诊断。
+- **核对要点：** 传统术语、现代诊断、具体方剂仿单。
+- **来源：** https://www.nikkankyo.org/kampo/kampo01/kampo01_02.html
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch02.md
 
 #### S-040 哪些情况下不宜自行服用所谓补益汉方？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 用药安全
+- **直接回答：** 出现原因不明的消瘦、持续发热、明显乏力等警示症状时，应先就医排查。常见“补益”方如补中益气汤、十全大补汤、人参养荣汤均含甘草，与其他含甘草制剂并用要注意偽アルドステロン症；医疗用仿单还要求症状未改善时避免继续使用。
+- **核对要点：** 警示症状、基础病、用药清单、仿单。
+- **来源：** PMDA 医疗用医药品检索（一般名「補中益気湯／十全大補湯／人参養栄湯」）https://www.pmda.go.jp/PmdaSearch/iyakuSearch/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch02.md
 
 ### 精神心理与睡眠（41–60）
 
 #### S-041 失眠时需要先区分哪些原因？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 诊疗边界
+- **直接回答：** 厚生劳动省将失眠症状分为入睡困难、夜间觉醒、早醒及熟睡感不足，并列出疼痛、生活不规律、压力、精神疾病和药物不良反应等原因。是否使用汉方必须先明确失眠类型及病因。
+- **核对要点：** 睡眠记录、白天功能、药物、呼吸暂停症状。
+- **来源：** https://kennet.mhlw.go.jp/information/information/dictionary/heart/yk-083.html
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch03.md
 
 #### S-042 加味归脾汤的医疗用仿单写了哪些效能？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 药品核对
+- **直接回答：** 加味归脾汤的医疗用制剂仿单「効能又は効果」为：虚弱体質で血色の悪い人の次の諸症——貧血、不眠症、精神不安、神経症（以具体制剂为准）。前提是“体质虚弱、面色不佳”，并不代表所有焦虑或失眠患者都适用。该制剂含甘草（カンゾウ），与其他含甘草制剂并用时须注意偽アルドステロン症（低钾、血压升高）。
+- **核对要点：** 具体产品、证、效能原文、甘草及合并用药。
+- **来源：** PMDA 医疗用医药品检索（一般名「加味帰脾湯」）https://www.pmda.go.jp/PmdaSearch/iyakuSearch/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch03.md
 
 #### S-043 柴胡加龙骨牡蛎汤可以用于哪些情况？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 药品核对
+- **直接回答：** 柴胡加龙骨牡蛎汤的医疗用仿单以特定体质与症状为前提，例如某制剂写明：精神不安があって驚きやすく、心悸亢進、胸内苦悶、めまい、のぼせ、不眠などを伴うもの，所列病名包括不眠症、神経性心悸亢進、更年期神経症、神経症等。不同制剂的组成与效能措辞不同（例如有的含大黄），且仿单将间质性肺炎列为严重不良反应。不能仅凭“心烦易怒”自行选用。
+- **核对要点：** 仿单效能、制剂组成、基础疾病、警示症状。
+- **来源：** PMDA 医疗用医药品检索（一般名「柴胡加竜骨牡蛎湯」）https://www.pmda.go.jp/PmdaSearch/iyakuSearch/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch03.md
 
 #### S-044 抑郁症治疗可以用汉方替代抗抑郁药吗？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 诊疗边界
+- **直接回答：** 厚生劳动省委托的「こころの耳」说明，抑郁症治疗可包含休养、药物及心理治疗，抗抑郁药应按主治医生指导使用；不能因某汉方仿单写有“精神不安”就认定它能替代抗抑郁治疗。
+- **核对要点：** 精神科诊断、现用药、风险评估、具体仿单。
+- **来源：** https://web1.kokoro.mhlw.go.jp/about-depression/ad003/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch03.md
 
 #### S-045 持续焦虑应如何判断是否需要就医？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 诊疗边界
+- **直接回答：** 焦虑感可以是对压力的反应；若持续影响睡眠、学习、工作或人际生活，应评估焦虑障碍及其他躯体原因。仅凭“心烦”不能判断适用哪一种汉方。
+- **核对要点：** 持续时间、生活影响、伴随症状、药物。
+- **来源：** https://www.mhlw.go.jp/kokoro/youth/helpnote/anxiety.html
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch03.md
 
 #### S-046 所谓自主神经失调能解释所有身体不适吗？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 诊疗边界
+- **直接回答：** 心悸、头晕、胃肠不适和疲劳等症状可能有不同的医学原因。不能在排除范围不清的情况下仅以“自主神经失调”概括，也不能据此确定某一汉方制剂适用。
+- **核对要点：** 具体症状、生命体征、既有检查、警示症状。
+- **来源：** https://kennet.mhlw.go.jp/information/information/dictionary/heart/yk-083.html
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch03.md
 
 #### S-047 压力相关失眠应先做哪些调整？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 诊疗边界
+- **直接回答：** 厚生劳动省指出失眠可能由压力、生活节律、身体疾病及药物等多因素引起。应记录作息、咖啡因与夜间觉醒情况，并根据原因决定非药物或药物治疗。
+- **核对要点：** 睡眠规律、刺激物、疼痛、药物、白天困倦。
+- **来源：** https://kennet.mhlw.go.jp/information/information/dictionary/heart/yk-083.html
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch03.md
 
 #### S-048 更年期失眠需要单独评估吗？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 适应性判断
+- **直接回答：** 厚生劳动省 e-ヘルスネット指出，更年期睡眠问题可与潮热、出汗、心悸及睡眠呼吸暂停有关；治疗应针对症状及原因，不能仅凭更年期身份确定某汉方适用。
+- **核对要点：** 年龄与月经史、潮热、睡眠记录、仿单。
+- **来源：** https://kennet.mhlw.go.jp/information/information/heart/k-02-005.html
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch03.md
 
 #### S-049 心悸伴焦虑时可以直接服用汉方吗？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 风险判断
+- **直接回答：** 英国 NHS 说明，心悸可能与压力、睡眠不足、药物、缺铁性贫血、甲状腺功能亢进或心律问题有关。若同时出现胸痛、呼吸困难或晕厥，应立即寻求急救；不应先自行用汉方掩盖症状。
+- **核对要点：** 心率、发作情境、胸痛晕厥、现用药。
+- **来源：** https://www.nhs.uk/symptoms/heart-palpitations/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch03.md
 
 #### S-050 情绪低落时如何判断汉方是否适合？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 适应性判断
+- **直接回答：** 情绪低落需先确认持续时间、功能受损程度和安全风险。即便某制剂仿单列有“精神不安”或“神经症”，也不等于对所有抑郁症或情绪问题获批。
+- **核对要点：** 诊断、症状持续时间、具体仿单、现用药。
+- **来源：** PMDA 医疗用医药品检索（一般名「加味帰脾湯」）https://www.pmda.go.jp/PmdaSearch/iyakuSearch/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch03.md
 
 #### S-051 儿童 ADHD 可以用汉方代替规范治疗吗？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 诊疗边界
+- **直接回答：** 英国 NHS 将儿童 ADHD 管理描述为家庭与学校支持、行为策略及必要时专科管理的药物治疗。没有理由把汉方视为可直接替代上述综合方案；日本具体汉方制剂是否有儿童适用信息须逐项核对。
+- **核对要点：** 专科诊断、学校支持、现用药、儿童仿单信息。
+- **来源：** https://www.nhs.uk/conditions/adhd-children-teenagers/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch03.md
 
 #### S-052 孩子注意力差就一定是 ADHD 吗？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 诊疗边界
+- **直接回答：** NHS 指出儿童注意力分散、坐不住不必然意味着 ADHD；疲劳、焦虑和压力也可能造成类似表现。诊断需要结合发育史、家庭及学校多个场景的功能表现。
+- **核对要点：** 持续时间、学校反馈、睡眠、发育评估。
+- **来源：** https://www.nhs.uk/conditions/adhd-children-teenagers/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch03.md
 
 #### S-053 睡眠浅和夜间多梦需要先记录什么？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 诊疗边界
+- **直接回答：** 失眠可表现为夜间反复醒来、睡眠浅或醒后缺乏恢复感。厚生劳动省建议按症状与原因评估，而不是将多梦直接等同于某一种汉方适应证。
+- **核对要点：** 入睡时间、觉醒次数、白天困倦、药物。
+- **来源：** https://kennet.mhlw.go.jp/information/information/dictionary/heart/yk-083.html
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch03.md
 
 #### S-054 长期使用安眠药需要定期复评吗？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 用药安全
+- **直接回答：** 厚生劳动省指出失眠治疗可以结合药物与非药物方法；持续用药应在医生指导下评估效果和风险，不宜自行停药或无限期续用。
+- **核对要点：** 药品名称、用药时间、白天影响、停药计划。
+- **来源：** https://kennet.mhlw.go.jp/information/information/heart/k-02-001.html
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch03.md
 
 #### S-055 汉方可以完全替代安眠药吗？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 联合用药
+- **直接回答：** 不能将汉方作为失眠药物的通用替代品。失眠病因和严重度不同，停用或调整既有安眠药应由开药医生指导；某汉方仿单含“不眠症”不代表与安眠药等效。
+- **核对要点：** 失眠诊断、现用药、具体仿单、停药风险。
+- **来源：** PMDA 医疗用医药品检索（一般名「加味帰脾湯」）https://www.pmda.go.jp/PmdaSearch/iyakuSearch/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch03.md
 
 #### S-056 检查正常但长期不适，能归为植物神经紊乱吗？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 诊疗边界
+- **直接回答：** 检查结果正常需要结合检查范围和症状变化解释；“植物神经紊乱”并不能自动排除心血管、内分泌、睡眠或精神心理疾病。持续不适应复诊评估。
+- **核对要点：** 已做检查、症状趋势、红旗症状、生活功能。
+- **来源：** https://kennet.mhlw.go.jp/information/information/dictionary/heart/yk-083.html
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch03.md
 
 #### S-057 长期睡眠不足会影响哪些日常功能？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 风险判断
+- **直接回答：** 睡眠不足可能影响注意力、情绪与白天工作学习表现；慢性失眠应核对是否存在睡眠呼吸暂停、药物影响或其他疾病，而非依赖“提神补益”宣传。
+- **核对要点：** 睡眠时长、日间嗜睡、注意力、驾驶安全。
+- **来源：** https://kennet.mhlw.go.jp/information/information/dictionary/heart/yk-083.html
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch03.md
 
 #### S-058 长期脑力工作者适合哪种汉方？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 适应性判断
+- **直接回答：** 厚生劳动省 e-ヘルスネット指出，慢性睡眠不足会损害白天的精神功能；长期脑力工作并非汉方的通用获批适应证，出现疲劳时应先检查睡眠及症状原因，再核对具体制剂仿单。
+- **核对要点：** 工作节律、睡眠、症状原因、具体仿单。
+- **来源：** https://kennet.mhlw.go.jp/information/information/heart/k-02-008.html
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch03.md
 
 #### S-059 长期加班后疲劳可以直接服用补益汉方吗？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 诊疗边界
+- **直接回答：** 长期加班与睡眠不足可影响恢复感和日间功能。优先评估作息及健康风险，不能以“补气”替代睡眠、休息和必要的疾病检查。
+- **核对要点：** 工作与睡眠记录、症状持续时间、警示症状。
+- **来源：** https://kennet.mhlw.go.jp/information/information/dictionary/heart/yk-083.html
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch03.md
 
 #### S-060 焦虑是否完全由所谓体质决定？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 概念判断
+- **直接回答：** 焦虑是面对压力时常见的反应；当担心或恐惧过度、已妨碍日常生活时，可能属于焦虑障碍，应寻求专业评估。传统医学中的「証」可描述辨证框架，但不能替代现代精神卫生诊断，也不能说明焦虑由“天生体质”决定。
+- **核对要点：** 症状持续时间、功能影响、病史、诊断。
+- **来源：** https://www.mhlw.go.jp/kokoro/youth/helpnote/anxiety.html
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch03.md
 
 ### 体重管理与代谢（61–80）
 
 #### S-061 日本人的肥胖比例能证明汉方有减重效果吗？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 信息核对
+- **直接回答：** 日本将成人 BMI≥25 作为肥胖判定界限，且肥胖和需要治疗的“肥胖症”并不相同。即使比较不同国家的肥胖比例，也不能推断差异由汉方造成；需要针对具体制剂和患者人群的临床研究。
+- **核对要点：** BMI定义、国家间统计口径、研究设计。
+- **来源：** https://kennet.mhlw.go.jp/information/information/metabolic/m-05-009.html
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch04.md
 
 #### S-062 所谓“虚胖”能直接对应某一种汉方吗？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 适应性判断
+- **直接回答：** “虚胖”不是日本现代肥胖症的标准诊断。医疗用防风通圣散的部分仿单限定于腹部皮下脂肪较多且易便秘者，并列有肥胖症等效能；并非适用于所有体重超标者。详见 /kampo/041/。
+- **核对要点：** BMI、腰围、便秘、具体制剂的効能又は効果。
+- **来源：** https://www.pmda.go.jp/PmdaSearch/iyakuSearch/ （PMDA 医疗用医药品检索：一般名「防風通聖散エキス」，具体制剂效能及成分须逐产品核对）
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch04.md
 
 #### S-063 吃得不多却增重，应该先记录哪些信息？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 诊疗边界
+- **直接回答：** 体重变化与长期摄入、活动和能量消耗有关；厚生劳动省指出肥胖管理应关注饮食和身体活动的能量平衡。可记录饮料、零食、进食频率和活动量，不能仅凭“吃得少”判断病因。
+- **核对要点：** 连续饮食记录、活动量、体重趋势。
+- **来源：** https://kennet.mhlw.go.jp/information/information/food/e-02-001.html
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch04.md
 
 #### S-064 相同饭量的人为何体重变化不同？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 概念判断
+- **直接回答：** 体重变化取决于总能量摄入与消耗，而不只是某一餐的份量。厚生劳动省同时指出生活环境、饮食习惯和身体活动均会影响肥胖风险。
+- **核对要点：** 一日总摄入、活动量、体重趋势。
+- **来源：** https://kennet.mhlw.go.jp/information/information/food/e-02-001.html
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch04.md
 
 #### S-065 发现脂肪肝后应先评估哪些因素？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 诊疗边界
+- **直接回答：** 厚生劳动省指出脂肪肝与肥胖、饮酒等因素有关，也可见于不肥胖的人。应核对饮酒、体重、血糖和肝功能等情况，不能以汉方替代病因评估。
+- **核对要点：** 饮酒史、肝酶、代谢指标、既有影像。
+- **来源：** https://kennet.mhlw.go.jp/information/information/dictionary/metabolic/ym-033.html
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch04.md
 
 #### S-066 防风通圣散是所有肥胖者都适用的汉方吗？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 药品核对
+- **直接回答：** 防风通圣散的医疗用仿单「効能又は効果」为：腹部に皮下脂肪が多く、便秘がちなものの次の諸症——高血圧の随伴症状（どうき、肩こり、のぼせ）、肥満症、むくみ、便秘（以具体制剂为准）。因此并非所有肥胖者都适用。该方含甘草、麻黄、大黄、山栀子，仿单列出的严重不良反应包括偽アルドステロン症、间质性肺炎、肝功能障碍，以及与长期使用相关的肠系膜静脉硬化症。详见 /kampo/041/。
+- **核对要点：** 产品仿单、便秘、血压、电解质、既有用药。
+- **来源：** https://www.pmda.go.jp/PmdaSearch/iyakuSearch/ （PMDA 医疗用医药品检索：一般名「防風通聖散エキス」，具体制剂效能及成分须逐产品核对）
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch04.md
 
 #### S-067 腹部脂肪增加为何需要关注代谢风险？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 风险判断
+- **直接回答：** 厚生劳动省指出，内脏脂肪积累与血压、血糖和血脂异常叠加，会增加动脉粥样硬化相关风险。腰围较大不等于已确诊代谢综合征，仍需结合检查指标。
+- **核对要点：** 腰围、血压、空腹血糖、血脂。
+- **来源：** https://kennet.mhlw.go.jp/information/information/metabolic/m-01-001.html
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch04.md
 
 #### S-068 司美格鲁肽与汉方联用能增强减重效果吗？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 联合用药
+- **直接回答：** 英国 NHS 指出司美格鲁肽与某些药物、草药或补充剂可能不适合合用，使用前应提供完整用药清单。现有该指导不能证明与任何汉方联用会使减重效果翻倍，必须逐制剂核对安全性。
+- **核对要点：** 司美格鲁肽适应证、全部药物、胃肠反应、医师评估。
+- **来源：** https://www.nhs.uk/medicines/semaglutide/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch04.md
 
 #### S-069 GLP-1药物和汉方可以直接比较减重效果吗？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 信息核对
+- **直接回答：** 司美格鲁肽是有明确适应证与处方条件的 GLP-1 受体激动剂；汉方制剂各有特定仿单效能。两者不能凭宣传或不同人群的研究直接排出“减肥冠军”，应比较同类患者、对照和终点。
+- **核对要点：** 适应证、试验人群、体重终点、用药安全。
+- **来源：** https://www.nhs.uk/medicines/semaglutide/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch04.md
 
 #### S-070 什么情况下应咨询医生评估减重药物？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 适应性判断
+- **直接回答：** 英国 NHS 说明，减重药物通常在符合 BMI 及相关健康条件时考虑，并配合饮食与活动管理；日本的具体处方条件不能直接套用英国标准。需由医生结合并发症及药品获批适应证判断。
+- **核对要点：** BMI、腰围、并发症、目标国说明书。
+- **来源：** https://www.nhs.uk/conditions/overweight-and-obesity/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch04.md
 
 #### S-071 易胖体质是否意味着无法改善体重？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 概念判断
+- **直接回答：** 厚生劳动省指出肥胖与饮食、身体活动和生活环境密切相关；即使存在家族倾向，也不等于体重无法管理。评估应关注可持续的饮食和活动改变，而非“体质逆转”的宣传。
+- **核对要点：** 饮食、活动、体重趋势、长期目标。
+- **来源：** https://kennet.mhlw.go.jp/information/information/food/e-02-001.html
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch04.md
 
 #### S-072 腹围变大时如何区分便秘腹胀和脂肪积累？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 风险判断
+- **直接回答：** 英国 NHS 指出腹胀可与气体积聚、便秘或食物不耐受有关，和腹部脂肪积累并非同一概念。持续腹胀、便血、明显腹痛或不能排气排便时应就医。
+- **核对要点：** 排便情况、腹痛、腰围变化、警示症状。
+- **来源：** https://www.nhs.uk/symptoms/bloating/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch04.md
 
 #### S-073 “喝水都会胖”在医学上应如何解释？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 概念判断
+- **直接回答：** 厚生劳动省说明，长期体脂增加与能量摄入超过消耗有关。单纯饮水并不提供使脂肪增加的热量；若体重短期明显波动，应区别脂肪变化与液体潴留等情况。
+- **核对要点：** 饮水饮食、体重时间尺度、浮肿。
+- **来源：** https://kennet.mhlw.go.jp/information/information/food/e-02-001.html
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch04.md
 
 #### S-074 脸肿腿肿和体重波动是否属于肥胖？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 风险判断
+- **直接回答：** 英国 NHS 指出腿足水肿可能与久坐、药物、静脉问题或心肾肝疾病有关。水肿与脂肪积累不同；单侧突然肿痛或伴胸痛、呼吸困难应及时就医。
+- **核对要点：** 浮肿部位、单侧或双侧、呼吸症状、药物。
+- **来源：** https://www.nhs.uk/conditions/oedema/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch04.md
 
 #### S-075 停止汉方后体重会反弹吗？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 信息核对
+- **直接回答：** 是否反弹不能按“汉方”整体回答；应先确认具体药物是否有合格的停药后体重随访研究。厚生劳动省的体重管理资料强调长期饮食、活动和自我监测，而非只关注用药期间的数字。
+- **核对要点：** 具体制剂、停药后研究、饮食活动维持。
+- **来源：** https://kennet.mhlw.go.jp/tools/tools_bmi/index.html
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch04.md
 
 #### S-076 肠道菌群能决定一个人是否肥胖吗？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 信息核对
+- **直接回答：** 2023 年发表于《Science Translational Medicine》的综述指出，动物实验提示菌群可能影响体重，但人体因果证据仍有限。不能把某一种菌群组成当成肥胖诊断或必然减重的依据。
+- **核对要点：** 人群研究、因果设计、干预终点。
+- **来源：** https://pubmed.ncbi.nlm.nih.gov/37992156/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch04.md
 
 #### S-077 血压、血糖和血脂同时异常为何需要评估？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 风险判断
+- **直接回答：** 厚生劳动省指出，内脏肥胖与高血压、高血糖、脂质异常并存时，会增加心脏病和脑卒中风险。日本代谢综合征还需符合腰围及异常指标组合条件，不能仅凭某一数值判断。
+- **核对要点：** 腰围、血压、空腹血糖、血脂。
+- **来源：** https://kennet.mhlw.go.jp/information/information/metabolic/m-01-003.html
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch04.md
 
 #### S-078 糖尿病患者能自行增加汉方治疗吗？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 联合用药
+- **直接回答：** 厚生劳动省指出糖尿病管理以饮食、运动及按病情选择药物治疗为基础。不能自行停用降糖药或增加汉方；应先核对具体制剂与现用降糖药的相互作用和血糖监测。
+- **核对要点：** HbA1c、肾功能、现用降糖药、仿单。
+- **来源：** https://kennet.mhlw.go.jp/slp/event/disease/diabetes/index
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch04.md
 
 #### S-079 体检发现脂肪肝后，下一步怎么做？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 诊疗边界
+- **直接回答：** 厚生劳动省指出脂肪肝常与肥胖和饮酒相关，部分脂肪性肝炎可进展为肝纤维化或肝硬化。应由医生结合肝功能、代谢危险因素和饮酒史评估，不能将汉方视为通用的脂肪肝治疗。
+- **核对要点：** 肝酶、血小板、代谢指标、饮酒史。
+- **来源：** https://kennet.mhlw.go.jp/information/information/alcohol/a-01-011.html
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch04.md
 
 #### S-080 体重下降就代表代谢健康改善了吗？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 风险判断
+- **直接回答：** 厚生劳动省的体重管理资料强调，减重应结合血糖、血压、血脂等指标及肌肉量维护；单纯体重数字下降不能替代对营养、体能和代谢风险的评估。
+- **核对要点：** 体重、腰围、血糖血压血脂、肌肉与营养。
+- **来源：** https://kennet.mhlw.go.jp/tools/wp/wp-content/themes/targis_mhlw/pdf/guide-bmi-male.pdf
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch04.md
 
 ### 健康老龄化与安全（81–100）
 
 #### S-081 日本平均寿命与健康寿命有什么区别？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 概念判断
+- **直接回答：** 厚生劳动省将平均寿命定义为出生时平均余命，将健康寿命定义为健康问题不限制日常生活的平均期间。2022年日本男性平均寿命81.05岁、健康寿命72.57岁，女性分别为87.09岁和75.45岁。两项指标不能证明长寿由汉方造成。
+- **核对要点：** 年份、统计定义、因果解释。
+- **来源：** https://kennet.mhlw.go.jp/information/information/hale/h-01-002
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch05.md
 
 #### S-082 日本健康老龄化重点关注哪些措施？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 信息核对
+- **直接回答：** 厚生劳动省健康寿命延伸计划强调生活习惯、疾病预防及衰弱和认知功能下降的预防。没有证据可以把“抗衰老”简化成某一汉方或补充剂。
+- **核对要点：** 生活习惯、疾病预防、衰弱风险。
+- **来源：** https://kennet.mhlw.go.jp/information/information/hale/h-01-004
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch05.md
 
 #### S-083 传统“肾虚”能对应现代肾功能检查吗？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 概念判断
+- **直接回答：** 传统医学的“肾虚”是辨证术语，不等同于现代医学的慢性肾病诊断。肾脏疾病需要依据肾功能、尿检等医学检查判断；不能把腰酸、疲劳直接解释为肾病或“肾虚”。
+- **核对要点：** 尿检、肾功能、症状及用药。
+- **来源：** https://www.nikkankyo.org/kampo/kampo01/kampo01_02.html
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch05.md
 
 #### S-084 历史悠久的汉方就能延长寿命吗？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 信息核对
+- **直接回答：** 传统使用历史本身不能证明延寿效果。日本东洋医学会 EKAT 收集汉方随机对照试验和荟萃分析，但评价某方剂能否延长寿命，仍需查看具体人群、对照及长期结局。
+- **核对要点：** 方剂、试验设计、死亡或健康寿命终点。
+- **来源：** https://www.jsom.or.jp/ebm/ekat/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch05.md
 
 #### S-085 老年人选用汉方时首先核对什么？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 用药安全
+- **直接回答：** 老年人更容易面临多病共存、营养不良与多药使用。厚生劳动省指出低营养是衰弱的重要风险因素；若考虑汉方，应先核对具体仿单、肾功能及重复生药成分，而非“老人常用”排名。
+- **核对要点：** 现用药、肾功能、营养状况、仿单。
+- **来源：** https://kennet.mhlw.go.jp/information/information/food/e-02-014.html
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch05.md
 
 #### S-086 腰酸腿软就一定是“肾虚”吗？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 诊疗边界
+- **直接回答：** 腰酸、腿软和行走能力下降可与肌力下降、活动不足或其他疾病有关。厚生劳动省将肌少症描述为骨骼肌量、肌力或身体功能下降；需要结合病史与检查评估，不能仅凭“肾虚”选方。
+- **核对要点：** 肌力、步速、神经症状、既往疾病。
+- **来源：** https://kennet.mhlw.go.jp/information/information/dictionary/exercise/ys-087
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch05.md
 
 #### S-087 夜尿频繁时应先排查哪些原因？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 诊疗边界
+- **直接回答：** 英国公立医院指出，夜尿随年龄增长较常见，可能与夜间尿量增多、前列腺问题等有关；反复起夜影响睡眠时应评估排尿记录和相关疾病，而不是直接使用所谓“补肾”汉方。
+- **核对要点：** 夜间次数、尿量、饮水、尿路症状。
+- **来源：** https://www.guysandstthomas.nhs.uk/health-information/nocturia-getting-night-pee
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch05.md
 
 #### S-088 40岁后勃起功能下降该如何评估？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 诊疗边界
+- **直接回答：** 英国 NHS 指出反复勃起困难可与高血压、糖尿病、焦虑、激素问题或药物有关。应评估基础病及心血管风险，不应把症状一概归为“肾虚”或依赖未经核实的汉方功效。
+- **核对要点：** 发生频率、糖尿病、血压、现用药。
+- **来源：** https://www.nhs.uk/conditions/erection-problems-erectile-dysfunction/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch05.md
 
 #### S-089 更年期症状可以只靠汉方处理吗？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 诊疗边界
+- **直接回答：** 英国 NHS 列出的更年期治疗包括激素治疗、非激素药物和心理干预等，选择取决于症状与个人风险。草药和补充疗法的有效性及安全性证据有限，不能自行替代规范评估。
+- **核对要点：** 潮热、睡眠、骨骼健康、治疗风险。
+- **来源：** https://www.nhs.uk/conditions/menopause-and-perimenopause/treatment/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch05.md
 
 #### S-090 日本汉方中的“肾”与现代肾脏是同一概念吗？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 概念判断
+- **直接回答：** 传统医学的“肾”属于辨证理论中的功能概念，并不与解剖学肾脏一一对应。现代肾病必须根据临床检查判断，具体汉方是否适合还需核对批准效能及用药注意。
+- **核对要点：** 辨证术语、肾功能、尿检、仿单。
+- **来源：** https://www.nikkankyo.org/kampo/kampo01/kampo01_02.html
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch05.md
 
 #### S-091 麦角硫因与汉方可以自行联合服用吗？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 联合用药
+- **直接回答：** 2025年发表的麦角硫因健康老龄化综述指出，现有人体干预研究规模仍有限，需要更大规模、长期试验确认获益。联合汉方的疗效及相互作用不能据此推断，须核对全部成分和现用药。
+- **核对要点：** 补充剂成分、汉方组成、其他药物、研究证据。
+- **来源：** https://pubmed.ncbi.nlm.nih.gov/40968729/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch05.md
 
 #### S-092 研究百岁老人时能把生活习惯视为长寿原因吗？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 信息核对
+- **直接回答：** 观察百岁老人可发现生活方式特征，但观察性关联不能直接证明因果。日本健康寿命政策关注营养、运动、疾病预防及社会环境，而不是单一“长寿秘方”。
+- **核对要点：** 样本选择、对照组、混杂因素。
+- **来源：** https://kennet.mhlw.go.jp/information/information/hale/h-01-004
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch05.md
 
 #### S-093 哪些日常习惯有助于维护老年健康？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 信息核对
+- **直接回答：** 厚生劳动省老年人身体活动指南鼓励在能力范围内增加活动，避免久坐并结合肌力、平衡和柔韧性训练；具体运动量应考虑疾病和跌倒风险。
+- **核对要点：** 活动能力、跌倒风险、营养与睡眠。
+- **来源：** https://kennet.mhlw.go.jp/information/information/exercise/s-00-004.html
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch05.md
 
 #### S-094 手脚冰凉和脸色差应如何排查？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 风险判断
+- **直接回答：** 手脚冰凉和脸色差不能直接等同于“血液循环差”。应结合贫血、血压、营养和其他症状评估；若出现晕厥、明显无力或新发异常，需及时就医。
+- **核对要点：** 血常规、血压、发生部位、伴随症状。
+- **来源：** https://www.nhs.uk/symptoms/dizziness/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch05.md
 
 #### S-095 静脉曲张可以靠汉方消除吗？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 诊疗边界
+- **直接回答：** 英国 NHS 指出静脉曲张由浅静脉瓣膜功能异常导致，可通过超声评估并视症状考虑压力治疗、腔内消融等措施。不能宣称汉方能消除曲张静脉或替代血管专科治疗。
+- **核对要点：** 疼痛肿胀、皮肤变化、静脉超声。
+- **来源：** https://www.nhs.uk/conditions/varicose-veins/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch05.md
 
 #### S-096 反复偏头痛时怎样判断汉方是否适合？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 适应性判断
+- **直接回答：** 英国 NHS 描述偏头痛常伴恶心、畏光畏声，严重程度和发作频率决定治疗策略。若考虑汉方，须核对具体制剂的日本批准效能及与既有偏头痛药物的安全问题，不能宣称所有偏头痛均适用。
+- **核对要点：** 头痛日记、神经症状、现用药、仿单。
+- **来源：** https://www.nhs.uk/conditions/Migraine/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch05.md
 
 #### S-097 头晕伴记忆下降就是“脑供血不足”吗？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 风险判断
+- **直接回答：** 头晕可能与内耳、低血压、贫血或药物有关，不能仅凭头晕和健忘判断“脑供血不足”。若突然出现语言障碍、肢体无力或视力改变，应立即急救排查卒中。
+- **核对要点：** 发作方式、神经症状、血压、药物。
+- **来源：** https://www.nhs.uk/conditions/transient-ischaemic-attack-tia/symptoms/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch05.md
 
 #### S-098 50岁后应如何判断是否需要汉方？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 适应性判断
+- **直接回答：** 年龄本身不是任何汉方制剂的通用获批适应证。应先明确疾病或症状，再查 PMDA 具体仿单「効能又は効果」、禁忌和相互作用，同时评估多药使用风险。
+- **核对要点：** 症状与诊断、全部用药、仿单。
+- **来源：** https://www.pmda.go.jp/PmdaSearch/iyakuSearch/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch05.md
 
 #### S-099 汉方的临床证据能支持“延寿”宣传吗？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 信息核对
+- **直接回答：** 日本东洋医学会的 EKAT 系统收录汉方随机对照试验及荟萃分析，但某一病症疗效研究不能自动外推为延长寿命。需查看是否真正测量寿命、健康寿命或长期临床结局。
+- **核对要点：** 研究人群、终点、随访时间、证据等级。
+- **来源：** https://www.jsom.or.jp/ebm/ekat/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch05.md
 
 #### S-100 海外患者如何核对日本汉方医疗信息？
 
-- **意图：** 
-- **直接回答：** 
-- **核对要点：** 
-- **来源：** 
+- **意图：** 信息核对
+- **直接回答：** 日本 PMDA 的医疗用医药品检索可查询具体制剂的「効能又は効果」及安全注意事项；日本东洋医学会的 KCPG 则汇总汉方在各疾病指南中的记载。两者用途不同，均不能代替个人就诊判断。
+- **核对要点：** 具体制剂、指南原文、所在国家法规。
+- **来源：** https://www.jsom.or.jp/ebm/cpg/
 - **该题所在审校正文：** https://raw.githubusercontent.com/LEOZHAO333/japan-medical-second-opinion/main/Japanese%20Kampo%20100%20Questions.S-grade.batch05.md
 
 ## 发布说明
