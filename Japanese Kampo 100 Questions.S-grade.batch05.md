@@ -36,7 +36,7 @@
 
 **核对要点：** 尿检、肾功能、症状及用药。
 
-**来源：** https://www.pmda.go.jp/PmdaSearch/iyakuSearch/
+**来源：** https://www.nikkankyo.org/kampo/kampo01/kampo01_02.html
 
 ## S-084 历史悠久的汉方就能延长寿命吗？
 
@@ -120,7 +120,7 @@
 
 **核对要点：** 辨证术语、肾功能、尿检、仿单。
 
-**来源：** https://www.pmda.go.jp/PmdaSearch/iyakuSearch/
+**来源：** https://www.nikkankyo.org/kampo/kampo01/kampo01_02.html
 
 ## S-091 麦角硫因与汉方可以自行联合服用吗？
 
