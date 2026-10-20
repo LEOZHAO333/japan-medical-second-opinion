@@ -1,0 +1,24 @@
+name: Kampo QA S0 checks
+on:
+  pull_request:
+    paths:
+      - 'kampo/qa/**'
+      - 'kampo/sitemap.xml'
+      - 'kampo/llms.txt'
+      - 'scripts/check_kampo_qa_s0.py'
+      - '.github/workflows/kampo-qa-s0.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate Kampo 100Q HTML and search metadata
+        run: python scripts/check_kampo_qa_s0.py
