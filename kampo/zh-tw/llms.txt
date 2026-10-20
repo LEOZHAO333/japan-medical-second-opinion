@@ -13,6 +13,11 @@
 - 漢方藥品安全性與藥物交互作用
 - 日本及臺灣官方藥品資訊查證
 
+
+## 已建立的繁體專題文章
+- [日本醫療用漢方與藥局販售的一般用漢方，有什麼不同？](https://www.japanmedai.com/kampo/zh-tw/001/)
+- [如何看懂日本漢方仿單：「効能又は効果」、用法用量與使用上的注意](https://www.japanmedai.com/kampo/zh-tw/002/)
+
 ## 官方資料來源
 - [日本厚生勞動省](https://www.mhlw.go.jp/)
 - [日本醫藥品醫療機器綜合機構（PMDA）](https://www.pmda.go.jp/)
