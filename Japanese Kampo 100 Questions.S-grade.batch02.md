@@ -12,7 +12,7 @@
 
 **核对要点：** 症状持续时间、睡眠、药物、血常规及其他检查。
 
-**来源：** https://www.pmda.go.jp/PmdaSearch/iyakuSearch/
+**来源：** https://kennet.mhlw.go.jp/slp/event/sleep_quality/index.html
 
 ## S-022 如何核对补中益气汤的适用范围？
 
@@ -60,7 +60,7 @@
 
 **核对要点：** 睡眠时长、伴随症状、既往疾病、现用药。
 
-**来源：** https://www.pmda.go.jp/PmdaSearch/iyakuSearch/
+**来源：** https://kennet.mhlw.go.jp/information/information/heart/k-02-001.html
 
 ## S-026 熬夜后的疲劳能靠汉方恢复吗？
 
@@ -72,7 +72,7 @@
 
 **核对要点：** 睡眠规律、日间功能、基础病、用药。
 
-**来源：** https://www.pmda.go.jp/PmdaSearch/iyakuSearch/
+**来源：** https://kennet.mhlw.go.jp/information/information/heart/k-02-008.html
 
 ## S-027 贫血患者可以自行使用汉方吗？
 
@@ -132,7 +132,7 @@
 
 **核对要点：** 症状记录、既有检查、警示症状。
 
-**来源：** https://www.pmda.go.jp/PmdaSearch/iyakuSearch/
+**来源：** https://kennet.mhlw.go.jp/slp/event/sleep_quality/index.html
 
 ## S-032 老年人使用汉方需要注意什么？
 
@@ -204,7 +204,7 @@
 
 **核对要点：** 觉醒原因、夜尿、呼吸症状、现用药。
 
-**来源：** https://www.pmda.go.jp/PmdaSearch/iyakuSearch/
+**来源：** https://kennet.mhlw.go.jp/information/information/heart/k-02-001.html
 
 ## S-038 长期疲劳时如何判断汉方是否适合？
 
