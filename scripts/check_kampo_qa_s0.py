@@ -40,6 +40,8 @@ def main():
         assert '<footer class="footer"><div class="wrap">' in source, f"Shared footer missing: {path}"
         assert '<span class="footerBrand">JapanMedAI · 文腾株式会社</span>' in source, f"Footer brand missing: {path}"
         assert 'qa-disclaimer' in source, f"Disclaimer missing: {path}"
+        assert '<body class="kampo-qa-page">' in source, f"QA scope missing: {path}"
+        assert 'body.kampo-qa-page .top .navMenu{display:flex' in source, f"Mobile navigation override missing: {path}"
         parsed = Page()
         parsed.feed(source)
         assert len(parsed.canonicals) == 1, f"Canonical missing/duplicate: {path}"
