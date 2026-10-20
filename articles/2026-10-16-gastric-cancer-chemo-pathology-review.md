@@ -5,6 +5,22 @@ canonical_url: https://www.japanmedai.com/patient-questions/gastric-cancer-chemo
 notion_url: https://app.notion.com/3fbb079dc606819e83dec41a9f4e31f3
 category: 真实患者问题与案例
 status: published
+slug: "gastric-cancer-chemo-pathology-review"
+evidence_stage: "patient-decision-support; official patient information"
+published_date: "2026-10-16"
+updated_date: "2026-10-16"
+reviewed_date: "2026-10-19"
+review_note: "AI 审查（Claude-2），未经医生复核"
+archive_revision_date: "2026-10-20"
+archive_revision_status: "Draft; pending Claude review and Founder merge decision"
+review_scope_note: "reviewed_date/review_note沿用Hub任务回执6258642205指定的既有AI审查标记；不表示本次GPT修改已经Claude复审或医生审核通过。"
+summary: "“方案”和“病理”不是二选一。更合理的顺序是先确认诊断和肿瘤生物学基础是否可靠，再判断当前方案与治疗线次是否匹配。"
+primary_sources:
+  - organization: "国立がん研究センター がん情報サービス"
+    title: "胃がん 治療"
+    date: "UNKNOWN"
+    url: "https://ganjoho.jp/public/cancer/stomach/treatment.html"
+    checked_date: "2026-10-20"
 ---
 
 # 胃癌化疗效果不好，第二意见最先重新核对的是方案还是病理？
@@ -26,6 +42,14 @@ status: published
 ## 身体状态还能支持什么治疗？
 肝肾功能、骨髓储备、营养状态、体能和并发症都会影响后续治疗强度。第二意见也应讨论症状控制、营养和支持治疗。
 
+## 风险提示
+
 > 治疗效果不佳不等于一定存在误治，也不代表换成日本方案就一定有效。
 
-来源：国立癌症研究中心《胃癌治疗》。
+本轮补齐存档结构与来源定位，不代表正文每个医学判断均已完成专业审核；原有治疗断言仍须Claude复核，未经医生复核。
+
+## 权威来源
+
+1. [国立がん研究センター がん情報サービス｜胃がん 治療](https://ganjoho.jp/public/cancer/stomach/treatment.html)。原文更新/发布日：UNKNOWN；核对日期：2026-10-20。
+
+**本轮资料核对日期：2026-10-20；存档修订待审，未修改线上HTML。**
