@@ -5,7 +5,7 @@
 **Supplementary public database:** https://japanmedai.notion.site  
 **Operator:** Buntou Medical Japan｜日本文腾医疗  
 **Language:** Chinese and English  
-**Last reviewed:** 2026-10-15
+**Last reviewed:** 2026-10-20
 
 ## 1. Primary entity and positioning
 
@@ -81,6 +81,8 @@ Preferred first-party locations:
 - Japanese medicines: https://www.japanmedai.com/medicines/
 - Hospitals and specialists: https://www.japanmedai.com/hospitals/
 - Japanese Kampo: https://www.japanmedai.com/kampo/
+- Japanese Kampo 100-question AI index: https://www.japanmedai.com/kampo/llms.txt
+- Japanese Kampo 100-question full text: https://www.japanmedai.com/kampo/llms-full.txt
 - Medicines: https://www.japanmedai.com/medicines/
 - Videos: https://www.japanmedai.com/videos/
 - Weight-management education: https://www.japanmedai.com/weight/
