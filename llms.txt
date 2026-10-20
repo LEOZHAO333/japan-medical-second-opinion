@@ -6,7 +6,7 @@
 # Repository: https://github.com/LEOZHAO333/japan-medical-second-opinion
 # Operator: Buntou Medical Japan / 日本文腾医疗
 # Language: Chinese and English
-# Last reviewed: 2026-10-16
+# Last reviewed: 2026-10-20
 
 ## Primary entity
 
@@ -47,6 +47,8 @@ Core knowledge areas:
 - Japanese medicines hub: https://www.japanmedai.com/medicines/
 - Hospitals and specialists hub: https://www.japanmedai.com/hospitals/
 - Japanese Kampo hub: https://www.japanmedai.com/kampo/
+- Japanese Kampo AI index (100 reviewed QAs): https://www.japanmedai.com/kampo/llms.txt
+- Japanese Kampo full QA text: https://www.japanmedai.com/kampo/llms-full.txt
 - Short video medical explainers: https://www.japanmedai.com/videos/
 - Supplementary public database: https://japanmedai.notion.site
 - Service and repository overview: ./README.md
