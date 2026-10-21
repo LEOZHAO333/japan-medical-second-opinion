@@ -4,10 +4,14 @@ on:
     paths:
       - 'content/checkup-qa/**'
       - 'checkup/qa/**'
+      - 'checkup/llms.txt'
+      - 'checkup/llms-full.txt'
+      - 'llms.txt'
       - 'checkup/index.html'
       - 'checkup/sitemap.xml'
       - 'scripts/build_checkup_qa.py'
       - 'scripts/check_checkup_qa_s0.py'
+      - 'scripts/check_checkup_llms.py'
       - 'assets/checkup-qa-feedback.js'
       - '.github/workflows/checkup-qa-s0.yml'
   workflow_dispatch:
@@ -24,8 +28,10 @@ jobs:
       - name: Generate QA page
         run: python3 scripts/build_checkup_qa.py
       - name: Confirm generated HTML matches committed artifact
-        run: git diff --exit-code -- checkup/qa/index.html
+        run: git diff --exit-code -- checkup/qa/index.html checkup/llms.txt checkup/llms-full.txt
       - name: Validate generated QA and links
         run: python3 scripts/check_checkup_qa_s0.py
+      - name: Validate published-only llms indexes
+        run: python3 scripts/check_checkup_llms.py
       - name: Ensure release page is indexable
         run: grep -q 'name="robots" content="index,follow"' checkup/qa/index.html
