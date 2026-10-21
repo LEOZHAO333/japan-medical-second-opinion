@@ -1,0 +1,31 @@
+name: Checkup QA S0 Draft Gate
+on:
+  pull_request:
+    paths:
+      - 'content/checkup-qa/**'
+      - 'checkup/qa/**'
+      - 'checkup/index.html'
+      - 'checkup/sitemap.xml'
+      - 'scripts/build_checkup_qa.py'
+      - 'scripts/check_checkup_qa_s0.py'
+      - 'assets/checkup-qa-feedback.js'
+      - '.github/workflows/checkup-qa-s0.yml'
+  workflow_dispatch:
+jobs:
+  checkup-qa-s0:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Generate QA page
+        run: python3 scripts/build_checkup_qa.py
+      - name: Confirm generated HTML matches committed artifact
+        run: git diff --exit-code -- checkup/qa/index.html
+      - name: Validate generated QA and links
+        run: python3 scripts/check_checkup_qa_s0.py
+      - name: Ensure release page is indexable
+        run: grep -q 'name="robots" content="index,follow"' checkup/qa/index.html
