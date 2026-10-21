@@ -62,8 +62,8 @@ def render_llms():
           "> 本文件由已发布JSON自动生成。医学信息仅供教育，不代替诊断、处方或治疗，不保证接诊。",""]
     for r in rows:
         link=base+"#"+r["id"].lower()
-        brief.append("- ["+r["id"]+" "+r["question"]+"]("+link+")")
-        full.extend(["## "+r["id"]+" "+r["question"],"",r["answer"],"",
+        brief.append("- ["+r["question"]+"]("+link+")")
+        full.extend(["## "+r["question"],"",r["answer"],"",
                      "核对要点："+r["check"],"","来源："+r["source"],
                      "来源说明："+r["source_note"],"","[网页入口]("+link+")",""])
     for name,lines in (("llms.txt",brief),("llms-full.txt",full)):

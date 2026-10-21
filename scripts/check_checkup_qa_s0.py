@@ -35,5 +35,8 @@ def main():
             assert (ROOT/href.lstrip("/")/"index.html").is_file(),href
     assert '/checkup/qa/' in (ROOT/"checkup/index.html").read_text(encoding="utf-8")
     assert "<loc>https://www.japanmedai.com/checkup/qa/</loc>" in (ROOT/"checkup/sitemap.xml").read_text(encoding="utf-8")
+    page=(ROOT/"checkup/qa/index.html").read_text(encoding="utf-8")
+    for bad in ("草稿","复审","专业审核待完成","待审核"):
+        assert bad not in page, "Draft wording on public page: "+bad
     print("PASS: 25 unique QA, 50 feedback buttons, fields, internal links, canonical, index,follow, hub, sitemap")
 if __name__=="__main__":main()

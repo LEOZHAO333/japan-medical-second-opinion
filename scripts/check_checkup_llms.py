@@ -11,7 +11,8 @@ for name in ("llms.txt","llms-full.txt"):
     p=ROOT/"checkup"/name
     assert p.is_file(), "Missing "+str(p)
     text=p.read_text(encoding="utf-8")
-    found=re.findall(r"SO-\d{3}",text)
+    found=[x.upper() for x in re.findall(r"#(so-\d{3})\)",text)]
     assert len(found)==len(ids) and set(found)==set(ids), "Published-only ID mismatch in "+name
-    assert not any(x in text.lower() for x in ("candidate_pending_review","blocked_medical_review","hold_specialty_evidence","未发布候选题：","草稿题：")), "Private draft marker in "+name
+    assert not re.search(r"SO-\d{3}",text), "Internal question ID exposed in "+name
+    assert not any(x in text.lower() for x in ("candidate_pending_review","blocked_medical_review","hold_specialty_evidence","未发布候选题：","草稿题：","草稿","复审","专业审核待完成","待审核")), "Private draft marker in "+name
 print("PASS: two llms files contain exactly",len(ids),"published questions")
