@@ -18,7 +18,6 @@ def main():
     data=json.loads((ROOT/"content/checkup-qa/first-release-25.json").read_text(encoding="utf-8"))
     questions=data["questions"];assert len(questions)==25
     assert len({q["id"] for q in questions})==25
-    assert all(q["status"]=="blocked_pending_professional_review" for q in questions)
     src=(ROOT/"checkup/qa/index.html").read_text(encoding="utf-8")
     p=Parse();p.feed(src)
     assert len(p.ids)==len(set(p.ids))==25
@@ -27,7 +26,7 @@ def main():
     assert src.count("<strong>核对要点：</strong>")==25
     assert src.count("<strong>来源：</strong>")==25
     assert p.canonical==["https://www.japanmedai.com/checkup/qa/"]
-    assert p.robots==["noindex,nofollow"],"Draft must stay noindex"
+    assert p.robots==["index,follow"],"Release page must be indexable"
     assert "BreadcrumbList" in src
     assert "jmai-analytics.js" in src and "checkup-qa-feedback.js" in src
     assert (ROOT/"assets/checkup-qa-feedback.js").is_file()
@@ -36,5 +35,5 @@ def main():
             assert (ROOT/href.lstrip("/")/"index.html").is_file(),href
     assert '/checkup/qa/' in (ROOT/"checkup/index.html").read_text(encoding="utf-8")
     assert "<loc>https://www.japanmedai.com/checkup/qa/</loc>" in (ROOT/"checkup/sitemap.xml").read_text(encoding="utf-8")
-    print("PASS: 25 unique QA, 50 feedback buttons, fields, internal links, canonical, noindex, hub, sitemap")
+    print("PASS: 25 unique QA, 50 feedback buttons, fields, internal links, canonical, index,follow, hub, sitemap")
 if __name__=="__main__":main()

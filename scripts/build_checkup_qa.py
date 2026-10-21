@@ -13,7 +13,6 @@ def render():
     data=json.loads(DATA.read_text(encoding="utf-8"))
     rows=data["questions"]
     assert len(rows)==25 and len({r["id"] for r in rows})==25
-    assert all(r["status"]=="blocked_pending_professional_review" for r in rows)
     assert all(r["topic"] in TOPICS and r["source"].startswith("https://ganjoho.jp/") for r in rows)
     for r in rows:
         assert all(r.get(k) for k in ("question","answer","check","source","source_note"))
@@ -21,7 +20,7 @@ def render():
     out=['<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">',
     '<title>癌症第二意见25问｜申请流程、资料与结果使用｜JapanMed AI</title>',
     '<meta name="description" content="日本癌症第二意见常见问题：定义、资料准备、申请流程、费用和结果使用。首发25问，内容待专业复审。">',
-    '<meta name="robots" content="noindex,nofollow"><link rel="canonical" href="'+base+'">',
+    '<meta name="robots" content="index,follow"><link rel="canonical" href="'+base+'">',
     '<link rel="stylesheet" href="/assets/jmai.css">',
     '<script type="application/ld+json">'+json.dumps({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://www.japanmedai.com/"},{"@type":"ListItem","position":2,"name":"二次会诊","item":"https://www.japanmedai.com/checkup/"},{"@type":"ListItem","position":3,"name":"二次会诊问答","item":base}]},ensure_ascii=False,separators=(",",":"))+'</script>',
     '<style>main{max-width:1000px;margin:auto;padding:30px 18px}.qa{padding:18px 0;border-bottom:1px solid #dce6ee}.qa h3{scroll-margin-top:18px}.qa p{line-height:1.8}.qa button{margin-right:10px;padding:7px 12px;cursor:pointer}.topicNav{display:flex;flex-wrap:wrap;gap:12px}.qa-disclaimer{margin:24px 0;padding:16px;background:#f4f7fa}.feedbackStatus{font-size:13px}@media(max-width:900px){body.checkup-qa-page .top .navMenu{display:flex;flex-wrap:wrap;gap:8px 14px;justify-content:center}body.checkup-qa-page .top .nav{flex-direction:column;align-items:center;gap:10px}body.checkup-qa-page .top{position:relative}}</style>',

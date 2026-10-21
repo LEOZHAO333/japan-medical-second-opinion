@@ -2,7 +2,7 @@
   "use strict";
   // Anonymous, fixed-value feedback only. No medical content, free text or contact data.
   var tracker = window.JMAIAnalytics && window.JMAIAnalytics.create({
-    table: "jmai_site_events", scope: "site", pageVersion: "checkup-qa-draft-v02"
+    table: "jmai_site_events", scope: "site", pageVersion: "checkup-qa-v1"
   });
   document.addEventListener("click", function (event) {
     var button = event.target && event.target.closest ? event.target.closest(".qaFeedback button[data-vote]") : null;
