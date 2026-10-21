@@ -1,0 +1,33 @@
+# 二次专家会诊｜已发布25问
+
+> 本索引由已发布JSON自动生成，不包含私有候选题或专科暂缓题。
+
+- [二次会诊专题](https://www.japanmedai.com/checkup/)
+- [已发布问答](https://www.japanmedai.com/checkup/qa/)
+- [完整问答](https://www.japanmedai.com/checkup/llms-full.txt)
+
+- [SO-001 第二意见与普通健康咨询有什么本质区别？](https://www.japanmedai.com/checkup/qa/#so-001)
+- [SO-005 对治疗没有疑问还需要强行做第二意见吗？](https://www.japanmedai.com/checkup/qa/#so-005)
+- [SO-006 第二意见能否替代线下检查？](https://www.japanmedai.com/checkup/qa/#so-006)
+- [SO-018 第二意见一定会推荐不同治疗方案吗？](https://www.japanmedai.com/checkup/qa/#so-018)
+- [SO-030 如何判断第二意见来源是否可靠？](https://www.japanmedai.com/checkup/qa/#so-030)
+- [SO-033 第二意见前怎样整理用药方面的疑问？](https://www.japanmedai.com/checkup/qa/#so-033)
+- [SO-041 医生已经给出方案，为什么还要考虑第二诊疗意见？](https://www.japanmedai.com/checkup/qa/#so-041)
+- [SO-002 拿到癌症确诊报告，第一步该整理什么？](https://www.japanmedai.com/checkup/qa/#so-002)
+- [SO-007 癌症诊断不明时，第二意见最重要的问题是什么？](https://www.japanmedai.com/checkup/qa/#so-007)
+- [SO-010 第二意见前为什么要整理想问的问题？](https://www.japanmedai.com/checkup/qa/#so-010)
+- [SO-090 申请第二意见前需要准备哪些检查资料？](https://www.japanmedai.com/checkup/qa/#so-090)
+- [SO-098 二次会诊中发现信息不足应该怎么办？](https://www.japanmedai.com/checkup/qa/#so-098)
+- [SO-008 做第二意见要不要告诉主治医生？](https://www.japanmedai.com/checkup/qa/#so-008)
+- [SO-009 日本第二意见门诊能用日本公费医疗保险吗？](https://www.japanmedai.com/checkup/qa/#so-009)
+- [SO-019 第二意见必须由患者本人到医院吗？](https://www.japanmedai.com/checkup/qa/#so-019)
+- [SO-065 如何寻找设有第二意见门诊的医院？](https://www.japanmedai.com/checkup/qa/#so-065)
+- [SO-066 申请第二意见前应向医院窗口确认什么？](https://www.japanmedai.com/checkup/qa/#so-066)
+- [SO-068 日本第二意见门诊的费用应如何核对？](https://www.japanmedai.com/checkup/qa/#so-068)
+- [SO-011 如果治疗机会窗口很短，如何安排第二意见？](https://www.japanmedai.com/checkup/qa/#so-011)
+- [SO-020 第二意见一定会提供书面报告吗？](https://www.japanmedai.com/checkup/qa/#so-020)
+- [SO-038 第二意见后可以直接在咨询医院接受治疗吗？](https://www.japanmedai.com/checkup/qa/#so-038)
+- [SO-061 第二意见报告与主治医生方案一致，是不是白花钱？](https://www.japanmedai.com/checkup/qa/#so-061)
+- [SO-062 第二意见报告提出多个选择，下一步该由谁决定？](https://www.japanmedai.com/checkup/qa/#so-062)
+- [SO-077 二次会诊后如何把意见带回国内主治团队？](https://www.japanmedai.com/checkup/qa/#so-077)
+- [SO-100 第二意见最终怎样转化为可执行的治疗决定？](https://www.japanmedai.com/checkup/qa/#so-100)
