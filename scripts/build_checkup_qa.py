@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate private-review second-opinion QA page from approved-schema JSON.
 Run: python3 scripts/build_checkup_qa.py
-No publication, no data mutation beyond checkup/qa/index.html.
+Outputs: checkup/qa/index.html and two generated checkup/llms text files.
 """
 import json, html, pathlib
 ROOT=pathlib.Path(__file__).resolve().parents[1]
@@ -47,4 +47,30 @@ def render():
     OUT.parent.mkdir(parents=True,exist_ok=True)
     OUT.write_text("".join(out)+"\n",encoding="utf-8")
     print("Generated",OUT.relative_to(ROOT),len(rows),"FAQ")
-if __name__=="__main__":render()
+
+def render_llms():
+    data=json.loads(DATA.read_text(encoding="utf-8"))
+    rows=data["questions"]
+    assert len(rows)==25 and len({r["id"] for r in rows})==25
+    assert all(r["source"].startswith("https://ganjoho.jp/") for r in rows)
+    base="https://www.japanmedai.com/checkup/qa/"
+    brief=["# 二次专家会诊｜已发布25问","","> 本索引由已发布JSON自动生成，不包含私有候选题或专科暂缓题。","",
+           "- [二次会诊专题](https://www.japanmedai.com/checkup/)",
+           "- [已发布问答](https://www.japanmedai.com/checkup/qa/)",
+           "- [完整问答](https://www.japanmedai.com/checkup/llms-full.txt)",""]
+    full=["# 二次专家会诊｜已发布25问完整正文","",
+          "> 本文件由已发布JSON自动生成。医学信息仅供教育，不代替诊断、处方或治疗，不保证接诊。",""]
+    for r in rows:
+        link=base+"#"+r["id"].lower()
+        brief.append("- ["+r["id"]+" "+r["question"]+"]("+link+")")
+        full.extend(["## "+r["id"]+" "+r["question"],"",r["answer"],"",
+                     "核对要点："+r["check"],"","来源："+r["source"],
+                     "来源说明："+r["source_note"],"","[网页入口]("+link+")",""])
+    for name,lines in (("llms.txt",brief),("llms-full.txt",full)):
+        p=ROOT/"checkup"/name
+        p.write_text("\n".join(lines)+"\n",encoding="utf-8")
+    print("Generated 2 llms files from",len(rows),"published FAQs")
+
+if __name__=="__main__":
+    render()
+    render_llms()
