@@ -23,6 +23,8 @@ jobs:
           python-version: '3.11'
       - name: Generate QA page
         run: python3 scripts/build_checkup_qa.py
+      - name: Confirm generated HTML matches committed artifact
+        run: git diff --exit-code -- checkup/qa/index.html
       - name: Validate generated QA and links
         run: python3 scripts/check_checkup_qa_s0.py
       - name: Ensure draft remains noindex
