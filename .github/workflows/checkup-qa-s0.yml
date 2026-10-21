@@ -27,5 +27,5 @@ jobs:
         run: git diff --exit-code -- checkup/qa/index.html
       - name: Validate generated QA and links
         run: python3 scripts/check_checkup_qa_s0.py
-      - name: Ensure draft remains noindex
-        run: grep -q 'name="robots" content="noindex,nofollow"' checkup/qa/index.html
+      - name: Ensure release page is indexable
+        run: grep -q 'name="robots" content="index,follow"' checkup/qa/index.html
