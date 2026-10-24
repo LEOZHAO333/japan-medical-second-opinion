@@ -1,4 +1,4 @@
-# 二次专家会诊｜已发布48问
+# 二次专家会诊｜已发布61问
 
 > 本索引由已发布JSON自动生成，不包含私有候选题或专科暂缓题。
 
@@ -54,3 +54,16 @@
 - [如果原医院不同意转出病理材料怎么办？](https://www.japanmedai.com/checkup/qa/#so-085)
 - [影像扫描日期相隔太久还能评估吗？](https://www.japanmedai.com/checkup/qa/#so-095)
 - [如何避免不同二次会诊平台重复收集病历？](https://www.japanmedai.com/checkup/qa/#so-099)
+- [第二意见能纠正病理误诊吗？](https://www.japanmedai.com/checkup/qa/#so-003)
+- [远程第二意见适合复发脑肿瘤吗？](https://www.japanmedai.com/checkup/qa/#so-022)
+- [肿瘤已经出现疼痛，是否先等第二意见？](https://www.japanmedai.com/checkup/qa/#so-024)
+- [第二意见报告中出现“考虑”或“建议”，代表什么？](https://www.japanmedai.com/checkup/qa/#so-031)
+- [复发时间很短是否说明原治疗一定错误？](https://www.japanmedai.com/checkup/qa/#so-034)
+- [病理结果写“倾向于”，适合申请病理第二意见吗？](https://www.japanmedai.com/checkup/qa/#so-042)
+- [影像报告和病理诊断相互矛盾怎么办？](https://www.japanmedai.com/checkup/qa/#so-043)
+- [两家医院对癌症分期判断不同，第二意见要问什么？](https://www.japanmedai.com/checkup/qa/#so-044)
+- [术后病理与术前评估差别很大，值得复核吗？](https://www.japanmedai.com/checkup/qa/#so-047)
+- [肿瘤复发后准备再次手术，第二意见应重点看什么？](https://www.japanmedai.com/checkup/qa/#so-048)
+- [医生说不能再放疗，申请第二意见应准备哪些原件？](https://www.japanmedai.com/checkup/qa/#so-051)
+- [不同专家推荐的药物不一样，应该如何比较？](https://www.japanmedai.com/checkup/qa/#so-060)
+- [老人合并多种慢性病，第二意见应增加哪些问题？](https://www.japanmedai.com/checkup/qa/#so-074)
