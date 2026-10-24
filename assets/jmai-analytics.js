@@ -109,6 +109,12 @@
       ["kind", "invite_kind", "funnel_step", "cta_id", "cta_position"].forEach(function (key) {
         if (data && tag(data[key])) details[key] = data[key];
       });
+      // Fixed-schema QA feedback metadata only; never accept free text or clinical data.
+      if (eventName === "qa_feedback" && data && /^s-\d{3}$/.test(data.qid || "") && ["concepts","quality","indications","safety","evidence"].includes(data.theme) && typeof data.helpful === "boolean") {
+        details.qid = data.qid;
+        details.theme = data.theme;
+        details.helpful = data.helpful;
+      }
       // WeChat source code from #62 (video/post code such as G6A, or "官网" when none).
       if (data && (/^[A-Z0-9_-]{1,24}$/.test(data.source_code || "") || data.source_code === "官网")) details.source_code = data.source_code;
       if (data && typeof data.code_from_url === "boolean") details.code_from_url = data.code_from_url;
@@ -128,12 +134,13 @@
       }).then(function (response) { return { ok: response.ok, status: response.status }; })
         .catch(function () { return { ok: false, reason: "network" }; });
     }
-    function trackOnce(eventName, data) {
+    function trackOnce(eventName, data, onceKey) {
       ensureSession();
-      if (sent.has(eventName)) return Promise.resolve({ skipped: true, reason: "already_sent" });
-      sent.add(eventName);
+      const dedupeKey = onceKey || eventName;
+      if (sent.has(dedupeKey)) return Promise.resolve({ skipped: true, reason: "already_sent" });
+      sent.add(dedupeKey);
       return track(eventName, data).then(function (result) {
-        if (result && result.ok === false) sent.delete(eventName);
+        if (result && result.ok === false) sent.delete(dedupeKey);
         return result;
       });
     }

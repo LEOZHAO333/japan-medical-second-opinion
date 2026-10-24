@@ -53,6 +53,11 @@ def main():
             assert source.count("<strong>直接回答：</strong>") == TOPICS[name]
             assert source.count("<strong>核对要点：</strong>") == TOPICS[name]
             assert source.count("<strong>来源：</strong>") == TOPICS[name]
+        if path != "kampo/qa/index.html":
+            assert source.count('class="qa-feedback" data-qid=') == TOPICS[name], f"Feedback count mismatch: {path}"
+            assert source.count('data-qa-helpful="true"') == TOPICS[name], f"Positive feedback missing: {path}"
+            assert source.count('data-qa-helpful="false"') == TOPICS[name], f"Negative feedback missing: {path}"
+            assert 'trackOnce("qa_feedback"' in source, f"Session dedupe missing: {path}"
         for href in parsed.links:
             if href.startswith("/kampo/qa/"):
                 target = href.split("#")[0]
@@ -65,7 +70,7 @@ def main():
         assert f"<loc>{url}</loc>" in sitemap, f"Sitemap missing {url}"
     index = (ROOT / "kampo/llms.txt").read_text(encoding="utf-8")
     assert len(re.findall(r"/kampo/qa/(?:concepts|quality|indications|safety|evidence)/#s-\d{3}", index)) == 100
-    print("PASS: 6 pages, 100 unique anchors, 0 missing QA links, 0 banned brand terms, sitemap + llms references OK")
+    print("PASS: 6 pages, 100 unique anchors and feedback panels, QA links, sitemap + llms references OK")
 
 if __name__ == "__main__":
     main()
