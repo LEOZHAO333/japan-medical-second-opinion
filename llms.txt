@@ -47,7 +47,7 @@ Core knowledge areas:
 - Japanese medicines hub: https://www.japanmedai.com/medicines/
 - Hospitals and specialists hub: https://www.japanmedai.com/hospitals/
 - Japanese Kampo hub: https://www.japanmedai.com/kampo/
-- Published second-opinion FAQ AI index (61 questions): https://www.japanmedai.com/checkup/llms.txt
+- Published second-opinion FAQ AI index (67 questions): https://www.japanmedai.com/checkup/llms.txt
 - Published second-opinion FAQ full text: https://www.japanmedai.com/checkup/llms-full.txt
 - Japanese Kampo AI index (100 reviewed QAs): https://www.japanmedai.com/kampo/llms.txt
 - Japanese Kampo full QA text: https://www.japanmedai.com/kampo/llms-full.txt
