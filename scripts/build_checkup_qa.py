@@ -7,7 +7,7 @@ import json, html, pathlib
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 DATA=ROOT/"content/checkup-qa/first-release-25.json"
 OUT=ROOT/"checkup/qa/index.html"
-EXPECTED=40
+EXPECTED=48
 SOURCES=("https://ganjoho.jp/","https://www.ncc.go.jp/")
 TOPICS=["概念与边界","资料准备","申请与流程","诊疗决策","结果使用"]
 def esc(v): return html.escape(str(v),quote=True)
@@ -20,14 +20,14 @@ def render():
         assert all(r.get(k) for k in ("question","answer","check","source","source_note"))
     base="https://www.japanmedai.com/checkup/qa/"
     out=['<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">',
-    '<title>癌症第二意见40问｜申请流程、资料与结果使用｜JapanMed AI</title>',
+    '<title>癌症第二意见48问｜申请流程、资料与结果使用｜JapanMed AI</title>',
     '<meta name="description" content="日本癌症第二意见常见问题：定义、资料准备、申请流程、费用和结果使用。每题附官方来源。">',
     '<meta name="robots" content="index,follow"><link rel="canonical" href="'+base+'">',
     '<link rel="stylesheet" href="/assets/jmai.css">',
     '<script type="application/ld+json">'+json.dumps({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://www.japanmedai.com/"},{"@type":"ListItem","position":2,"name":"二次会诊","item":"https://www.japanmedai.com/checkup/"},{"@type":"ListItem","position":3,"name":"二次会诊问答","item":base}]},ensure_ascii=False,separators=(",",":"))+'</script>',
     '<style>main{max-width:1000px;margin:auto;padding:30px 18px}.qa{padding:18px 0;border-bottom:1px solid #dce6ee}.qa h3{scroll-margin-top:18px}.qa p{line-height:1.8}.qa button{margin-right:10px;padding:7px 12px;cursor:pointer}.topicNav{display:flex;flex-wrap:wrap;gap:12px}.qa-disclaimer{margin:24px 0;padding:16px;background:#f4f7fa}.feedbackStatus{font-size:13px}@media(max-width:900px){body.checkup-qa-page .top .navMenu{display:flex;flex-wrap:wrap;gap:8px 14px;justify-content:center}body.checkup-qa-page .top .nav{flex-direction:column;align-items:center;gap:10px}body.checkup-qa-page .top{position:relative}}</style>',
     '</head><body class="checkup-qa-page"><div class="top"><div class="wrap nav navHome"><a class="brand" href="/">JapanMed AI<small>日本医疗资源整合与跨境医疗信息平台</small></a><nav class="navMenu"><a href="/">首页</a><a href="/checkup/">二次会诊</a><a href="/hospitals/">日本医院</a><a href="/blog/">医疗知识库</a></nav></div></div>',
-    '<main><p><a href="/checkup/">返回二次会诊专题</a></p><h1>癌症第二意见40问</h1><p>按五大主题整理常见问题，帮助理解日本第二意见门诊的流程与边界。本页为医学信息科普，不提供诊断或治疗建议。</p>',
+    '<main><p><a href="/checkup/">返回二次会诊专题</a></p><h1>癌症第二意见48问</h1><p>按五大主题整理常见问题，帮助理解日本第二意见门诊的流程与边界。本页为医学信息科普，不提供诊断或治疗建议。</p>',
     '<nav class="topicNav" aria-label="问答主题">']
     for i,topic in enumerate(TOPICS):out.append('<a href="#topic-'+str(i+1)+'">'+esc(topic)+'</a>')
     out.append('</nav>')
@@ -56,11 +56,11 @@ def render_llms():
     assert len(rows)==EXPECTED and len({r["id"] for r in rows})==EXPECTED
     assert all(r["source"].startswith(SOURCES) for r in rows)
     base="https://www.japanmedai.com/checkup/qa/"
-    brief=["# 二次专家会诊｜已发布40问","","> 本索引由已发布JSON自动生成，不包含私有候选题或专科暂缓题。","",
+    brief=["# 二次专家会诊｜已发布48问","","> 本索引由已发布JSON自动生成，不包含私有候选题或专科暂缓题。","",
            "- [二次会诊专题](https://www.japanmedai.com/checkup/)",
            "- [已发布问答](https://www.japanmedai.com/checkup/qa/)",
            "- [完整问答](https://www.japanmedai.com/checkup/llms-full.txt)",""]
-    full=["# 二次专家会诊｜已发布40问完整正文","",
+    full=["# 二次专家会诊｜已发布48问完整正文","",
           "> 本文件由已发布JSON自动生成。医学信息仅供教育，不代替诊断、处方或治疗，不保证接诊。",""]
     for r in rows:
         link=base+"#"+r["id"].lower()

@@ -1,4 +1,4 @@
-# 二次专家会诊｜已发布40问
+# 二次专家会诊｜已发布48问
 
 > 本索引由已发布JSON自动生成，不包含私有候选题或专科暂缓题。
 
@@ -46,3 +46,11 @@
 - [异地专家对同一影像意见不同，下一步是什么？](https://www.japanmedai.com/checkup/qa/#so-037)
 - [多次第二意见结论仍不一致，是否要继续寻找答案？](https://www.japanmedai.com/checkup/qa/#so-040)
 - [二次会诊如何判断是否真的产生了决策价值？](https://www.japanmedai.com/checkup/qa/#so-081)
+- [二次会诊过程中如何保护病历隐私？](https://www.japanmedai.com/checkup/qa/#so-026)
+- [如何判断翻译后的病理报告有没有遗漏？](https://www.japanmedai.com/checkup/qa/#so-027)
+- [海外第二意见是否会直接给出日本处方？](https://www.japanmedai.com/checkup/qa/#so-063)
+- [第二意见与多学科会诊（MDT）有什么区别？](https://www.japanmedai.com/checkup/qa/#so-064)
+- [能否只用微信截图申请日本专家二次意见？](https://www.japanmedai.com/checkup/qa/#so-079)
+- [如果原医院不同意转出病理材料怎么办？](https://www.japanmedai.com/checkup/qa/#so-085)
+- [影像扫描日期相隔太久还能评估吗？](https://www.japanmedai.com/checkup/qa/#so-095)
+- [如何避免不同二次会诊平台重复收集病历？](https://www.japanmedai.com/checkup/qa/#so-099)
