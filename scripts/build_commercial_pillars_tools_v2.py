@@ -3,7 +3,7 @@ import json
 R=Path('.'); D='2026-10-15'; B='https://www.japanmedai.com'
 pillars=[
 ('bnct/recurrent-head-neck','复发头颈癌做日本BNCT前，先判断哪5件事？','适用于已经接受过治疗、正在评估日本BNCT或第二意见的人群。先核对适应证边界、原始DICOM、既往放疗计划、近期病理与全身病灶，再谈能否进入机构评估。',['/bnct/001/','/bnct/004/','/bnct/010/','/bnct/024/'],'/tools/bnct-records/'),
-('bnct/gbm','复发胶质母细胞瘤考虑日本BNCT，先看研究阶段和资料条件','复发GBM的BNCT在日本仍需严格区分临床研究、注册试验与常规医疗。先核对分子病理、复发位置、既往放疗、近期MRI/DICOM和当前体能，再判断是否值得申请研究或专家第二意见。',['/bnct/021/','/bnct/022/','/bnct/024/','/bnct/047/'],'/tools/bnct-records/'),
+('bnct/gbm','复发胶质母细胞瘤考虑日本BNCT，先看研究阶段和资料条件','复发GBM不在日本BNCT的医保适应证内，目前只能通过临床研究入组或医保外自由诊疗；部分机构的自由诊疗使用尚未获日本批准的设备和硼药，且不适用药品副作用救济制度。先核对分子病理、复发位置、既往放疗、近期MRI/DICOM和当前体能，再判断是否值得申请研究或专家第二意见。',['/bnct/021/','/bnct/022/','/bnct/024/','/bnct/047/'],'/tools/bnct-records/'),
 ('second-opinion/cancer','日本癌症二次专家会诊：什么时候值得做，资料怎么准备？','适合刚确诊、复发进展、治疗选择复杂或希望核对病理/影像/分子结果的人群。二次意见的价值不是保证找到新方案，而是把当前诊断、证据和下一步决策重新核对清楚。',['/checkup/005/','/checkup/006/','/checkup/023/','/checkup/048/'],'/tools/second-opinion-records/'),
 ('hospitals/international-patient','海外患者申请日本医院：从资料预审到接诊，先搞清这6步','日本医院是否接收海外患者，取决于科室、病种、资料完整度、是否需要介绍状、国际协调流程和费用支付安排。先做接诊准备，而不是先群发医院。',['/hospitals/013/','/hospitals/031/','/hospitals/033/','/hospitals/050/'],'/tools/hospital-readiness/'),
 ('medicines/indication-check','日本新药适应证怎么核对？别只看“日本已上市”','药物是否日本已上市与某位患者能否使用不是一回事。至少核对通用名、PMDA批准状态、正式适应证、治疗线次/生物标志物、最新添付文书和处方属性。',['/medicines/004/','/medicines/031/','/medicines/032/','/medicines/050/'],'/tools/medicine-indication/'),]
