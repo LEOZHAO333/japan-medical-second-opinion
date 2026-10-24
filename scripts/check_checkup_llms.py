@@ -6,7 +6,7 @@ import re
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 rows=json.loads((ROOT/"content/checkup-qa/first-release-25.json").read_text(encoding="utf-8"))["questions"]
 ids=[r["id"] for r in rows]
-assert len(ids)==len(set(ids))==25, "Published JSON count or IDs changed"
+assert len(ids)==len(set(ids))==40, "Published JSON count or IDs changed"
 for name in ("llms.txt","llms-full.txt"):
     p=ROOT/"checkup"/name
     assert p.is_file(), "Missing "+str(p)
