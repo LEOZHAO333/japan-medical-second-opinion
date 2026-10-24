@@ -25,7 +25,7 @@
       ["关西BNCT共同医疗中心｜受诊与研究入口","https://www.ompu.ac.jp/kbmc/bnct/copy_of_index.html"],
       ["关西BNCT共同医疗中心｜海外患者须知（目前不接受海外患者及海外BNCT第二意见）","https://www.ompu.ac.jp/kbmc/bnct_2/copy_of_consultation_from_overseas.html"]
     ],
-    "boundary": "“研究中”“机构开展研究”“医保外自由诊疗”与“日本已批准临床适应证”不是同一层级；部分机构以自由诊疗形式为其他癌种开展BNCT，所用设备和硼药尚未获日本批准。"
+    "boundary": "“研究中”“机构开展研究”“医保外自由诊疗”与“日本已批准临床适应证”不是同一层级；部分机构以自由诊疗形式为其他癌种开展BNCT，所用设备和硼药尚未获日本批准；具体病种与海外患者受理条件须逐院核对，不能把某机构的情况推及所有机构。"
   },
   "bnct/010": {
     "facts": [
@@ -52,7 +52,7 @@
       ["关西BNCT共同医疗中心｜官网","https://www.ompu.ac.jp/kbmc/index.html"],
       ["关西BNCT共同医疗中心｜海外患者须知（目前不接受海外患者及海外BNCT第二意见）","https://www.ompu.ac.jp/kbmc/bnct_2/copy_of_consultation_from_overseas.html"]
     ],
-    "boundary": "“日本已经临床应用”不等于所有复发头颈癌患者都符合某家机构的实际接诊条件。"
+    "boundary": "“日本已经临床应用”不等于所有复发头颈癌患者都符合某家机构的实际接诊条件；医保适应证、本人是否具备日本公共医疗保险资格，以及医院是否受理海外患者是不同判断。"
   },
   "bnct/016": {
     "facts": [
@@ -121,7 +121,7 @@
       ["关西BNCT共同医疗中心｜受诊入口","https://www.ompu.ac.jp/kbmc/bnct/copy_of_index.html"],
       ["关西BNCT共同医疗中心｜海外患者须知（目前不接受海外患者及海外BNCT第二意见）","https://www.ompu.ac.jp/kbmc/bnct_2/copy_of_consultation_from_overseas.html"]
     ],
-    "boundary": "资料清单用于提高预审效率，不代表资料齐全后就一定被接诊或一定适合BNCT。"
+    "boundary": "资料清单用于提高预审效率，不代表资料齐全后就一定被接诊或一定适合BNCT；还须先确认机构当前是否接收海外患者，以及拟申请的是医保诊疗、临床研究还是自由诊疗。"
   },
   "bnct/029": {
     "facts": [
