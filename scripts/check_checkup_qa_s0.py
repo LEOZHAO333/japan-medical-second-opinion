@@ -16,15 +16,15 @@ class Parse(HTMLParser):
         if tag=="button" and a.get("data-vote") in ("helpful","needs_work"):self.buttons+=1
 def main():
     data=json.loads((ROOT/"content/checkup-qa/first-release-25.json").read_text(encoding="utf-8"))
-    questions=data["questions"];assert len(questions)==61
-    assert len({q["id"] for q in questions})==61
+    questions=data["questions"];assert len(questions)==67
+    assert len({q["id"] for q in questions})==67
     src=(ROOT/"checkup/qa/index.html").read_text(encoding="utf-8")
     p=Parse();p.feed(src)
-    assert len(p.ids)==len(set(p.ids))==61
+    assert len(p.ids)==len(set(p.ids))==67
     assert set(p.ids)=={q["id"].lower() for q in questions}
-    assert p.buttons==122 and src.count("<strong>直接回答：</strong>")==61
-    assert src.count("<strong>核对要点：</strong>")==61
-    assert src.count("<strong>来源：</strong>")==61
+    assert p.buttons==134 and src.count("<strong>直接回答：</strong>")==67
+    assert src.count("<strong>核对要点：</strong>")==67
+    assert src.count("<strong>来源：</strong>")==67
     assert p.canonical==["https://www.japanmedai.com/checkup/qa/"]
     assert p.robots==["index,follow"],"Release page must be indexable"
     assert "BreadcrumbList" in src
@@ -38,5 +38,5 @@ def main():
     page=(ROOT/"checkup/qa/index.html").read_text(encoding="utf-8")
     for bad in ("草稿","复审","专业审核待完成","待审核"):
         assert bad not in page, "Draft wording on public page: "+bad
-    print("PASS: 61 unique QA, 122 feedback buttons, fields, internal links, canonical, index,follow, hub, sitemap")
+    print("PASS: 67 unique QA, 134 feedback buttons, fields, internal links, canonical, index,follow, hub, sitemap")
 if __name__=="__main__":main()

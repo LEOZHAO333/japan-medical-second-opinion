@@ -1,4 +1,4 @@
-# 二次专家会诊｜已发布61问
+# 二次专家会诊｜已发布67问
 
 > 本索引由已发布JSON自动生成，不包含私有候选题或专科暂缓题。
 
@@ -67,3 +67,9 @@
 - [医生说不能再放疗，申请第二意见应准备哪些原件？](https://www.japanmedai.com/checkup/qa/#so-051)
 - [不同专家推荐的药物不一样，应该如何比较？](https://www.japanmedai.com/checkup/qa/#so-060)
 - [老人合并多种慢性病，第二意见应增加哪些问题？](https://www.japanmedai.com/checkup/qa/#so-074)
+- [哪些检查材料能帮助复核肿瘤分期？](https://www.japanmedai.com/checkup/qa/#so-012)
+- [患者无法说日语，日本第二意见还可以申请吗？](https://www.japanmedai.com/checkup/qa/#so-053)
+- [癌症治疗结束后，随访计划有疑问还能寻求第二意见吗？](https://www.japanmedai.com/checkup/qa/#so-083)
+- [日本二次会诊报告能用于中国医保或商业保险报销吗？](https://www.japanmedai.com/checkup/qa/#so-101)
+- [选择日本第二意见医院，为什么不能只看医院排名？](https://www.japanmedai.com/checkup/qa/#so-102)
+- [申请日本第二意见，应该先联系专家还是医院窗口？](https://www.japanmedai.com/checkup/qa/#so-103)
