@@ -5,6 +5,22 @@ canonical_url: https://www.japanmedai.com/patient-questions/evidence-based-cance
 notion_url: https://app.notion.com/3fbb079dc60681a4a401c813f9d45f09
 category: 真实患者问题与案例
 status: published
+slug: "evidence-based-cancer-screening"
+evidence_stage: "patient-decision-support; official patient information"
+published_date: "2026-10-16"
+updated_date: "2026-10-16"
+reviewed_date: "2026-10-19"
+review_note: "AI 审查（Claude-2），未经医生复核"
+archive_revision_date: "2026-10-20"
+archive_revision_status: "Draft; pending Claude review and Founder merge decision"
+review_scope_note: "reviewed_date/review_note沿用Hub任务回执6258642205指定的既有AI审查标记；不表示本次GPT修改已经Claude复审或医生审核通过。"
+summary: "真正循证的癌症筛查逻辑不是“查最多”，而是选择已经证明能够减少特定癌症死亡，而且总体获益大于假阳性、过度诊断和检查并发症的项目。"
+primary_sources:
+  - organization: "国立がん研究センター がん情報サービス"
+    title: "がん検診について"
+    date: "2026-04-01"
+    url: "https://ganjoho.jp/public/pre_scr/screening/about_scr01.html"
+    checked_date: "2026-10-20"
 ---
 
 # 癌症筛查不是项目越多越好：真正有证据的筛查怎么选？
@@ -25,6 +41,10 @@ status: published
 
 准备购买一个筛查项目之前，可以先问四个问题：它针对哪种癌症？我的年龄和风险是否属于推荐人群？有没有减少癌症死亡的证据？如果异常，下一步精查路径是什么？
 
+## 风险提示
+
 > 一旦已经出现持续便血、吞咽异常、乳房肿块、异常出血、长期咳嗽等症状，就不属于普通筛查情境，应进入诊断流程。
 
-来源：国立癌症研究中心《癌症筛查》。
+## 权威来源
+
+1. [国立がん研究センター がん情報サービス｜がん検診について](https://ganjoho.jp/public/pre_scr/screening/about_scr01.html)。原文更新/发布日：2026-04-01；核对日期：2026-10-20。

@@ -5,6 +5,27 @@ canonical_url: https://www.japanmedai.com/patient-questions/advanced-cancer-seco
 notion_url: https://app.notion.com/3fbb079dc6068179a403e16722d59ec6
 category: 真实患者问题与案例
 status: published
+slug: "advanced-cancer-second-opinion-value"
+evidence_stage: "patient-decision-support; official patient information"
+published_date: "2026-10-16"
+updated_date: "2026-10-16"
+reviewed_date: "2026-10-19"
+review_note: "AI 审查（Claude-2），未经医生复核"
+archive_revision_date: "2026-10-20"
+archive_revision_status: "Draft; pending Claude review and Founder merge decision"
+review_scope_note: "reviewed_date/review_note沿用Hub任务回执6258642205指定的既有AI审查标记；不表示本次GPT修改已经Claude复审或医生审核通过。"
+summary: "晚期癌症仍然可以有做第二意见的价值，但目的需要设对。它不是“最后去国外碰碰运气”，更不是保证找到一种国内没有的新疗法。"
+primary_sources:
+  - organization: "国立がん研究センター がん情報サービス"
+    title: "セカンドオピニオン"
+    date: "2024-06-17"
+    url: "https://ganjoho.jp/public/dia_tre/dia_tre_diagnosis/second_opinion.html"
+    checked_date: "2026-10-20"
+  - organization: "国立がん研究センター がん情報サービス"
+    title: "緩和ケア"
+    date: "2020-08-26"
+    url: "https://ganjoho.jp/public/dia_tre/treatment/relaxation/index.html"
+    checked_date: "2026-10-20"
 ---
 
 # 晚期癌症还有必要做第二意见吗？真正价值不只是“找新疗法”
@@ -26,4 +47,12 @@ status: published
 ## 重新明确患者最在乎的目标
 延长生存、控制症状、保持活动能力、减少住院等目标，都会影响治疗强度的选择。第二意见也应帮助患者理解治疗收益、副作用、时间成本和支持治疗/缓和医疗的角色。
 
+## 风险提示
+
 > 第二意见质量不取决于“听了多少位专家”，而取决于资料是否完整、问题是否明确，以及意见能否真正帮助下一步决策。
+
+## 权威来源
+
+1. [国立がん研究センター がん情報サービス｜セカンドオピニオン](https://ganjoho.jp/public/dia_tre/dia_tre_diagnosis/second_opinion.html)。原文更新/发布日：2024-06-17；核对日期：2026-10-20。
+
+2. [国立がん研究センター がん情報サービス｜緩和ケア](https://ganjoho.jp/public/dia_tre/treatment/relaxation/index.html)。原文更新/发布日：2020-08-26；核对日期：2026-10-20。

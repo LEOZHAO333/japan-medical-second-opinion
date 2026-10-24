@@ -5,6 +5,22 @@ canonical_url: https://www.japanmedai.com/patient-questions/glioma-second-opinio
 notion_url: https://app.notion.com/3fbb079dc6068140a706e98dd003efce
 category: 真实患者问题与案例
 status: published
+slug: "glioma-second-opinion-timing"
+evidence_stage: "patient-decision-support; official patient information"
+published_date: "2026-10-16"
+updated_date: "2026-10-16"
+reviewed_date: "2026-10-19"
+review_note: "AI 审查（Claude-2），未经医生复核"
+archive_revision_date: "2026-10-20"
+archive_revision_status: "Draft; pending Claude review and Founder merge decision"
+review_scope_note: "reviewed_date/review_note沿用Hub任务回执6258642205指定的既有AI审查标记；不表示本次GPT修改已经Claude复审或医生审核通过。"
+summary: "第二意见的价值不是保证找到“日本新疗法”，而是重新确认诊断有没有变化、MRI到底意味着什么，以及下一步还有哪些标准治疗、局部治疗或研究性选择值得讨论。"
+primary_sources:
+  - organization: "国立がん研究センター がん情報サービス"
+    title: "神経膠腫（グリオーマ） 治療"
+    date: "UNKNOWN"
+    url: "https://ganjoho.jp/public/cancer/glioma/treatment.html"
+    checked_date: "2026-10-20"
 ---
 
 # 脑胶质瘤治疗陷入瓶颈，什么时候应该重新做一次专家第二意见？
@@ -26,6 +42,10 @@ status: published
 ## 想尝试日本新疗法，但不知道是否匹配
 看到病毒疗法、BNCT、靶向药等新闻时，第一步不是按技术找医院，而是把病理、分子、影像和既往治疗整理完整。
 
+## 风险提示
+
 > 真正值得重新会诊的是诊断信息变化、影像判断存在不确定性，或下一步出现重大决策分叉的时点。
 
-来源：国立癌症研究中心《神经胶质瘤治疗》。
+## 权威来源
+
+1. [国立がん研究センター がん情報サービス｜神経膠腫（グリオーマ） 治療](https://ganjoho.jp/public/cancer/glioma/treatment.html)。原文更新/发布日：UNKNOWN；核对日期：2026-10-20。

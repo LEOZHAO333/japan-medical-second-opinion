@@ -5,6 +5,37 @@ canonical_url: https://www.japanmedai.com/patient-questions/nodule-after-health-
 notion_url: https://app.notion.com/3fbb079dc60681938737fb3ff7a90db0
 category: 真实患者问题与案例
 status: published
+slug: "nodule-after-health-check"
+evidence_stage: "patient-decision-support; official patient information"
+published_date: "2026-10-16"
+updated_date: "2026-10-16"
+reviewed_date: "2026-10-19"
+review_note: "AI 审查（Claude-2），未经医生复核"
+archive_revision_date: "2026-10-20"
+archive_revision_status: "Draft; pending Claude review and Founder merge decision"
+review_scope_note: "reviewed_date/review_note沿用Hub任务回执6258642205指定的既有AI审查标记；不表示本次GPT修改已经Claude复审或医生审核通过。"
+summary: "“结节”不等于已经确诊癌症。下一步应先弄清异常位于哪个器官、报告建议做什么检查，再由相应专科医生判断。本文只以肺部和甲状腺检查作例子，不提供跨器官通用的大小或随访门槛。"
+primary_sources:
+  - organization: "国立がん研究センター がん情報サービス"
+    title: "肺がん 検査"
+    date: "2026-08-26"
+    url: "https://ganjoho.jp/public/cancer/lung/diagnosis.html"
+    checked_date: "2026-10-20"
+  - organization: "国立がん研究センター がん情報サービス"
+    title: "甲状腺がん 検査"
+    date: "2026-08-21"
+    url: "https://ganjoho.jp/public/cancer/thyroid/diagnosis.html"
+    checked_date: "2026-10-20"
+  - organization: "国立がん研究センター がん情報サービス"
+    title: "がん検診について"
+    date: "2026-04-01"
+    url: "https://ganjoho.jp/public/pre_scr/screening/about_scr01.html"
+    checked_date: "2026-10-20"
+  - organization: "国立がん研究センター がん情報サービス"
+    title: "セカンドオピニオン"
+    date: "2024-06-17"
+    url: "https://ganjoho.jp/public/dia_tre/dia_tre_diagnosis/second_opinion.html"
+    checked_date: "2026-10-20"
 ---
 
 # 体检查出结节，真正需要判断的不是“是不是癌”这一个问题
@@ -26,4 +57,16 @@ status: published
 ## 下一步是复查、精查还是治疗？
 低风险病灶规范随访可能比立即侵入性检查更合理；高风险病灶则需尽快进入专科精密检查。第二意见更应该回答：风险大概在哪一层？还缺什么资料？多久复查？什么变化出现时需要升级检查？
 
+## 风险提示
+
 > 不同器官的结节随访阈值并不相同，本文不能替代各器官专门指南。
+
+## 权威来源
+
+1. [国立がん研究センター がん情報サービス｜肺がん 検査](https://ganjoho.jp/public/cancer/lung/diagnosis.html)。原文更新/发布日：2026-08-26；核对日期：2026-10-20。
+
+2. [国立がん研究センター がん情報サービス｜甲状腺がん 検査](https://ganjoho.jp/public/cancer/thyroid/diagnosis.html)。原文更新/发布日：2026-08-21；核对日期：2026-10-20。
+
+3. [国立がん研究センター がん情報サービス｜がん検診について](https://ganjoho.jp/public/pre_scr/screening/about_scr01.html)。原文更新/发布日：2026-04-01；核对日期：2026-10-20。
+
+4. [国立がん研究センター がん情報サービス｜セカンドオピニオン](https://ganjoho.jp/public/dia_tre/dia_tre_diagnosis/second_opinion.html)。原文更新/发布日：2024-06-17；核对日期：2026-10-20。

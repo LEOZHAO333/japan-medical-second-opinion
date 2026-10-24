@@ -5,6 +5,22 @@ canonical_url: https://www.japanmedai.com/patient-questions/rectal-cancer-sphinc
 notion_url: https://app.notion.com/3fbb079dc6068124aecaf77fa8b9c37e
 category: 真实患者问题与案例
 status: published
+slug: "rectal-cancer-sphincter-preservation"
+evidence_stage: "patient-decision-support; official patient information"
+published_date: "2026-10-16"
+updated_date: "2026-10-16"
+reviewed_date: "2026-10-19"
+review_note: "AI 审查（Claude-2），未经医生复核"
+archive_revision_date: "2026-10-20"
+archive_revision_status: "Draft; pending Claude review and Founder merge decision"
+review_scope_note: "reviewed_date/review_note沿用Hub任务回执6258642205指定的既有AI审查标记；不表示本次GPT修改已经Claude复审或医生审核通过。"
+summary: "第二意见不是寻找一家“愿意保肛”的医院，而是重新确认：在不牺牲肿瘤学安全性的前提下，是否存在合理保肛方案，以及保留下来的肛门功能是否真正有价值。"
+primary_sources:
+  - organization: "国立がん研究センター がん情報サービス"
+    title: "大腸がん（結腸がん・直腸がん） 治療"
+    date: "2025-03-24"
+    url: "https://ganjoho.jp/public/cancer/colon/treatment.html"
+    checked_date: "2026-10-20"
 ---
 
 # 低位直肠癌被告知不能保肛，第二意见最值得重新核对哪5项？
@@ -28,6 +44,10 @@ status: published
 
 建议准备盆腔MRI原始DICOM、肠镜报告与图像、病理报告、胸腹部CT、治疗前后影像、既往放化疗方案及目前排便功能信息。
 
+## 风险提示
+
 > 本文不主张为了保肛而保肛。直肠癌手术首要目标仍是肿瘤学安全。
 
-来源：国立癌症研究中心《大肠癌治疗》。
+## 权威来源
+
+1. [国立がん研究センター がん情報サービス｜大腸がん（結腸がん・直腸がん） 治療](https://ganjoho.jp/public/cancer/colon/treatment.html)。原文更新/发布日：2025-03-24；核对日期：2026-10-20。
