@@ -1,5 +1,5 @@
 {
-  "version": "v1.2",
+  "version": "v1.3",
   "updated": "2026-10-24",
   "questions": [
     {
@@ -481,6 +481,136 @@
       "source": "https://ganjoho.jp/public/dia_tre/dia_tre_diagnosis/second_opinion.html",
       "source_note": "第2节：向各目标医院确认所需资料；资料目录为编辑整理建议；2024-06-17更新，2026-10-21核对",
       "related": "/checkup/035/"
+    },
+    {
+      "id": "SO-003",
+      "topic": "诊疗决策",
+      "question": "第二意见能纠正病理误诊吗？",
+      "answer": "第二意见可能帮助重新审视诊断依据，但不能保证发现或纠正误诊。是否需要正式病理复核，应由相应医疗团队判断。",
+      "check": "核对原病理诊断与标本部位；确认是否需要正式病理切片复核；询问复核结果会否改变治疗决定",
+      "source": "https://ganjoho.jp/public/dia_tre/dia_tre_diagnosis/second_opinion.html",
+      "source_note": "第1节：第二意见基于既有资料对诊断提出意见；是否病理复核由医疗团队判断；2024-06-17更新，2026-10-21核对",
+      "related": "/checkup/034/"
+    },
+    {
+      "id": "SO-022",
+      "topic": "诊疗决策",
+      "question": "远程第二意见适合复发脑肿瘤吗？",
+      "answer": "能否远程评估，须由受理医院根据资料和咨询目的判断；远程意见不能替代复发脑肿瘤的正式诊疗。",
+      "check": "核对复发脑肿瘤的近期影像和病理资料；确认目标医院是否受理远程第二意见及海外申请；出现急性神经症状时优先现场就医",
+      "source": "https://ganjoho.jp/public/dia_tre/dia_tre_diagnosis/second_opinion.html",
+      "source_note": "第1节：第二意见基于既有资料；远程受理以各院规定为准；2024-06-17更新，2026-10-21核对",
+      "related": "/checkup/033/"
+    },
+    {
+      "id": "SO-024",
+      "topic": "诊疗决策",
+      "question": "肿瘤已经出现疼痛，是否先等第二意见？",
+      "answer": "不要为等待第二意见而推迟疼痛或其他症状的医疗评估。请及时联系当前治疗团队，症状急性加重时及时就医。",
+      "check": "确认疼痛变化及当前症状处理计划；向现治疗团队及时反馈症状；第二意见与症状处理并行，不延误必要诊疗",
+      "source": "https://ganjoho.jp/public/dia_tre/dia_tre_diagnosis/second_opinion.html",
+      "source_note": "第1节：注意治疗开始时机，不因等待第二意见延误诊疗；2024-06-17更新，2026-10-21核对",
+      "related": null
+    },
+    {
+      "id": "SO-031",
+      "topic": "结果使用",
+      "question": "第二意见报告中出现“考虑”或“建议”，代表什么？",
+      "answer": "这类表述通常表示医生基于现有资料提出判断或建议，并不意味着已经完成新的诊断或开具处方。应向医生确认依据和适用条件。",
+      "check": "区分初步判断、建议与最终诊疗决定；询问判断依赖哪些尚未确认的信息；与当前主治团队讨论具体执行条件",
+      "source": "https://ganjoho.jp/public/dia_tre/dia_tre_diagnosis/second_opinion.html",
+      "source_note": "第2节：获得意见后与主治医生讨论；报告用语解读为编辑说明；2024-06-17更新，2026-10-21核对",
+      "related": "/checkup/048/"
+    },
+    {
+      "id": "SO-034",
+      "topic": "诊疗决策",
+      "question": "复发时间很短是否说明原治疗一定错误？",
+      "answer": "不能仅凭复发时间判断之前治疗是否错误。应请医疗团队结合病理、分期、既往治疗记录及复查资料解释病情变化。",
+      "check": "核对复发诊断的依据及检查日期；梳理原治疗方案与随访记录；请专科医生解释复发时间与治疗效果的关系",
+      "source": "https://ganjoho.jp/public/dia_tre/dia_tre_diagnosis/second_opinion.html",
+      "source_note": "第1节：就诊断与治疗经过征求另一位医生意见；2024-06-17更新，2026-10-21核对",
+      "related": null
+    },
+    {
+      "id": "SO-042",
+      "topic": "申请与流程",
+      "question": "病理结果写“倾向于”，适合申请病理第二意见吗？",
+      "answer": "可先请主治医生解释“倾向于”所指的不确定性，再讨论是否有必要请病理专科复核；不应凭这三个字认定原诊断有误。",
+      "check": "向主治医生确认病理不确定性具体在哪；核对是否具备可复核的原始切片/报告；讨论复核是否影响当前治疗选择",
+      "source": "https://ganjoho.jp/public/dia_tre/dia_tre_diagnosis/second_opinion.html",
+      "source_note": "第1节：在理解主治医生说明后再咨询；病理复核需求由医疗团队判断；2024-06-17更新，2026-10-21核对",
+      "related": "/checkup/034/"
+    },
+    {
+      "id": "SO-043",
+      "topic": "结果使用",
+      "question": "影像报告和病理诊断相互矛盾怎么办？",
+      "answer": "应先由当前医疗团队核对两份报告的检查日期、取材部位和临床背景；如仍影响决策，可讨论是否需要专科复核。",
+      "check": "核对影像与病理的检查日期及取材位置；确认报告描述的是同一病灶；如差异影响治疗请专科团队讨论复核",
+      "source": "https://ganjoho.jp/public/dia_tre/dia_tre_diagnosis/second_opinion.html",
+      "source_note": "第2节：准备影像与病理等检查资料；2024-06-17更新，2026-10-21核对",
+      "related": "/checkup/017/"
+    },
+    {
+      "id": "SO-044",
+      "topic": "申请与流程",
+      "question": "两家医院对癌症分期判断不同，第二意见要问什么？",
+      "answer": "可请医生说明两次分期分别依据哪些病理、影像和检查日期，并询问分歧是否影响治疗方案。",
+      "check": "逐项列出两家医院使用的分期资料；核对影像、病理及检查时间是否一致；询问分期差异是否会改变治疗选择",
+      "source": "https://ganjoho.jp/public/dia_tre/dia_tre_diagnosis/second_opinion.html",
+      "source_note": "第2节：准备用于诊断的检查资料；2024-06-17更新，2026-10-21核对",
+      "related": "/checkup/004/"
+    },
+    {
+      "id": "SO-047",
+      "topic": "诊疗决策",
+      "question": "术后病理与术前评估差别很大，值得复核吗？",
+      "answer": "可先请治疗团队解释差异及其对后续治疗的影响；若仍有重要疑问，可讨论专科病理第二意见。",
+      "check": "请治疗团队解释术前与术后信息差异；核对术后病理完整报告与标本信息；确认差异是否影响后续治疗及复核需要",
+      "source": "https://ganjoho.jp/public/dia_tre/dia_tre_diagnosis/second_opinion.html",
+      "source_note": "第1节：就诊断与治疗选择征求意见；2024-06-17更新，2026-10-21核对",
+      "related": "/checkup/004/"
+    },
+    {
+      "id": "SO-048",
+      "topic": "诊疗决策",
+      "question": "肿瘤复发后准备再次手术，第二意见应重点看什么？",
+      "answer": "可围绕复发诊断依据、已有检查和拟定手术方案向专家提问；是否适合再次手术必须由负责诊疗的专科团队判断。",
+      "check": "确认复发的诊断依据和近期影像；整理前次手术及其他治疗记录；请负责诊疗的专科团队评估再次手术风险",
+      "source": "https://ganjoho.jp/public/dia_tre/dia_tre_diagnosis/second_opinion.html",
+      "source_note": "第1节：就治疗选择征求意见；手术可行性由负责诊疗的团队判断；2024-06-17更新，2026-10-21核对",
+      "related": null
+    },
+    {
+      "id": "SO-051",
+      "topic": "资料准备",
+      "question": "医生说不能再放疗，申请第二意见应准备哪些原件？",
+      "answer": "可先准备病理报告、近期影像及既往放疗记录，并向原治疗医院询问能否提供放疗计划等资料。是否能够再次放疗必须由放疗专科医生评估。",
+      "check": "向原医院申请既往放疗计划和剂量记录；准备近期影像、病理与放疗治疗摘要；再次照射可能性由放疗专科结合累计剂量评估",
+      "source": "https://ganjoho.jp/public/dia_tre/dia_tre_diagnosis/second_opinion.html",
+      "source_note": "第2节：由原医院提供诊疗资料；放疗记录要求为编辑建议；2024-06-17更新，2026-10-21核对",
+      "related": "/bnct/024/"
+    },
+    {
+      "id": "SO-060",
+      "topic": "诊疗决策",
+      "question": "不同专家推荐的药物不一样，应该如何比较？",
+      "answer": "可把各方案的治疗目标、适用条件、已有证据和主要风险整理成问题，请当前医疗团队解释分歧。不要自行合并或更换处方药。",
+      "check": "分别记录专家推荐方案及适用前提；核对各方案证据、风险与患者当前情况；由负责处方的医疗团队讨论，勿自行改药",
+      "source": "https://ganjoho.jp/public/dia_tre/dia_tre_diagnosis/second_opinion.html",
+      "source_note": "第1–2节：意见需带回主治医生讨论；不自行更改治疗；2024-06-17更新，2026-10-21核对",
+      "related": "/checkup/017/"
+    },
+    {
+      "id": "SO-074",
+      "topic": "诊疗决策",
+      "question": "老人合并多种慢性病，第二意见应增加哪些问题？",
+      "answer": "除肿瘤治疗目标外，可请医生解释合并疾病、当前用药、身体状态与治疗负担如何影响方案。不能只凭年龄判断是否适合治疗。",
+      "check": "整理合并疾病、当前药物及既往不良反应；确认身体功能状态与本人治疗目标；请医疗团队说明合并疾病对方案的影响",
+      "source": "https://ganjoho.jp/public/dia_tre/dia_tre_diagnosis/second_opinion.html",
+      "source_note": "第1节：结合本人意愿与身体状况作出选择；2024-06-17更新，2026-10-21核对",
+      "related": "/checkup/005/"
     }
   ]
 }
