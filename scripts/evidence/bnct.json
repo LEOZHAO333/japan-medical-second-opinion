@@ -25,7 +25,7 @@
       ["关西BNCT共同医疗中心｜受诊与研究入口","https://www.ompu.ac.jp/kbmc/bnct/copy_of_index.html"],
       ["关西BNCT共同医疗中心｜海外患者须知（目前不接受海外患者及海外BNCT第二意见）","https://www.ompu.ac.jp/kbmc/bnct_2/copy_of_consultation_from_overseas.html"]
     ],
-    "boundary": "“研究中”“机构开展研究”与“日本已批准临床适应证”不是同一层级。"
+    "boundary": "“研究中”“机构开展研究”“医保外自由诊疗”与“日本已批准临床适应证”不是同一层级；部分机构以自由诊疗形式为其他癌种开展BNCT，所用设备和硼药尚未获日本批准。"
   },
   "bnct/010": {
     "facts": [
