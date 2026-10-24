@@ -110,7 +110,7 @@
         if (data && tag(data[key])) details[key] = data[key];
       });
       // Fixed-schema QA feedback metadata only; never accept free text or clinical data.
-      if (eventName === "qa_feedback" && data && /^s-\\d{3}$/.test(data.qid || "") && ["concepts","quality","indications","safety","evidence"].includes(data.theme) && typeof data.helpful === "boolean") {
+      if (eventName === "qa_feedback" && data && /^s-\d{3}$/.test(data.qid || "") && ["concepts","quality","indications","safety","evidence"].includes(data.theme) && typeof data.helpful === "boolean") {
         details.qid = data.qid;
         details.theme = data.theme;
         details.helpful = data.helpful;
