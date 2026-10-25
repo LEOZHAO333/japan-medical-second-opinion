@@ -1,0 +1,27 @@
+name: iPS QA S0 Gate
+on:
+  pull_request:
+    paths:
+      - 'content/ips-qa/**'
+      - 'ips/qa/**'
+      - 'ips/llms.txt'
+      - 'ips/llms-full.txt'
+      - 'ips/index.html'
+      - 'ips/sitemap.xml'
+      - 'llms.txt'
+      - 'scripts/build_ips_qa.py'
+      - 'assets/checkup-qa-feedback.js'
+      - '.github/workflows/ips-qa-s0.yml'
+  workflow_dispatch:
+jobs:
+  ips-qa-s0:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Generated page and llms match data, links/sitemap/hub OK
+        run: python3 scripts/build_ips_qa.py --check

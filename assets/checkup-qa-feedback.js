@@ -11,7 +11,7 @@
     if (!wrap || wrap.dataset.submitted === "1") return;
     var vote = button.getAttribute("data-vote");
     var id = wrap.getAttribute("data-qa-id");
-    if (!/^(helpful|needs_work)$/.test(vote) || !/^(so|bnct)-\d{3}$/.test(id || "")) return;
+    if (!/^(helpful|needs_work)$/.test(vote) || !/^(so|bnct|ips)-\d{3}$/.test(id || "")) return;
     var status = wrap.querySelector(".feedbackStatus");
     if (!tracker) { if (status) status.textContent = "反馈暂不可用，请稍后重试。"; return; }
     button.disabled = true;

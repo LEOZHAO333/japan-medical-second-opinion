@@ -1,0 +1,18 @@
+# 日本iPS再生医疗｜已发布10问
+
+> 本索引由已发布JSON自动生成，只含已上线问答。
+
+- [iPS再生医疗专题](https://www.japanmedai.com/ips/)
+- [已发布问答](https://www.japanmedai.com/ips/qa/)
+- [完整问答](https://www.japanmedai.com/ips/llms-full.txt)
+
+- [到2026年10月，日本真正获得药事批准的iPS细胞来源治疗产品有哪些？](https://www.japanmedai.com/ips/qa/#ips-001)
+- [iPS产品的“附条件及期限批准”到期后会自动转成正式批准吗？](https://www.japanmedai.com/ips/qa/#ips-002)
+- [AMCHEPRY获批后，帕金森病的记忆力下降或其他非运动症状也属于获批治疗目标吗？](https://www.japanmedai.com/ips/qa/#ips-003)
+- [RiHEART心肌细胞片已获批，扩张型心肌病或一般心衰患者都能接受吗？](https://www.japanmedai.com/ips/qa/#ips-004)
+- [AMCHEPRY是打针或口服就能完成的帕金森iPS治疗吗？](https://www.japanmedai.com/ips/qa/#ips-005)
+- [AMCHEPRY移植后为什么可能还要长期做脑部影像检查？](https://www.japanmedai.com/ips/qa/#ips-006)
+- [iPS产品取得日本药事批准，是否等于当天就能使用日本医保？](https://www.japanmedai.com/ips/qa/#ips-007)
+- [自费诊所展示RiHEART或AMCHEPRY的日本批文，能证明它自己的iPS项目也获批吗？](https://www.japanmedai.com/ips/qa/#ips-008)
+- [日本iPS产品纳入医保后，没有日本医保资格的海外患者也能直接报销吗？](https://www.japanmedai.com/ips/qa/#ips-009)
+- [海外患者把帕金森或心衰病历发给日本机构，能否直接视为iPS移植已获预约？](https://www.japanmedai.com/ips/qa/#ips-010)
