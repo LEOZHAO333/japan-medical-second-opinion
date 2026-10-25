@@ -1,4 +1,4 @@
-# BNCT硼中子治疗｜已发布20问
+# BNCT硼中子治疗｜已发布29问
 
 > 本索引由已发布JSON自动生成，只含已上线问答。
 
@@ -26,3 +26,12 @@
 - [BNCT自由诊疗出现严重药物不良反应，日本救济制度一定赔付吗？](https://www.japanmedai.com/bnct/qa/#bnct-018)
 - [BNCT资料预审后又做了新CT或MRI，要不要补交医院？](https://www.japanmedai.com/bnct/qa/#bnct-019)
 - [BNCT治疗后突然出现呼吸困难，应先等日本医院回复吗？](https://www.japanmedai.com/bnct/qa/#bnct-020)
+- [慢性肾病患者申请BNCT，为什么要提前核对肾功能？](https://www.japanmedai.com/bnct/qa/#bnct-021)
+- [备孕、怀孕或哺乳期患者，能把成人BNCT方案直接照搬吗？](https://www.japanmedai.com/bnct/qa/#bnct-022)
+- [装有心脏起搏器，是否一定不能接受日本所有BNCT治疗？](https://www.japanmedai.com/bnct/qa/#bnct-023)
+- [复发胶质母细胞瘤想参加BNCT三期试验，为什么必须核对IDH和既往治疗？](https://www.japanmedai.com/bnct/qa/#bnct-025)
+- [BNCT三期研究里的“医生选择治疗”对照组，是安慰剂组吗？](https://www.japanmedai.com/bnct/qa/#bnct-026)
+- [有人推荐自费BNCT时，为什么还应先问有没有已确立的标准治疗选择？](https://www.japanmedai.com/bnct/qa/#bnct-027)
+- [BNCT自由诊疗网页只写“先进技术”，却没有说明风险和费用，应该怎么核查？](https://www.japanmedai.com/bnct/qa/#bnct-028)
+- [申请BNCT时只有患者自己整理的病历，没有主治医生介绍信可以吗？](https://www.japanmedai.com/bnct/qa/#bnct-029)
+- [BNCT照射时需要保持体位不动，无法长时间固定还能申请评估吗？](https://www.japanmedai.com/bnct/qa/#bnct-030)
