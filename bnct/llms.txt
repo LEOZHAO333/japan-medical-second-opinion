@@ -1,4 +1,4 @@
-# BNCT硼中子治疗｜已发布68问
+# BNCT硼中子治疗｜已发布78问
 
 > 本索引由已发布JSON自动生成，只含已上线问答。
 
@@ -74,3 +74,13 @@
 - [海外患者听说日本有“患者申出療養”，能直接申请用这个制度接受BNCT吗？](https://www.japanmedai.com/bnct/qa/#bnct-066)
 - [BNCT预审提到FDG-PET和FBPA-PET，这两种检查是一样的吗？](https://www.japanmedai.com/bnct/qa/#bnct-067)
 - [还没有做FDG-PET/CT，海外患者必须先自费检查才能提交BNCT预审吗？](https://www.japanmedai.com/bnct/qa/#bnct-068)
+- [FBPA-PET显示肿瘤摄取良好，是不是代表BNCT治疗一定有效？](https://www.japanmedai.com/bnct/qa/#bnct-069)
+- [BNCT评估为什么要看肿瘤距离体表的深度，而不只看肿块大小？](https://www.japanmedai.com/bnct/qa/#bnct-070)
+- [正在接受透析的头颈癌患者，是否一定不能在日本任何医院做BNCT？](https://www.japanmedai.com/bnct/qa/#bnct-071)
+- [头颈癌属于BNCT日本医保适应证，申请专家第二意见也能用医保报销吗？](https://www.japanmedai.com/bnct/qa/#bnct-072)
+- [日本BNCT的“特定临床研究”和以获批为目标的“治验”是同一种研究吗？](https://www.japanmedai.com/bnct/qa/#bnct-073)
+- [BNCT特定临床研究已经发布结果，是否可以直接拿去申请新癌种获批？](https://www.japanmedai.com/bnct/qa/#bnct-074)
+- [自费BNCT可以和普通日本医保治疗混在一起，只自付BNCT那部分吗？](https://www.japanmedai.com/bnct/qa/#bnct-075)
+- [海外商业医疗保险能直接保证报销日本BNCT自由诊疗费用吗？](https://www.japanmedai.com/bnct/qa/#bnct-076)
+- [BNCT之后照射区域皮肤严重破损、渗液，可以等下次影像复查再处理吗？](https://www.japanmedai.com/bnct/qa/#bnct-077)
+- [BNCT后持续高热并伴严重头痛或意识异常，为什么要尽快就医？](https://www.japanmedai.com/bnct/qa/#bnct-078)
