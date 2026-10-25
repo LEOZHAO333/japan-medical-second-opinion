@@ -1,4 +1,4 @@
-# BNCT硼中子治疗｜已发布78问
+# BNCT硼中子治疗｜已发布88问
 
 > 本索引由已发布JSON自动生成，只含已上线问答。
 
@@ -84,3 +84,13 @@
 - [海外商业医疗保险能直接保证报销日本BNCT自由诊疗费用吗？](https://www.japanmedai.com/bnct/qa/#bnct-076)
 - [BNCT之后照射区域皮肤严重破损、渗液，可以等下次影像复查再处理吗？](https://www.japanmedai.com/bnct/qa/#bnct-077)
 - [BNCT后持续高热并伴严重头痛或意识异常，为什么要尽快就医？](https://www.japanmedai.com/bnct/qa/#bnct-078)
+- [FBPA-PET检查注射的示踪剂，和BNCT治疗时使用的硼药是同一种药吗？](https://www.japanmedai.com/bnct/qa/#bnct-079)
+- [看到日本BNCT硼药包装写9000mg，能自己推算需要用几袋吗？](https://www.japanmedai.com/bnct/qa/#bnct-080)
+- [头颈癌患者已经做过气管切开，是否一定失去日本BNCT评估机会？](https://www.japanmedai.com/bnct/qa/#bnct-081)
+- [治疗前就已严重吞咽困难或依赖鼻饲，BNCT评估为什么要报告营养与吞咽情况？](https://www.japanmedai.com/bnct/qa/#bnct-082)
+- [海外患者参加日本BNCT研究，能否把所有复查都留在本国医院完成？](https://www.japanmedai.com/bnct/qa/#bnct-083)
+- [参加BNCT临床研究出现研究相关健康损害，是否一定能获得保险补偿？](https://www.japanmedai.com/bnct/qa/#bnct-084)
+- [通过第三方机构提交BNCT病历前，为什么要先问谁会看到和保存这些资料？](https://www.japanmedai.com/bnct/qa/#bnct-085)
+- [海外医疗协调方说已经“保证日本医院接收BNCT”，患者应如何核实？](https://www.japanmedai.com/bnct/qa/#bnct-086)
+- [海外患者为了BNCT做FBPA-PET，是否必须在资料预审之前就赴日检查？](https://www.japanmedai.com/bnct/qa/#bnct-087)
+- [日本BNCT医院提供线上咨询，是否每个海外申请人都能直接预约？](https://www.japanmedai.com/bnct/qa/#bnct-088)
