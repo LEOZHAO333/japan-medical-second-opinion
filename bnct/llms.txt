@@ -1,4 +1,4 @@
-# BNCT硼中子治疗｜已发布10问
+# BNCT硼中子治疗｜已发布20问
 
 > 本索引由已发布JSON自动生成，只含已上线问答。
 
@@ -16,3 +16,13 @@
 - [BNCT自由诊疗与临床研究，患者应分别核对哪些告知和安全信息？](https://www.japanmedai.com/bnct/qa/#bnct-008)
 - [BNCT的资料预审、正式接诊和最终确认治疗，是同一个步骤吗？](https://www.japanmedai.com/bnct/qa/#bnct-009)
 - [计划赴日接受BNCT前，为什么要先明确回国后的随访由谁负责？](https://www.japanmedai.com/bnct/qa/#bnct-010)
+- [有哮喘或药物过敏史，申请BNCT前为什么必须主动告知？](https://www.japanmedai.com/bnct/qa/#bnct-011)
+- [正在使用化疗药或靶向药，BNCT时能直接同时使用吗？](https://www.japanmedai.com/bnct/qa/#bnct-012)
+- [头颈癌手术后，能把BNCT直接作为常规辅助治疗吗？](https://www.japanmedai.com/bnct/qa/#bnct-013)
+- [儿童头颈癌患者，能直接套用日本成人BNCT已批准方案吗？](https://www.japanmedai.com/bnct/qa/#bnct-014)
+- [参加BNCT临床试验，是否一定能接受试验中的BNCT方案？](https://www.japanmedai.com/bnct/qa/#bnct-015)
+- [已签署BNCT临床试验同意书，还能中途退出吗？](https://www.japanmedai.com/bnct/qa/#bnct-016)
+- [BNCT自由诊疗的报价，为什么要逐项问清检查与后续处理费用？](https://www.japanmedai.com/bnct/qa/#bnct-017)
+- [BNCT自由诊疗出现严重药物不良反应，日本救济制度一定赔付吗？](https://www.japanmedai.com/bnct/qa/#bnct-018)
+- [BNCT资料预审后又做了新CT或MRI，要不要补交医院？](https://www.japanmedai.com/bnct/qa/#bnct-019)
+- [BNCT治疗后突然出现呼吸困难，应先等日本医院回复吗？](https://www.japanmedai.com/bnct/qa/#bnct-020)
