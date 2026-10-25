@@ -1,4 +1,4 @@
-# 日本iPS再生医疗｜已发布56问
+# 日本iPS再生医疗｜已发布66问
 
 > 本索引由已发布JSON自动生成，只含已上线问答。
 
@@ -61,4 +61,14 @@
 - [AMCHEPRY脑内移植后发烧，能先自己吃消炎药、等到下次复查吗？](https://www.japanmedai.com/ips/qa/#ips-053)
 - [RiHEART心肌片移植后又出现明显气短、胸痛或晕厥，等日本医院回邮件可以吗？](https://www.japanmedai.com/ips/qa/#ips-054)
 - [赴日咨询iPS疗法时，医院要求专业医疗口译，费用一定包括在医保治疗费用里吗？](https://www.japanmedai.com/ips/qa/#ips-055)
+- [RiHEART心肌细胞片移植后还需要免疫管理与检查，相关药费、复查费都包括在细胞片材料价格里吗？](https://www.japanmedai.com/ips/qa/#ips-056)
 - [海外患者申请日本iPS治疗预审，英文病历都可以直接提交，不必翻译成日文吗？](https://www.japanmedai.com/ips/qa/#ips-057)
+- [海外患者在日本接受RiHEART心肌片移植，回国后能直接拿日本处方买到后续免疫管理药物吗？](https://www.japanmedai.com/ips/qa/#ips-058)
+- [“自体iPS”和“异体iPS”有什么区别？诊所说使用自体细胞就代表更安全、也已获批准吗？](https://www.japanmedai.com/ips/qa/#ips-059)
+- [RiHEART和AMCHEPRY已在日本获批，在其他国家的医院使用同样技术是否自动获得许可？](https://www.japanmedai.com/ips/qa/#ips-060)
+- [左旋多巴服药后仍有短暂好转，但药效波动明显，还值得问AMCHEPRY的适用性吗？](https://www.japanmedai.com/ips/qa/#ips-061)
+- [缺血性心肌病患者以前做过冠脉支架或搭桥，就一定不能考虑RiHEART吗？](https://www.japanmedai.com/ips/qa/#ips-062)
+- [RiHEART移植后既要继续心衰管理又有免疫相关药物，能按原来的处方自行合并或调整吗？](https://www.japanmedai.com/ips/qa/#ips-063)
+- [AMCHEPRY脑内细胞移植后运动症状有变化，原来的左旋多巴药物可以立刻全部停掉吗？](https://www.japanmedai.com/ips/qa/#ips-064)
+- [拥有日本医保的人在日本接受iPS移植后，回国进行计划内复查就一定能用“海外疗养费”报销吗？](https://www.japanmedai.com/ips/qa/#ips-065)
+- [RiHEART心肌片移植手术后出院，是不是可以马上乘坐长途航班回国？](https://www.japanmedai.com/ips/qa/#ips-066)
