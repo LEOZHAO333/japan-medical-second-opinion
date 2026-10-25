@@ -1,4 +1,4 @@
-# BNCT硼中子治疗｜已发布48问
+# BNCT硼中子治疗｜已发布58问
 
 > 本索引由已发布JSON自动生成，只含已上线问答。
 
@@ -54,3 +54,13 @@
 - [海外患者为自费BNCT预付费用后，若最终无法治疗，能要求全额退款吗？](https://www.japanmedai.com/bnct/qa/#bnct-046)
 - [医院有国际医疗认证，就能证明其自费BNCT方案一定安全有效吗？](https://www.japanmedai.com/bnct/qa/#bnct-047)
 - [计划赴日接受BNCT，为什么不能只按中子照射当天安排往返机票？](https://www.japanmedai.com/bnct/qa/#bnct-048)
+- [患有苯丙酮尿症，申请BNCT时为什么必须主动告诉医生？](https://www.japanmedai.com/bnct/qa/#bnct-049)
+- [有遗传性果糖不耐受症，BNCT硼药中的辅料需要核对吗？](https://www.japanmedai.com/bnct/qa/#bnct-050)
+- [头颈癌肿瘤把颈动脉完整包绕，还能直接使用日本已批准的BNCT硼药吗？](https://www.japanmedai.com/bnct/qa/#bnct-051)
+- [既往治疗后已有严重黏膜溃疡或瘘管，评估BNCT时为什么要提前告知？](https://www.japanmedai.com/bnct/qa/#bnct-052)
+- [BNCT研究为什么可能要求额外复查影像或血液指标？](https://www.japanmedai.com/bnct/qa/#bnct-053)
+- [参加BNCT临床研究，饮食、日常活动和正在服用的药物也可能受限制吗？](https://www.japanmedai.com/bnct/qa/#bnct-054)
+- [自费BNCT广告中展示几位患者的“成功故事”，能证明疗效吗？](https://www.japanmedai.com/bnct/qa/#bnct-055)
+- [看到自费BNCT宣传写“日本第一、绝对安全”，应如何判断？](https://www.japanmedai.com/bnct/qa/#bnct-056)
+- [家属代患者询问日本BNCT并提交病历，是否需要患者本人同意？](https://www.japanmedai.com/bnct/qa/#bnct-057)
+- [身上有不止一处病灶，BNCT预审为什么要写明最想评估的具体部位？](https://www.japanmedai.com/bnct/qa/#bnct-058)
