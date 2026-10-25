@@ -1,4 +1,4 @@
-# BNCT硼中子治疗｜已发布58问
+# BNCT硼中子治疗｜已发布68问
 
 > 本索引由已发布JSON自动生成，只含已上线问答。
 
@@ -64,3 +64,13 @@
 - [看到自费BNCT宣传写“日本第一、绝对安全”，应如何判断？](https://www.japanmedai.com/bnct/qa/#bnct-056)
 - [家属代患者询问日本BNCT并提交病历，是否需要患者本人同意？](https://www.japanmedai.com/bnct/qa/#bnct-057)
 - [身上有不止一处病灶，BNCT预审为什么要写明最想评估的具体部位？](https://www.japanmedai.com/bnct/qa/#bnct-058)
+- [BNCT硼药说明书在2026年更新，是否说明又有新的癌种获批？](https://www.japanmedai.com/bnct/qa/#bnct-059)
+- [BNCT使用硼药后出现血尿或排尿异常，可以只当普通尿路感染吗？](https://www.japanmedai.com/bnct/qa/#bnct-060)
+- [头颈癌还没发生复发，但局部进展、无法切除，是否也在日本BNCT批准范围内？](https://www.japanmedai.com/bnct/qa/#bnct-061)
+- [病理显示头颈部非鳞状细胞癌，是否一定不属于日本已批准BNCT的评估对象？](https://www.japanmedai.com/bnct/qa/#bnct-062)
+- [不参加医生推荐的BNCT临床试验，会不会因此失去原本能接受的标准治疗？](https://www.japanmedai.com/bnct/qa/#bnct-063)
+- [BNCT临床试验筛选要等一段时间，能自己推迟原定标准治疗吗？](https://www.japanmedai.com/bnct/qa/#bnct-064)
+- [日本自费BNCT自称“先進医療”，就等于获得官方先進医療资格吗？](https://www.japanmedai.com/bnct/qa/#bnct-065)
+- [海外患者听说日本有“患者申出療養”，能直接申请用这个制度接受BNCT吗？](https://www.japanmedai.com/bnct/qa/#bnct-066)
+- [BNCT预审提到FDG-PET和FBPA-PET，这两种检查是一样的吗？](https://www.japanmedai.com/bnct/qa/#bnct-067)
+- [还没有做FDG-PET/CT，海外患者必须先自费检查才能提交BNCT预审吗？](https://www.japanmedai.com/bnct/qa/#bnct-068)
