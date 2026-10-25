@@ -2,7 +2,7 @@
   "use strict";
   // Anonymous, fixed-value feedback only. No medical content, free text or contact data.
   var tracker = window.JMAIAnalytics && window.JMAIAnalytics.create({
-    table: "jmai_site_events", scope: "site", pageVersion: "checkup-qa-v1"
+    table: "jmai_site_events", scope: "site", pageVersion: (document.body && document.body.getAttribute("data-qa-version")) || "checkup-qa-v1"
   });
   document.addEventListener("click", function (event) {
     var button = event.target && event.target.closest ? event.target.closest(".qaFeedback button[data-vote]") : null;
@@ -11,7 +11,7 @@
     if (!wrap || wrap.dataset.submitted === "1") return;
     var vote = button.getAttribute("data-vote");
     var id = wrap.getAttribute("data-qa-id");
-    if (!/^(helpful|needs_work)$/.test(vote) || !/^so-\d{3}$/.test(id || "")) return;
+    if (!/^(helpful|needs_work)$/.test(vote) || !/^(so|bnct)-\d{3}$/.test(id || "")) return;
     var status = wrap.querySelector(".feedbackStatus");
     if (!tracker) { if (status) status.textContent = "反馈暂不可用，请稍后重试。"; return; }
     button.disabled = true;
