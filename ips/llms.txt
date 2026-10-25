@@ -1,4 +1,4 @@
-# 日本iPS再生医疗｜已发布28问
+# 日本iPS再生医疗｜已发布38问
 
 > 本索引由已发布JSON自动生成，只含已上线问答。
 
@@ -30,7 +30,17 @@
 - [日本再生医疗项目签了知情同意后，患者还能决定不接受细胞移植吗？](https://www.japanmedai.com/ips/qa/#ips-022)
 - [日本iPS角膜上皮细胞片研究已有4名患者完成随访，是否说明这种治疗已经常规获批？](https://www.japanmedai.com/ips/qa/#ips-023)
 - [患有白内障或一般视力下降，能直接套用日本iPS角膜细胞片研究吗？](https://www.japanmedai.com/ips/qa/#ips-024)
+- [日本iPS细胞制品已经做了未分化细胞检查，为什么还要核对染色体等细胞质量指标？](https://www.japanmedai.com/ips/qa/#ips-025)
 - [日本iPS角膜研究有患者没用免疫抑制剂，是否代表所有异体iPS移植都不需要？](https://www.japanmedai.com/ips/qa/#ips-026)
 - [日本iPS自由诊疗的同意书只有签名，没有解释风险和其他治疗选择，患者应该核对什么？](https://www.japanmedai.com/ips/qa/#ips-027)
 - [怀疑日本某家iPS诊所没有按备案方案做治疗，患者能向哪里提供线索？](https://www.japanmedai.com/ips/qa/#ips-028)
+- [海外重症心衰患者想先评估RiHEART，为什么不能只发送一张心脏彩超结论？](https://www.japanmedai.com/ips/qa/#ips-029)
 - [海外患者参加日本iPS角膜移植研究，回国后只发照片就能完成全部随访吗？](https://www.japanmedai.com/ips/qa/#ips-030)
+- [京都大学的医疗用iPS细胞库已经建立，是否代表库里的细胞都能直接作为获批产品植入人体？](https://www.japanmedai.com/ips/qa/#ips-031)
+- [AMCHEPRY已经获批，为什么日本还专门发布“最适使用推进指南”？](https://www.japanmedai.com/ips/qa/#ips-032)
+- [日本早期iPS视网膜色素上皮移植研究针对湿性黄斑变性，干性黄斑变性可以直接套用吗？](https://www.japanmedai.com/ips/qa/#ips-033)
+- [iPS来源视网膜移植研究里，‘视力保持稳定’是不是就代表视力显著提高？](https://www.japanmedai.com/ips/qa/#ips-034)
+- [iPS制品如果来源于经过筛选的捐献者，还需要考虑微生物污染风险吗？](https://www.japanmedai.com/ips/qa/#ips-035)
+- [日本iPS产品药价很高，参加日本医保就一定要按药价全额自己付款吗？](https://www.japanmedai.com/ips/qa/#ips-036)
+- [参加日本iPS治验，研究方会承担所有检查、交通和住宿费用吗？](https://www.japanmedai.com/ips/qa/#ips-037)
+- [海外帕金森病患者希望咨询AMCHEPRY，为什么要记录药效‘开’和‘关’的状态？](https://www.japanmedai.com/ips/qa/#ips-038)
