@@ -1,4 +1,4 @@
-# 日本iPS再生医疗｜已发布85问
+# 日本iPS再生医疗｜已发布98问
 
 > 本索引由已发布JSON自动生成，只含已上线问答。
 
@@ -90,4 +90,17 @@
 - [AMCHEPRY移植后运动表现仍有波动，是不是说明移植已经失败？](https://www.japanmedai.com/ips/qa/#ips-082)
 - [一项日本iPS研究拿到AMED国家科研经费，就说明其疗法已获药事批准、患者治疗费由政府支付吗？](https://www.japanmedai.com/ips/qa/#ips-083)
 - [日本“先進医療”产生的技术自费部分，也能直接算进高额疗养费制度的医保自付上限吗？](https://www.japanmedai.com/ips/qa/#ips-084)
+- [海外患者曾在其他国家接受来源不明的“干细胞注射”，赴日咨询iPS治疗时可以不告诉日本医生吗？](https://www.japanmedai.com/ips/qa/#ips-085)
 - [海外血小板输注无效患者能要求日本直接提供iPS来源血小板在本国输血吗？](https://www.japanmedai.com/ips/qa/#ips-086)
+- [新闻说用患者iPS细胞找到了候选药物，是否表示研究者已把iPS细胞移植进患者体内？](https://www.japanmedai.com/ips/qa/#ips-087)
+- [一项iPS人体研究写“主要终点为安全性”，少数患者症状改善就能证明疗法有效吗？](https://www.japanmedai.com/ips/qa/#ips-088)
+- [研究机构展示用iPS细胞培养出的“迷你肝脏”或类器官，是不是已经造出可替换人体器官的获批移植产品？](https://www.japanmedai.com/ips/qa/#ips-089)
+- [阿尔茨海默病患者能把日本已获批的iPS脑细胞移植用于改善记忆力吗？](https://www.japanmedai.com/ips/qa/#ips-090)
+- [日本出现iPS来源NK免疫细胞抗癌研发项目，癌症患者现在就能把它当作日本已批准的抗癌治疗吗？](https://www.japanmedai.com/ips/qa/#ips-091)
+- [日本iPS来源胰岛细胞研究主要针对1型糖尿病，2型糖尿病患者能按同一个项目直接预约移植吗？](https://www.japanmedai.com/ips/qa/#ips-092)
+- [iPS细胞制品通过出厂质量检测，是否就意味着植入人体后不会发生免疫反应或其他严重问题？](https://www.japanmedai.com/ips/qa/#ips-093)
+- [接受日本iPS来源细胞移植后，出院记录为什么需要准确写出产品名称与实施机构？](https://www.japanmedai.com/ips/qa/#ips-094)
+- [RiHEART心肌片和AMCHEPRY脑内细胞移植都是iPS产品，术后能照搬同一份复查计划吗？](https://www.japanmedai.com/ips/qa/#ips-095)
+- [日本医院给出iPS制品的官方药价或材料价格，海外患者能直接按这个数字准备全部治疗预算吗？](https://www.japanmedai.com/ips/qa/#ips-096)
+- [日本iPS产品已列入日本医保，海外患者就能用自己国家的商业医疗保险自动报销吗？](https://www.japanmedai.com/ips/qa/#ips-098)
+- [海外患者申请到日本“医疗滞在签证”，就代表RiHEART或AMCHEPRY移植已经得到医院正式接诊批准吗？](https://www.japanmedai.com/ips/qa/#ips-099)
