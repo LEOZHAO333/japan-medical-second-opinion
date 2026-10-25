@@ -1,0 +1,27 @@
+name: BNCT QA S0 Gate
+on:
+  pull_request:
+    paths:
+      - 'content/bnct-qa/**'
+      - 'bnct/qa/**'
+      - 'bnct/llms.txt'
+      - 'bnct/llms-full.txt'
+      - 'bnct/index.html'
+      - 'bnct/sitemap.xml'
+      - 'llms.txt'
+      - 'scripts/build_bnct_qa.py'
+      - 'assets/checkup-qa-feedback.js'
+      - '.github/workflows/bnct-qa-s0.yml'
+  workflow_dispatch:
+jobs:
+  bnct-qa-s0:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Generated page and llms match data, links/sitemap/hub OK
+        run: python3 scripts/build_bnct_qa.py --check
