@@ -1,4 +1,4 @@
-# 日本iPS再生医疗｜已发布38问
+# 日本iPS再生医疗｜已发布48问
 
 > 本索引由已发布JSON自动生成，只含已上线问答。
 
@@ -44,3 +44,13 @@
 - [日本iPS产品药价很高，参加日本医保就一定要按药价全额自己付款吗？](https://www.japanmedai.com/ips/qa/#ips-036)
 - [参加日本iPS治验，研究方会承担所有检查、交通和住宿费用吗？](https://www.japanmedai.com/ips/qa/#ips-037)
 - [海外帕金森病患者希望咨询AMCHEPRY，为什么要记录药效‘开’和‘关’的状态？](https://www.japanmedai.com/ips/qa/#ips-038)
+- [日本iPS产品已经附条件获批，为什么还要登记所有使用患者的治疗结果？](https://www.japanmedai.com/ips/qa/#ips-039)
+- [使用HLA匹配的iPS细胞库，是不是移植后就不会发生免疫排斥？](https://www.japanmedai.com/ips/qa/#ips-040)
+- [RiHEART获批前研究只有8名患者，其中主要指标改善不多，能说“8人都有效”吗？](https://www.japanmedai.com/ips/qa/#ips-041)
+- [新闻里的iPS心肌球HS-005，与已获批的RiHEART心肌细胞片，是同一种治疗吗？](https://www.japanmedai.com/ips/qa/#ips-042)
+- [AMCHEPRY脑内移植后出现抽搐、明显意识混乱或站立不稳，能等远程随访再问吗？](https://www.japanmedai.com/ips/qa/#ips-043)
+- [RiHEART是异体iPS来源心肌片，移植后为什么仍可能需要免疫管理和定期影像检查？](https://www.japanmedai.com/ips/qa/#ips-044)
+- [AMCHEPRY已经纳入日本医保，是不是任何医院都能按医保安排脑内移植？](https://www.japanmedai.com/ips/qa/#ips-045)
+- [AMCHEPRY和RiHEART都进入日本医保，患者可以直接用两款产品的价格比较总治疗费用吗？](https://www.japanmedai.com/ips/qa/#ips-046)
+- [海外患者接受AMCHEPRY后，只把走路视频发给日本医生，能完成移植后全部随访吗？](https://www.japanmedai.com/ips/qa/#ips-047)
+- [海外患者考虑RiHEART，能按一次门诊注射的行程订日本往返机票吗？](https://www.japanmedai.com/ips/qa/#ips-048)
