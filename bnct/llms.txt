@@ -1,4 +1,4 @@
-# BNCT硼中子治疗｜已发布38问
+# BNCT硼中子治疗｜已发布48问
 
 > 本索引由已发布JSON自动生成，只含已上线问答。
 
@@ -43,4 +43,14 @@
 - [查到一项BNCT临床试验，却找不到参加医院，是不是说明研究不存在？](https://www.japanmedai.com/bnct/qa/#bnct-035)
 - [自费BNCT宣传引用已获批头颈癌数据，能证明脑肿瘤也有同样疗效吗？](https://www.japanmedai.com/bnct/qa/#bnct-036)
 - [自费BNCT方案引用某篇临床试验论文，为什么还要核对实际使用的设备和硼药？](https://www.japanmedai.com/bnct/qa/#bnct-037)
+- [BNCT海外资料预审时，中文病历必须全部先译成英语或日语吗？](https://www.japanmedai.com/bnct/qa/#bnct-038)
 - [BNCT治疗后口腔疼痛、吞咽困难到吃不下东西，可以只等下一次复查吗？](https://www.japanmedai.com/bnct/qa/#bnct-039)
+- [BNCT为什么不能把硼药输注与中子照射的先后顺序随意调换？](https://www.japanmedai.com/bnct/qa/#bnct-040)
+- [为什么BNCT不能在普通诊室随便实施，而需要有紧急处置能力的机构？](https://www.japanmedai.com/bnct/qa/#bnct-041)
+- [进入日本BNCT医保诊疗后，照射结束是不是可以当天直接回家？](https://www.japanmedai.com/bnct/qa/#bnct-042)
+- [头颈癌患者有心力衰竭，为什么不能只看肿瘤是否符合BNCT医保适应证？](https://www.japanmedai.com/bnct/qa/#bnct-043)
+- [去外地参加BNCT临床试验，路费和住宿是否一定由研究方支付？](https://www.japanmedai.com/bnct/qa/#bnct-044)
+- [BNCT临床试验遇到不清楚的检查安排，应问主治医生还是研究协调员？](https://www.japanmedai.com/bnct/qa/#bnct-045)
+- [海外患者为自费BNCT预付费用后，若最终无法治疗，能要求全额退款吗？](https://www.japanmedai.com/bnct/qa/#bnct-046)
+- [医院有国际医疗认证，就能证明其自费BNCT方案一定安全有效吗？](https://www.japanmedai.com/bnct/qa/#bnct-047)
+- [计划赴日接受BNCT，为什么不能只按中子照射当天安排往返机票？](https://www.japanmedai.com/bnct/qa/#bnct-048)
