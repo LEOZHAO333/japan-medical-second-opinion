@@ -70,7 +70,7 @@
       "check": "第二意见的目标是澄清哪些疑问；是否误把不改变方案视为无价值",
       "source": "https://ganjoho.jp/public/dia_tre/dia_tre_diagnosis/second_opinion.html",
       "source_note": "第1节：意见一致也可能增进理解；2024-06-17更新，2026-10-21核对",
-      "related": "/checkup/039/"
+      "related": "/second-opinion/"
     },
     {
       "id": "SO-002",
@@ -100,7 +100,7 @@
       "check": "是否写下最想解决的问题；是否把主治医生已有解释与新疑问分开",
       "source": "https://ganjoho.jp/public/dia_tre/dia_tre_diagnosis/second_opinion.html",
       "source_note": "第1节：咨询前整理不清楚、希望进一步了解的问题；2024-06-17更新，2026-10-21核对",
-      "related": "/checkup/031/"
+      "related": "/second-opinion/"
     },
     {
       "id": "SO-090",
@@ -150,7 +150,7 @@
       "check": "目标医院是否提供线上咨询；是否要求患者到场；代理受诊是否需患者同意",
       "source": "https://ganjoho.jp/public/dia_tre/dia_tre_diagnosis/second_opinion.html",
       "source_note": "第1节：第二意见受诊方式；线上及家属代理条件仍须目标医院专属来源；2024-06-17更新，2026-10-21核对",
-      "related": "/checkup/033/"
+      "related": "/second-opinion/"
     },
     {
       "id": "SO-065",
@@ -200,7 +200,7 @@
       "check": "是否提供正式书面报告；报告何时交付；不明白的内容如何向医院提问",
       "source": "https://ganjoho.jp/public/dia_tre/dia_tre_diagnosis/second_opinion.html",
       "source_note": "第1节：第二意见结果及沟通方式；书面报告形式须另核医院规定；2024-06-17更新，2026-10-21核对",
-      "related": "/checkup/048/"
+      "related": "/second-opinion/"
     },
     {
       "id": "SO-038",
@@ -210,7 +210,7 @@
       "check": "目标医院是否只提供第二意见；是否另设正式诊疗预约入口；是否需要重新申请转院及初诊手续",
       "source": "https://ganjoho.jp/public/dia_tre/dia_tre_diagnosis/second_opinion.html",
       "source_note": "第1节受诊注意点及第2节步骤5：第二意见与转院治疗属于不同流程；2024-06-17更新，2026-10-21核对",
-      "related": "/checkup/048/"
+      "related": "/second-opinion/"
     },
     {
       "id": "SO-061",
@@ -220,7 +220,7 @@
       "check": "两位医生的解释是否一致；仍有何疑问；是否需要回主治医生讨论",
       "source": "https://ganjoho.jp/public/dia_tre/dia_tre_diagnosis/second_opinion.html",
       "source_note": "第1节：与主治医生意见一致也可能帮助理解；2024-06-17更新，2026-10-21核对",
-      "related": "/checkup/039/"
+      "related": "/second-opinion/"
     },
     {
       "id": "SO-062",
@@ -230,7 +230,7 @@
       "check": "不同方案的条件是否清楚；患者希望重点讨论什么；是否已安排与主治医生沟通",
       "source": "https://ganjoho.jp/public/dia_tre/dia_tre_diagnosis/second_opinion.html",
       "source_note": "第2节步骤5：把第二意见带回现主治医生讨论后续治疗；2024-06-17更新，2026-10-21核对",
-      "related": "/checkup/048/"
+      "related": "/second-opinion/"
     },
     {
       "id": "SO-077",
@@ -240,7 +240,7 @@
       "check": "是否保留正式报告；是否准备讨论重点；是否由实际诊疗团队决定后续方案",
       "source": "https://ganjoho.jp/public/dia_tre/dia_tre_diagnosis/second_opinion.html",
       "source_note": "第2节步骤5：与现主治医生讨论咨询结果和后续方案；2024-06-17更新，2026-10-21核对",
-      "related": "/checkup/048/"
+      "related": "/second-opinion/"
     },
     {
       "id": "SO-100",
@@ -250,7 +250,7 @@
       "check": "是否已把意见交给负责治疗的医生；拟调整的方案是否由实际诊疗机构评估",
       "source": "https://ganjoho.jp/public/dia_tre/dia_tre_diagnosis/second_opinion.html",
       "source_note": "第2节步骤5：与现主治医生讨论后续治疗；转院须另办手续；2024-06-17更新，2026-10-21核对",
-      "related": "/checkup/048/"
+      "related": "/second-opinion/"
     },
     {
       "id": "SO-014",
@@ -280,7 +280,7 @@
       "check": "每个问题是否与当前要做的决定相关；是否按重要程度排序；是否已写在纸面上带去咨询",
       "source": "https://ganjoho.jp/public/dia_tre/dia_tre_diagnosis/second_opinion.html",
       "source_note": "第2节：事先整理想咨询的内容；数量为编辑建议；2024-06-17更新，2026-10-21核对",
-      "related": "/checkup/031/"
+      "related": "/second-opinion/"
     },
     {
       "id": "SO-015",
@@ -500,7 +500,7 @@
       "check": "核对复发脑肿瘤的近期影像和病理资料；确认目标医院是否受理远程第二意见及海外申请；出现急性神经症状时优先现场就医",
       "source": "https://ganjoho.jp/public/dia_tre/dia_tre_diagnosis/second_opinion.html",
       "source_note": "第1节：第二意见基于既有资料；远程受理以各院规定为准；2024-06-17更新，2026-10-21核对",
-      "related": "/checkup/033/"
+      "related": "/second-opinion/"
     },
     {
       "id": "SO-024",
@@ -520,7 +520,7 @@
       "check": "区分初步判断、建议与最终诊疗决定；询问判断依赖哪些尚未确认的信息；与当前主治团队讨论具体执行条件",
       "source": "https://ganjoho.jp/public/dia_tre/dia_tre_diagnosis/second_opinion.html",
       "source_note": "第2节：获得意见后与主治医生讨论；报告用语解读为编辑说明；2024-06-17更新，2026-10-21核对",
-      "related": "/checkup/048/"
+      "related": "/second-opinion/"
     },
     {
       "id": "SO-034",
@@ -640,7 +640,7 @@
       "check": "准备既往治疗摘要；整理现有随访计划和疑问；与长期随访团队讨论咨询结果",
       "source": "https://ganjoho.jp/public/dia_tre/dia_tre_diagnosis/second_opinion.html",
       "source_note": "第2节：获得意见后与主治医生讨论后续方针；2024-06-17更新，2026-10-21核对",
-      "related": "/checkup/048/"
+      "related": "/second-opinion/"
     },
     {
       "id": "SO-101",
