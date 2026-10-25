@@ -1,4 +1,4 @@
-# 日本iPS再生医疗｜已发布48问
+# 日本iPS再生医疗｜已发布56问
 
 > 本索引由已发布JSON自动生成，只含已上线问答。
 
@@ -54,3 +54,11 @@
 - [AMCHEPRY和RiHEART都进入日本医保，患者可以直接用两款产品的价格比较总治疗费用吗？](https://www.japanmedai.com/ips/qa/#ips-046)
 - [海外患者接受AMCHEPRY后，只把走路视频发给日本医生，能完成移植后全部随访吗？](https://www.japanmedai.com/ips/qa/#ips-047)
 - [海外患者考虑RiHEART，能按一次门诊注射的行程订日本往返机票吗？](https://www.japanmedai.com/ips/qa/#ips-048)
+- [日本iPS项目写的是“临床研究”而不是“治验”，两者都以申请产品上市为目标吗？](https://www.japanmedai.com/ips/qa/#ips-049)
+- [iPS项目宣传“先進医療”，是否就意味着产品已正式获批并且全部费用可使用医保？](https://www.japanmedai.com/ips/qa/#ips-050)
+- [诊断写“帕金森综合征”或多系统萎缩症，就能按帕金森病申请AMCHEPRY吗？](https://www.japanmedai.com/ips/qa/#ips-051)
+- [发生急性心肌梗死或突然胸痛，可以直接申请RiHEART心肌片作为急救治疗吗？](https://www.japanmedai.com/ips/qa/#ips-052)
+- [AMCHEPRY脑内移植后发烧，能先自己吃消炎药、等到下次复查吗？](https://www.japanmedai.com/ips/qa/#ips-053)
+- [RiHEART心肌片移植后又出现明显气短、胸痛或晕厥，等日本医院回邮件可以吗？](https://www.japanmedai.com/ips/qa/#ips-054)
+- [赴日咨询iPS疗法时，医院要求专业医疗口译，费用一定包括在医保治疗费用里吗？](https://www.japanmedai.com/ips/qa/#ips-055)
+- [海外患者申请日本iPS治疗预审，英文病历都可以直接提交，不必翻译成日文吗？](https://www.japanmedai.com/ips/qa/#ips-057)
