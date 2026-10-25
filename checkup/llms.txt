@@ -1,4 +1,4 @@
-# 二次专家会诊｜已发布85问
+# 二次专家会诊｜已发布100问
 
 > 本索引由已发布JSON自动生成，不包含私有候选题或专科暂缓题。
 
@@ -91,3 +91,18 @@
 - [罕见癌症没有明确指南，如何提高第二意见价值？](https://www.japanmedai.com/checkup/qa/#so-073)
 - [二次会诊能否评估新的放射治疗技术？](https://www.japanmedai.com/checkup/qa/#so-086)
 - [二次会诊结论提到研究药，如何判断是否真的能用？](https://www.japanmedai.com/checkup/qa/#so-093)
+- [癌症治疗可能影响生育，申请第二意见前该先确认什么？](https://www.japanmedai.com/checkup/qa/#so-104)
+- [家族中多人患癌，第二意见时是否应该准备家族病史？](https://www.japanmedai.com/checkup/qa/#so-105)
+- [选择癌症治疗方案时，工作安排能否作为第二意见的讨论因素？](https://www.japanmedai.com/checkup/qa/#so-106)
+- [化疗后手脚持续麻木影响生活，可以在第二意见中讨论调整治疗吗？](https://www.japanmedai.com/checkup/qa/#so-107)
+- [患者希望保留器官或吞咽、言语功能，第二意见应该怎么比较治疗方案？](https://www.japanmedai.com/checkup/qa/#so-108)
+- [同时发现两处肿瘤，第二意见要先分清转移还是另一个原发癌吗？](https://www.japanmedai.com/checkup/qa/#so-109)
+- [二次会诊从提交资料到拿到报告，一般需要多长时间？](https://www.japanmedai.com/checkup/qa/#so-110)
+- [线上第二意见和面谈第二意见有什么区别？](https://www.japanmedai.com/checkup/qa/#so-111)
+- [国内主治医生不认可日本第二意见，怎么办？](https://www.japanmedai.com/checkup/qa/#so-112)
+- [已没有明确可选的标准抗癌治疗时，还值得申请第二意见吗？](https://www.japanmedai.com/checkup/qa/#so-113)
+- [住在海外的患者，一定能申请日本医院的线上第二意见吗？](https://www.japanmedai.com/checkup/qa/#so-114)
+- [第二意见咨询时能带家属一起或录音吗？](https://www.japanmedai.com/checkup/qa/#so-115)
+- [急性白血病申请第二意见，除了血常规还应核对哪些骨髓与分子检测资料？](https://www.japanmedai.com/checkup/qa/#so-116)
+- [儿童癌症申请第二意见时，怎样兼顾孩子本人意愿与监护人决定？](https://www.japanmedai.com/checkup/qa/#so-117)
+- [某项复发风险检测结果，第二意见能帮助解读吗？](https://www.japanmedai.com/checkup/qa/#so-087)
