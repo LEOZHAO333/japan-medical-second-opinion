@@ -1,4 +1,4 @@
-# BNCT硼中子治疗｜已发布88问
+# BNCT硼中子治疗｜已发布100问
 
 > 本索引由已发布JSON自动生成，只含已上线问答。
 
@@ -94,3 +94,15 @@
 - [海外医疗协调方说已经“保证日本医院接收BNCT”，患者应如何核实？](https://www.japanmedai.com/bnct/qa/#bnct-086)
 - [海外患者为了BNCT做FBPA-PET，是否必须在资料预审之前就赴日检查？](https://www.japanmedai.com/bnct/qa/#bnct-087)
 - [日本BNCT医院提供线上咨询，是否每个海外申请人都能直接预约？](https://www.japanmedai.com/bnct/qa/#bnct-088)
+- [BNCT治疗计划中的Gy-Eq，与普通放疗报告里的Gy能直接相加吗？](https://www.japanmedai.com/bnct/qa/#bnct-089)
+- [BNCT只靠硼和中子反应杀伤肿瘤，治疗计划还要考虑γ射线吗？](https://www.japanmedai.com/bnct/qa/#bnct-090)
+- [头颈部肿瘤靠近眼眶，BNCT评估前为什么要告知既往眼病与眼部放疗史？](https://www.japanmedai.com/bnct/qa/#bnct-091)
+- [头颈癌患者治疗前已经严重张口困难，BNCT评估时需要提交这一情况吗？](https://www.japanmedai.com/bnct/qa/#bnct-092)
+- [有人推荐BNCT临床研究，却不提供研究负责人和伦理审查信息，应如何核查？](https://www.japanmedai.com/bnct/qa/#bnct-093)
+- [参加BNCT研究后，论文发表会公开患者姓名和完整病历吗？](https://www.japanmedai.com/bnct/qa/#bnct-094)
+- [自费BNCT项目通过医院伦理审查，是否就说明治疗药械已经获得日本正式批准？](https://www.japanmedai.com/bnct/qa/#bnct-095)
+- [跨境BNCT服务中的翻译、接送、住宿和医疗费用，能默认由医院统一收取吗？](https://www.japanmedai.com/bnct/qa/#bnct-096)
+- [BNCT后新出现持续耳痛、听力下降或眩晕，要等下次肿瘤复查吗？](https://www.japanmedai.com/bnct/qa/#bnct-097)
+- [BNCT治疗后一直口干、味觉改变，但还能进食，需要告诉随访医生吗？](https://www.japanmedai.com/bnct/qa/#bnct-098)
+- [赴日BNCT面诊时，家属会日语就一定可以代替专业医疗翻译吗？](https://www.japanmedai.com/bnct/qa/#bnct-099)
+- [海外患者准备赴日接受BNCT，是否一定要申请日本医疗停留签证？](https://www.japanmedai.com/bnct/qa/#bnct-100)
