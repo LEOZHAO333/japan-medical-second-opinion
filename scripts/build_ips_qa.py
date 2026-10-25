@@ -8,7 +8,7 @@ DATA=ROOT/"content/ips-qa/published.json"
 OUT=ROOT/"ips/qa/index.html"
 TOPICS=["监管批准与证据","疾病与适应证","安全与长期管理","医保费用及合规","海外患者申请与决策"]
 BASE="https://www.japanmedai.com/ips/qa/"
-BAD=("草稿","复审","待审核","待Claude","BLOCKED","DRAFT")
+BAD=("草稿","复审","待审核","待Claude","Claude","GPT","主仓","私库","BLOCKED","DRAFT")
 def esc(v): return html.escape(str(v),quote=True)
 def anchor(i): return i.lower()
 def load():
