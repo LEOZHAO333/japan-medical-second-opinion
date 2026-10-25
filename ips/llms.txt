@@ -1,4 +1,4 @@
-# 日本iPS再生医疗｜已发布76问
+# 日本iPS再生医疗｜已发布85问
 
 > 本索引由已发布JSON自动生成，只含已上线问答。
 
@@ -82,3 +82,12 @@
 - [签约自费iPS细胞项目后，细胞培养已经开始，临时取消能退回全部费用吗？](https://www.japanmedai.com/ips/qa/#ips-074)
 - [海外帕金森病患者体内已有DBS刺激器，赴日评估AMCHEPRY时还能直接做脑部MRI吗？](https://www.japanmedai.com/ips/qa/#ips-075)
 - [海外患者做完日本获批iPS移植，回国后的随访资料能直接由当地医院发给日本制造商完成全例调查吗？](https://www.japanmedai.com/ips/qa/#ips-076)
+- [日本诊所宣传“iPS培养上清液”或外泌体注射，能视为日本已经批准的iPS细胞治疗吗？](https://www.japanmedai.com/ips/qa/#ips-077)
+- [2026年日本公布用ALS患者iPS细胞研究MA-5药物，是否说明患者已能接受iPS细胞移植治疗ALS？](https://www.japanmedai.com/ips/qa/#ips-078)
+- [日本iPS来源血小板研究已完成过人体输注，是否意味着所有血小板减少或白血病患者都可常规使用？](https://www.japanmedai.com/ips/qa/#ips-079)
+- [2025年神户iPS视网膜细胞“凝集条”研究出现视网膜色素变性病例，所有遗传性视网膜病都在研究范围内吗？](https://www.japanmedai.com/ips/qa/#ips-080)
+- [2025年日本iPS视网膜移植3例未出现严重不良事件，是否等于术后没有免疫反应或眼部并发症？](https://www.japanmedai.com/ips/qa/#ips-081)
+- [AMCHEPRY移植后运动表现仍有波动，是不是说明移植已经失败？](https://www.japanmedai.com/ips/qa/#ips-082)
+- [一项日本iPS研究拿到AMED国家科研经费，就说明其疗法已获药事批准、患者治疗费由政府支付吗？](https://www.japanmedai.com/ips/qa/#ips-083)
+- [日本“先進医療”产生的技术自费部分，也能直接算进高额疗养费制度的医保自付上限吗？](https://www.japanmedai.com/ips/qa/#ips-084)
+- [海外血小板输注无效患者能要求日本直接提供iPS来源血小板在本国输血吗？](https://www.japanmedai.com/ips/qa/#ips-086)
