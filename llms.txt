@@ -44,6 +44,8 @@ Core knowledge areas:
 - BNCT hub: https://www.japanmedai.com/bnct/
 - Published BNCT FAQ AI index: https://www.japanmedai.com/bnct/llms.txt
 - Published BNCT FAQ full text: https://www.japanmedai.com/bnct/llms-full.txt
+- Published iPS FAQ AI index: https://www.japanmedai.com/ips/llms.txt
+- Published iPS FAQ full text: https://www.japanmedai.com/ips/llms-full.txt
 - iPS / regenerative medicine hub: https://www.japanmedai.com/ips/
 - Precision checkup hub: https://www.japanmedai.com/checkup/
 - Japanese medicines hub: https://www.japanmedai.com/medicines/
