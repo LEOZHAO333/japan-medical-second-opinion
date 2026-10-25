@@ -1,4 +1,4 @@
-# 日本iPS再生医疗｜已发布66问
+# 日本iPS再生医疗｜已发布76问
 
 > 本索引由已发布JSON自动生成，只含已上线问答。
 
@@ -72,3 +72,13 @@
 - [AMCHEPRY脑内细胞移植后运动症状有变化，原来的左旋多巴药物可以立刻全部停掉吗？](https://www.japanmedai.com/ips/qa/#ips-064)
 - [拥有日本医保的人在日本接受iPS移植后，回国进行计划内复查就一定能用“海外疗养费”报销吗？](https://www.japanmedai.com/ips/qa/#ips-065)
 - [RiHEART心肌片移植手术后出院，是不是可以马上乘坐长途航班回国？](https://www.japanmedai.com/ips/qa/#ips-066)
+- [日本获批的Acuugo用于外伤性脑损伤，是否就是AMCHEPRY同类的iPS脑细胞移植？](https://www.japanmedai.com/ips/qa/#ips-067)
+- [日本脊髓损伤用的Stemirac（ステミラック）已获批，能把它称为已批准的iPS脊髓疗法吗？](https://www.japanmedai.com/ips/qa/#ips-068)
+- [帕金森病患者已经做过DBS脑深部电刺激手术，就一定不能再评估AMCHEPRY吗？](https://www.japanmedai.com/ips/qa/#ips-069)
+- [重症心衰患者已安装辅助人工心脏VAD，就能直接认定符合RiHEART心肌片的适用条件吗？](https://www.japanmedai.com/ips/qa/#ips-070)
+- [AMCHEPRY移植后MRI提示移植区有变化，是不是一定意味着细胞长成了肿瘤？](https://www.japanmedai.com/ips/qa/#ips-071)
+- [RiHEART心肌片移植后完成约90天免疫管理，就代表后续不用再做心脏检查了吗？](https://www.japanmedai.com/ips/qa/#ips-072)
+- [报名日本iPS临床研究前，如果出现研究相关健康损害，是否保证所有费用都能获赔？](https://www.japanmedai.com/ips/qa/#ips-073)
+- [签约自费iPS细胞项目后，细胞培养已经开始，临时取消能退回全部费用吗？](https://www.japanmedai.com/ips/qa/#ips-074)
+- [海外帕金森病患者体内已有DBS刺激器，赴日评估AMCHEPRY时还能直接做脑部MRI吗？](https://www.japanmedai.com/ips/qa/#ips-075)
+- [海外患者做完日本获批iPS移植，回国后的随访资料能直接由当地医院发给日本制造商完成全例调查吗？](https://www.japanmedai.com/ips/qa/#ips-076)

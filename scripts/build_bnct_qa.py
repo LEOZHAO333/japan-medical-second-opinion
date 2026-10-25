@@ -8,7 +8,7 @@ DATA=ROOT/"content/bnct-qa/published.json"
 OUT=ROOT/"bnct/qa/index.html"
 TOPICS=["原理与监管","医保诊疗","临床研究","自由诊疗","预审、海外受理与随访"]
 BASE="https://www.japanmedai.com/bnct/qa/"
-BAD=("草稿","复审","待审核","待Claude","BLOCKED","DRAFT")
+BAD=("草稿","复审","待审核","待Claude","Claude","GPT","主仓","私库","BLOCKED","DRAFT")
 def esc(v): return html.escape(str(v),quote=True)
 def anchor(i): return i.lower()
 def load():
