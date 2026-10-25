@@ -1,4 +1,4 @@
-# BNCT硼中子治疗｜已发布29问
+# BNCT硼中子治疗｜已发布38问
 
 > 本索引由已发布JSON自动生成，只含已上线问答。
 
@@ -29,9 +29,18 @@
 - [慢性肾病患者申请BNCT，为什么要提前核对肾功能？](https://www.japanmedai.com/bnct/qa/#bnct-021)
 - [备孕、怀孕或哺乳期患者，能把成人BNCT方案直接照搬吗？](https://www.japanmedai.com/bnct/qa/#bnct-022)
 - [装有心脏起搏器，是否一定不能接受日本所有BNCT治疗？](https://www.japanmedai.com/bnct/qa/#bnct-023)
+- [头颈癌仍有手术切除机会，可以优先用BNCT替代手术并走日本医保吗？](https://www.japanmedai.com/bnct/qa/#bnct-024)
 - [复发胶质母细胞瘤想参加BNCT三期试验，为什么必须核对IDH和既往治疗？](https://www.japanmedai.com/bnct/qa/#bnct-025)
 - [BNCT三期研究里的“医生选择治疗”对照组，是安慰剂组吗？](https://www.japanmedai.com/bnct/qa/#bnct-026)
 - [有人推荐自费BNCT时，为什么还应先问有没有已确立的标准治疗选择？](https://www.japanmedai.com/bnct/qa/#bnct-027)
 - [BNCT自由诊疗网页只写“先进技术”，却没有说明风险和费用，应该怎么核查？](https://www.japanmedai.com/bnct/qa/#bnct-028)
 - [申请BNCT时只有患者自己整理的病历，没有主治医生介绍信可以吗？](https://www.japanmedai.com/bnct/qa/#bnct-029)
 - [BNCT照射时需要保持体位不动，无法长时间固定还能申请评估吗？](https://www.japanmedai.com/bnct/qa/#bnct-030)
+- [BNCT的中子一定来自核反应堆吗？医院里的加速器又是什么？](https://www.japanmedai.com/bnct/qa/#bnct-031)
+- [市售的硼补充剂能代替BNCT医院使用的含硼药物吗？](https://www.japanmedai.com/bnct/qa/#bnct-032)
+- [正在接受不能随意中断的其他疾病治疗，BNCT医保评估时需要提前说明吗？](https://www.japanmedai.com/bnct/qa/#bnct-033)
+- [看到“日本BNCT新研究启动”的新闻，如何确认它确实登记在临床试验系统里？](https://www.japanmedai.com/bnct/qa/#bnct-034)
+- [查到一项BNCT临床试验，却找不到参加医院，是不是说明研究不存在？](https://www.japanmedai.com/bnct/qa/#bnct-035)
+- [自费BNCT宣传引用已获批头颈癌数据，能证明脑肿瘤也有同样疗效吗？](https://www.japanmedai.com/bnct/qa/#bnct-036)
+- [自费BNCT方案引用某篇临床试验论文，为什么还要核对实际使用的设备和硼药？](https://www.japanmedai.com/bnct/qa/#bnct-037)
+- [BNCT治疗后口腔疼痛、吞咽困难到吃不下东西，可以只等下一次复查吗？](https://www.japanmedai.com/bnct/qa/#bnct-039)
