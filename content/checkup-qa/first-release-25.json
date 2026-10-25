@@ -1,6 +1,6 @@
 {
-  "version": "v1.4",
-  "updated": "2026-10-24",
+  "version": "v1.5",
+  "updated": "2026-10-25",
   "questions": [
     {
       "id": "SO-001",
@@ -671,6 +671,36 @@
       "source": "https://ganjoho.jp/public/dia_tre/dia_tre_diagnosis/second_opinion.html",
       "source_note": "第2节：先向目标医院受理窗口确认申请手续；2024-06-17更新，2026-10-21核对",
       "related": "/hospitals/013/"
+    },
+    {
+      "id": "SO-032",
+      "topic": "诊疗决策",
+      "question": "二次会诊能否帮助解释药物严重不良反应？",
+      "answer": "可以在急性问题得到处置后，请第二意见医生帮助梳理药物安全性疑问。但如果出现突发呼吸困难、意识异常或持续出血等危险症状，应立即在当地就医，不要等待跨境咨询。",
+      "check": "确认症状是否需要立即当地急诊处理；向当前治疗团队核对药物名称与症状发生时间；待病情稳定后再明确第二意见要解决的问题",
+      "source": "https://ganjoho.jp/public/dia_tre/treatment/drug_therapy/dt02.html",
+      "source_note": "国立癌症研究中心 药物疗法详解「副作用」：出现危险症状应及时联系医疗机构；2026-10-25核对",
+      "related": "/checkup/qa/#so-024"
+    },
+    {
+      "id": "SO-071",
+      "topic": "诊疗决策",
+      "question": "免疫治疗出现严重副作用，还能等待日本第二意见吗？",
+      "answer": "不能等待。免疫治疗期间或结束后若出现严重呼吸困难、胸痛、意识改变等症状，应立即在当地就医；是否属于免疫相关不良反应及如何处理，由接诊医生判断。",
+      "check": "确认危险症状是否已获得当地即时医疗评估；核对免疫治疗药物、用药日期及症状时间线；病情稳定后再讨论跨境第二意见的具体问题",
+      "source": "https://ganjoho.jp/public/dia_tre/treatment/immunotherapy/immu02.html",
+      "source_note": "国立癌症研究中心 免疫疗法详解「副作用」：不良反应可累及多个器官、治疗结束后也可能出现；2026-10-25核对",
+      "related": "/checkup/qa/#so-024"
+    },
+    {
+      "id": "SO-096",
+      "topic": "诊疗决策",
+      "question": "临终阶段还有必要申请海外二次会诊吗？",
+      "answer": "不一定需要。应优先考虑患者本人的意愿、当前症状能否得到及时缓解，以及跨境咨询是否增加负担；若仍有重要疑问，可与现有医疗及缓和照护团队讨论是否值得再咨询。",
+      "check": "向患者本人或合法代理人确认希望解决的决策问题；与现有照护团队核对症状控制及现实时间负担；确认咨询不会延误正在进行的必要照护",
+      "source": "https://ganjoho.jp/public/dia_tre/treatment/relaxation/index.html",
+      "source_note": "国立癌症研究中心 缓和医疗：重视本人意愿与症状缓解，由医疗团队共同支持；是否申请第二意见为个体判断；2026-10-25核对",
+      "related": "/checkup/qa/#so-025"
     }
   ]
 }
