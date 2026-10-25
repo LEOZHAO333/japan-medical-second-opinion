@@ -1,4 +1,4 @@
-# 日本iPS再生医疗｜已发布98问
+# 日本iPS再生医疗｜已发布100问
 
 > 本索引由已发布JSON自动生成，只含已上线问答。
 
@@ -102,5 +102,7 @@
 - [接受日本iPS来源细胞移植后，出院记录为什么需要准确写出产品名称与实施机构？](https://www.japanmedai.com/ips/qa/#ips-094)
 - [RiHEART心肌片和AMCHEPRY脑内细胞移植都是iPS产品，术后能照搬同一份复查计划吗？](https://www.japanmedai.com/ips/qa/#ips-095)
 - [日本医院给出iPS制品的官方药价或材料价格，海外患者能直接按这个数字准备全部治疗预算吗？](https://www.japanmedai.com/ips/qa/#ips-096)
+- [帕金森病患者已有DBS治疗建议，拿到AMCHEPRY批准资料后，能不比较两种方案就决定接受iPS脑内移植吗？](https://www.japanmedai.com/ips/qa/#ips-097)
 - [日本iPS产品已列入日本医保，海外患者就能用自己国家的商业医疗保险自动报销吗？](https://www.japanmedai.com/ips/qa/#ips-098)
 - [海外患者申请到日本“医疗滞在签证”，就代表RiHEART或AMCHEPRY移植已经得到医院正式接诊批准吗？](https://www.japanmedai.com/ips/qa/#ips-099)
+- [海外患者决定赴日评估iPS治疗前，专家第二意见能核对什么，又不能替代什么？](https://www.japanmedai.com/ips/qa/#ips-100)
