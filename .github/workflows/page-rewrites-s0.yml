@@ -1,0 +1,27 @@
+name: Page Rewrites S0 Gate
+on:
+  pull_request:
+    paths:
+      - 'content/page-rewrites/**'
+      - 'scripts/build_page_rewrites.py'
+      - 'checkup/**'
+      - 'bnct/**'
+      - 'ips/**'
+      - 'hospitals/**'
+      - 'medicines/**'
+      - 'kampo/**'
+      - 'sitemap.xml'
+      - '.github/workflows/page-rewrites-s0.yml'
+  workflow_dispatch:
+jobs:
+  page-rewrites-s0:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Rewritten pages match reviewed JSON, no placeholders
+        run: python3 scripts/build_page_rewrites.py --check
