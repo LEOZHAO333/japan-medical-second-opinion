@@ -214,6 +214,16 @@
       "source": "/checkup/048/",
       "destination": "/checkup/qa/#so-062",
       "statusCode": 301
+    },
+    {
+      "source": "/bnct/048",
+      "destination": "/bnct/021/",
+      "statusCode": 301
+    },
+    {
+      "source": "/bnct/048/",
+      "destination": "/bnct/021/",
+      "statusCode": 301
     }
   ],
   "rewrites": []
