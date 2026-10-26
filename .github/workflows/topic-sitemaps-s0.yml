@@ -8,6 +8,7 @@ on:
       - "ips/sitemap.xml"
       - "medicines/sitemap.xml"
       - "hospitals/sitemap.xml"
+      - "kampo/sitemap.xml"
       - "vercel.json"
       - "scripts/check_topic_sitemaps.py"
       - ".github/workflows/topic-sitemaps-s0.yml"
