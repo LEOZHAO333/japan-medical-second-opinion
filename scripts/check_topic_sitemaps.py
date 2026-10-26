@@ -47,6 +47,16 @@ def sitemap_entries(path: Path) -> dict[str, str | None]:
             raise ValueError(f"Unexpected sitemap URL: {link}")
         if link in entries:
             raise ValueError(f"Duplicate sitemap URL: {link}")
+        # Google can be told about URLs that do not have deployable files.
+        # Stop that at PR time; directory URLs map to index.html.
+        public_path = u.path.lstrip("/")
+        html_path = ROOT / (
+            public_path + "index.html"
+            if not public_path or public_path.endswith("/")
+            else public_path
+        )
+        if not html_path.is_file():
+            raise ValueError(f"Sitemap URL has no repository file: {link} -> {html_path}")
         lastmod = node.findtext("sm:lastmod", default=None, namespaces=NS)
         if lastmod is not None:
             lastmod = lastmod.strip()
@@ -83,8 +93,9 @@ def main() -> int:
             if required[u] != subset[u]
         )
         retired = redirect_ids_for(section, redirects)
+        # Reject retired 301 URLs in *either* sitemap, not only the child.
         obsolete = sorted(
-            u for u in subset
+            u for u in set(subset) | set(required)
             if (lambda segments: len(segments) == 2 and segments[1] in retired)(
                 [x for x in urlsplit(u).path.split("/") if x]
             )
