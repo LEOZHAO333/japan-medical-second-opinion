@@ -8,6 +8,7 @@ ROOT=pathlib.Path(__file__).resolve().parents[1]
 SITE="https://www.japanmedai.com"
 PLACEHOLDER=("这个问题的事实层面是什么","哪些条件会改变结论","优先决策参考")
 BAD=("草稿","待审核","Claude","GPT","主仓","私库","BLOCKED","DRAFT")
+SRC_BAD=("第二条","补充官方来源","交叉核查","原始资料","严禁","的明确证据","原始补充依据","相关PMDA")
 e=lambda x: html.escape(str(x),quote=True)
 def ld(o): return '<script type="application/ld+json">'+json.dumps(o,ensure_ascii=False,separators=(",",":"))+'</script>'
 def render(cfg,p,old):
@@ -38,12 +39,18 @@ def main():
     check="--check" in sys.argv; stale=[]; n=0
     sm=(ROOT/"sitemap.xml").read_text(encoding="utf-8"); sm0=sm
     for f in sorted((ROOT/"content/page-rewrites").glob("*.json")):
-        cfg=json.loads(f.read_text(encoding="utf-8"))
+        cfg=json.loads(f.read_text(encoding="utf-8")); purpose_url={}
         for p in cfg["pages"]:
             blob=json.dumps(p,ensure_ascii=False)
             assert not any(b in blob for b in BAD+PLACEHOLDER),(p["id"],[b for b in BAD+PLACEHOLDER if b in blob])
             assert len(p["explanations"])>=2 and len(p["checks"])>=3 and len(p["faqs"])>=2 and p["sources"], p["id"]
             assert all(s["url"].startswith("https://") and s["url"].rstrip("/").count("/")>=3 for s in p["sources"]), p["id"]
+            assert all(len(f["a"])>=12 for f in p["faqs"]), (p["id"],"FAQ answer too short")
+            assert all(len(c)>=10 for c in p["checks"]), (p["id"],"check item too short")
+            for s_ in p["sources"]:
+                assert len(s_["purpose"])>=10 and not any(b in s_["purpose"] for b in SRC_BAD), (p["id"],"source label",s_["purpose"])
+                prev=purpose_url.setdefault(s_["purpose"],s_["url"])
+                assert prev==s_["url"], (p["id"],"same source label used for different URLs",s_["purpose"])
             path=ROOT/cfg["section"]/p["id"]/"index.html"
             assert path.is_file(), path
             old=path.read_text(encoding="utf-8")
