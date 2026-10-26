@@ -387,7 +387,7 @@
       // permits knowledge_intent and second_opinion_click, not internal_link_click.
       // Only fixed CTA metadata is sent; URLs, labels and medical answers are not.
       var href = link.getAttribute("href") || "";
-      var secondOpinionDestination = /^\/second-opinion\/(?:[?#]|$)/.test(href);
+      var secondOpinionDestination = /^\/second-opinion\//.test(href);
       tracker.track(secondOpinionDestination ? "second_opinion_click" : "knowledge_intent", {
         kind: link.getAttribute("data-jmai-track") || "internal",
         cta_id: link.getAttribute("data-jmai-id") || "internal_link",
