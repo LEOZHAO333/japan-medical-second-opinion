@@ -13,7 +13,8 @@
 <h1>目前的诊断与治疗选择，哪些问题值得再核对？</h1>
 <p class="lead">日本专家第二意见，是对现有诊断、病理、影像、分子检测与治疗经过进行独立审阅，帮助患者和家属准备与主诊团队讨论的问题。它不保证改变原方案，也不等于需要赴日。</p>
 <div class="chips"><span class="chip">约3分钟</span><span class="chip">无需注册</span><span class="chip">不自动推荐治疗方案</span></div>
-<div class="actions"><a class="btn" href="#soQuiz">开始3分钟预评估</a></div>
+<div class="actions"><a class="btn" href="#soQuiz">开始3分钟预评估</a><a class="btn soft" id="soHeroContact" href="#contact">已准备资料：了解咨询方式</a></div>
+<p class="small">无需先完成测试，也不必在网页上传病历。联系前先确认资料安全传输方式。</p>
 </div>
 
 <main class="wrap quiz">
@@ -60,6 +61,7 @@
 6. 最希望专家回答的3个问题与当前主诊建议
 资料先自行保存；具体要求由承接机构确认；不要延误当地必要诊疗。</textarea><p class="help nextCopyStatus" role="status" id="soChecklistCopyStatus"></p></div>
 <details class="nextOptional"><summary>可选：保存摘要或了解资料检查流程</summary><div class="notice" id="soSummary" style="margin-top:14px;white-space:pre-line"></div><div class="row"><button type="button" class="btn soft" id="soCopy">复制给我的医生或家人</button><a class="nextSecondary" href="#contact" id="soConsult">带着这份摘要去咨询 →</a></div></details>
+<p class="help soConsultStep">已经整理好资料，想了解下一步？ <a id="soConsultResult" href="#contact">查看微信、邮件和咨询开场信息</a>。此步骤不判断治疗资格，先发简短摘要即可。</p>
 </section>
 
 <section class="card panel" id="soRecommendations">
@@ -99,6 +101,10 @@ el.copy.addEventListener("click",async()=>{try{await navigator.clipboard.writeTe
 el.consult.addEventListener("click",()=>track("consult_intent"));
 const consultTpl="您好，我想咨询日本专家二次书面会诊。\n患者所在地：\n诊断/病种：\n目前阶段（刚确诊/治疗中/复发进展）：\n已有资料（病理/影像/治疗记录）：\n最想请专家回答的问题（1–3个）：\n（暂不附病历，确认传输方式后再提交）";
 document.getElementById("soConsultCopy").addEventListener("click",async()=>{const b=document.getElementById("soConsultCopy"),st=document.getElementById("soConsultCopyStatus");const t=(el.summary.textContent.trim()?("您好，我想咨询日本专家二次书面会诊。以下是我在官网完成的预评估：\n"+el.summary.textContent.trim()+"\n（暂不附病历，确认传输方式后再提交）"):consultTpl);try{await navigator.clipboard.writeText(t);b.textContent="✓ 已复制";st.textContent="已复制。请添加下方微信 JAPANYAO111 后直接粘贴发送。";}catch(e){st.textContent="复制未成功，请手动复制：\n"+t;}track("consult_intent",{cta_id:"consult_template",cta_position:"contact"});});
+[["soHeroContact","so_hero_contact"],["soConsultResult","so_result_contact"]].forEach(([id,cta_id])=>{
+ const link=document.getElementById(id);
+ if(link)link.addEventListener("click",()=>track("consult_intent",{cta_id}));
+});
 draw();
 JMAINextStep.init({analytics,resultId:"soResult",buttonId:"soChecklist",panelId:"soPreparationChecklist",ctaId:"records_v1"});
 JMAINextStep.copy("soCopyChecklist","soChecklistText","soChecklistCopyStatus","已复制，清单可自行保存。","清单已选中，请长按或使用键盘复制。");
