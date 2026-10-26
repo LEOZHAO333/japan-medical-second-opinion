@@ -383,7 +383,12 @@
         pageVersion: "topic-cluster-v2"
       });
       if (!tracker) return;
-      tracker.track("internal_link_click", {
+      // Keep the existing anon RLS allowlist unchanged: the site events table
+      // permits knowledge_intent and second_opinion_click, not internal_link_click.
+      // Only fixed CTA metadata is sent; URLs, labels and medical answers are not.
+      var href = link.getAttribute("href") || "";
+      var secondOpinionDestination = /^\/second-opinion\/(?:[?#]|$)/.test(href);
+      tracker.track(secondOpinionDestination ? "second_opinion_click" : "knowledge_intent", {
         kind: link.getAttribute("data-jmai-track") || "internal",
         cta_id: link.getAttribute("data-jmai-id") || "internal_link",
         cta_position: link.getAttribute("data-jmai-position") || "body"
