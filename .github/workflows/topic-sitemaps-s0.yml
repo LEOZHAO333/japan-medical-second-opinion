@@ -1,0 +1,26 @@
+name: Topic Sitemaps S0
+on:
+  pull_request:
+    paths:
+      - "sitemap.xml"
+      - "checkup/sitemap.xml"
+      - "bnct/sitemap.xml"
+      - "ips/sitemap.xml"
+      - "medicines/sitemap.xml"
+      - "hospitals/sitemap.xml"
+      - "kampo/sitemap.xml"
+      - "vercel.json"
+      - "scripts/check_topic_sitemaps.py"
+      - ".github/workflows/topic-sitemaps-s0.yml"
+  workflow_dispatch:
+
+jobs:
+  topic-sitemaps-s0:
+    name: Validate topic sitemap alignment
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check sitemap coverage and retired URL exclusion
+        run: python3 scripts/check_topic_sitemaps.py
