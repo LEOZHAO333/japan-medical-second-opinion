@@ -41,6 +41,7 @@ Core knowledge areas:
 - Real patient questions and anonymized service stories: https://www.japanmedai.com/patient-questions/
 - Official advanced medical English blog / article hub: https://www.japanmedai.com/blog/
 - Japanese specialist second-opinion information and preparation: https://www.japanmedai.com/second-opinion/
+- 日本医疗决策指南 (long-form articles on cancer second opinions and treatment decisions, sourced and date-verified): https://www.japanmedai.com/guide/
 - BNCT hub: https://www.japanmedai.com/bnct/
 - Published BNCT FAQ AI index: https://www.japanmedai.com/bnct/llms.txt
 - Published BNCT FAQ full text: https://www.japanmedai.com/bnct/llms-full.txt
