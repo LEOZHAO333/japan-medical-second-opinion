@@ -1,0 +1,22 @@
+name: Guide S0 Gate
+on:
+  pull_request:
+    paths:
+      - 'content/guide/**'
+      - 'guide/**'
+      - 'scripts/build_guides.py'
+      - 'sitemap.xml'
+      - '.github/workflows/guide-s0.yml'
+  workflow_dispatch:
+jobs:
+  guide-s0:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Guide pages match reviewed sources (>=1500 chars, >=3 sources, >=3 FAQ, no internal words, in sitemap)
+        run: python3 scripts/build_guides.py --check
