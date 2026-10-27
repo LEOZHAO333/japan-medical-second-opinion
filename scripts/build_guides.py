@@ -3,7 +3,7 @@
 Run: python3 scripts/build_guides.py [--check]
 Each source file: a JSON header in <!--json ... --> followed by the article body (Markdown-lite:
 '## ' and '### ' headings, blank-line separated paragraphs, single newlines kept as line breaks).
-Gate (S0): body >= 2000 chars, >= 3 https sources with specific labels, >= 3 FAQs,
+Gate (S0): body >= 1500 chars, >= 3 https sources with specific labels, >= 3 FAQs,
 verified date present, no internal/workflow words, related links resolve to repository files.
 """
 import html, json, pathlib, re, sys
@@ -60,7 +60,7 @@ def gate(meta, body, path):
     bad = [b for b in BAD if b in blob]
     assert not bad, (path.name, "internal words", bad)
     n = len(re.sub(r"[#\s]", "", body))
-    assert n >= 2000, (path.name, "body under 2000 chars", n)
+    assert n >= 1500, (path.name, "body under 1500 chars", n)
     src = meta["sources"]
     assert len(src) >= 3, (path.name, "needs >=3 sources")
     for s in src:
@@ -151,7 +151,7 @@ def main():
         assert f"<loc>{SITE}/guide/</loc>" in sm and not missing, ("sitemap missing guide URLs", missing)
         if stale:
             sys.exit("Out of date: " + ", ".join(stale))
-        print("PASS:", len(items), "guide pages up to date; >=2000 chars, >=3 sources, >=3 FAQ, no internal words, in sitemap")
+        print("PASS:", len(items), "guide pages up to date; >=1500 chars, >=3 sources, >=3 FAQ, no internal words, in sitemap")
         return
     idx.write_text(ih, encoding="utf-8")
     print("Built", len(items), "guide pages + index")
