@@ -38,6 +38,11 @@ def body_html(body):
             out.append("<h3>" + e(block[4:].strip()) + "</h3>")
         elif block.startswith("## "):
             out.append("<h2>" + e(block[3:].strip()) + "</h2>")
+        elif block.startswith("|") and "\n|---" in block:
+            rows = [r.strip().strip("|").split("|") for r in block.split("\n") if not re.match(r"^\|[-| ]+\|$", r.strip())]
+            head, rest = rows[0], rows[1:]
+            out.append('<div class="tableWrap"><table><thead><tr>' + "".join("<th>" + e(c.strip()) + "</th>" for c in head) + "</tr></thead><tbody>"
+                       + "".join("<tr>" + "".join("<td>" + e(c.strip()) + "</td>" for c in r) + "</tr>" for r in rest) + "</tbody></table></div>")
         else:
             out.append("<p>" + "<br>".join(e(x) for x in block.split("\n")) + "</p>")
     return "".join(out)
@@ -95,7 +100,7 @@ def render(meta, body):
          f'<title>{T}</title><meta name="description" content="{e(desc)}"><meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large"><link rel="canonical" href="{url}">',
          f'<meta property="og:type" content="article"><meta property="og:site_name" content="JapanMedAI"><meta property="og:title" content="{T}"><meta property="og:description" content="{e(desc)}"><meta property="og:url" content="{url}"><meta name="twitter:card" content="summary">',
          '<link rel="stylesheet" href="/assets/jmai.css">',
-         '<style>.guide p{line-height:1.9}.guide h2{margin-top:2em}.guide .meta{color:#5b6b7a;font-size:14px}.guide .faq h3{margin-top:1.2em}</style>',
+         '<style>.guide p{line-height:1.9}.guide h2{margin-top:2em}.guide .meta{color:#5b6b7a;font-size:14px}.guide .faq h3{margin-top:1.2em}.guide .tableWrap{overflow-x:auto}.guide table{border-collapse:collapse;width:100%;font-size:15px}.guide th,.guide td{border:1px solid #d6e2ea;padding:8px;text-align:left}</style>',
          ld(art), ld(bc), ld(fq), '</head><body>',
          '<div class="top"><div class="wrap nav navHome"><a class="brand" href="/">JapanMed AI<small>日本专家医疗决策平台</small></a><nav class="navMenu"><a href="/">首页</a><a href="/guide/">决策指南</a><a href="/second-opinion/">二次会诊</a><a href="/checkup/qa/">二次会诊问答</a></nav></div></div>',
          f'<main class="article guide"><div class="crumb"><a href="/">首页</a> › <a href="/guide/">{SERIES}</a> › 第{int(gid)}篇</div><article><header><span class="kicker">{SERIES}</span><h1>{e(title)}</h1>',
