@@ -19,8 +19,15 @@ jobs:
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           persist-credentials: false
-          fetch-depth: 4
+          fetch-depth: 8
       - name: Ensure production articles and sitemap match b66c42de
         run: git diff --exit-code b66c42de75c3a950be3b4b9159d6bd2650f2188a HEAD -- weight/articles weight/library.html sitemap.xml
-      - name: Test public URL responses against verified content
+      - name: Test www public URL responses against verified content
         run: python3 scripts/verify_weight_live_50.py
+      - name: Test apex domain public responses
+        shell: bash
+        run: |
+          set -euo pipefail
+          for path in / /weight/library.html /weight/articles/article-034.html; do
+            curl --location --fail --silent --show-error --retry 2 --max-time 20 --output /dev/null --write-out "apex HTTP %{http_code} final_url=%{url_effective}\n" "https://japanmedai.com$path"
+          done
