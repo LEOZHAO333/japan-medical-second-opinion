@@ -39,6 +39,7 @@ def request_path(path: str) -> dict:
                 final_url = response.geturl()
                 body = response.read()
                 content_type = response.headers.get("Content-Type", "")
+                x_robots_tag = response.headers.get("X-Robots-Tag", "")
             if status != 200:
                 return {"path": path, "status": status, "result": "FAIL", "reason": "not 200"}
             result = {
@@ -46,6 +47,8 @@ def request_path(path: str) -> dict:
                 "bytes": len(body), "final_url": final_url,
                 "sha256": hashlib.sha256(body).hexdigest(),
             }
+            if re.search(r"\\bnoindex\\b", x_robots_tag, re.I):
+                result.update(result="FAIL", reason="live X-Robots-Tag noindex")
             if path.endswith(".html") and (path.startswith(ARTICLE_PREFIX) or path == "/weight/library.html"):
                 html = body.decode("utf-8", errors="replace")
                 match = re.search(r'<link\s+rel=["\']canonical["\']\s+href=["\']([^"\']+)', html, re.I)
