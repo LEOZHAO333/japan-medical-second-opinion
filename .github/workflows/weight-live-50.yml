@@ -1,0 +1,24 @@
+name: Weight 50 live production HTTP check
+
+on:
+  push:
+    branches:
+      - audit/weight-50-live-20261029
+    paths:
+      - .github/workflows/weight-live-50.yml
+
+permissions:
+  contents: read
+
+jobs:
+  public-http-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out verified production source
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+          ref: b66c42de75c3a950be3b4b9159d6bd2650f2188a
+      - name: Test public URL responses against verified content
+        run: python3 scripts/verify_weight_live_50.py
