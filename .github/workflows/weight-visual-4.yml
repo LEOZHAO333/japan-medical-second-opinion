@@ -1,0 +1,39 @@
+name: Weight 50 four-page Chrome visual and CTA smoke check
+
+on:
+  push:
+    branches:
+      - audit/weight-50-live-20261029
+    paths:
+      - .github/workflows/weight-visual-4.yml
+      - scripts/weight_visual_smoke.mjs
+
+permissions:
+  contents: read
+
+jobs:
+  chrome-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out isolated audit code, not production
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Chrome version on runner
+        run: |
+          command -v google-chrome
+          google-chrome --version
+      - name: Install pinned browser driver library only
+        run: npm install --no-save --ignore-scripts --no-audit --no-fund playwright-core@1.56.1
+      - name: Validate live 001 008 034 050 at two viewport sizes
+        env:
+          CHROME_BIN: /usr/bin/google-chrome
+        run: node scripts/weight_visual_smoke.mjs
+      - name: Keep screenshots and report for Claude-3
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: weight-50-visual-4-20261029
+          path: weight-browser-qa/
+          retention-days: 30
