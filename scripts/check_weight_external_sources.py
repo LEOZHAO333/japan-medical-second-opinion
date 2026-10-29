@@ -61,12 +61,14 @@ def crawl(url):
                 time.sleep(1.0)
 
 refs = defaultdict(set)
+occurrences = 0
 for i in range(1,51):
     number = f"{i:03d}"
     file = ARTICLES / f"article-{number}.html"
     html = file.read_text(encoding="utf-8")
     parser=ExternalLinks()
     parser.feed(html)
+    occurrences += len(parser.urls)
     for url in parser.urls:
         refs[url].add(number)
 distinct = sorted(refs)
@@ -80,13 +82,11 @@ report={
     "source_commit":"b66c42de75c3a950be3b4b9159d6bd2650f2188a",
     "purpose":"External reference URL reachability. No medical claim or source validity is reviewed.",
     "articles_checked":50,
-    "source_links_total":sum(len(v) for v in refs.values()),
-    "source_links_per_article_total":sum(len(ExternalLinksFromFile(ARTICLES / f"article-{i:03d}.html")) for i in range(1,51)) if False else None,
+    "source_links_total":occurrences,
     "unique_external_urls":len(distinct),
     "status_counts":dict(counters),
     "checks":checks,
 }
-report.pop("source_links_per_article_total")
 (OUTPUT / "report.json").write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding="utf-8")
 lines=[
  "# Weight 50｜外部来源链接只读访问核验",
