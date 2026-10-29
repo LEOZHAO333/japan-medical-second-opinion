@@ -15,10 +15,12 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - name: Check out verified production source
+      - name: Check out isolated audit branch
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           persist-credentials: false
-          ref: b66c42de75c3a950be3b4b9159d6bd2650f2188a
+          fetch-depth: 4
+      - name: Ensure production articles and sitemap match b66c42de
+        run: git diff --exit-code b66c42de75c3a950be3b4b9159d6bd2650f2188a HEAD -- weight/articles weight/library.html sitemap.xml
       - name: Test public URL responses against verified content
         run: python3 scripts/verify_weight_live_50.py
