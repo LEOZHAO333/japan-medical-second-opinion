@@ -97,7 +97,7 @@ def render(meta, body):
     fq = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
         {"@type": "Question", "name": f["q"], "acceptedAnswer": {"@type": "Answer", "text": f["a"]}} for f in meta["faqs"]]}
     h = ['<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">',
-         f'<title>{T}</title><meta name="description" content="{e(desc)}"><meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large"><link rel="canonical" href="{url}">',
+         f'<title>{T}</title><meta name="description" content="{e(desc)}"><meta name="robots" content="{"index,follow,max-snippet:-1,max-image-preview:large" if meta.get("indexable", True) else "noindex,nofollow"}"><link rel="canonical" href="{url}">',
          f'<meta property="og:type" content="article"><meta property="og:site_name" content="JapanMedAI"><meta property="og:title" content="{T}"><meta property="og:description" content="{e(desc)}"><meta property="og:url" content="{url}"><meta name="twitter:card" content="summary">',
          '<link rel="stylesheet" href="/assets/jmai.css">',
          '<style>.guide p{line-height:1.9}.guide h2{margin-top:2em}.guide .meta{color:#5b6b7a;font-size:14px}.guide .faq h3{margin-top:1.2em}.guide .tableWrap{overflow-x:auto}.guide table{border-collapse:collapse;width:100%;font-size:15px}.guide th,.guide td{border:1px solid #d6e2ea;padding:8px;text-align:left}</style>',
@@ -109,7 +109,7 @@ def render(meta, body):
          '<section class="faq"><h2>常见问题</h2>' + "".join("<h3>" + e(f["q"]) + "</h3><p>" + e(f["a"]) + "</p>" for f in meta["faqs"]) + "</section>",
          '<section class="evidencePanel"><h2>参考资料</h2><ul>' + "".join(f'<li><a href="{e(s["url"])}" target="_blank" rel="noopener">{e(s["label"])}</a></li>' for s in meta["sources"]) + f'</ul><p>资料核对日期：{meta["verified"]}。医院流程与费用可能调整，申请前请以各机构最新公开信息为准。</p></section>',
          '<section class="decisionPath"><h2>延伸阅读</h2><div class="relatedGrid">' + "".join(f'<a href="{e(r["url"])}">{e(r["text"])} →</a>' for r in meta["related"]) + '<a href="/second-opinion/">了解日本癌症第二意见服务 →</a></div></section>',
-         '<p class="small">本文首发于“德川在東京”知乎专栏，官网版补充了来源核对与常见问题。本页为医学信息教育，不替代医生诊断、处方或治疗决定；不承诺任何医疗机构接诊。</p>',
+         ('<p class="small">本文首发于“德川在東京”知乎专栏，官网版补充了来源核对与常见问题。本页为医学信息教育，不替代医生诊断、处方或治疗决定；不承诺任何医疗机构接诊。</p>' if meta.get("zhihu_url") else '<p class="small">本文为JapanMedAI原创医学科普。内容基于公开医学与监管资料，不替代医生诊断、处方或治疗决定，也不承诺任何医疗机构接诊。</p>'),
          '</article></main><footer class="footer"><div class="wrap"><span class="footerBrand">JapanMedAI · 文腾株式会社</span><br>内容用于医学信息教育与跨境医疗决策准备，不替代执业医疗团队诊疗。</div></footer><script src="/assets/jmai-analytics.js"></script></body></html>']
     return "".join(h) + "\n", desc
 
