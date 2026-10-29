@@ -24,6 +24,12 @@ jobs:
         run: |
           command -v google-chrome
           google-chrome --version
+      - name: Install Chinese font support for visually valid screenshots
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq fonts-noto-cjk
+          fc-cache -f
+          fc-match 'Noto Sans CJK SC'
       - name: Install pinned browser driver library only
         run: npm install --no-save --ignore-scripts --no-audit --no-fund playwright-core@1.56.1
       - name: Validate live 001 008 034 050 at two viewport sizes
