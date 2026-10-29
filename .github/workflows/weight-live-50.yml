@@ -6,6 +6,7 @@ on:
       - audit/weight-50-live-20261029
     paths:
       - .github/workflows/weight-live-50.yml
+      - scripts/verify_weight_live_50.py
 
 permissions:
   contents: read
