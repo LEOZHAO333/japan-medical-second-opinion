@@ -82,7 +82,7 @@ h1{font-family:var(--serif);font-weight:900;font-size:clamp(40px,5.4vw,66px);lin
 .mail a{font-weight:600;word-break:break-all}
 .foot{border-top:1px solid var(--rule);padding:28px 0 36px;font-size:13px;color:var(--soft)}.foot p{margin:0 0 4px}
 @media(max-width:960px){.topin{flex-wrap:wrap;gap:6px 16px;padding-top:10px}.lang{margin-left:auto}.nav{order:3;flex-basis:100%;margin:0 -16px;padding:4px 16px 10px;overflow-x:auto;gap:18px;white-space:nowrap;scrollbar-width:none}.nav::-webkit-scrollbar{display:none}.heroin,.guidein{grid-template-columns:1fr;gap:44px}.contactin{grid-template-columns:1fr}}
-@media(max-width:720px){.wrap{padding:0 16px}.hero{padding:40px 0 56px}.flow{grid-template-columns:1fr;gap:28px}.qa{grid-template-columns:1fr}.rows label{padding:12px 16px}.sheethd,.sheetft{padding-left:16px;padding-right:16px}.seal{right:12px;top:52px;width:80px;height:80px;font-size:16px}.seal span{width:66px;height:66px}.steps,.guide,.honest,.contact{padding:56px 0}}
+@media(max-width:720px){.sub2{display:none}.wrap{padding:0 16px}.hero{padding:40px 0 56px}.flow{grid-template-columns:1fr;gap:28px}.qa{grid-template-columns:1fr}.rows label{padding:12px 16px}.sheethd,.sheetft{padding-left:16px;padding-right:16px}.seal{right:12px;top:52px;width:80px;height:80px;font-size:16px}.seal span{width:66px;height:66px}.steps,.guide,.honest,.contact{padding:56px 0}}
 @media(prefers-reduced-motion:reduce){.sheet.full .seal{transition:none}}
 </style>
 </head>
@@ -99,7 +99,7 @@ h1{font-family:var(--serif);font-weight:900;font-size:clamp(40px,5.4vw,66px);lin
 <div class="lead">
 <h1>日本专家<br>医疗决策平台</h1>
 <p class="sub">为全球华人整理可核验的日本医疗信息，协助准备病历资料、申请日本专家二次书面会诊，并解读 BNCT、iPS 再生医疗的批准状态与研究证据。</p>
-<p class="sub">诊断和治疗由患者与执业医疗团队共同决定。我们做的，是让你带着更完整的资料和更清楚的问题去见专家。</p>
+<p class="sub sub2">诊断和治疗由患者与执业医疗团队共同决定。我们做的，是让你带着更完整的资料和更清楚的问题去见专家。</p>
 <div class="acts"><a class="btn" href="/second-opinion/">开始 3 分钟预评估</a><a class="link" href="/second-opinion/cancer/">先看服务说明</a></div>
 </div>
 
@@ -113,8 +113,8 @@ h1{font-family:var(--serif);font-weight:900;font-size:clamp(40px,5.4vw,66px);lin
 <li><label><input type="checkbox"><span>当前用药清单</span></label></li>
 <li><label><input type="checkbox"><span>最想问专家的 3 个问题</span></label></li>
 </ul>
-<div class="sheetft"><p id="hint">勾选你手上已经有的资料。缺的部分，预评估会告诉你怎么补。</p><a class="btn small" href="/second-opinion/">带着清单去预评估</a></div>
-<div class="seal" aria-hidden="true"><span>资料<br>齐备</span></div>
+<div class="sheetft"><p id="hint">勾选你手上已经有的资料。不用勾满，随时可以去预评估，缺的部分会告诉你怎么补。</p><a class="btn small" id="sheetCta" href="/second-opinion/">去做资料预评估</a></div>
+<div class="seal" aria-hidden="true"><span>自查<br>完成</span></div>
 </form>
 </div></section>
 
@@ -178,10 +178,10 @@ h1{font-family:var(--serif);font-weight:900;font-size:clamp(40px,5.4vw,66px);lin
 
 <footer class="foot"><div class="wrap"><p>JapanMed AI · Buntou Medical Japan｜文腾株式会社</p><p>网站内容用于医疗信息整理、健康教育与服务介绍，不替代医生面对面的诊断与治疗建议。</p></div></footer>
 
-<script>(function(){var s=document.querySelector('.sheet');var boxes=s.querySelectorAll('input');var have=document.getElementById('have');var hint=document.getElementById('hint');var done=false;
+<script>(function(){var s=document.querySelector('.sheet');var boxes=s.querySelectorAll('input');var have=document.getElementById('have');var hint=document.getElementById('hint');var done=false,started=false;function t(e,p){try{window.__jmai&&window.__jmai.track(e,p)}catch(x){}}if('IntersectionObserver'in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){t('home_checklist_view');io.disconnect()}})},{threshold:.5});io.observe(s)}document.getElementById('sheetCta').addEventListener('click',function(){var n=0;boxes.forEach(function(b){if(b.checked)n++});t('home_checklist_cta',{funnel_step:'checked_'+n})});
 function up(){var n=0;boxes.forEach(function(b){if(b.checked)n++});have.textContent=n;s.classList.toggle('full',n===6);
-hint.textContent=n===6?'六类资料都在手上，可以直接进入预评估。':(n===0?'勾选你手上已经有的资料。缺的部分，预评估会告诉你怎么补。':'还差 '+(6-n)+' 项。缺的部分，预评估会告诉你怎么补。');
-if(n===6&&!done&&window.__jmai){done=true;try{window.__jmai.track('home_checklist_complete')}catch(e){}}}
+hint.textContent=n===6?'六项自查完成。是否符合受理要求，以目标医院的正式规定为准。':(n===0?'勾选你手上已经有的资料。不用勾满，随时可以去预评估，缺的部分会告诉你怎么补。':'已勾 '+n+' 项。不用勾满，随时可以去预评估，缺的部分会告诉你怎么补。');
+if(n>0&&!started){started=true;t('home_checklist_start')}if(n===6&&!done){done=true;t('home_checklist_complete')}}
 boxes.forEach(function(b){b.addEventListener('change',up)});
 document.querySelectorAll('[data-copy]').forEach(function(b){b.addEventListener('click',function(){var t=b.getAttribute('data-copy');(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){b.textContent='已复制'},function(){b.textContent='请手动复制：'+t})})});})();</script>
 <script src="/assets/jmai-analytics.js"></script><script>(function(){const a=JMAIAnalytics.create({table:"jmai_site_events",scope:"site"});a.trackOnce("landing_view");window.__jmai=a;document.querySelectorAll('a[href="/weight/"]').forEach(x=>x.addEventListener("click",()=>a.track("weight_intent")));document.querySelectorAll('a[href="/second-opinion/"]').forEach(x=>x.addEventListener("click",()=>a.track("second_opinion_intent")));})();</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"JapanMedAI 是医院吗？","acceptedAnswer":{"@type":"Answer","text":"不是。我们整理日本医疗信息和跨境就医流程，不提供临床诊断、处方或治疗方案。"}},{"@type":"Question","name":"二次会诊会保证出现新方案吗？","acceptedAnswer":{"@type":"Answer","text":"不会。专家可能确认现有判断、指出需补充的问题或讨论其他选项；结果由医疗专家独立作出，也可能与现有方案一致。"}},{"@type":"Question","name":"BNCT 或 iPS 适合所有人吗？","acceptedAnswer":{"@type":"Answer","text":"不适合这样推定。须区分获批治疗、临床试验、研究及个案治疗，并由接诊机构核实具体适用条件。"}},{"@type":"Question","name":"科学减重测试会推荐药物吗？","acceptedAnswer":{"@type":"Answer","text":"不会。它仅帮助梳理生活习惯，不诊断疾病、不判断药物适用性，也不提供处方或购药服务。"}}]}</script>
