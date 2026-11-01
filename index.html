@@ -48,9 +48,9 @@ h1{font-family:var(--serif);font-weight:900;font-size:clamp(40px,5.4vw,66px);lin
 .rows input:checked+span{color:var(--soft)}
 .sheetft{display:flex;flex-wrap:wrap;gap:12px 16px;align-items:center;justify-content:space-between;padding:18px 24px 22px}
 .sheetft p{margin:0;font-size:14px;color:var(--soft);flex:1 1 220px}
-.seal{position:absolute;right:22px;top:58px;width:92px;height:92px;border:3px solid var(--seal);border-radius:50%;color:var(--seal);display:grid;place-items:center;font-family:var(--serif);font-weight:900;font-size:19px;line-height:1.15;text-align:center;transform:rotate(-12deg) scale(1.6);opacity:0;pointer-events:none;mix-blend-mode:multiply}
-.seal span{border:1.5px solid var(--seal);border-radius:50%;width:76px;height:76px;display:grid;place-items:center}
-.sheet.full .seal{opacity:.88;transform:rotate(-12deg) scale(1);transition:transform .28s cubic-bezier(.2,1.4,.4,1),opacity .2s}
+.seal{position:absolute;right:16px;top:4px;width:62px;height:62px;border:3px solid var(--seal);border-radius:50%;color:var(--seal);display:grid;place-items:center;font-family:var(--serif);font-weight:900;font-size:13px;line-height:1.15;text-align:center;transform:rotate(-12deg) scale(1.6);opacity:0;pointer-events:none;mix-blend-mode:multiply}
+.seal span{border:1.5px solid var(--seal);border-radius:50%;width:50px;height:50px;display:grid;place-items:center}
+.sheet.full .count{visibility:hidden}.sheet.full .seal{opacity:.88;transform:rotate(-12deg) scale(1);transition:transform .28s cubic-bezier(.2,1.4,.4,1),opacity .2s}
 .steps{background:var(--mist);padding:72px 0}
 .flow{list-style:none;margin:8px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:40px;counter-reset:s}
 .flow li{counter-increment:s;border-top:2px solid var(--ink);padding-top:18px}
@@ -82,7 +82,7 @@ h1{font-family:var(--serif);font-weight:900;font-size:clamp(40px,5.4vw,66px);lin
 .mail a{font-weight:600;word-break:break-all}
 .foot{border-top:1px solid var(--rule);padding:28px 0 36px;font-size:13px;color:var(--soft)}.foot p{margin:0 0 4px}
 @media(max-width:960px){.topin{flex-wrap:wrap;gap:6px 16px;padding-top:10px}.lang{margin-left:auto}.nav{order:3;flex-basis:100%;margin:0 -16px;padding:4px 16px 10px;overflow-x:auto;gap:18px;white-space:nowrap;scrollbar-width:none}.nav::-webkit-scrollbar{display:none}.heroin,.guidein{grid-template-columns:1fr;gap:44px}.contactin{grid-template-columns:1fr}}
-@media(max-width:720px){.sub2{display:none}.wrap{padding:0 16px}.hero{padding:40px 0 56px}.flow{grid-template-columns:1fr;gap:28px}.qa{grid-template-columns:1fr}.rows label{padding:12px 16px}.sheethd,.sheetft{padding-left:16px;padding-right:16px}.seal{right:12px;top:52px;width:80px;height:80px;font-size:16px}.seal span{width:66px;height:66px}.steps,.guide,.honest,.contact{padding:56px 0}}
+@media(max-width:720px){.sub2{display:none}.wrap{padding:0 16px}.hero{padding:40px 0 56px}.flow{grid-template-columns:1fr;gap:28px}.qa{grid-template-columns:1fr}.rows label{padding:12px 16px}.sheethd,.sheetft{padding-left:16px;padding-right:16px}.steps,.guide,.honest,.contact{padding:56px 0}}
 @media(prefers-reduced-motion:reduce){.sheet.full .seal{transition:none}}
 </style>
 </head>
@@ -106,7 +106,7 @@ h1{font-family:var(--serif);font-weight:900;font-size:clamp(40px,5.4vw,66px);lin
 <form class="sheet" aria-labelledby="sheet-title" onsubmit="return false">
 <div class="sheethd"><h2 id="sheet-title">二次会诊资料准备单</h2><span class="count" aria-live="polite"><b id="have">0</b> / 6 已准备</span></div>
 <ul class="rows">
-<li><label><input type="checkbox"><span>病理报告，以及切片或蜡块能否调取</span></label></li>
+<li><label><input type="checkbox"><span>病理报告与切片信息（做过活检或手术时）</span></label></li>
 <li><label><input type="checkbox"><span>近期 CT、MRI 或 PET-CT 报告</span></label></li>
 <li><label><input type="checkbox"><span>影像原始 DICOM 文件</span></label></li>
 <li><label><input type="checkbox"><span>手术、放疗、用药的时间线</span></label></li>
