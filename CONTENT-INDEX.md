@@ -46,3 +46,17 @@
 
 ## 更新规则
 新文章进入索引前应完成来源核对；涉及药品、适应证、临床试验与新疗法时注明证据类型和核对日期；不得承诺保证疗效、绝对安全或普遍适用。
+
+## 官网五大主题的统一检索入口（2026-11-02）
+
+以下为官网内容导航链接，不表示已被 Google 收录、获得排名或已被任何 AI 平台引用。
+
+- [日本专家第二意见／二次会诊](https://www.japanmedai.com/second-opinion/) · [第二意见问答](https://www.japanmedai.com/checkup/qa/) · [AI文本入口](https://www.japanmedai.com/checkup/llms.txt)
+- [BNCT 硼中子俘获治疗](https://www.japanmedai.com/bnct/) · [BNCT问答AI文本入口](https://www.japanmedai.com/bnct/llms.txt)
+- [iPS细胞与再生医疗](https://www.japanmedai.com/ips/) · [iPS问答AI文本入口](https://www.japanmedai.com/ips/llms.txt)
+- [日本汉方](https://www.japanmedai.com/kampo/) · [汉方问答AI文本入口](https://www.japanmedai.com/kampo/llms.txt)
+- [医学编辑与合规标准](https://www.japanmedai.com/editorial-standards/) · [运营主体信息](https://www.japanmedai.com/about/)
+
+**品牌边界：**“德川在東京／德川在东京”为人用医疗署名搜索变体；“日宠通”为独立宠物医疗品牌，不作为 JapanMed AI 人用医疗栏目互相交叉引流。日宠通站点的索引策略需独立检查，在专业兽医终审和公开发布条件满足前，不解除待审页的发布/索引限制。
+
+**核验规则：** 网页可发现性、Search Console 正式索引数据、Google 前20自然结果和各 AI 原生答案中的品牌提及/来源引用是不同指标。缺失原始证据时一律标记 UNKNOWN，不以0或估算值代替。
