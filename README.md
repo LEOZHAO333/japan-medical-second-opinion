@@ -1,6 +1,6 @@
 # JapanMed AI｜日本医疗知识库
 
-## Buntou Medical Japan｜日本文腾医疗
+## JapanMed AI｜文腾株式会社（Buntou Co., Ltd.）
 
 面向全球华人患者与家属的日本医疗资源整合与跨境医疗信息知识库。
 
@@ -9,7 +9,7 @@
 - JapanMed AI 官网：https://japanmedai.com
 - Notion 知识库：https://japanmedai.notion.site
 - 三层产品架构：[JAPANMED-AI-ARCHITECTURE.md](./JAPANMED-AI-ARCHITECTURE.md)
-- 内容索引：[CONTENT-INDEX.md](./CONTENT-INDEX.md)
+- 内容索引（含二次会诊、BNCT、iPS、汉方的官网和 FAQ 导航）：[CONTENT-INDEX.md](./CONTENT-INDEX.md)
 - 仓库分工：[REPOSITORY-MAP.md](./REPOSITORY-MAP.md)
 - BNCT专题：[BNCT-100-QA.md](./BNCT-100-QA.md)
 - iPS专题：[IPS-100-QA.md](./IPS-100-QA.md)
@@ -45,6 +45,10 @@
 ### 8. 服务总览
 介绍日本文腾医疗的医疗资料整理、翻译、医疗机构信息、预约及跨境就医流程支持。
 
+## 品牌边界
+
+“德川在東京”与“德川在东京”是中文内容渠道名称的繁简体变体，不代表医疗机构或医师身份。“日宠通”是独立的宠物医疗科普品牌，未经兽医专业终审的内容不得因 SEO/GEO 需要解除审核和索引限制。
+
 ## 服务边界
 
 JapanMed AI 用于医疗信息整理和跨境医疗路径参考，不进行医学诊断、患者资格认定、处方或治疗方案制定。所有临床结论、收治决定及治疗建议均由接诊医疗机构的执业医师独立作出。
@@ -63,4 +67,5 @@ BNCT、iPS、再生医疗、精准放疗及其他新疗法必须区分已获批�
 
 Buntou Co., Ltd. holds a Japanese pharmaceutical retail business license. This license does not make the company a medical institution and does not authorize medical diagnosis or treatment planning. See [VERIFICATION.md](./VERIFICATION.md).
 
-**Last reviewed:** 2026-09-28
+**Entity information previously reviewed:** 2026-09-28  
+**Navigation updated:** 2026-11-02（不代表医学专业审核）
