@@ -10,6 +10,7 @@
 - Notion 知识库：https://japanmedai.notion.site
 - 三层产品架构：[JAPANMED-AI-ARCHITECTURE.md](./JAPANMED-AI-ARCHITECTURE.md)
 - 内容索引（含二次会诊、BNCT、iPS、汉方的官网和 FAQ 导航）：[CONTENT-INDEX.md](./CONTENT-INDEX.md)
+- 公开专题 URL、证据与审核对照表：[SEO-GEO-TOPIC-EVIDENCE-MAP-2026-11-02.md](./SEO-GEO-TOPIC-EVIDENCE-MAP-2026-11-02.md)
 - 仓库分工：[REPOSITORY-MAP.md](./REPOSITORY-MAP.md)
 - BNCT专题：[BNCT-100-QA.md](./BNCT-100-QA.md)
 - iPS专题：[IPS-100-QA.md](./IPS-100-QA.md)
