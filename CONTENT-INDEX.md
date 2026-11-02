@@ -6,13 +6,13 @@
 **Content-index navigation checked:** 2026-11-02  
 **Clinical review status:** Follow each individual page's editorial/review label; this index is not a physician sign-off.
 
-本索引按 JapanMed AI 公开人用医疗内容的专题入口组织。链接是内容导航，不代表 Google 已收录或 AI 已引用；个别页面是否上线、索引及 canonical 设置须以生产环境核验为准。
+本索引按 JapanMed AI 公开人用医疗内容的专题入口组织。
 
 > 所有页面均用于医疗信息整理与跨境医疗路径参考，不构成诊断、处方、患者资格认定、治疗建议或疗效承诺。医学信息的编辑及合规复核不等于执业医师逐篇签署。
 
 ## 1. 日本专家二次会诊｜精密体检
 - [第二意见核心指南（知识库）](./second-opinion/README.md)
-- [二次会诊常见问题（官网）](https://www.japanmedai.com/checkup/qa/)
+- [癌症第二意见100问（官网）](https://www.japanmedai.com/checkup/qa/)
 - [二次会诊 FAQ 的 AI 文本入口（官网）](https://www.japanmedai.com/checkup/llms.txt)
 - [精密体检专题（官网）](https://www.japanmedai.com/checkup/)
 - [真实患者问题与案例（官网）](https://www.japanmedai.com/patient-questions/)
@@ -56,7 +56,6 @@
 ## 7. 品牌与内容边界
 - **JapanMed AI**：人用医疗信息与日本医疗路径参考。
 - **德川在東京／德川在东京**：中文内容渠道的繁简体名称变体；不代表医疗机构、执业医师或诊疗资格。
-- **日宠通**：独立宠物医疗科普品牌，不与人用医疗内容混编；未经专业兽医终审的文章不因 GEO 目标改变审核与索引限制。
 
 ## 更新规则
 新增或修改页面前应核对有效来源、审核状态、官方页面 URL、适应证及监管阶段。医学事实须注明来源与事实核对日期；索引技术状态、Google 排名及 AI 引用只能凭实际证据报告。此索引的导航检查日期不替代各篇文章的医学审核日期。

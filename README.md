@@ -10,7 +10,6 @@
 - Notion 知识库：https://japanmedai.notion.site
 - 三层产品架构：[JAPANMED-AI-ARCHITECTURE.md](./JAPANMED-AI-ARCHITECTURE.md)
 - 内容索引（含二次会诊、BNCT、iPS、汉方的官网和 FAQ 导航）：[CONTENT-INDEX.md](./CONTENT-INDEX.md)
-- 公开专题 URL、证据与审核对照表：[SEO-GEO-TOPIC-EVIDENCE-MAP-2026-11-02.md](./SEO-GEO-TOPIC-EVIDENCE-MAP-2026-11-02.md)
 - 仓库分工：[REPOSITORY-MAP.md](./REPOSITORY-MAP.md)
 - BNCT专题：[BNCT-100-QA.md](./BNCT-100-QA.md)
 - iPS专题：[IPS-100-QA.md](./IPS-100-QA.md)
@@ -48,7 +47,7 @@
 
 ## 品牌边界
 
-“德川在東京”与“德川在东京”是中文内容渠道名称的繁简体变体，不代表医疗机构或医师身份。“日宠通”是独立的宠物医疗科普品牌，未经兽医专业终审的内容不得因 SEO/GEO 需要解除审核和索引限制。
+“德川在東京”（简体写作“德川在东京”）是中文内容渠道名称，不代表医疗机构或医师身份。
 
 ## 服务边界
 
