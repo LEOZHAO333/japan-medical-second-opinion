@@ -3,6 +3,9 @@
 Run: python3 scripts/build_page_rewrites.py [--check]
 Each JSON: {section,label,kicker,cta:{href,text},updated,pages:[{id,title,direct,explanations[],checks[],faqs[{q,a}],sources[{url,purpose}],related[{url,text}]}]}
 """
+import sys as _s, pathlib as _p
+_s.path.insert(0, str(_p.Path(__file__).resolve().parent))
+from expert_opinion_module import module_html
 import html, json, pathlib, re, sys
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 SITE="https://www.japanmedai.com"
@@ -31,6 +34,7 @@ def render(cfg,p,old):
        '<h2>这个问题真正要核对什么？</h2><ol>'+"".join('<li>'+e(x)+'</li>' for x in p["checks"])+'</ol>',
        '<section class="evidencePanel"><h2>可以去哪里核对</h2><ul>'+"".join(f'<li><a href="{e(s["url"])}" target="_blank" rel="noopener">{e(s["purpose"])}</a></li>' for s in p["sources"])+'</ul><p>来源用于核对一般医学信息；个人情况仍需由接诊医生或专业人员判断。</p></section>',
        '<h2>常见问题</h2>'+"".join('<h3>'+e(f["q"])+'</h3><p>'+e(f["a"])+'</p>' for f in p["faqs"]),
+       (module_html(cfg['section']) if cfg['section'] in ('bnct','ips','checkup') else ''),
        '<section class="decisionPath"><h2>下一步</h2><div class="relatedGrid">'+"".join(f'<a href="{e(r["url"])}">{e(r["text"])} →</a>' for r in p["related"])+f'<a href="{e(cfg["cta"]["href"])}">{e(cfg["cta"]["text"])} →</a></div></section>',
        '<p class="small">本页为医学信息教育，不替代医生诊断、处方或治疗决定；不承诺任何机构接诊或检查结果。</p>',
        '</article></main><footer class="footer"><div class="wrap"><span class="footerBrand">JapanMedAI · 文腾株式会社</span><br>内容用于医学信息教育与跨境医疗决策准备，不替代执业医疗团队诊疗。</div></footer><script src="/assets/jmai-analytics.js"></script></body></html>']
