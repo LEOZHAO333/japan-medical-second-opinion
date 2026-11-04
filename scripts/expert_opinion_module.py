@@ -4,6 +4,7 @@
 Run: python3 scripts/expert_opinion_module.py [--check]
 覆盖：guide/NNN、bnct/NNN 及专题页、ips/NNN、checkup/NNN、patient-questions/* 文章页（不含减重、医院、药品、汉方）。
 已有 class="a2Module" 的页面跳过（幂等）。生成脚本（build_guides / build_page_rewrites / build_so_topics）自行调用 module_html()。
+--check 另外检测匿名统计脚本是否已加载；只报告缺口，不自动向患者案例页添加追踪。
 """
 import pathlib, re, sys
 
@@ -46,12 +47,17 @@ def insert(html_, section):
 
 def main():
     check = "--check" in sys.argv
-    missing, n = [], 0
+    missing, missing_analytics, n = [], [], 0
     for sec, p in targets():
         old = p.read_text(encoding="utf-8")
         new = insert(old, sec)
         if MARK not in new:
             print("WARN no anchor:", p.relative_to(ROOT)); continue
+        # A2 clicks cannot be recorded if the page does not load the shared
+        # anonymous analytics script. Report absence, but do not silently add
+        # tracking to patient-case pages before privacy/medical review.
+        if '<script src="/assets/jmai-analytics.js"' not in new:
+            missing_analytics.append(str(p.relative_to(ROOT)))
         if old != new:
             if check:
                 missing.append(str(p.relative_to(ROOT)))
@@ -60,8 +66,14 @@ def main():
     if check:
         if missing:
             sys.exit("A2 module missing: " + ", ".join(missing[:10]))
-        print("PASS: A2 module present on all target pages"); return
+        if missing_analytics:
+            sys.exit("A2 anonymous analytics loader missing (privacy review required before adding): " +
+                     ", ".join(missing_analytics[:20]))
+        print("PASS: A2 module and anonymous analytics loader present on all target pages"); return
     print("A2 module inserted into", n, "pages")
+    if missing_analytics:
+        print("WARN: anonymous analytics loader absent on", len(missing_analytics),
+              "A2 pages; do not enable on patient-case content without privacy review")
 
 
 if __name__ == "__main__":

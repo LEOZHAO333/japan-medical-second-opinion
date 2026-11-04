@@ -369,13 +369,21 @@
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
   else init();
 })();
-/* JMAI_INTERNAL_LINK_TRACKING_V1
-   Tracks only anonymous navigation metadata (no free text, medical answers or contact fields). */
+/* JMAI_INTERNAL_LINK_TRACKING_V2
+   Anonymous navigation only. Tracks legacy data-jmai-track links and the
+   existing A2 records-checklist CTA without modifying 138 generated pages.
+   Does not read form answers, records, names, medical data or free text. */
 (function () {
   "use strict";
   document.addEventListener("click", function (event) {
-    var link = event.target && event.target.closest ? event.target.closest("[data-jmai-track]") : null;
+    var link = event.target && event.target.closest ? event.target.closest("a") : null;
     if (!link) return;
+    var annotated = link.hasAttribute && link.hasAttribute("data-jmai-track");
+    var a2Primary = !!(link.closest &&
+      link.closest(".a2Module") &&
+      link.origin === window.location.origin &&
+      link.pathname === "/tools/second-opinion-records/");
+    if (!annotated && !a2Primary) return;
     try {
       var tracker = window.JMAIAnalytics && window.JMAIAnalytics.create({
         table: "jmai_site_events",
@@ -384,9 +392,9 @@
       });
       if (!tracker) return;
       tracker.track("internal_link_click", {
-        kind: link.getAttribute("data-jmai-track") || "internal",
-        cta_id: link.getAttribute("data-jmai-id") || "internal_link",
-        cta_position: link.getAttribute("data-jmai-position") || "body"
+        kind: link.getAttribute("data-jmai-track") || (a2Primary ? "second_opinion_records" : "internal"),
+        cta_id: link.getAttribute("data-jmai-id") || (a2Primary ? "a2_records_primary" : "internal_link"),
+        cta_position: link.getAttribute("data-jmai-position") || (a2Primary ? "article_footer" : "body")
       });
     } catch (_) {}
   }, { passive: true });
