@@ -6,6 +6,8 @@ const assert = require("node:assert/strict");
 const fs = require("node:fs");
 const path = require("node:path");
 const vm = require("node:vm");
+const os = require("node:os");
+const child = require("node:child_process");
 
 const original = fs.readFileSync(path.join(__dirname, "../assets/jmai-analytics.js"), "utf8");
 const marker = "/* JMAI_INTERNAL_LINK_TRACKING_V2";
@@ -110,4 +112,30 @@ test("click handler ignores non-anchor targets and does not send form answers", 
   const f = fixture();
   f.emit(null);
   assert.equal(f.events.length, 0);
+});
+
+
+test("A2 generator --check flags missing shared analytics without injecting tracking", () => {
+  const temp = fs.mkdtempSync(path.join(os.tmpdir(), "jmai-a2-audit-"));
+  try {
+    const scriptsDir = path.join(temp, "scripts");
+    const caseDir = path.join(temp, "patient-questions", "sample");
+    fs.mkdirSync(scriptsDir, { recursive: true });
+    fs.mkdirSync(caseDir, { recursive: true });
+    const pythonScript = path.join(scriptsDir, "expert_opinion_module.py");
+    fs.copyFileSync(path.join(__dirname, "../scripts/expert_opinion_module.py"), pythonScript);
+    const page = path.join(caseDir, "index.html");
+    const base = '<html><body><article><section class="evidencePanel a2Module">Test</section></article></body></html>';
+    fs.writeFileSync(page, base, "utf8");
+    const without = child.spawnSync("python3", [pythonScript, "--check"], { encoding: "utf8" });
+    assert.notEqual(without.status, 0);
+    assert.match(without.stderr + without.stdout, /anonymous analytics loader missing/);
+    assert.equal(fs.readFileSync(page, "utf8"), base, "--check must not mutate patient-case HTML");
+    fs.writeFileSync(page, base.replace("</body>", '<script src="/assets/jmai-analytics.js"></script></body>'), "utf8");
+    const withLoader = child.spawnSync("python3", [pythonScript, "--check"], { encoding: "utf8" });
+    assert.equal(withLoader.status, 0, withLoader.stderr);
+    assert.match(withLoader.stdout, /PASS: A2 module and anonymous analytics loader/);
+  } finally {
+    fs.rmSync(temp, { recursive: true, force: true });
+  }
 });
