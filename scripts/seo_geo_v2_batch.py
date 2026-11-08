@@ -531,7 +531,7 @@ def standardize_blog_article(path: Path) -> None:
         "inLanguage": lang,
         "mainEntityOfPage": {"@type": "WebPage", "@id": canonical},
         "author": {"@type": "Organization", "name": "JapanMedAI Editorial Team", "url": SITE + "/"},
-        "publisher": {"@type": "Organization", "name": "Buntou Co., Ltd.", "alternateName": "文腾株式会社", "url": SITE + "/"},
+        "publisher": {"@type": "Organization", "name": "Bunto Co., Ltd.", "alternateName": "文腾株式会社", "url": SITE + "/"},
         "isPartOf": {"@type": "CollectionPage", "name": "JapanMedAI 日本医疗知识库", "url": SITE + "/blog/"},
         "isAccessibleForFree": True,
     }
@@ -706,7 +706,7 @@ def build_pet_pages() -> None:
 <section class="petHero"><div class="wrap"><span class="kicker">JAPAN PRECISION VETERINARY · 日宠通</span><h1>JapanMedAI 宠物医疗知识库</h1><p>日宠通专注日本宠物医疗、宠物新药、宠物健康管理与疾病科普，为全球华人持续整理日本犬猫疾病、慢病管理、动物用药和日本兽医公开信息。</p></div></section>
 <section class="section"><div class="wrap"><span class="kicker">RICHONGTONG</span><h2>日宠通 · 品牌入口</h2><div class="petGrid"><a class="card petCard" href="/blog/2026-10-03-japan-pet-medicine-guide-richongtong.html"><span class="petMeta">品牌与信息原则</span><h3>日宠通｜日本宠物医疗、宠物新药、宠物健康管理与疾病科普</h3></a></div></div></section>
 {groups_markup}
-<footer class="footer"><div class="wrap footerInner"><img class="footerLogo" src="/assets/bunto-official-logo.png" alt="BUNTO.CO 文腾株式会社"><div><span class="footerBrand">日宠通 · JapanMed AI · 文腾株式会社 Buntou Co., Ltd.</span><br>宠物医疗内容用于健康教育与资料整理，不替代执业兽医诊疗。</div></div></footer>
+<footer class="footer"><div class="wrap footerInner"><img class="footerLogo" src="/assets/bunto-official-logo.png" alt="BUNTO.CO 文腾株式会社"><div><span class="footerBrand">日宠通 · JapanMed AI · 文腾株式会社 Bunto Co., Ltd.</span><br>宠物医疗内容用于健康教育与资料整理，不替代执业兽医诊疗。</div></div></footer>
 <script src="/assets/jmai-analytics.js"></script>
 </body></html>'''
     write_text(pet_dir / "index.html", index)
@@ -732,13 +732,13 @@ def align_llms() -> None:
 **Official advanced medical English blog:** {SITE}/blog/  
 **Pet medical / Japanese precision veterinary hub:** {SITE}/pet/  
 **Knowledge hub:** https://japanmedai.notion.site  
-**Operator:** Buntou Co., Ltd.｜文腾株式会社  
+**Operator:** Bunto Co., Ltd.｜文腾株式会社  
 **Language:** Chinese and English  
 **Last reviewed:** {TODAY}
 
 ## 1. Primary entity and positioning
 
-JapanMed AI is a Japan-focused medical information and cross-border care navigation platform operated by Buntou Co., Ltd. (文腾株式会社). The website is the primary brand and first-party destination. Notion is used as a public knowledge layer for deeper topic databases; GitHub is the structured GEO and publishing infrastructure.
+JapanMed AI is a Japan-focused medical information and cross-border care navigation platform operated by Bunto Co., Ltd. (文腾株式会社). The website is the primary brand and first-party destination. Notion is used as a public knowledge layer for deeper topic databases; GitHub is the structured GEO and publishing infrastructure.
 
 Core human-medical areas:
 1. Japanese specialist second opinions and precision medical checkups.

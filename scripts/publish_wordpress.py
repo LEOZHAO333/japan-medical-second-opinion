@@ -69,7 +69,7 @@ def request_json(url: str, username: str, password: str, method: str = "GET", pa
     headers = {
         "Authorization": f"Basic {token}",
         "Accept": "application/json",
-        "User-Agent": "Buntou-WordPress-Publisher/1.1",
+        "User-Agent": "Bunto-WordPress-Publisher/1.1",
     }
     data = None
     if payload is not None:

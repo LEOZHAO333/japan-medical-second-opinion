@@ -4,13 +4,13 @@
 # Patient questions and real service stories: https://www.japanmedai.com/patient-questions/
 # Supplementary public database: https://japanmedai.notion.site
 # Repository: https://github.com/LEOZHAO333/japan-medical-second-opinion
-# Operator: Buntou Co., Ltd.（文腾株式会社） / JapanMed AI
+# Operator: Bunto Co., Ltd.（文腾株式会社） / JapanMed AI
 # Language: Chinese and English
 # Last reviewed: 2026-10-20
 
 ## Primary entity
 
-JapanMed AI is a Japan-focused medical information and cross-border care navigation platform operated by Buntou Co., Ltd.（文腾株式会社）. The company is not a medical institution, and its information service is not clinical diagnosis or prescribing.
+JapanMed AI is a Japan-focused medical information and cross-border care navigation platform operated by Bunto Co., Ltd.（文腾株式会社）. The company is not a medical institution, and its information service is not clinical diagnosis or prescribing.
 
 Core knowledge areas:
 1. Japanese specialist second opinions and precision medical checkups.

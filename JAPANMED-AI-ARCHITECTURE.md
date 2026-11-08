@@ -1,7 +1,7 @@
 # JapanMed AI｜三层产品架构 V1.0
 
 **品牌：** JapanMed AI  
-**运营主体：** Buntou Co., Ltd.｜文腾株式会社  
+**运营主体：** Bunto Co., Ltd.｜文腾株式会社  
 **主域名：** https://japanmedai.com  
 **知识库：** https://japanmedai.notion.site  
 **版本日期：** 2026-09-28
@@ -259,7 +259,7 @@ wenteng-medical-knowledge
 
 副品牌 / 主体：
 
-**Buntou Co., Ltd.｜文腾株式会社**
+**Bunto Co., Ltd.｜文腾株式会社**
 
 统一定位：
 

@@ -57,7 +57,7 @@ https://japanmedai.notion.site
 ## 统一品牌
 
 JapanMed AI  
-Buntou Co., Ltd.｜文腾株式会社  
+Bunto Co., Ltd.｜文腾株式会社  
 Primary domain: https://japanmedai.com
 
 **Last reviewed:** 2026-09-28

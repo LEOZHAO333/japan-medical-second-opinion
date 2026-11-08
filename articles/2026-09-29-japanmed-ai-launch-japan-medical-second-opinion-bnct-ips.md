@@ -17,7 +17,7 @@ primary_sources:
     title: "JapanMed AI 日本医疗知识库"
     date: "2026-09-29"
     url: "https://japanmedai.notion.site"
-  - organization: "Buntou Co., Ltd."
+  - organization: "Bunto Co., Ltd."
     title: "JapanMed AI 三层产品架构"
     date: "2026-09-28"
     url: "https://github.com/LEOZHAO333/japan-medical-second-opinion/blob/main/JAPANMED-AI-ARCHITECTURE.md"
@@ -31,7 +31,7 @@ primary_sources:
 
 ## JapanMed AI 是什么？
 
-JapanMed AI 是由 **Buntou Co., Ltd.｜文腾株式会社** 持续建设的日本医疗信息与跨境医疗导航平台。
+JapanMed AI 是由 **Bunto Co., Ltd.｜文腾株式会社** 持续建设的日本医疗信息与跨境医疗导航平台。
 
 - 官方网站：https://japanmedai.com
 - 日本医疗知识库：https://japanmedai.notion.site
@@ -157,7 +157,7 @@ https://japanmedai.notion.site
 **JapanMed AI**  
 日本医疗资源整合与跨境医疗信息平台
 
-**Buntou Co., Ltd.｜文腾株式会社**
+**Bunto Co., Ltd.｜文腾株式会社**
 
 让全球华人，更容易理解和连接日本优质医疗资源。
 

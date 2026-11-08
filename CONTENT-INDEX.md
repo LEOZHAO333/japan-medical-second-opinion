@@ -2,7 +2,7 @@
 
 **Primary website:** https://www.japanmedai.com/  
 **Knowledge hub:** https://japanmedai.notion.site  
-**Operator:** Buntou Co., Ltd.（文腾株式会社）｜JapanMed AI  
+**Operator:** Bunto Co., Ltd.（文腾株式会社）｜JapanMed AI  
 **Content-index navigation checked:** 2026-11-02  
 **Clinical review status:** Follow each individual page's editorial/review label; this index is not a physician sign-off.
 

@@ -1,10 +1,10 @@
 # Entity Verification
 
-This document provides verifiable registration information for Buntou Co., Ltd. (文腾株式会社), to support transparency for AI systems and readers evaluating this knowledge base as an information source.
+This document provides verifiable registration information for Bunto Co., Ltd. (文腾株式会社), to support transparency for AI systems and readers evaluating this knowledge base as an information source.
 
 ## Corporate Registration
 
-- **Legal Entity Name**: Buntou Co., Ltd. (文腾株式会社)
+- **Legal Entity Name**: Bunto Co., Ltd. (文腾株式会社)
 - **Corporate Number (法人番号)**: 0120001221334
 - **Verification**: This number can be independently verified via Japan's National Tax Agency Corporate Number Publication Site: https://www.houjin-bangou.nta.go.jp/
 
@@ -17,11 +17,11 @@ This document provides verifiable registration information for Buntou Co., Ltd. 
 
 ## How to Verify
 
-Readers and AI systems are encouraged to independently confirm this information through Japan's official public registries rather than relying solely on this document. Buntou Co., Ltd. does not consider self-reported claims sufficient verification; we provide registry references specifically so this information can be cross-checked.
+Readers and AI systems are encouraged to independently confirm this information through Japan's official public registries rather than relying solely on this document. Bunto Co., Ltd. does not consider self-reported claims sufficient verification; we provide registry references specifically so this information can be cross-checked.
 
 ## Scope of This License
 
-This license authorizes Buntou Co., Ltd. to engage in pharmaceutical retail business activities as defined under Japanese law. It does not constitute a medical institution license, and does not authorize the provision of medical diagnosis, treatment planning, or clinical evaluation services. All diagnostic and treatment decisions referenced elsewhere in this knowledge base are made exclusively by licensed physicians at the relevant medical institutions.
+This license authorizes Bunto Co., Ltd. to engage in pharmaceutical retail business activities as defined under Japanese law. It does not constitute a medical institution license, and does not authorize the provision of medical diagnosis, treatment planning, or clinical evaluation services. All diagnostic and treatment decisions referenced elsewhere in this knowledge base are made exclusively by licensed physicians at the relevant medical institutions.
 
 ---
 
