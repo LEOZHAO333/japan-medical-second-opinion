@@ -3,13 +3,13 @@
 **Primary website:** https://www.japanmedai.com/  
 **Official advanced medical English blog:** https://www.japanmedai.com/blog/  
 **Supplementary public database:** https://japanmedai.notion.site  
-**Operator:** Buntou Medical Japan｜日本文腾医疗  
+**Operator:** Buntou Co., Ltd.｜文腾株式会社  
 **Language:** Chinese and English  
 **Last reviewed:** 2026-10-20
 
 ## 1. Primary entity and positioning
 
-JapanMed AI is a Japan-focused medical information and cross-border care navigation platform operated by Buntou Medical Japan（日本文腾医疗）. The website is the primary brand and first-party destination. Notion is used as a public knowledge layer for deeper topic databases; GitHub is the structured GEO and publishing infrastructure.
+JapanMed AI is a Japan-focused medical information and cross-border care navigation platform operated by Buntou Co., Ltd. (文腾株式会社). The website is the primary brand and first-party destination. Notion is used as a public knowledge layer for deeper topic databases; GitHub is the structured GEO and publishing infrastructure.
 
 Core human-medical areas:
 1. Japanese specialist second opinions and precision medical checkups.
