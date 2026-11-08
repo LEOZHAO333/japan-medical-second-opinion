@@ -9,7 +9,7 @@
 - 仿单与适应性判断：https://www.japanmedai.com/kampo/qa/indications/
 - 用药安全与风险：https://www.japanmedai.com/kampo/qa/safety/
 - 证据与信息核对：https://www.japanmedai.com/kampo/qa/evidence/
-- 已有公开文章：https://www.japanmedai.com/kampo/031/ 至 https://www.japanmedai.com/kampo/050/（20篇已有独立网页；不能据此推断本100题均有独立网页）
+- 已有公开文章：https://www.japanmedai.com/kampo/031/ 至 https://www.japanmedai.com/kampo/070/（40篇已有独立网页；不能据此推断本100题均有独立网页）
 - 日本药品官方检索：https://www.pmda.go.jp/PmdaSearch/iyakuSearch/
 - 日本东洋医学会 EKAT：https://www.jsom.or.jp/ebm/ekat/
 - 日本东洋医学会 KCPG：https://www.jsom.or.jp/ebm/cpg/
@@ -147,3 +147,28 @@
 ## 完整逐题问答
 
 - [日本汉方100问：完整内容](https://www.japanmedai.com/kampo/llms-full.txt)
+
+<!-- kampo-articles:start -->
+## 日本汉方长文（/kampo/051/ 起）
+
+- 总觉得喉咙里有东西咽不下去，日本半夏厚朴汤适合吗？哪些情况要先查咽喉和食道？：https://www.japanmedai.com/kampo/051/
+- 下雨天就头痛、还想吐，日本五苓散能代替正规诊断吗？：https://www.japanmedai.com/kampo/052/
+- 更年期眩晕、心慌，当归芍药散、加味逍遥散、桂枝茯苓丸能按症状随便换着吃吗？：https://www.japanmedai.com/kampo/053/
+- 慢性肾病患者经常腿抽筋，可以自己买日本芍药甘草汤吃吗？：https://www.japanmedai.com/kampo/054/
+- 头颈部放疗后一直口干，能按“润燥”的思路自己选日本麦门冬汤吗？：https://www.japanmedai.com/kampo/055/
+- 有心律失常或甲亢，吃葛根汤等含麻黄的日本汉方前要核对什么？：https://www.japanmedai.com/kampo/056/
+- 尿频、尿痛、残尿感，日本猪苓汤能直接吃吗？为什么要先排查感染、结石和梗阻？：https://www.japanmedai.com/kampo/057/
+- 皮肤反复瘙痒、湿疹，日本消风散能代替特应性皮炎的规范治疗吗？：https://www.japanmedai.com/kampo/058/
+- 正在化疗、靶向或免疫治疗，想加日本汉方，要先告诉肿瘤科医生什么？：https://www.japanmedai.com/kampo/059/
+- 日本汉方说明书写“食前或食间服用”，到底是什么时候吃？吃饭时吃行不行？：https://www.japanmedai.com/kampo/060/
+- 花粉症一到就鼻涕不停，日本小青龙汤和抗过敏药怎么选？：https://www.japanmedai.com/kampo/061/
+- 慢性鼻窦炎鼻塞、鼻涕倒流，日本辛夷清肺汤和葛根汤加川芎辛夷能自己选吗？：https://www.japanmedai.com/kampo/062/
+- 长期便秘靠日本麻子仁丸、大黄甘草汤通便，含大黄的汉方能一直吃吗？：https://www.japanmedai.com/kampo/063/
+- 每年冬天手指冻疮、发白发紫，日本当归四逆加吴茱萸生姜汤适合吗？：https://www.japanmedai.com/kampo/064/
+- 口腔溃疡反反复复，日本半夏泻心汤有用吗？哪些溃疡要先查原因？：https://www.japanmedai.com/kampo/065/
+- 孩子经常说肚子痛，日本小建中汤适合吗？哪些腹痛要马上去医院？：https://www.japanmedai.com/kampo/066/
+- 怀孕期间能吃日本汉方吗？孕吐、感冒、便秘时要先确认什么？：https://www.japanmedai.com/kampo/067/
+- 膝盖痛、腿浮肿、爱出汗，日本防己黄耆汤适合“虚胖”吗？要先排查什么？：https://www.japanmedai.com/kampo/068/
+- 胃痛反反复复，日本安中散能自己买来吃吗？哪些胃痛要先做胃镜？：https://www.japanmedai.com/kampo/069/
+- 一站起来就头晕眼前发黑，日本苓桂术甘汤能用吗？要先排除哪些原因？：https://www.japanmedai.com/kampo/070/
+<!-- kampo-articles:end -->
