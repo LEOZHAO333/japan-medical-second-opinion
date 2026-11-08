@@ -1,6 +1,6 @@
 # JapanMed AI｜日本医疗知识库
 
-## JapanMed AI｜文腾株式会社（Buntou Co., Ltd.）
+## JapanMed AI｜文腾株式会社（Bunto Co., Ltd.）
 
 面向全球华人患者与家属的日本医疗资源整合与跨境医疗信息知识库。
 
@@ -65,7 +65,7 @@ BNCT、iPS、再生医疗、精准放疗及其他新疗法必须区分已获批�
 
 ## Entity verification
 
-Buntou Co., Ltd. holds a Japanese pharmaceutical retail business license. This license does not make the company a medical institution and does not authorize medical diagnosis or treatment planning. See [VERIFICATION.md](./VERIFICATION.md).
+Bunto Co., Ltd. holds a Japanese pharmaceutical retail business license. This license does not make the company a medical institution and does not authorize medical diagnosis or treatment planning. See [VERIFICATION.md](./VERIFICATION.md).
 
 **Entity information previously reviewed:** 2026-09-28  
 **Navigation updated:** 2026-11-02（不代表医学专业审核）

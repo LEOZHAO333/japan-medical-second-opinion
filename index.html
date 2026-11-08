@@ -176,7 +176,7 @@ h1{font-family:var(--serif);font-weight:900;font-size:clamp(40px,5.4vw,66px);lin
 </div></section>
 </main>
 
-<footer class="foot"><div class="wrap"><p>JapanMed AI · 文腾株式会社 Buntou Co., Ltd.　<a href="/about/">关于文腾</a>　<a href="/editorial-standards/">审核与编辑标准</a></p><p>网站内容用于医疗信息整理、健康教育与服务介绍，不替代医生面对面的诊断与治疗建议。</p></div></footer>
+<footer class="foot"><div class="wrap"><p>JapanMed AI · 文腾株式会社 Bunto Co., Ltd.　<a href="/about/">关于文腾</a>　<a href="/editorial-standards/">审核与编辑标准</a></p><p>网站内容用于医疗信息整理、健康教育与服务介绍，不替代医生面对面的诊断与治疗建议。</p></div></footer>
 
 <script>(function(){var s=document.querySelector('.sheet');var boxes=s.querySelectorAll('input');var have=document.getElementById('have');var hint=document.getElementById('hint');var done=false,started=false;function t(e,p){try{window.__jmai&&window.__jmai.track(e,p)}catch(x){}}if('IntersectionObserver'in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){t('home_checklist_view');io.disconnect()}})},{threshold:.5});io.observe(s)}document.getElementById('sheetCta').addEventListener('click',function(){var n=0;boxes.forEach(function(b){if(b.checked)n++});t('home_checklist_cta',{funnel_step:'checked_'+n})});
 function up(){var n=0;boxes.forEach(function(b){if(b.checked)n++});have.textContent=n;s.classList.toggle('full',n===6);
