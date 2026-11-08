@@ -121,7 +121,7 @@ def render(meta, body):
          + f'</ul><p>资料核对日期：{meta["verified"]}。具体产品的效能、组成、禁忌和警示，请以该产品最新版说明书为准；标注“厂家示例”的链接仅用于说明说明书写法，不代表推荐某一厂家。</p></section>',
          '<section class="decisionPath"><h2>延伸阅读</h2><div class="relatedGrid">' + "".join(f'<a href="{e(r["url"])}">{e(r["text"])} →</a>' for r in meta["related"])
          + '<a href="/kampo/qa/">日本汉方100问 →</a><a href="/kampo/">查看日本汉方专题 →</a></div></section>',
-         '<p class="small">本页为医学信息教育，不替代医生诊断、处方或用药建议；不推荐购买任何具体产品。</p>',
+         ('<p class="small">本文同步发布于“德川在東京”知乎专栏<a href="' + e(meta["zhihu_url"]) + '" target="_blank" rel="noopener">《日本汉方研究室》</a>，官网版补充了可点击核对的来源。' if meta.get("zhihu_url") else '<p class="small">') + '本页为医学信息教育，不替代医生诊断、处方或用药建议；不推荐购买任何具体产品。</p>',
          '</article></main><footer class="footer"><div class="wrap"><span class="footerBrand">JapanMedAI · 文腾株式会社</span><br>内容用于医学信息教育与跨境医疗决策准备，不替代执业医疗团队诊疗。</div></footer><script src="/assets/jmai-analytics.js"></script></body></html>']
     return "".join(h) + "\n"
 
