@@ -93,6 +93,10 @@ def gate(meta, body, path, sec):
     assert not bad, (path.name, "internal words", bad)
     n = len(re.sub(r"[#\s]", "", body))
     assert n >= 1500, (path.name, "body under 1500 chars", n)
+    if sec == "bnct":
+        desc = meta["description"].strip()
+        assert 60 <= len(desc) <= 130, (path.name, "BNCT SEO description length", len(desc))
+        assert desc.endswith(("。", "？", "！")), (path.name, "BNCT SEO description incomplete sentence")
     assert len(meta["sources"]) >= 3, (path.name, "needs >=3 sources")
     for s in meta["sources"]:
         assert s["url"].startswith("https://") and s["url"].rstrip("/").count("/") >= 3, (path.name, s["url"])
