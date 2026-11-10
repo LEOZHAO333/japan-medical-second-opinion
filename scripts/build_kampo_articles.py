@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build /kampo/NNN/ long-form articles (051+) from content/kampo-articles/NNN.md.
+"""Build long-form articles: /kampo/NNN/ (051+) from content/kampo-articles and /bnct/NNN/ (051+) from content/bnct-articles.
 Run: python3 scripts/build_kampo_articles.py [--check]
 Each source: JSON header in <!--json ... --> then a Markdown-lite body
 ('## '/'### ' headings, '- ' lists, '1. ' lists, '> ' quotes, '|' tables, blank-line paragraphs).
@@ -9,15 +9,34 @@ root and /kampo/ sitemaps, and /kampo/llms*.txt entries in sync (idempotent).
 """
 import html, json, pathlib, re, sys
 
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from expert_opinion_module import module_html  # noqa: E402
+
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 SITE = "https://www.japanmedai.com"
-SRC = ROOT / "content/kampo-articles"
+NOTE_KAMPO = "具体产品的效能、组成、禁忌和警示，请以该产品最新版说明书为准；标注“厂家示例”的链接仅用于说明说明书写法，不代表推荐某一厂家。"
+NOTE_BNCT = "BNCT 监管信息以 PMDA、厚生劳动省及企业公告原文为准；获批范围不等于个体适用，具体病例须由实施机构依据完整资料正式评估。"
+SECTIONS = {
+    "kampo": {"src": "content/kampo-articles", "label": "日本汉方", "kicker": "JAPANESE KAMPO",
+              "nav": '<a href="/">首页</a><a href="/kampo/">日本汉方</a><a href="/kampo/qa/">汉方100问</a><a href="/second-opinion/">二次会诊</a>',
+              "anchor": 'data-jmai-id="hub_kampo_050" data-jmai-position="hub"><h3>怎么看一篇“日本汉方神方”文章是否可信？</h3></a>',
+              "extra": ('<a href="/kampo/qa/">日本汉方100问 →</a><a href="/kampo/">查看日本汉方专题 →</a>'),
+              "llms_head": "## 日本汉方长文（/kampo/051/ 起）", "a2": False,
+              "zhihu_note": "本文同步发布于“德川在東京”知乎专栏《日本汉方研究室》",
+              "foot": "本页为医学信息教育，不替代医生诊断、处方或用药建议；不推荐购买任何具体产品。", "note": NOTE_KAMPO,
+              "zhihu_link": "《日本汉方研究室》", "zhihu_pre": "本文同步发布于“德川在東京”知乎专栏"},
+    "bnct": {"src": "content/bnct-articles", "label": "日本BNCT", "kicker": "JAPAN BNCT",
+             "nav": '<a href="/">首页</a><a href="/bnct/">日本BNCT</a><a href="/bnct/qa/">BNCT问答</a><a href="/second-opinion/">二次会诊</a>',
+             "anchor": 'data-jmai-id="hub_bnct_050" data-jmai-position="hub"><h3>准备BNCT二次意见时，最值得先问专家哪5个问题？</h3></a>',
+             "extra": ('<a href="/bnct/qa/">BNCT问答 →</a><a href="/bnct/">查看日本BNCT专题 →</a>'),
+             "llms_head": "## BNCT评估长文（/bnct/051/ 起）", "a2": True,
+             "zhihu_note": "本文同步发布于“德川在東京”知乎",
+             "foot": "本页为医学信息教育，不替代医生诊断或治疗决定；BNCT是否适用须由实施机构依据完整资料正式评估，不构成接诊或疗效承诺。", "note": NOTE_BNCT,
+             "zhihu_link": "知乎", "zhihu_pre": "本文同步发布于“德川在東京”"},
+}
 BAD = ("草稿", "待审核", "待医学", "复审", "GEO", "SEO", "Claude", "GPT", "主仓", "私库", "BLOCKED", "DRAFT",
        "知乎专栏", "德川在東京｜日本汉方专题", "日宠通")
-LABEL = "日本汉方"
 e = lambda x: html.escape(str(x), quote=True)
-CARD_START, CARD_END = "<!--kampo-articles:start-->", "<!--kampo-articles:end-->"
-LLMS_START, LLMS_END = "<!-- kampo-articles:start -->", "<!-- kampo-articles:end -->"
 
 
 def ld(o):
@@ -68,7 +87,7 @@ def body_html(body):
     return "".join(out)
 
 
-def gate(meta, body, path):
+def gate(meta, body, path, sec):
     blob = json.dumps(meta, ensure_ascii=False) + body
     bad = [b for b in BAD if b in blob]
     assert not bad, (path.name, "internal words", bad)
@@ -80,29 +99,31 @@ def gate(meta, body, path):
         assert len(s["label"]) >= 10, (path.name, "source label too short", s["label"])
     assert len(meta["faqs"]) >= 3 and all(len(f["a"]) >= 20 for f in meta["faqs"]), (path.name, "FAQ")
     assert re.fullmatch(r"\d{4}-\d{2}-\d{2}", meta["verified"]), (path.name, "verified date")
-    ids = {p.stem for p in SRC.glob("[0-9][0-9][0-9].md")}
+    ids = {p.stem for p in (ROOT / SECTIONS[sec]["src"]).glob("[0-9][0-9][0-9].md")}
     for r in meta["related"]:
         u = r["url"].split("#")[0].strip("/")
-        ok = (ROOT / u / "index.html").is_file() or (u.startswith("kampo/") and u.split("/")[-1] in ids)
+        ok = (ROOT / u / "index.html").is_file() or (u.startswith(sec + "/") and u.split("/")[-1] in ids)
         assert ok, (path.name, "related link missing", r["url"])
 
 
-def render(meta, body):
+def render(meta, body, sec):
+    C = SECTIONS[sec]
+    LABEL = C["label"]
     gid = meta["id"]
-    url = f"{SITE}/kampo/{gid}/"
+    url = f"{SITE}/{sec}/{gid}/"
     title, desc = meta["title"], meta["description"]
     T = e(title) + "｜JapanMedAI"
     art = {"@context": "https://schema.org", "@type": "MedicalWebPage", "headline": title, "description": desc, "url": url,
            "datePublished": meta["published"], "dateModified": meta["verified"], "lastReviewed": meta["verified"], "inLanguage": "zh-CN",
            "about": [LABEL, title], "author": {"@type": "Organization", "name": "JapanMedAI 编辑部｜文腾株式会社"},
            "publisher": {"@type": "Organization", "name": "JapanMedAI｜文腾株式会社", "url": SITE + "/"},
-           "isPartOf": {"@type": "CollectionPage", "name": LABEL, "url": f"{SITE}/kampo/"},
+           "isPartOf": {"@type": "CollectionPage", "name": LABEL, "url": f"{SITE}/{sec}/"},
            "citation": [s["url"] for s in meta["sources"]]}
     if meta.get("zhihu_url"):
         art["sameAs"] = meta["zhihu_url"]
     bc = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": "JapanMedAI", "item": SITE + "/"},
-        {"@type": "ListItem", "position": 2, "name": LABEL, "item": f"{SITE}/kampo/"},
+        {"@type": "ListItem", "position": 2, "name": LABEL, "item": f"{SITE}/{sec}/"},
         {"@type": "ListItem", "position": 3, "name": title, "item": url}]}
     fq = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
         {"@type": "Question", "name": f["q"], "acceptedAnswer": {"@type": "Answer", "text": f["a"]}} for f in meta["faqs"]]}
@@ -112,36 +133,38 @@ def render(meta, body):
          '<link rel="stylesheet" href="/assets/jmai.css">',
          '<style>main.article{max-width:860px;margin:0 auto;padding:0 16px 48px;box-sizing:border-box}.guide p,.guide li{line-height:1.9}.guide h2{margin-top:2em}.guide .meta{color:#5b6b7a;font-size:14px}.guide .faq h3{margin-top:1.2em}.guide .tableWrap{overflow-x:auto}.guide table{border-collapse:collapse;width:100%;font-size:15px}.guide th,.guide td{border:1px solid #d6e2ea;padding:8px;text-align:left}.guide blockquote{margin:1em 0;padding:8px 16px;border-left:4px solid #b9cfdc;background:#f5f9fb}</style>',
          ld(art), ld(bc), ld(fq), '</head><body>',
-         '<div class="top"><div class="wrap nav navHome"><a class="brand" href="/">JapanMed AI<small>日本专家医疗决策平台</small></a><nav class="navMenu"><a href="/">首页</a><a href="/kampo/">日本汉方</a><a href="/kampo/qa/">汉方100问</a><a href="/second-opinion/">二次会诊</a></nav></div></div>',
-         f'<main class="article guide"><div class="crumb"><a href="/">首页</a> › <a href="/kampo/">{LABEL}</a> › 第{int(gid)}篇</div><article><header><span class="kicker">JAPANESE KAMPO</span><h1>{e(title)}</h1>',
+         '<div class="top"><div class="wrap nav navHome"><a class="brand" href="/">JapanMed AI<small>日本专家医疗决策平台</small></a><nav class="navMenu">' + C["nav"] + '</nav></div></div>',
+         f'<main class="article guide"><div class="crumb"><a href="/">首页</a> › <a href="/{sec}/">{LABEL}</a> › 第{int(gid)}篇</div><article><header><span class="kicker">{C["kicker"]}</span><h1>{e(title)}</h1>',
          f'<p class="meta">JapanMed AI 编辑部｜发布：{meta["published"]}｜资料核对：{meta["verified"]}｜编辑与医学合规审核，未经执业医师逐篇签署</p></header>',
          body_html(body),
          '<section class="faq"><h2>常见问题</h2>' + "".join("<h3>" + e(f["q"]) + "</h3><p>" + e(f["a"]) + "</p>" for f in meta["faqs"]) + "</section>",
          '<section class="evidencePanel"><h2>可以去哪里核对</h2><ul>' + "".join(f'<li><a href="{e(s["url"])}" target="_blank" rel="noopener">{e(s["label"])}</a></li>' for s in meta["sources"])
-         + f'</ul><p>资料核对日期：{meta["verified"]}。具体产品的效能、组成、禁忌和警示，请以该产品最新版说明书为准；标注“厂家示例”的链接仅用于说明说明书写法，不代表推荐某一厂家。</p></section>',
+         + f'</ul><p>资料核对日期：{meta["verified"]}。{C["note"]}</p></section>',
+         (module_html("bnct") if C["a2"] else ""),
          '<section class="decisionPath"><h2>延伸阅读</h2><div class="relatedGrid">' + "".join(f'<a href="{e(r["url"])}">{e(r["text"])} →</a>' for r in meta["related"])
-         + '<a href="/kampo/qa/">日本汉方100问 →</a><a href="/kampo/">查看日本汉方专题 →</a></div></section>',
-         ('<p class="small">本文同步发布于“德川在東京”知乎专栏<a href="' + e(meta["zhihu_url"]) + '" target="_blank" rel="noopener">《日本汉方研究室》</a>，官网版补充了可点击核对的来源。' if meta.get("zhihu_url") else '<p class="small">') + '本页为医学信息教育，不替代医生诊断、处方或用药建议；不推荐购买任何具体产品。</p>',
+         + C["extra"] + '</div></section>',
+         ('<p class="small">' + C["zhihu_pre"] + '<a href="' + e(meta["zhihu_url"]) + '" target="_blank" rel="noopener">' + C["zhihu_link"] + '</a>，官网版补充了可点击核对的来源。' if meta.get("zhihu_url") else '<p class="small">') + C["foot"] + '</p>',
          '</article></main><footer class="footer"><div class="wrap"><span class="footerBrand">JapanMedAI · 文腾株式会社</span><br>内容用于医学信息教育与跨境医疗决策准备，不替代执业医疗团队诊疗。</div></footer><script src="/assets/jmai-analytics.js"></script></body></html>']
     return "".join(h) + "\n"
 
 
-def sync_hub(text, items):
+def sync_hub(text, items, sec):
+    CARD_START, CARD_END = f"<!--{sec}-articles:start-->", f"<!--{sec}-articles:end-->"
     cards = CARD_START + "".join(
-        f'\n<a class="card" href="/kampo/{m["id"]}/" data-jmai-track="hub" data-jmai-id="hub_kampo_{m["id"]}" data-jmai-position="hub"><h3>{e(m["title"])}</h3></a>'
+        f'\n<a class="card" href="/{sec}/{m["id"]}/" data-jmai-track="hub" data-jmai-id="hub_{sec}_{m["id"]}" data-jmai-position="hub"><h3>{e(m["title"])}</h3></a>'
         for m in items) + "\n" + CARD_END
     if CARD_START in text:
         text = re.sub(re.escape(CARD_START) + ".*?" + re.escape(CARD_END), lambda _: cards, text, flags=re.S)
     else:
-        anchor = 'data-jmai-id="hub_kampo_050" data-jmai-position="hub"><h3>怎么看一篇“日本汉方神方”文章是否可信？</h3></a>'
-        assert anchor in text, "kampo hub anchor (050 card) not found"
+        anchor = SECTIONS[sec]["anchor"]
+        assert anchor in text, sec + " hub anchor (050 card) not found"
         text = text.replace(anchor, anchor + "\n" + cards, 1)
     m = None
     for mm in re.finditer(r'<script[^>]*type="application/ld\+json"[^>]*>(.*?)</script>', text, re.S):
         if '"ItemList"' in mm.group(1):
             m = mm
             break
-    assert m, "kampo hub ItemList JSON-LD not found"
+    assert m, sec + " hub ItemList JSON-LD not found"
     root = json.loads(m.group(1))
 
     def find(o):
@@ -159,19 +182,19 @@ def sync_hub(text, items):
                     return r
     obj = find(root)
     assert obj, "ItemList not found inside JSON-LD"
-    ours = {f"{SITE}/kampo/{x['id']}/" for x in items}
+    ours = {f"{SITE}/{sec}/{x['id']}/" for x in items}
     lst = [x for x in obj["itemListElement"] if x["url"] not in ours]
     for x in items:
-        lst.append({"@type": "ListItem", "url": f"{SITE}/kampo/{x['id']}/", "name": x["title"]})
+        lst.append({"@type": "ListItem", "url": f"{SITE}/{sec}/{x['id']}/", "name": x["title"]})
     obj["itemListElement"] = [{"@type": "ListItem", "position": i, "url": x["url"], "name": x["name"]} for i, x in enumerate(lst, 1)]
     if "numberOfItems" in obj:
         obj["numberOfItems"] = len(lst)
     return text[:m.start(1)] + json.dumps(root, ensure_ascii=False, separators=(",", ":")) + text[m.end(1):]
 
 
-def sync_sitemap(text, items):
+def sync_sitemap(text, items, sec):
     for m in items:
-        loc = f"<loc>{SITE}/kampo/{m['id']}/</loc>"
+        loc = f"<loc>{SITE}/{sec}/{m['id']}/</loc>"
         line = f"  <url>{loc}<lastmod>{m['verified']}</lastmod></url>\n"
         if loc in text:
             text = re.sub(r"  <url>" + re.escape(loc) + r"<lastmod>[^<]*</lastmod></url>\n", line, text)
@@ -180,23 +203,24 @@ def sync_sitemap(text, items):
     return text
 
 
-def sync_llms(text, items):
-    block = LLMS_START + "\n## 日本汉方长文（/kampo/051/ 起）\n\n" + "".join(
-        f"- {m['title']}：{SITE}/kampo/{m['id']}/\n" for m in items) + LLMS_END
+def sync_llms(text, items, sec):
+    LLMS_START, LLMS_END = f"<!-- {sec}-articles:start -->", f"<!-- {sec}-articles:end -->"
+    block = LLMS_START + "\n" + SECTIONS[sec]["llms_head"] + "\n\n" + "".join(
+        f"- {m['title']}：{SITE}/{sec}/{m['id']}/\n" for m in items) + LLMS_END
     if LLMS_START in text:
         return re.sub(re.escape(LLMS_START) + ".*?" + re.escape(LLMS_END), lambda _: block, text, flags=re.S)
     return text.rstrip("\n") + "\n\n" + block + "\n"
 
 
-def main():
-    check = "--check" in sys.argv
-    stale, items = [], []
-    for f in sorted(SRC.glob("[0-9][0-9][0-9].md")):
+def build_section(sec, check, stale):
+    src = ROOT / SECTIONS[sec]["src"]
+    items = []
+    for f in sorted(src.glob("[0-9][0-9][0-9].md")):
         meta, body = parse(f)
         assert meta["id"] == f.stem and int(meta["id"]) >= 51, f
-        gate(meta, body, f)
-        out = ROOT / "kampo" / meta["id"] / "index.html"
-        html_ = render(meta, body)
+        gate(meta, body, f, sec)
+        out = ROOT / sec / meta["id"] / "index.html"
+        html_ = render(meta, body, sec)
         items.append(meta)
         if check:
             if not out.is_file() or out.read_text(encoding="utf-8") != html_:
@@ -204,22 +228,32 @@ def main():
         else:
             out.parent.mkdir(parents=True, exist_ok=True)
             out.write_text(html_, encoding="utf-8")
-    targets = [(ROOT / "kampo/index.html", sync_hub), (ROOT / "sitemap.xml", sync_sitemap), (ROOT / "kampo/sitemap.xml", sync_sitemap),
-               (ROOT / "kampo/llms.txt", sync_llms), (ROOT / "kampo/llms-full.txt", sync_llms)]
+    if not items:
+        return 0
+    targets = [(ROOT / sec / "index.html", sync_hub), (ROOT / "sitemap.xml", sync_sitemap), (ROOT / sec / "sitemap.xml", sync_sitemap),
+               (ROOT / sec / "llms.txt", sync_llms), (ROOT / sec / "llms-full.txt", sync_llms)]
     for p, fn in targets:
         old = p.read_text(encoding="utf-8")
-        new = fn(old, items)
+        new = fn(old, items, sec)
         if check:
             if new != old:
                 stale.append(str(p.relative_to(ROOT)))
         elif new != old:
             p.write_text(new, encoding="utf-8")
+    return len(items)
+
+
+def main():
+    check = "--check" in sys.argv
+    stale, counts = [], {}
+    for sec in SECTIONS:
+        counts[sec] = build_section(sec, check, stale)
     if check:
         if stale:
             sys.exit("Out of date: " + ", ".join(stale))
-        print("PASS:", len(items), "kampo long-form pages up to date; >=1500 chars, >=3 sources, >=3 FAQ; hub/sitemaps/llms in sync")
+        print("PASS: long-form pages up to date", counts, "; >=1500 chars, >=3 sources, >=3 FAQ; hubs/sitemaps/llms in sync")
         return
-    print("Built", len(items), "kampo long-form pages; hub, sitemaps and llms synced")
+    print("Built long-form pages", counts, "; hubs, sitemaps and llms synced")
 
 
 if __name__ == "__main__":
