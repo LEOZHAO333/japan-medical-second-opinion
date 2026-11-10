@@ -5,6 +5,7 @@ on:
       - 'content/page-rewrites/**'
       - 'scripts/build_page_rewrites.py'
       - 'content/kampo-articles/**'
+      - 'content/bnct-articles/**'
       - 'scripts/build_kampo_articles.py'
       - 'checkup/**'
       - 'bnct/**'
@@ -27,5 +28,5 @@ jobs:
           python-version: '3.11'
       - name: Rewritten pages match reviewed JSON, no placeholders
         run: python3 scripts/build_page_rewrites.py --check
-      - name: Kampo long-form pages (051+) match content/kampo-articles, S0 gate, hub/sitemaps/llms in sync
+      - name: Kampo and BNCT long-form pages (051+) match content/*-articles, S0 gate, hub/sitemaps/llms in sync
         run: python3 scripts/build_kampo_articles.py --check

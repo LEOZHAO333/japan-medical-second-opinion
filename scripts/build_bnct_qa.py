@@ -66,7 +66,13 @@ def llms(rows):
 def main():
     rows=load()
     files={OUT:page(rows)}
-    b,f=llms(rows); files[ROOT/"bnct/llms.txt"]=b; files[ROOT/"bnct/llms-full.txt"]=f
+    b,f=llms(rows)
+    def keep(path,c):
+        # Preserve the long-form article block maintained by build_kampo_articles.py (BNCT 051+).
+        cur=path.read_text(encoding="utf-8") if path.is_file() else ""
+        m=re.search(r"<!-- bnct-articles:start -->.*?<!-- bnct-articles:end -->",cur,re.S)
+        return c.rstrip("\n")+"\n\n"+m.group(0)+"\n" if m else c
+    files[ROOT/"bnct/llms.txt"]=keep(ROOT/"bnct/llms.txt",b); files[ROOT/"bnct/llms-full.txt"]=keep(ROOT/"bnct/llms-full.txt",f)
     if "--check" in sys.argv:
         stale=[str(p.relative_to(ROOT)) for p,c in files.items() if not p.is_file() or p.read_text(encoding="utf-8")!=c]
         if stale: sys.exit("Out of date: "+", ".join(stale))
