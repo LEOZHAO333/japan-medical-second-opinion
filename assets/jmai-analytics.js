@@ -33,9 +33,11 @@
     const value = String(raw || "").toLowerCase().trim();
     const host = hostOf(referrer);
     if (["facebook", "fb"].includes(value) || /(^|\.)facebook\.com$/.test(host)) return "facebook";
+    if (value === "zhihu" || /(^|\.)zhihu\.com$/.test(host)) return "zhihu";
+    if (value === "weibo" || /(^|\.)weibo\.com$/.test(host) || host === "weibo.cn") return "weibo";
     if (["x", "twitter"].includes(value) || /(^|\.)(x|twitter)\.com$/.test(host) || host === "t.co") return "x";
     if (value === "threads" || /(^|\.)threads\.(net|com)$/.test(host)) return "threads";
-    if (["wechat_official", "mp"].includes(value)) return "wechat_official";
+    if (["wechat_official", "mp"].includes(value) || host === "mp.weixin.qq.com") return "wechat_official";
     if (["wechat", "weixin", "wechat_group"].includes(value) || /(^|\.)weixin\.qq\.com$/.test(host)) return "wechat";
     if (["friend", "buddy", "challenge", "challenge_done", "return"].includes(value)) return "friend_referral";
     if (aiSource(value) || (!value && aiSource(host))) return "ai_assistant";
