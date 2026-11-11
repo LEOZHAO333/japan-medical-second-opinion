@@ -1,0 +1,5 @@
+# Explicit publication approval list. Do not include drafts, HOLD/noindex or private pages.
+# Add new approved URLs through reviewed PRs alongside the published HTML change.
+https://www.japanmedai.com/checkup/
+https://www.japanmedai.com/bnct/
+https://www.japanmedai.com/ips/
