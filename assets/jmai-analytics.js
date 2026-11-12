@@ -229,7 +229,7 @@
   function contactAnalytics() {
     try {
       const isSecondOpinion = location.pathname.indexOf("/second-opinion") === 0;
-      return JMAIAnalytics.create({
+      return window.JMAIAnalytics.create({
         table: isSecondOpinion ? "jmai_second_opinion_events" : "jmai_site_events",
         scope: isSecondOpinion ? "second_opinion" : "site"
       });
@@ -363,10 +363,20 @@
     });
   }
 
+  function trackPublicArticleView() {
+    // Existing RLS permits landing_view. For numbered, already-public educational
+    // articles this records a page-view denominator, not a clinical inquiry.
+    // Do not track unnumbered service/tools pages, drafts, or patient content.
+    if (!/^\/(?:bnct|checkup|ips)\/\d{3}\/$/.test(location.pathname)) return;
+    const a = contactAnalytics();
+    if (a) a.trackOnce("landing_view", {}, "numbered_article_view");
+  }
+
   function init() {
     patchBranding();
     patchContacts();
     bindAttributionEvents();
+    trackPublicArticleView();
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
