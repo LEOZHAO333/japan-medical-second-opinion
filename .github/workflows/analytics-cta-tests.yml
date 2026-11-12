@@ -1,0 +1,30 @@
+name: Analytics CTA regression checks
+
+on:
+  pull_request:
+    paths:
+      - 'assets/jmai-analytics.js'
+      - 'tests/jmai-analytics-cta.test.cjs'
+      - '.github/workflows/analytics-cta-tests.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'assets/jmai-analytics.js'
+      - 'tests/jmai-analytics-cta.test.cjs'
+      - '.github/workflows/analytics-cta-tests.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  offline-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node --test tests/jmai-analytics-cta.test.cjs
