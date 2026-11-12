@@ -382,11 +382,13 @@
     var link = event.target && event.target.closest ? event.target.closest("a") : null;
     if (!link) return;
     var annotated = link.hasAttribute && link.hasAttribute("data-jmai-track");
-    var a2Primary = !!(link.closest &&
-      link.closest(".a2Module") &&
-      link.origin === window.location.origin &&
-      link.pathname === "/tools/second-opinion-records/");
-    if (!annotated && !a2Primary) return;
+    var isInternal = link.origin === window.location.origin;
+    // Audit 2026-11-12: some approved article CTAs have no annotation.
+    // Only record fixed destination categories; never send link text, query or form input.
+    var isServiceCTA = isInternal && link.pathname === "/second-opinion/";
+    var isRecordsCTA = isInternal && link.pathname === "/tools/second-opinion-records/";
+    var a2Primary = !!(link.closest && link.closest(".a2Module") && isRecordsCTA);
+    if (!annotated && !isServiceCTA && !isRecordsCTA) return;
     try {
       var tracker = window.JMAIAnalytics && window.JMAIAnalytics.create({
         table: "jmai_site_events",
@@ -395,8 +397,8 @@
       });
       if (!tracker) return;
       tracker.track("internal_link_click", {
-        kind: link.getAttribute("data-jmai-track") || (a2Primary ? "second_opinion_records" : "internal"),
-        cta_id: link.getAttribute("data-jmai-id") || (a2Primary ? "a2_records_primary" : "internal_link"),
+        kind: link.getAttribute("data-jmai-track") || (isServiceCTA ? "second_opinion_service" : "second_opinion_records"),
+        cta_id: link.getAttribute("data-jmai-id") || (a2Primary ? "a2_records_primary" : isServiceCTA ? "service_link" : "records_link"),
         cta_position: link.getAttribute("data-jmai-position") || (a2Primary ? "article_footer" : "body")
       });
     } catch (_) {}
