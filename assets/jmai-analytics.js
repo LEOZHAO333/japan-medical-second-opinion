@@ -229,7 +229,7 @@
   function contactAnalytics() {
     try {
       const isSecondOpinion = location.pathname.indexOf("/second-opinion") === 0;
-      return JMAIAnalytics.create({
+      return window.JMAIAnalytics.create({
         table: isSecondOpinion ? "jmai_second_opinion_events" : "jmai_site_events",
         scope: isSecondOpinion ? "second_opinion" : "site"
       });
