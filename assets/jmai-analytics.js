@@ -56,9 +56,12 @@
     const scope = options.scope || options.table;
     const params = new URLSearchParams(w.location.search);
     const referrer = w.document.referrer || "";
-    const sidKey = options.sessionKey || "jmai_sid_" + scope + "_v1";
-    const activityKey = "jmai_activity_" + scope + "_v2";
-    const attributionKey = "jmai_attr_" + scope + "_v1";
+    // Use one anonymous session/attribution across main-site and second-opinion pages.
+    // This permits aggregate funnel analysis without collecting identity or medical data.
+    // V3 keys deliberately start a fresh baseline; historical scoped sessions are unchanged.
+    const sidKey = options.sessionKey || "jmai_sid_global_v3";
+    const activityKey = "jmai_activity_global_v3";
+    const attributionKey = "jmai_attr_global_v3";
     if (params.get("jmai_qa") === "1") store("jmai_qa_v1", "1");
     if (params.get("jmai_qa") === "0") store("jmai_qa_v1", "0");
     const hostname = w.location.hostname.toLowerCase();
