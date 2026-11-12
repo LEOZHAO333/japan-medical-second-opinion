@@ -15,6 +15,7 @@ function browser(storage, pathname, options = {}) {
     referrer: options.referrer || '',
     readyState: 'loading',
     documentElement: { lang: 'zh-CN' },
+    querySelectorAll() { return []; },
     addEventListener(type, fn) {
       if (!listeners.has(type)) listeners.set(type, []);
       listeners.get(type).push(fn);
@@ -45,6 +46,10 @@ function browser(storage, pathname, options = {}) {
   vm.runInNewContext(script, context, { filename: 'jmai-analytics.js' });
   return {
     sent, w,
+    async init() {
+      for (const listener of listeners.get('DOMContentLoaded') || []) listener();
+      await new Promise(setImmediate);
+    },
     async click(pathname, attrs = {}) {
       const link = {
         origin: location.origin, pathname,
@@ -106,6 +111,33 @@ test('QA and preview traffic cannot write production events', async () => {
   const preview = browser(new Map(), '/', { hostname: 'preview.example.com' });
   await qa.click('/second-opinion/');
   await preview.click('/second-opinion/');
+  assert.equal(qa.sent.length, 0);
+  assert.equal(preview.sent.length, 0);
+});
+
+test('numbered public educational articles record one anonymous page view', async () => {
+  for (const pathname of ['/bnct/024/', '/checkup/006/', '/ips/031/']) {
+    const b = browser(new Map(), pathname);
+    await b.init();
+    assert.equal(b.sent.length, 1, pathname);
+    assert.equal(b.sent[0].event_name, 'landing_view');
+    assert.equal(b.sent[0].page_path, pathname);
+  }
+});
+
+test('hubs, service, drafts and other pages do not receive additional view events', async () => {
+  for (const pathname of ['/', '/bnct/', '/checkup/qa/', '/ips/', '/second-opinion/', '/tools/second-opinion-records/', '/drafts/004/', '/bnct/patient-001/']) {
+    const b = browser(new Map(), pathname);
+    await b.init();
+    assert.equal(b.sent.length, 0, pathname);
+  }
+});
+
+test('numbered article QA and preview visits are excluded', async () => {
+  const qa = browser(new Map(), '/bnct/024/', { search: '?jmai_qa=1' });
+  const preview = browser(new Map(), '/bnct/024/', { hostname: 'preview.example.com' });
+  await qa.init();
+  await preview.init();
   assert.equal(qa.sent.length, 0);
   assert.equal(preview.sent.length, 0);
 });
