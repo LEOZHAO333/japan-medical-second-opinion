@@ -115,8 +115,8 @@ def render(meta, body, groups, lang):
     fq = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
         {"@type": "Question", "name": tr(f["q"]), "acceptedAnswer": {"@type": "Answer", "text": tr(f["a"])}} for f in meta["faqs"]]}
     a2 = ""
-    if sec in ("bnct", "second-opinion"):
-        a2 = module_html("bnct" if sec == "bnct" else "default")
+    if sec in ("bnct", "second-opinion", "ips"):
+        a2 = module_html(sec if sec in ("bnct", "ips") else "default")
         a2 = a2 if lang == "zh-CN" else hant(a2)
     note = "" if lang == "zh-CN" else '<p class="small">下方目錄中的文章為簡體中文頁面。</p>'
     dir_html = ('<section class="pillarDir"><h2>' + tr("全部相关文章目录") + f'（{total}）</h2>' + note
