@@ -24,3 +24,30 @@ def carry(out_path, html_):
         return html_
     m = _RX.search(cur)
     return insert(html_, m.group(0)) if m else html_
+
+
+HSTART, HEND = "<!--hreflang:start-->", "<!--hreflang:end-->"
+_HRX = re.compile(re.escape(HSTART) + ".*?" + re.escape(HEND), re.S)
+
+
+def insert_head(html_, block):
+    """Put an hreflang block (wrapped in HSTART/HEND) right before </head>, replacing any existing one."""
+    if HSTART in html_:
+        return _HRX.sub(lambda _: block, html_)
+    i = html_.find("</head>")
+    if i < 0:
+        raise ValueError("no </head>")
+    return html_[:i] + block + html_[i:]
+
+
+_carry_back = carry
+
+
+def carry(out_path, html_):  # noqa: F811  (extends the back-link carry with the hreflang block)
+    html_ = _carry_back(out_path, html_)
+    try:
+        cur = out_path.read_text(encoding="utf-8")
+    except FileNotFoundError:
+        return html_
+    m = _HRX.search(cur)
+    return insert_head(html_, m.group(0)) if m else html_

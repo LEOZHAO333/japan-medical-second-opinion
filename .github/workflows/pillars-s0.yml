@@ -38,3 +38,4 @@ jobs:
           python3 scripts/build_bnct_qa.py --check
           python3 scripts/build_kampo_qa.py --check
           python3 scripts/build_ips_qa.py --check
+          python3 scripts/build_hant_qa.py --check
