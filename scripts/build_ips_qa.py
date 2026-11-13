@@ -3,6 +3,7 @@
 Run: python3 scripts/build_ips_qa.py [--check]
 """
 import json, html, pathlib, re, sys
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent)); import pillar_links  # keeps pillar back-links
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 DATA=ROOT/"content/ips-qa/published.json"
 OUT=ROOT/"ips/qa/index.html"
@@ -65,7 +66,7 @@ def llms(rows):
     return "\n".join(brief)+"\n","\n".join(full)+"\n"
 def main():
     rows=load()
-    files={OUT:page(rows)}
+    files={OUT:pillar_links.carry(OUT,page(rows))}
     b,f=llms(rows); files[ROOT/"ips/llms.txt"]=b; files[ROOT/"ips/llms-full.txt"]=f
     if "--check" in sys.argv:
         stale=[str(p.relative_to(ROOT)) for p,c in files.items() if not p.is_file() or p.read_text(encoding="utf-8")!=c]
