@@ -6,7 +6,7 @@
 
 **核心方向：二次专家会诊｜BNCT硼中子治疗｜iPS再生医疗｜日本新药与疗法｜精密体检**
 
-- JapanMed AI 官网：https://japanmedai.com
+- JapanMed AI 官网：https://www.japanmedai.com
 - Notion 知识库：https://japanmedai.notion.site
 - 三层产品架构：[JAPANMED-AI-ARCHITECTURE.md](./JAPANMED-AI-ARCHITECTURE.md)
 - 内容索引（含二次会诊、BNCT、iPS、汉方的官网和 FAQ 导航）：[CONTENT-INDEX.md](./CONTENT-INDEX.md)
@@ -18,6 +18,14 @@
 - 医疗内容标准：[MEDICAL-CONTENT-STANDARD.md](./MEDICAL-CONTENT-STANDARD.md)
 - AI读取入口：[llms.txt](./llms.txt)
 - 扩展资料：[llms-full.txt](./llms-full.txt)
+
+## 核心主题指南（官网，简体 / 繁體）
+
+- 日本专家第二意见指南：https://www.japanmedai.com/second-opinion/guide/ ｜ https://www.japanmedai.com/zh-hant/second-opinion-guide/
+- 日本BNCT评估指南：https://www.japanmedai.com/bnct/guide/ ｜ https://www.japanmedai.com/zh-hant/bnct-guide/
+- 日本iPS再生医疗指南：https://www.japanmedai.com/ips/guide/ ｜ https://www.japanmedai.com/zh-hant/ips-guide/
+- 日本汉方用药指南：https://www.japanmedai.com/kampo/guide/ ｜ https://www.japanmedai.com/zh-hant/kampo-guide/
+- 100问：BNCT https://www.japanmedai.com/bnct/qa/ ｜ 癌症第二意见 https://www.japanmedai.com/checkup/qa/ ｜ iPS https://www.japanmedai.com/ips/qa/（繁體版见 /zh-hant/bnct-qa/、/zh-hant/checkup-qa/、/zh-hant/ips-qa/）
 
 ## 知识库导航
 
