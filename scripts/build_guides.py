@@ -9,6 +9,7 @@ verified date present, no internal/workflow words, related links resolve to repo
 import html, json, pathlib, re, sys
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from expert_opinion_module import module_html
+import pillar_links  # keeps pillar back-links
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 SITE = "https://www.japanmedai.com"
 SRC = ROOT / "content/guide"
@@ -143,6 +144,7 @@ def main():
         html_, desc = render(meta, body)
         items.append((meta, desc))
         out = ROOT / "guide" / meta["id"] / "index.html"
+        html_ = pillar_links.carry(out, html_)
         if check:
             if not out.is_file() or out.read_text(encoding="utf-8") != html_:
                 stale.append(str(out.relative_to(ROOT)))
