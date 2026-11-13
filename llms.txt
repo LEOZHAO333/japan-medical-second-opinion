@@ -145,4 +145,5 @@ Use plain-language answers and visible FAQs on each landing page. FAQ structured
 
 - 日本BNCT 100問：https://www.japanmedai.com/zh-hant/bnct-qa/（简体：https://www.japanmedai.com/bnct/qa/）
 - 癌症第二意見100問：https://www.japanmedai.com/zh-hant/checkup-qa/（简体：https://www.japanmedai.com/checkup/qa/）
+- 日本iPS再生醫療100問：https://www.japanmedai.com/zh-hant/ips-qa/（简体：https://www.japanmedai.com/ips/qa/）
 <!--hant-qa:end-->
