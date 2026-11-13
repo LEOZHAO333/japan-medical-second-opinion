@@ -16,6 +16,7 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 PAGES = [  # simplified path, traditional path, short title for link lists
     ("/bnct/qa/", "/zh-hant/bnct-qa/", "日本BNCT 100問"),
     ("/checkup/qa/", "/zh-hant/checkup-qa/", "癌症第二意見100問"),
+    ("/ips/qa/", "/zh-hant/ips-qa/", "日本iPS再生醫療100問"),
 ]
 # links inside the converted page that have a Traditional twin
 TWIN = {"/bnct/guide/": "/zh-hant/bnct-guide/", "/second-opinion/guide/": "/zh-hant/second-opinion-guide/",

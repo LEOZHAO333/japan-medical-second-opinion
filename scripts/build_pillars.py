@@ -143,7 +143,7 @@ def render(meta, body, groups, lang):
          '</article></main><footer class="footer"><div class="wrap"><span class="footerBrand">JapanMedAI · ' + e(tr("文腾株式会社")) + ' Bunto Co., Ltd.</span></div></footer><script src="/assets/jmai-analytics.js"></script></body></html>']
     s = "".join(h)
     if lang != "zh-CN":  # Traditional twins of the 100-question pages (scripts/build_hant_qa.py)
-        for zs, zt in (("/bnct/qa/", "/zh-hant/bnct-qa/"), ("/checkup/qa/", "/zh-hant/checkup-qa/")):
+        for zs, zt in (("/bnct/qa/", "/zh-hant/bnct-qa/"), ("/checkup/qa/", "/zh-hant/checkup-qa/"), ("/ips/qa/", "/zh-hant/ips-qa/")):
             s = s.replace(f'href="{zs}"', f'href="{zt}"')
     return s + "\n"
 
