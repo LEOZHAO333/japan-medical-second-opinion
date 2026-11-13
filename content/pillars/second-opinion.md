@@ -10,25 +10,74 @@
  "published": "2026-11-13",
  "verified": "2026-11-13",
  "sources": [
-  {"label": "日本国立癌症研究中心 癌症信息服务：第二意见（セカンドオピニオン）的说明", "url": "https://ganjoho.jp/public/dia_tre/dia_tre_diagnosis/second_opinion.html"},
-  {"label": "日本国立癌症研究中心中央医院：第二意见门诊（面对面）说明", "url": "https://www.ncc.go.jp/jp/ncch/d001/secondopinion/taimen/index.html"},
-  {"label": "日本国立癌症研究中心中央医院：海外患者第二意见说明", "url": "https://www.ncc.go.jp/jp/ncch/international_medical_advanced_care/foreign_patients/second_opinion/index.html"},
-  {"label": "日本国立癌症研究中心 癌症信息服务：病理检查是什么", "url": "https://ganjoho.jp/public/dia_tre/inspection/pathology-test.html"},
-  {"label": "美国国家癌症研究所：如何与医生讨论治疗方案", "url": "https://www.cancer.gov/about-cancer/coping/adjusting-to-cancer/talking-with-doctors"}
+  {
+   "label": "日本国立癌症研究中心 癌症信息服务：第二意见（セカンドオピニオン）的说明",
+   "url": "https://ganjoho.jp/public/dia_tre/dia_tre_diagnosis/second_opinion.html"
+  },
+  {
+   "label": "日本国立癌症研究中心中央医院：第二意见门诊（面对面）说明",
+   "url": "https://www.ncc.go.jp/jp/ncch/d001/secondopinion/taimen/index.html"
+  },
+  {
+   "label": "日本国立癌症研究中心中央医院：海外患者第二意见说明",
+   "url": "https://www.ncc.go.jp/jp/ncch/international_medical_advanced_care/foreign_patients/second_opinion/index.html"
+  },
+  {
+   "label": "日本国立癌症研究中心 癌症信息服务：病理检查是什么",
+   "url": "https://ganjoho.jp/public/dia_tre/inspection/pathology-test.html"
+  },
+  {
+   "label": "美国国家癌症研究所：如何与医生讨论治疗方案",
+   "url": "https://www.cancer.gov/about-cancer/coping/adjusting-to-cancer/talking-with-doctors"
+  }
  ],
  "faqs": [
-  {"q": "第二意见会不会得罪现在的主治医生？", "a": "在日本，第二意见是常规的医疗流程，很多医院设有专门门诊。把书面意见带回去与主治医生讨论，通常有助于更好地做决定，而不是否定原来的医生。"},
-  {"q": "第二意见是不是等于转去日本治疗？", "a": "不是。第二意见是基于资料的决策参考，不是转院，也不保证改变原方案。是否需要赴日进一步评估或治疗，是之后另外的决定。"},
-  {"q": "多久能拿到书面意见？", "a": "资料齐全后10～15个工作日出具书面意见。资料缺失或需要补充检查时，时间会相应延长。"},
-  {"q": "费用是多少？", "a": "15,000元/次，含日本医院会诊费，不另收。"},
-  {"q": "只有检查报告、没有原始影像可以吗？", "a": "可以先提交报告做初步整理，但很多判断依赖原始DICOM影像和病理资料。缺少关键资料时，书面意见可能只能给出有限的结论。"}
+  {
+   "q": "第二意见会不会得罪现在的主治医生？",
+   "a": "在日本，第二意见是常规的医疗流程，很多医院设有专门门诊。把书面意见带回去与主治医生讨论，通常有助于更好地做决定，而不是否定原来的医生。"
+  },
+  {
+   "q": "第二意见是不是等于转去日本治疗？",
+   "a": "不是。第二意见是基于资料的决策参考，不是转院，也不保证改变原方案。是否需要赴日进一步评估或治疗，是之后另外的决定。"
+  },
+  {
+   "q": "多久能拿到书面意见？",
+   "a": "资料齐全后10～15个工作日出具书面意见。资料缺失或需要补充检查时，时间会相应延长。"
+  },
+  {
+   "q": "费用是多少？",
+   "a": "15,000元/次，含日本医院会诊费，不另收。"
+  },
+  {
+   "q": "只有检查报告、没有原始影像可以吗？",
+   "a": "可以先提交报告做初步整理，但很多判断依赖原始DICOM影像和病理资料。缺少关键资料时，书面意见可能只能给出有限的结论。"
+  }
  ],
  "directory": [
-  {"title": "第二意见专题（按问题查找）", "match": "^/second-opinion/topics/"},
-  {"title": "第二意见入门与癌症第二意见", "match": "^/second-opinion/(cancer/)?$"},
-  {"title": "癌症第二意见100问与资料准备", "match": "^/checkup/(qa/|0[0-9][0-9]/)"},
-  {"title": "日本医院与海外患者", "match": "^/hospitals/"},
-  {"title": "患者常见问题", "match": "^/patient-questions/"}
+  {
+   "title": "第二意见专题（按问题查找）",
+   "match": "^/second-opinion/topics/"
+  },
+  {
+   "title": "第二意见与癌症治疗决策解读",
+   "match": "^/guide/0(0[1-9]|1[0-9]|2[1-9]|48)/$"
+  },
+  {
+   "title": "第二意见入门与癌症第二意见",
+   "match": "^/second-opinion/(cancer/)?$"
+  },
+  {
+   "title": "癌症第二意见100问与资料准备",
+   "match": "^/checkup/(qa/|0[0-9][0-9]/)"
+  },
+  {
+   "title": "日本医院与海外患者",
+   "match": "^/hospitals/"
+  },
+  {
+   "title": "患者常见问题",
+   "match": "^/patient-questions/"
+  }
  ]
 }
 -->

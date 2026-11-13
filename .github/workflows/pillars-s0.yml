@@ -8,6 +8,7 @@ on:
       - 'kampo/**'
       - 'second-opinion/**'
       - 'checkup/**'
+      - 'ips/**'
       - 'hospitals/**'
       - 'patient-questions/**'
       - 'zh-hant/**'
@@ -36,3 +37,4 @@ jobs:
           python3 scripts/build_so_topics.py --check
           python3 scripts/build_bnct_qa.py --check
           python3 scripts/build_kampo_qa.py --check
+          python3 scripts/build_ips_qa.py --check

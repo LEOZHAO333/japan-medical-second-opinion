@@ -115,8 +115,8 @@ def render(meta, body, groups, lang):
     fq = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
         {"@type": "Question", "name": tr(f["q"]), "acceptedAnswer": {"@type": "Answer", "text": tr(f["a"])}} for f in meta["faqs"]]}
     a2 = ""
-    if sec in ("bnct", "second-opinion"):
-        a2 = module_html("bnct" if sec == "bnct" else "default")
+    if sec in ("bnct", "second-opinion", "ips"):
+        a2 = module_html(sec if sec in ("bnct", "ips") else "default")
         a2 = a2 if lang == "zh-CN" else hant(a2)
     note = "" if lang == "zh-CN" else '<p class="small">下方目錄中的文章為簡體中文頁面。</p>'
     dir_html = ('<section class="pillarDir"><h2>' + tr("全部相关文章目录") + f'（{total}）</h2>' + note
@@ -126,7 +126,7 @@ def render(meta, body, groups, lang):
     h = ['<!doctype html><html lang="' + ("zh-CN" if lang == "zh-CN" else "zh-Hant") + '"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">',
          f'<title>{T}</title><meta name="description" content="{e(desc)}"><meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large"><link rel="canonical" href="{url}">',
          f'<link rel="alternate" hreflang="zh-CN" href="{alt["zh-CN"]}"><link rel="alternate" hreflang="zh-TW" href="{alt["zh-TW"]}"><link rel="alternate" hreflang="x-default" href="{alt["zh-CN"]}">',
-         f'<meta property="og:type" content="article"><meta property="og:site_name" content="JapanMedAI"><meta property="og:title" content="{T}"><meta property="og:description" content="{e(desc)}"><meta property="og:url" content="{url}"><meta name="twitter:card" content="summary">',
+         f'<meta property="og:type" content="article"><meta property="og:site_name" content="JapanMedAI"><meta property="og:title" content="{T}"><meta property="og:description" content="{e(desc)}"><meta property="og:url" content="{url}"><meta property="og:locale" content="{"zh_CN" if lang == "zh-CN" else "zh_TW"}"><meta name="twitter:card" content="summary">',
          '<link rel="stylesheet" href="/assets/jmai.css">',
          '<style>main.article{max-width:860px;margin:0 auto;padding:0 16px 48px;box-sizing:border-box}.guide p,.guide li{line-height:1.9}.guide h2{margin-top:2em}.guide .meta{color:#5b6b7a;font-size:14px}.pillarDir h3{margin-top:1.4em}.pillarDir li{line-height:1.7}.langSwitch{font-size:14px}</style>',
          ld(art), ld(bc), ld(fq), "</head><body>",
