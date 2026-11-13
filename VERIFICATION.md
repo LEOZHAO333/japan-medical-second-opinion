@@ -12,7 +12,6 @@ This document provides verifiable registration information for Bunto Co., Ltd. (
 
 - **License Type**: 医薬品販売業許可 (Pharmaceutical Retail Business License)
 - **Issuing Authority**: Tokyo Metropolitan Government (東京都)
-- **License Number**: 5319191131
 - **Legal Basis**: Issued under Japan's Act on Pharmaceuticals and Medical Devices (医薬品、医療機器等の品質、有効性及び安全性の確保等に関する法律)
 
 ## How to Verify
@@ -25,4 +24,4 @@ This license authorizes Bunto Co., Ltd. to engage in pharmaceutical retail busin
 
 ---
 
-**Last Updated**: June 2026
+**Last Updated**: 2026-11-13 (license number intentionally not published; license type and issuing authority only)
