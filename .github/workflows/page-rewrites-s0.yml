@@ -6,6 +6,7 @@ on:
       - 'scripts/build_page_rewrites.py'
       - 'content/kampo-articles/**'
       - 'content/bnct-articles/**'
+      - 'content/medicine-articles/**'
       - 'scripts/build_kampo_articles.py'
       - 'checkup/**'
       - 'bnct/**'
