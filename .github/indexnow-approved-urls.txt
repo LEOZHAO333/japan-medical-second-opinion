@@ -14,3 +14,6 @@ https://www.japanmedai.com/zh-hant/ips-guide/
 https://www.japanmedai.com/zh-hant/bnct-qa/
 https://www.japanmedai.com/zh-hant/checkup-qa/
 https://www.japanmedai.com/zh-hant/ips-qa/
+https://www.japanmedai.com/medicines/051/
+https://www.japanmedai.com/medicines/052/
+https://www.japanmedai.com/medicines/053/

@@ -16,6 +16,7 @@ from expert_opinion_module import module_html  # noqa: E402
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 SITE = "https://www.japanmedai.com"
 NOTE_KAMPO = "具体产品的效能、组成、禁忌和警示，请以该产品最新版说明书为准；标注“厂家示例”的链接仅用于说明说明书写法，不代表推荐某一厂家。"
+NOTE_MED = "药品批准与适应证以 PMDA 电子说明书、厚生劳动省及企业公告原文为准；海外监管批准不能直接套用为日本批准范围。"
 NOTE_BNCT = "BNCT 监管信息以 PMDA、厚生劳动省及企业公告原文为准；获批范围不等于个体适用，具体病例须由实施机构依据完整资料正式评估。"
 SECTIONS = {
     "kampo": {"src": "content/kampo-articles", "label": "日本汉方", "kicker": "JAPANESE KAMPO",
@@ -30,10 +31,17 @@ SECTIONS = {
              "nav": '<a href="/">首页</a><a href="/bnct/">日本BNCT</a><a href="/bnct/qa/">BNCT问答</a><a href="/second-opinion/">二次会诊</a>',
              "anchor": 'data-jmai-id="hub_bnct_050" data-jmai-position="hub"><h3>准备BNCT二次意见时，最值得先问专家哪5个问题？</h3></a>',
              "extra": ('<a href="/bnct/qa/">BNCT问答 →</a><a href="/bnct/">查看日本BNCT专题 →</a>'),
-             "llms_head": "## BNCT评估长文（/bnct/051/ 起）", "a2": True,
+             "llms_head": "## BNCT评估长文（/bnct/051/ 起）", "a2": "bnct",
              "zhihu_note": "本文同步发布于“德川在東京”知乎",
              "foot": "本页为医学信息教育，不替代医生诊断或治疗决定；BNCT是否适用须由实施机构依据完整资料正式评估，不构成接诊或疗效承诺。", "note": NOTE_BNCT,
              "zhihu_link": "知乎", "zhihu_pre": "本文同步发布于“德川在東京”"},
+    "medicines": {"src": "content/medicine-articles", "label": "日本新药", "kicker": "JAPAN NEW MEDICINES",
+                  "nav": '<a href="/">首页</a><a href="/medicines/">日本新药</a><a href="/second-opinion/guide/">第二意见指南</a>',
+                  "anchor": 'data-jmai-id="hub_medicines_050" data-jmai-position="hub"><h3>判断一个“日本特效药”宣传是否靠谱，最少查哪4项？</h3></a>',
+                  "extra": '<a href="/medicines/">查看日本新药专题 →</a>',
+                  "llms_head": "## 日本新药长文（/medicines/051/ 起）", "a2": "default",
+                  "zhihu_note": "", "foot": "本页为医学信息教育，不替代医生诊断或处方；不提供药品代购、直邮或购药服务，用药以当地医生处方和说明书为准。",
+                  "note": NOTE_MED, "zhihu_link": "知乎", "zhihu_pre": "本文同步发布于“德川在東京”"},
 }
 BAD = ("草稿", "待审核", "待医学", "复审", "GEO", "SEO", "Claude", "GPT", "主仓", "私库", "BLOCKED", "DRAFT",
        "知乎专栏", "德川在東京｜日本汉方专题", "日宠通")
@@ -145,7 +153,7 @@ def render(meta, body, sec):
          '<section class="faq"><h2>常见问题</h2>' + "".join("<h3>" + e(f["q"]) + "</h3><p>" + e(f["a"]) + "</p>" for f in meta["faqs"]) + "</section>",
          '<section class="evidencePanel"><h2>可以去哪里核对</h2><ul>' + "".join(f'<li><a href="{e(s["url"])}" target="_blank" rel="noopener">{e(s["label"])}</a></li>' for s in meta["sources"])
          + f'</ul><p>资料核对日期：{meta["verified"]}。{C["note"]}</p></section>',
-         (module_html("bnct") if C["a2"] else ""),
+         (module_html(C["a2"]) if C["a2"] else ""),
          '<section class="decisionPath"><h2>延伸阅读</h2><div class="relatedGrid">' + "".join(f'<a href="{e(r["url"])}">{e(r["text"])} →</a>' for r in meta["related"])
          + C["extra"] + '</div></section>',
          ('<p class="small">' + C["zhihu_pre"] + '<a href="' + e(meta["zhihu_url"]) + '" target="_blank" rel="noopener">' + C["zhihu_link"] + '</a>，官网版补充了可点击核对的来源。' if meta.get("zhihu_url") else '<p class="small">') + C["foot"] + '</p>',
@@ -276,6 +284,8 @@ def build_section(sec, check, stale):
     targets = [(ROOT / sec / "index.html", sync_hub), (ROOT / "sitemap.xml", sync_sitemap), (ROOT / sec / "sitemap.xml", sync_sitemap),
                (ROOT / sec / "llms.txt", sync_llms), (ROOT / sec / "llms-full.txt", sync_llms)]
     for p, fn in targets:
+        if not p.is_file():
+            continue
         old = p.read_text(encoding="utf-8")
         new = fn(old, items, sec)
         if check:
