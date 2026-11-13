@@ -133,7 +133,7 @@ def render(meta, body, groups, lang):
          f'<div class="top"><div class="wrap nav navHome"><a class="brand" href="{nav_home}">JapanMed AI<small>{e(tr("日本专家医疗决策平台"))}</small></a><nav class="navMenu"><a href="{nav_home}">{e(tr("首页"))}</a><a href="/second-opinion/guide/">{e(tr("第二意见指南"))}</a><a href="/bnct/guide/">{e(tr("BNCT评估指南"))}</a><a href="/kampo/guide/">{e(tr("汉方用药指南"))}</a></nav></div></div>',
          f'<main class="article guide"><div class="crumb"><a href="{nav_home}">{e(tr("首页"))}</a> › <a href="{hub}">{e(tr(meta["label"]))}</a> › {e(tr("指南"))}</div>',
          '<p class="langSwitch">' + (f'<a href="{meta["path_hant"]}">繁體中文</a>' if lang == "zh-CN" else f'<a href="{meta["path"]}">简体中文</a>') + "</p>",
-         f'<article><header><span class="kicker">PILLAR GUIDE</span><h1>{e(title)}</h1><p class="meta">{e(tr("JapanMed AI 编辑部"))}｜{e(tr("发布"))}：{meta["published"]}｜{e(tr("资料核对"))}：{meta["verified"]}｜{e(tr("编辑与医学合规审核，未经执业医师逐篇签署"))}</p></header>',
+         f'<article><header><span class="kicker">PILLAR GUIDE</span><h1>{e(title)}</h1><p class="meta">{e(tr("JapanMed AI 编辑部"))}｜{e(tr("发布"))}：{meta["published"]}｜{e(tr("资料核对"))}：{meta["verified"]}｜' + (e(tr("日本药剂师审核")) + "：" + meta["pharmacist_reviewed"] + "｜" if meta.get("pharmacist_reviewed") else "") + f'{e(tr("编辑与医学合规审核，未经执业医师逐篇签署"))}</p></header>',
          body_html(tr(body)),
          '<section class="faq"><h2>' + e(tr("常见问题")) + "</h2>" + "".join("<h3>" + e(tr(f["q"])) + "</h3><p>" + e(tr(f["a"])) + "</p>" for f in meta["faqs"]) + "</section>",
          '<section class="evidencePanel"><h2>' + e(tr("可以去哪里核对")) + "</h2><ul>" + "".join(f'<li><a href="{e(s["url"])}" target="_blank" rel="noopener">{e(tr(s["label"]))}</a></li>' for s in meta["sources"])
