@@ -1,0 +1,38 @@
+name: Pillar Guides S0 Gate
+on:
+  pull_request:
+    paths:
+      - 'content/**'
+      - 'scripts/**'
+      - 'bnct/**'
+      - 'kampo/**'
+      - 'second-opinion/**'
+      - 'checkup/**'
+      - 'hospitals/**'
+      - 'patient-questions/**'
+      - 'zh-hant/**'
+      - 'index.html'
+      - 'sitemap.xml'
+      - 'llms.txt'
+      - '.github/workflows/pillars-s0.yml'
+  workflow_dispatch:
+jobs:
+  pillars-s0:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install opencc-python-reimplemented==0.1.7
+      - name: 3 pillar guides (zh-CN + zh-Hant) match content/pillars, directories, back-links, hubs, sitemaps, llms in sync
+        run: python3 scripts/build_pillars.py --check
+      - name: Other generators keep the pillar back-links
+        run: |
+          python3 scripts/build_page_rewrites.py --check
+          python3 scripts/build_kampo_articles.py --check
+          python3 scripts/build_so_topics.py --check
+          python3 scripts/build_bnct_qa.py --check
+          python3 scripts/build_kampo_qa.py --check

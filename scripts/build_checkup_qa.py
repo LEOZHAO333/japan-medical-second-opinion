@@ -3,7 +3,8 @@
 Run: python3 scripts/build_checkup_qa.py
 Outputs: checkup/qa/index.html and two generated checkup/llms text files.
 """
-import json, html, pathlib
+import json, html, pathlib, sys
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent)); import pillar_links  # keeps pillar back-links
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 DATA=ROOT/"content/checkup-qa/first-release-25.json"
 OUT=ROOT/"checkup/qa/index.html"
@@ -47,7 +48,7 @@ def render():
     '<footer class="footer"><div class="wrap"><span class="footerBrand">JapanMedAI · 文腾株式会社</span><br>内容用于医学信息教育与跨境医疗决策准备，不替代执业医疗团队诊疗。</div></footer>',
     '<script src="/assets/jmai-analytics.js"></script><script src="/assets/checkup-qa-feedback.js"></script></body></html>'])
     OUT.parent.mkdir(parents=True,exist_ok=True)
-    OUT.write_text("".join(out)+"\n",encoding="utf-8")
+    OUT.write_text(pillar_links.carry(OUT,"".join(out)+"\n"),encoding="utf-8")
     print("Generated",OUT.relative_to(ROOT),len(rows),"FAQ")
 
 def render_llms():

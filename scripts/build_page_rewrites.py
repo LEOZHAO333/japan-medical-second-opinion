@@ -7,6 +7,7 @@ import sys as _s, pathlib as _p
 _s.path.insert(0, str(_p.Path(__file__).resolve().parent))
 from expert_opinion_module import module_html
 import html, json, pathlib, re, sys
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent)); import pillar_links  # keeps pillar back-links
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 SITE="https://www.japanmedai.com"
 PLACEHOLDER=("这个问题的事实层面是什么","哪些条件会改变结论","优先决策参考")
@@ -58,7 +59,7 @@ def main():
             path=ROOT/cfg["section"]/p["id"]/"index.html"
             assert path.is_file(), path
             old=path.read_text(encoding="utf-8")
-            new=render(cfg,p,old) if not check else render(cfg,p,old)
+            new=pillar_links.carry(path,render(cfg,p,old))
             for r in p["related"]:
                 u=r["url"].split("#")[0]; assert (ROOT/u.lstrip("/")/"index.html").is_file(), u
             loc=f"<loc>{SITE}/{cfg['section']}/{p['id']}/</loc><lastmod>"

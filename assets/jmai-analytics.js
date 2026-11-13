@@ -58,9 +58,12 @@
     const scope = options.scope || options.table;
     const params = new URLSearchParams(w.location.search);
     const referrer = w.document.referrer || "";
-    const sidKey = options.sessionKey || "jmai_sid_" + scope + "_v1";
-    const activityKey = "jmai_activity_" + scope + "_v2";
-    const attributionKey = "jmai_attr_" + scope + "_v1";
+    // Use one anonymous session/attribution across main-site and second-opinion pages.
+    // This permits aggregate funnel analysis without collecting identity or medical data.
+    // V3 keys deliberately start a fresh baseline; historical scoped sessions are unchanged.
+    const sidKey = options.sessionKey || "jmai_sid_global_v3";
+    const activityKey = "jmai_activity_global_v3";
+    const attributionKey = "jmai_attr_global_v3";
     if (params.get("jmai_qa") === "1") store("jmai_qa_v1", "1");
     if (params.get("jmai_qa") === "0") store("jmai_qa_v1", "0");
     const hostname = w.location.hostname.toLowerCase();
@@ -228,7 +231,7 @@
   function contactAnalytics() {
     try {
       const isSecondOpinion = location.pathname.indexOf("/second-opinion") === 0;
-      return JMAIAnalytics.create({
+      return window.JMAIAnalytics.create({
         table: isSecondOpinion ? "jmai_second_opinion_events" : "jmai_site_events",
         scope: isSecondOpinion ? "second_opinion" : "site"
       });
@@ -362,10 +365,20 @@
     });
   }
 
+  function trackPublicArticleView() {
+    // Existing RLS permits landing_view. For numbered, already-public educational
+    // articles this records a page-view denominator, not a clinical inquiry.
+    // Do not track unnumbered service/tools pages, drafts, or patient content.
+    if (!/^\/(?:bnct|checkup|ips)\/\d{3}\/$/.test(location.pathname)) return;
+    const a = contactAnalytics();
+    if (a) a.trackOnce("landing_view", {}, "numbered_article_view");
+  }
+
   function init() {
     patchBranding();
     patchContacts();
     bindAttributionEvents();
+    trackPublicArticleView();
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
@@ -381,11 +394,13 @@
     var link = event.target && event.target.closest ? event.target.closest("a") : null;
     if (!link) return;
     var annotated = link.hasAttribute && link.hasAttribute("data-jmai-track");
-    var a2Primary = !!(link.closest &&
-      link.closest(".a2Module") &&
-      link.origin === window.location.origin &&
-      link.pathname === "/tools/second-opinion-records/");
-    if (!annotated && !a2Primary) return;
+    var isInternal = link.origin === window.location.origin;
+    // Audit 2026-11-12: some approved article CTAs have no annotation.
+    // Only record fixed destination categories; never send link text, query or form input.
+    var isServiceCTA = isInternal && link.pathname === "/second-opinion/";
+    var isRecordsCTA = isInternal && link.pathname === "/tools/second-opinion-records/";
+    var a2Primary = !!(link.closest && link.closest(".a2Module") && isRecordsCTA);
+    if (!annotated && !isServiceCTA && !isRecordsCTA) return;
     try {
       var tracker = window.JMAIAnalytics && window.JMAIAnalytics.create({
         table: "jmai_site_events",
@@ -394,8 +409,8 @@
       });
       if (!tracker) return;
       tracker.track("internal_link_click", {
-        kind: link.getAttribute("data-jmai-track") || (a2Primary ? "second_opinion_records" : "internal"),
-        cta_id: link.getAttribute("data-jmai-id") || (a2Primary ? "a2_records_primary" : "internal_link"),
+        kind: link.getAttribute("data-jmai-track") || (isServiceCTA ? "second_opinion_service" : "second_opinion_records"),
+        cta_id: link.getAttribute("data-jmai-id") || (a2Primary ? "a2_records_primary" : isServiceCTA ? "service_link" : "records_link"),
         cta_position: link.getAttribute("data-jmai-position") || (a2Primary ? "article_footer" : "body")
       });
     } catch (_) {}

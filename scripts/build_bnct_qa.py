@@ -3,6 +3,7 @@
 Run: python3 scripts/build_bnct_qa.py [--check]
 """
 import json, html, pathlib, re, sys
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent)); import pillar_links  # keeps pillar back-links
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 DATA=ROOT/"content/bnct-qa/published.json"
 OUT=ROOT/"bnct/qa/index.html"
@@ -65,7 +66,7 @@ def llms(rows):
     return "\n".join(brief)+"\n","\n".join(full)+"\n"
 def main():
     rows=load()
-    files={OUT:page(rows)}
+    files={OUT:pillar_links.carry(OUT,page(rows))}
     b,f=llms(rows)
     def keep(path,c):
         # Preserve the long-form article block maintained by build_kampo_articles.py (BNCT 051+).
