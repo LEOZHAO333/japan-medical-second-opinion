@@ -112,6 +112,8 @@ def gate(meta, body, path, sec):
         assert len(s["label"]) >= 10, (path.name, "source label too short", s["label"])
     assert len(meta["faqs"]) >= 3 and all(len(f["a"]) >= 20 for f in meta["faqs"]), (path.name, "FAQ")
     assert re.fullmatch(r"\d{4}-\d{2}-\d{2}", meta["verified"]), (path.name, "verified date")
+    if meta.get("pharmacist_reviewed"):  # only set after the team pharmacist actually reviewed this page (Founder 11/13: no public name)
+        assert re.fullmatch(r"\d{4}-\d{2}-\d{2}", meta["pharmacist_reviewed"]), (path.name, "pharmacist_reviewed date")
     ids = {p.stem for p in (ROOT / SECTIONS[sec]["src"]).glob("[0-9][0-9][0-9].md")}
     for r in meta["related"]:
         u = r["url"].split("#")[0].strip("/")
@@ -148,7 +150,7 @@ def render(meta, body, sec):
          ld(art), ld(bc), ld(fq), '</head><body>',
          '<div class="top"><div class="wrap nav navHome"><a class="brand" href="/">JapanMed AI<small>日本专家医疗决策平台</small></a><nav class="navMenu">' + C["nav"] + '</nav></div></div>',
          f'<main class="article guide"><div class="crumb"><a href="/">首页</a> › <a href="/{sec}/">{LABEL}</a> › 第{int(gid)}篇</div><article><header><span class="kicker">{C["kicker"]}</span><h1>{e(title)}</h1>',
-         f'<p class="meta">JapanMed AI 编辑部｜发布：{meta["published"]}｜资料核对：{meta["verified"]}｜编辑与医学合规审核，未经执业医师逐篇签署</p></header>',
+         f'<p class="meta">JapanMed AI 编辑部｜发布：{meta["published"]}｜资料核对：{meta["verified"]}｜' + (f'日本药剂师审核：{meta["pharmacist_reviewed"]}｜' if meta.get("pharmacist_reviewed") else "") + '编辑与医学合规审核，未经执业医师逐篇签署</p></header>',
          body_html(body),
          '<section class="faq"><h2>常见问题</h2>' + "".join("<h3>" + e(f["q"]) + "</h3><p>" + e(f["a"]) + "</p>" for f in meta["faqs"]) + "</section>",
          '<section class="evidencePanel"><h2>可以去哪里核对</h2><ul>' + "".join(f'<li><a href="{e(s["url"])}" target="_blank" rel="noopener">{e(s["label"])}</a></li>' for s in meta["sources"])
