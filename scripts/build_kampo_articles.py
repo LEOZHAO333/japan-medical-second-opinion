@@ -212,6 +212,44 @@ def sync_llms(text, items, sec):
     return text.rstrip("\n") + "\n\n" + block + "\n"
 
 
+HOME_START, HOME_END = "<!--home-focus:start-->", "<!--home-focus:end-->"
+HOME_FIXED = [
+    ("/second-opinion/topics/", "二次会诊专题（100篇）", "诊断、治疗方案与下一步决策：按问题查找日本专家二次会诊相关解读。"),
+    ("/hospitals/international-patient/", "海外患者申请日本医院：6步", "从资料预审、介绍状到接诊确认，先搞清流程再联系医院。"),
+    ("/bnct/", "日本BNCT评估长文", "复发头颈癌等情况下，BNCT评估前需要核对的病理、影像与既往治疗。"),
+    ("/kampo/", "日本汉方用药长文", "具体方剂、适用人群与安全边界：什么时候先就医，什么时候可以问药剂师。"),
+    ("/ips/qa/", "日本iPS再生医疗100问", "区分已获批治疗、临床试验与研究阶段。"),
+    ("/checkup/qa/", "癌症第二意见100问", "第二意见的准备、流程与常见误区。"),
+]
+
+
+def sync_home(text, latest):
+    block = (HOME_START + '<section class="guide" id="focus-content"><div class="wrap guidein"><div class="topics"><h2>重点内容</h2><dl>'
+             + "".join(f'<dt><a href="{u}" data-jmai-track="focus" data-jmai-id="focus_{fid}" data-jmai-position="home">{e(t)}</a></dt><dd>{e(d)}</dd>' for u, t, d, fid in ((u, t, d, u.strip("/").replace("/", "_")) for u, t, d in HOME_FIXED))
+             + '</dl></div><div class="questions"><h2>最近更新</h2><div class="qgroup"><ul>'
+             + "".join(f'<li><a href="/{s}/{m["id"]}/" data-jmai-track="focus" data-jmai-id="latest_{s}_{m["id"]}" data-jmai-position="home">{e(m["title"])}</a></li>' for s, m in latest)
+             + '</ul></div></div></div></section>' + HOME_END)
+    if HOME_START in text:
+        return re.sub(re.escape(HOME_START) + ".*?" + re.escape(HOME_END), lambda _: block, text, flags=re.S)
+    anchor = '<section class="cases" id="real-service-stories">'
+    assert anchor in text, "homepage anchor not found"
+    return text.replace(anchor, block + anchor, 1)
+
+
+def latest_items():
+    out = []
+    for sec in SECTIONS:
+        for f in (ROOT / SECTIONS[sec]["src"]).glob("[0-9][0-9][0-9].md"):
+            meta, _ = parse(f)
+            out.append((meta["published"], sec, meta))
+    out.sort(key=lambda x: (x[0], x[2]["id"]), reverse=True)
+    picks, per = [], {}
+    for _, sec, meta in out:
+        if per.get(sec, 0) < 3:
+            picks.append((sec, meta)); per[sec] = per.get(sec, 0) + 1
+    return picks[:6]
+
+
 def build_section(sec, check, stale):
     src = ROOT / SECTIONS[sec]["src"]
     items = []
@@ -248,6 +286,14 @@ def main():
     stale, counts = [], {}
     for sec in SECTIONS:
         counts[sec] = build_section(sec, check, stale)
+    home = ROOT / "index.html"
+    old = home.read_text(encoding="utf-8")
+    new = sync_home(old, latest_items())
+    if check:
+        if new != old:
+            stale.append("index.html")
+    elif new != old:
+        home.write_text(new, encoding="utf-8")
     if check:
         if stale:
             sys.exit("Out of date: " + ", ".join(stale))
