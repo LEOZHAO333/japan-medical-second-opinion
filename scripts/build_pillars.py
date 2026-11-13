@@ -142,6 +142,9 @@ def render(meta, body, groups, lang):
          '<p class="small">' + e(tr("本页为医学信息教育，不替代医生诊断、处方或治疗决定。")) + "</p>",
          '</article></main><footer class="footer"><div class="wrap"><span class="footerBrand">JapanMedAI · ' + e(tr("文腾株式会社")) + ' Bunto Co., Ltd.</span></div></footer><script src="/assets/jmai-analytics.js"></script></body></html>']
     s = "".join(h)
+    if lang != "zh-CN":  # Traditional twins of the 100-question pages (scripts/build_hant_qa.py)
+        for zs, zt in (("/bnct/qa/", "/zh-hant/bnct-qa/"), ("/checkup/qa/", "/zh-hant/checkup-qa/")):
+            s = s.replace(f'href="{zs}"', f'href="{zt}"')
     return s + "\n"
 
 

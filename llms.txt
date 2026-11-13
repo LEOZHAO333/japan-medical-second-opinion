@@ -139,3 +139,10 @@ Use plain-language answers and visible FAQs on each landing page. FAQ structured
 - 日本汉方用药指南：怎么看说明书、哪些成分要注意、什么时候先就医：https://www.japanmedai.com/kampo/guide/（繁體：https://www.japanmedai.com/zh-hant/kampo-guide/）
 - 日本专家第二意见指南：适用情况、资料准备、流程与常见误区：https://www.japanmedai.com/second-opinion/guide/（繁體：https://www.japanmedai.com/zh-hant/second-opinion-guide/）
 <!--pillars:end-->
+
+<!--hant-qa:start-->
+## 繁體中文問答
+
+- 日本BNCT 100問：https://www.japanmedai.com/zh-hant/bnct-qa/（简体：https://www.japanmedai.com/bnct/qa/）
+- 癌症第二意見100問：https://www.japanmedai.com/zh-hant/checkup-qa/（简体：https://www.japanmedai.com/checkup/qa/）
+<!--hant-qa:end-->
