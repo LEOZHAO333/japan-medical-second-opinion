@@ -12,6 +12,7 @@ from pathlib import Path
 import argparse
 import re
 import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent)); import pillar_links  # keeps pillar back-links
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "scripts/kampo_qa_sources"
@@ -94,7 +95,7 @@ def main():
         source_path = SOURCE / (theme + ".html")
         assert source_path.is_file(), source_path
         target = ROOT / "kampo/qa" / ("" if theme == "index" else theme) / "index.html"
-        content = render(theme, source_path.read_text(encoding="utf-8"))
+        content = pillar_links.carry(target, render(theme, source_path.read_text(encoding="utf-8")))
         if args.check:
             if not target.is_file() or target.read_text(encoding="utf-8") != content:
                 problems.append(str(target.relative_to(ROOT)))

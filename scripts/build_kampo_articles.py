@@ -8,6 +8,7 @@ no internal/workflow words, related links resolve. Also keeps /kampo/ hub cards 
 root and /kampo/ sitemaps, and /kampo/llms*.txt entries in sync (idempotent).
 """
 import html, json, pathlib, re, sys
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent)); import pillar_links  # keeps pillar back-links
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from expert_opinion_module import module_html  # noqa: E402
@@ -214,10 +215,10 @@ def sync_llms(text, items, sec):
 
 HOME_START, HOME_END = "<!--home-focus:start-->", "<!--home-focus:end-->"
 HOME_FIXED = [
-    ("/second-opinion/topics/", "二次会诊专题（100篇）", "诊断、治疗方案与下一步决策：按问题查找日本专家二次会诊相关解读。"),
+    ("/second-opinion/guide/", "日本专家第二意见指南", "适用情况、资料准备、流程与常见误区，并汇总全部第二意见相关文章。"),
     ("/hospitals/international-patient/", "海外患者申请日本医院：6步", "从资料预审、介绍状到接诊确认，先搞清流程再联系医院。"),
-    ("/bnct/", "日本BNCT评估长文", "复发头颈癌等情况下，BNCT评估前需要核对的病理、影像与既往治疗。"),
-    ("/kampo/", "日本汉方用药长文", "具体方剂、适用人群与安全边界：什么时候先就医，什么时候可以问药剂师。"),
+    ("/bnct/guide/", "日本BNCT评估指南", "获批范围、评估资料与决策流程，并汇总全部BNCT文章。"),
+    ("/kampo/guide/", "日本汉方用药指南", "说明书怎么看、哪些成分要注意、什么时候先就医，并汇总全部汉方文章。"),
     ("/ips/qa/", "日本iPS再生医疗100问", "区分已获批治疗、临床试验与研究阶段。"),
     ("/checkup/qa/", "癌症第二意见100问", "第二意见的准备、流程与常见误区。"),
 ]
@@ -258,7 +259,7 @@ def build_section(sec, check, stale):
         assert meta["id"] == f.stem and int(meta["id"]) >= 51, f
         gate(meta, body, f, sec)
         out = ROOT / sec / meta["id"] / "index.html"
-        html_ = render(meta, body, sec)
+        html_ = pillar_links.carry(out, render(meta, body, sec))
         items.append(meta)
         if check:
             if not out.is_file() or out.read_text(encoding="utf-8") != html_:
