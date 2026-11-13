@@ -7,6 +7,7 @@ Gate (S0): body >= 1500 chars, >= 3 https sources with specific labels, >= 3 FAQ
 verified date present, no internal/workflow words, related links resolve to repository files.
 """
 import html, json, pathlib, re, sys
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent)); import pillar_links  # keeps pillar back-links
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 SITE = "https://www.japanmedai.com"
 SRC = ROOT / "content/so-topics"
@@ -141,6 +142,7 @@ def main():
         assert meta["id"] == f.stem, f
         gate(meta, body, f)
         html_, desc = render(meta, body)
+        html_ = pillar_links.carry(ROOT / BASE / meta["slug"] / "index.html", html_)
         items.append((meta, desc))
         out = ROOT / BASE / meta["slug"] / "index.html"
         if check:
@@ -150,7 +152,7 @@ def main():
             out.parent.mkdir(parents=True, exist_ok=True)
             out.write_text(html_, encoding="utf-8")
     idx = ROOT / BASE / "index.html"
-    ih = render_index(items)
+    ih = pillar_links.carry(idx, render_index(items))
     if check:
         if not idx.is_file() or idx.read_text(encoding="utf-8") != ih:
             stale.append(BASE + "/index.html")
