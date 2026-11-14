@@ -29,7 +29,7 @@ def render(cfg,p,old):
        f'<meta property="og:type" content="article"><meta property="og:site_name" content="JapanMedAI"><meta property="og:title" content="{T}"><meta property="og:description" content="{e(desc)}"><meta property="og:url" content="{url}"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="{T}"><meta name="twitter:description" content="{e(desc)}">',
        '<link rel="stylesheet" href="/assets/jmai.css">',style,ld(mw),ld(bc),ld(fq),'</head><body>',
        f'<div class="top"><div class="wrap nav navHome"><a class="brand" href="/">JapanMed AI<small>日本医疗资源整合与跨境医疗信息平台</small></a><nav class="navMenu"><a href="/">首页</a><a href="/{sec}/">{e(cfg["label"])}</a><a href="/second-opinion/">二次会诊</a><a href="/blog/">医疗知识库</a></nav></div></div>',
-       f'<main class="article"><div class="crumb"><a href="/">首页</a> › <a href="/{sec}/">{e(cfg["label"])}</a> › 第{int(p["id"])}篇</div><article><header><span class="kicker">{e(cfg["kicker"])}</span><h1>{e(title)}</h1><p class="meta">JapanMedAI医学信息整理｜首次发布：{pub}｜资料核对：{cfg["updated"]}</p></header>',
+       f'<main class="article"><div class="crumb"><a href="/">首页</a> › <a href="/{sec}/">{e(cfg["label"])}</a> › 第{int(p["id"])}篇</div><article><header><span class="kicker">{e(cfg["kicker"])}</span><h1>{e(title)}</h1><p class="meta">JapanMedAI医学信息整理｜首次发布：{pub}｜资料核对：{cfg["updated"]}'+('｜日本药剂师审核：'+p["pharmacist_reviewed"] if p.get("pharmacist_reviewed") else "")+f'</p></header>',
        '<h2>直接回答</h2><div class="answer"><p>'+e(p["direct"])+'</p></div>',
        '<h2>为什么这样判断</h2>'+"".join('<p>'+e(x)+'</p>' for x in p["explanations"]),
        '<h2>这个问题真正要核对什么？</h2><ol>'+"".join('<li>'+e(x)+'</li>' for x in p["checks"])+'</ol>',
