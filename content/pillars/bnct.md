@@ -74,7 +74,8 @@
    "title": "BNCT问答",
    "match": "^/bnct/qa/"
   }
- ]
+ ],
+ "path_en": "/en/bnct-guide/"
 }
 -->
 ## 直接回答

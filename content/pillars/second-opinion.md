@@ -78,7 +78,8 @@
    "title": "患者常见问题",
    "match": "^/patient-questions/"
   }
- ]
+ ],
+ "path_en": "/en/second-opinion-guide/"
 }
 -->
 ## 直接回答

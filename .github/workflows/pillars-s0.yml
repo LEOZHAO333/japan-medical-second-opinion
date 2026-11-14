@@ -12,6 +12,7 @@ on:
       - 'hospitals/**'
       - 'patient-questions/**'
       - 'zh-hant/**'
+      - 'en/**'
       - 'index.html'
       - 'sitemap.xml'
       - 'llms.txt'
@@ -39,3 +40,4 @@ jobs:
           python3 scripts/build_kampo_qa.py --check
           python3 scripts/build_ips_qa.py --check
           python3 scripts/build_hant_qa.py --check
+          python3 scripts/build_en_guides.py --check

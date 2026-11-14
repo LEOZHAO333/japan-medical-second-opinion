@@ -125,7 +125,7 @@ def render(meta, body, groups, lang):
     nav_home = "/" if lang == "zh-CN" else "/zh-hant/"
     h = ['<!doctype html><html lang="' + ("zh-CN" if lang == "zh-CN" else "zh-Hant") + '"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">',
          f'<title>{T}</title><meta name="description" content="{e(desc)}"><meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large"><link rel="canonical" href="{url}">',
-         f'<link rel="alternate" hreflang="zh-CN" href="{alt["zh-CN"]}"><link rel="alternate" hreflang="zh-TW" href="{alt["zh-TW"]}"><link rel="alternate" hreflang="x-default" href="{alt["zh-CN"]}">',
+         f'<link rel="alternate" hreflang="zh-CN" href="{alt["zh-CN"]}"><link rel="alternate" hreflang="zh-TW" href="{alt["zh-TW"]}">'+(f'<link rel="alternate" hreflang="en" href="{SITE}{meta["path_en"]}">' if meta.get("path_en") else "")+f'<link rel="alternate" hreflang="x-default" href="{alt["zh-CN"]}">',
          f'<meta property="og:type" content="article"><meta property="og:site_name" content="JapanMedAI"><meta property="og:title" content="{T}"><meta property="og:description" content="{e(desc)}"><meta property="og:url" content="{url}"><meta property="og:locale" content="{"zh_CN" if lang == "zh-CN" else "zh_TW"}"><meta name="twitter:card" content="summary">',
          '<link rel="stylesheet" href="/assets/jmai.css">',
          '<style>main.article{max-width:860px;margin:0 auto;padding:0 16px 48px;box-sizing:border-box}.guide p,.guide li{line-height:1.9}.guide h2{margin-top:2em}.guide .meta{color:#5b6b7a;font-size:14px}.pillarDir h3{margin-top:1.4em}.pillarDir li{line-height:1.7}.langSwitch{font-size:14px}</style>',
