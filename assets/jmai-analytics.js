@@ -230,7 +230,8 @@
 
   function contactAnalytics() {
     try {
-      const isSecondOpinion = location.pathname.indexOf("/second-opinion") === 0;
+      // The pillar guide is an educational page, not the service funnel: keep it in the site table.
+      const isSecondOpinion = location.pathname.indexOf("/second-opinion") === 0 && location.pathname !== "/second-opinion/guide/";
       return window.JMAIAnalytics.create({
         table: isSecondOpinion ? "jmai_second_opinion_events" : "jmai_site_events",
         scope: isSecondOpinion ? "second_opinion" : "site"
@@ -369,7 +370,13 @@
     // Existing RLS permits landing_view. For numbered, already-public educational
     // articles this records a page-view denominator, not a clinical inquiry.
     // Do not track unnumbered service/tools pages, drafts, or patient content.
-    if (!/^\/(?:bnct|checkup|ips)\/\d{3}\/$/.test(location.pathname)) return;
+    // 2026-11-14: also count the 4 pillar guides (zh-CN + zh-Hant), Traditional 100-QA twins and
+    // numbered kampo/medicines/guide articles, so the A2 click funnel has a denominator on every page carrying A2.
+    var P = location.pathname;
+    if (!(/^\/(?:bnct|checkup|ips|kampo|medicines|guide)\/\d{3}\/$/.test(P) ||
+          /^\/(?:bnct|second-opinion|kampo|ips)\/guide\/$/.test(P) ||
+          /^\/zh-hant\/(?:bnct|second-opinion|kampo|ips)-guide\/$/.test(P) ||
+          /^\/zh-hant\/(?:bnct|checkup|ips)-qa\/$/.test(P))) return;
     const a = contactAnalytics();
     if (a) a.trackOnce("landing_view", {}, "numbered_article_view");
   }
