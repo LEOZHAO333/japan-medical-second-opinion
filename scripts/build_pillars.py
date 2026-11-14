@@ -27,7 +27,7 @@ def hant(text):
     if _cc is None:
         import opencc
         _cc = opencc.OpenCC("s2twp")
-    return _cc.convert(text).replace("釋出", "發布")
+    return _cc.convert(text).replace("釋出", "發布").replace("稽核", "審核")
 
 
 def ld(o):
