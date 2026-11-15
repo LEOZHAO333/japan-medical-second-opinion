@@ -64,7 +64,7 @@
   },
   {
    "title": "第二意见入门与癌症第二意见",
-   "match": "^/second-opinion/(cancer/)?$"
+   "match": "^/second-opinion/$"
   },
   {
    "title": "癌症第二意见100问与资料准备",
