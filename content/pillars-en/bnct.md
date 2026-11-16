@@ -7,19 +7,50 @@
  "title": "BNCT in Japan: Approved Indications, Evaluation Records and Decision Process",
  "description": "What is boron neutron capture therapy (BNCT) approved for in Japan, which patients with recurrent head and neck cancer may be worth evaluating, which pathology, imaging and radiotherapy records are needed, and how the evaluation process works.",
  "published": "2026-11-14",
- "verified": "2026-11-14",
+ "verified": "2026-11-16",
  "sources": [
-  {"label": "PMDA: Steboronine (borofalan 10B) product information and Japanese package insert", "url": "https://www.pmda.go.jp/PmdaSearch/rdDetail/iyaku/4291453A1027_1"},
-  {"label": "PMDA: Steboronine full prescribing information (Japanese)", "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/370738_4291453A1027_1_08"},
-  {"label": "Nationwide post-marketing surveillance of BNCT with borofalan for recurrent head and neck cancer in Japan (PMC)", "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10931064/"},
-  {"label": "National Cancer Center Japan, Cancer Information Service: radiotherapy process and side effects (Japanese)", "url": "https://ganjoho.jp/public/dia_tre/treatment/radiotherapy/rt_02.html"}
+  {
+   "label": "PMDA: Steboronine (borofalan 10B) product information and Japanese package insert",
+   "url": "https://www.pmda.go.jp/PmdaSearch/rdDetail/iyaku/4291453A1027_1"
+  },
+  {
+   "label": "PMDA: Steboronine full prescribing information (Japanese)",
+   "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/370738_4291453A1027_1_08"
+  },
+  {
+   "label": "Nationwide post-marketing surveillance of BNCT with borofalan for recurrent head and neck cancer in Japan (PMC)",
+   "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10931064/"
+  },
+  {
+   "label": "National Cancer Center Japan, Cancer Information Service: radiotherapy process and side effects (Japanese)",
+   "url": "https://ganjoho.jp/public/dia_tre/treatment/radiotherapy/rt_02.html"
+  },
+  {
+   "label": "Media report: Stella Pharma obtains approval for Steboronine in recurrent meningioma (16 Nov 2026, Japanese)",
+   "url": "https://www.media-ir.com/news/?p=188421"
+  }
  ],
  "faqs": [
-  {"q": "What is BNCT currently approved for in Japan?", "a": "The boron drug and the accelerator-based treatment system approved in 2020 cover unresectable locally advanced or locally recurrent head and neck cancer. For recurrent meningioma, the device received an additional intended use in October 2026, while the matching drug indication was still under review as of 14 November 2026. Other cancers remain at the research stage."},
-  {"q": "Can BNCT be considered after previous radiotherapy?", "a": "Recurrence after radiotherapy is a common reason to ask about BNCT, but eligibility depends on prior dose, time since radiotherapy, tumour location and depth, and the relationship to major vessels such as the carotid artery. A specialist has to review the original records."},
-  {"q": "Which records matter most for an evaluation request?", "a": "Pathology reports (sometimes slides for review), recent contrast MRI or CT in original DICOM format, the previous radiotherapy plan and dose, and a complete treatment timeline. Report text or phone photos of images are usually not enough."},
-  {"q": "Why get a written specialist opinion first?", "a": "BNCT screening is strict. We suggest that a relevant Japanese specialist first reviews the complete records and gives a written opinion on whether a formal evaluation request is worthwhile; the written opinion is decision support, not a commitment by any hospital to accept the patient."},
-  {"q": "Is BNCT better than re-irradiation or drug therapy?", "a": "They cannot be ranked in general. BNCT is one local treatment option and has to be compared with re-surgery, re-irradiation, systemic therapy and clinical trials according to tumour extent, general condition and treatment goals."}
+  {
+   "q": "What is BNCT currently approved for in Japan?",
+   "a": "The boron drug and the accelerator-based treatment system approved in 2020 cover unresectable locally advanced or locally recurrent head and neck cancer. For recurrent meningioma, the device received an additional intended use in October 2026, and the boron drug received a partial-change approval for recurrent meningioma in November 2026 (company announcement on 16 November 2026). Other cancers remain at the research stage."
+  },
+  {
+   "q": "Can BNCT be considered after previous radiotherapy?",
+   "a": "Recurrence after radiotherapy is a common reason to ask about BNCT, but eligibility depends on prior dose, time since radiotherapy, tumour location and depth, and the relationship to major vessels such as the carotid artery. A specialist has to review the original records."
+  },
+  {
+   "q": "Which records matter most for an evaluation request?",
+   "a": "Pathology reports (sometimes slides for review), recent contrast MRI or CT in original DICOM format, the previous radiotherapy plan and dose, and a complete treatment timeline. Report text or phone photos of images are usually not enough."
+  },
+  {
+   "q": "Why get a written specialist opinion first?",
+   "a": "BNCT screening is strict. We suggest that a relevant Japanese specialist first reviews the complete records and gives a written opinion on whether a formal evaluation request is worthwhile; the written opinion is decision support, not a commitment by any hospital to accept the patient."
+  },
+  {
+   "q": "Is BNCT better than re-irradiation or drug therapy?",
+   "a": "They cannot be ranked in general. BNCT is one local treatment option and has to be compared with re-surgery, re-irradiation, systemic therapy and clinical trials according to tumour extent, general condition and treatment goals."
+  }
  ]
 }
 -->
@@ -37,7 +68,7 @@ Effectiveness and safety therefore depend on two conditions: whether the tumour 
 
 - **Boron drug**: borofalan (Steboronine), approved in 2020 for unresectable locally advanced or locally recurrent head and neck cancer.
 - **Treatment system**: an accelerator-based BNCT system and dose-calculation program, approved separately in the same year for the same head and neck cancer indication.
-- **Recurrent meningioma**: in October 2026 the device and dose-calculation program received an additional intended use for recurrent meningioma. The matching drug indication had not completed formal approval as of the date this page was checked (14 November 2026). Device approval and drug approval are separate steps and should not be read together.
+- **Recurrent meningioma**: in October 2026 the device and dose-calculation program received an additional intended use for recurrent meningioma, and in November 2026 borofalan (Steboronine) received a partial-change approval for recurrent meningioma (company announcement on 16 November 2026). The approval is not limited to the WHO grade 2 and 3 tumours studied in the trial, but surgery or other curative treatment should come first when possible. Public insurance coverage is expected from 1 March 2027; until then treatment is planned under Japan's evaluated-treatment (hyoka ryoyo) framework.
 - **Other cancers**: glioma, malignant melanoma and others remain in clinical research or earlier stages, not routine approved use.
 
 The approved scope is the starting point for evaluation. Approval does not mean every patient is suitable, nor that a hospital will accept a given patient.
