@@ -92,6 +92,19 @@ def gate(meta, body, groups):
     assert not bad, (meta["id"], bad)
 
 
+# Curated links source of truth for rendered simplified pillar guides (PR #253).
+CURATED = {"second-opinion":["第二意见需要核对诊断依据、治疗记录和实际分歧；书面意见不等于医院接诊。",[["BNCT相关评估",[["/bnct/031/","为什么需要DICOM原始影像"],["/bnct/033/","BNCT前为何再次确认病理"],["/bnct/058/","伤口感染及瘘管风险评估"]]],["专家第二意见专题",[["/second-opinion/topics/new-diagnosis-stage-discrepancy/","诊断与分期出现分歧"],["/second-opinion/topics/guideline-country-version-difference/","不同国家指南意见不同"],["/second-opinion/topics/radiotherapy-dvh-dose/","放疗剂量和DVH记录"],["/second-opinion/topics/patient-consent-secure-transfer/","病历传递与患者同意"],["/second-opinion/topics/crossborder-advice-not-prescription/","跨境医学意见不等于处方"]]]]],"bnct":["按已发布编号文章核对个体风险；研究结果与监管批准、是否接诊应分别确认。",[["BNCT风险与资料",[["/bnct/017/","再次BNCT前应重新评估什么"],["/bnct/034/","肿瘤靠近颈动脉的风险"],["/bnct/037/","为何不能过早判断BNCT效果"],["/bnct/038/","治疗后影像变大怎么办"],["/bnct/042/","免疫及靶向治疗记录"],["/bnct/049/","费用沟通前为何先评估资料"],["/bnct/059/","气管切开与体位固定"],["/bnct/060/","营养和误吸风险评估"]]],["第二意见专题",[["/second-opinion/topics/head-neck-cancer-prior-radiation-plan/","头颈癌既往放疗资料"],["/second-opinion/topics/radiotherapy-dvh-dose/","放疗DVH和受量信息"]]]]],"ips":["先分清获批、临床试验与个人适用条件，再考虑准备第二意见资料。",[["iPS专题问题",[["/ips/034/","帕金森病iPS产品适合谁"],["/ips/035/","心肌细胞片与细胞注射"],["/ips/038/","为什么需要长期随访"],["/ips/040/","自体iPS一定更安全吗"],["/ips/041/","再生医疗费用差异"],["/ips/049/","为什么要核实细胞来源"]]],["其他领域与第二意见",[["/bnct/060/","BNCT评估中的全身风险"],["/second-opinion/topics/patient-consent-secure-transfer/","第二意见资料传递与知情同意"]]]]],"kampo":["以汉方安全和说明书为阅读重点，其他医学技术仅供对照监管边界。",[["日本汉方文章与问答",[["/kampo/051/","喉咙异物感应先排查什么"],["/kampo/053/","更年期症状与汉方选方边界"],["/kampo/056/","心律失常、甲亢与含麻黄汉方"],["/kampo/060/","怎样理解“食前或食间”"],["/kampo/067/","妊娠期汉方使用风险"],["/kampo/qa/safety/","日本汉方安全专题问答"]]],["其他领域与第二意见",[["/bnct/049/","特殊治疗咨询为什么先核对资料"],["/second-opinion/topics/crossborder-advice-not-prescription/","跨境医疗意见与处方的区别"]]]]]}
+CURATED_CSS = "<style id=\"jmai-curated-css\">.jmaiCuratedLinks{margin:24px auto;padding:20px 22px;background:#f3f8fd;border:1px solid #d8e7f5;border-radius:14px;color:#16365a}.jmaiCuratedLinks h2{font-family:Arial,\"Noto Sans SC\",\"Microsoft YaHei\",sans-serif!important;font-size:1.2rem;line-height:1.45;margin:0 0 10px;color:#17365d}.jmaiCuratedLinks p{margin:0 0 12px;line-height:1.65}.jmaiCuratedLinks .jmaiLinkGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.jmaiCuratedLinks .jmaiLinkGroup{background:#fff;border:1px solid #e1ecf5;border-radius:10px;padding:12px 15px}.jmaiCuratedLinks h3{font-family:Arial,\"Noto Sans SC\",sans-serif;font-size:1rem;margin:0 0 9px;color:#143a64}.jmaiCuratedLinks ul{list-style:disc;margin:0;padding-left:1.25em}.jmaiCuratedLinks li{margin:6px 0;line-height:1.5}.jmaiCuratedLinks a{color:#1656a1;text-decoration:underline;text-underline-offset:3px}.jmaiCuratedLinks a:focus-visible{outline:2px solid #1450f1;outline-offset:3px}@media(max-width:670px){.jmaiCuratedLinks{padding:15px}.jmaiCuratedLinks .jmaiLinkGrid{grid-template-columns:1fr}}</style>"
+
+
+def curated_links(meta, lang):
+    if lang != "zh-CN" or meta["section"] not in CURATED:
+        return ""
+    intro, groups = CURATED[meta["section"]]
+    panels = "".join('<div class="jmaiLinkGroup"><h3>' + heading + '</h3><ul>' + "".join('<li><a href="' + url + '">' + label + '</a></li>' for url, label in items) + '</ul></div>' for heading, items in groups)
+    return CURATED_CSS + '<section class="jmaiCuratedLinks" aria-labelledby="jmai-curated-heading"><h2 id="jmai-curated-heading">继续阅读：精选专题问题</h2><p>' + intro + '</p><div class="jmaiLinkGrid">' + panels + '</div></section>'
+
+
 def render(meta, body, groups, lang):
     tr = (lambda s: s) if lang == "zh-CN" else hant
     path = meta["path"] if lang == "zh-CN" else meta["path_hant"]
@@ -135,6 +148,7 @@ def render(meta, body, groups, lang):
          '<p class="langSwitch">' + (f'<a href="{meta["path_hant"]}">繁體中文</a>' if lang == "zh-CN" else f'<a href="{meta["path"]}">简体中文</a>') + "</p>",
          f'<article><header><span class="kicker">PILLAR GUIDE</span><h1>{e(title)}</h1><p class="meta">{e(tr("JapanMed AI 编辑部"))}｜{e(tr("发布"))}：{meta["published"]}｜{e(tr("资料核对"))}：{meta["verified"]}｜' + (e(tr("日本药剂师审核")) + "：" + meta["pharmacist_reviewed"] + "｜" if meta.get("pharmacist_reviewed") else "") + f'{e(tr("编辑与医学合规审核，未经执业医师逐篇签署"))}</p></header>',
          body_html(tr(body)),
+         curated_links(meta, lang),
          '<section class="faq"><h2>' + e(tr("常见问题")) + "</h2>" + "".join("<h3>" + e(tr(f["q"])) + "</h3><p>" + e(tr(f["a"])) + "</p>" for f in meta["faqs"]) + "</section>",
          '<section class="evidencePanel"><h2>' + e(tr("可以去哪里核对")) + "</h2><ul>" + "".join(f'<li><a href="{e(s["url"])}" target="_blank" rel="noopener">{e(tr(s["label"]))}</a></li>' for s in meta["sources"])
          + "</ul><p>" + e(tr("资料核对日期：")) + meta["verified"] + "</p></section>",
