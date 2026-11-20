@@ -148,7 +148,7 @@ def render(meta, body, sec):
          '<link rel="stylesheet" href="/assets/jmai.css">',
          '<style>main.article{max-width:860px;margin:0 auto;padding:0 16px 48px;box-sizing:border-box}.guide p,.guide li{line-height:1.9}.guide h2{margin-top:2em}.guide .meta{color:#5b6b7a;font-size:14px}.guide .faq h3{margin-top:1.2em}.guide .tableWrap{overflow-x:auto}.guide table{border-collapse:collapse;width:100%;font-size:15px}.guide th,.guide td{border:1px solid #d6e2ea;padding:8px;text-align:left}.guide blockquote{margin:1em 0;padding:8px 16px;border-left:4px solid #b9cfdc;background:#f5f9fb}</style>',
          ld(art), ld(bc), ld(fq), '</head><body>',
-         '<div class="top"><div class="wrap nav navHome"><a class="brand" href="/">JapanMed AI<small>日本专家医疗决策平台</small></a><nav class="navMenu">' + C["nav"] + '</nav></div></div>',
+         '<div class="top"><div class="wrap nav navHome"><a class="brand" href="/">JapanMed AI<small>日本医疗知识与预约协调服务平台</small></a><nav class="navMenu">' + C["nav"] + '</nav></div></div>',
          f'<main class="article guide"><div class="crumb"><a href="/">首页</a> › <a href="/{sec}/">{LABEL}</a> › 第{int(gid)}篇</div><article><header><span class="kicker">{C["kicker"]}</span><h1>{e(title)}</h1>',
          f'<p class="meta">JapanMed AI 编辑部｜发布：{meta["published"]}｜资料核对：{meta["verified"]}｜' + (f'日本药剂师审核：{meta["pharmacist_reviewed"]}｜' if meta.get("pharmacist_reviewed") else "") + '编辑与医学合规审核，未经执业医师逐篇签署</p></header>',
          body_html(body),
