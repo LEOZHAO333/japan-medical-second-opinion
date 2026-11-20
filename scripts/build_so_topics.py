@@ -105,7 +105,7 @@ def render(meta, body):
          '<link rel="stylesheet" href="/assets/jmai.css">',
          '<style>main.article{max-width:860px;margin:0 auto;padding:0 16px 48px;box-sizing:border-box}.guide p{line-height:1.9}.guide h2{margin-top:2em}.guide .meta{color:#5b6b7a;font-size:14px}.guide .faq h3{margin-top:1.2em}.guide .tableWrap{overflow-x:auto}.guide table{border-collapse:collapse;width:100%;font-size:15px}.guide th,.guide td{border:1px solid #d6e2ea;padding:8px;text-align:left}</style>',
          ld(art), ld(bc), ld(fq), '</head><body>',
-         '<div class="top"><div class="wrap nav navHome"><a class="brand" href="/">JapanMed AI<small>日本专家医疗决策平台</small></a><nav class="navMenu"><a href="/">首页</a><a href="/guide/">决策指南</a><a href="/second-opinion/">二次会诊</a><a href="/checkup/qa/">二次会诊问答</a></nav></div></div>',
+         '<div class="top"><div class="wrap nav navHome"><a class="brand" href="/">JapanMed AI<small>日本医疗知识与预约协调服务平台</small></a><nav class="navMenu"><a href="/">首页</a><a href="/guide/">决策指南</a><a href="/second-opinion/">二次会诊</a><a href="/checkup/qa/">二次会诊问答</a></nav></div></div>',
          f'<main class="article guide"><div class="crumb"><a href="/">首页</a> › <a href="/second-opinion/">日本专家第二意见</a> › <a href="/{BASE}/">{SERIES}</a></div><article><header><span class="kicker">{SERIES}</span><h1>{e(title)}</h1>',
          f'<p class="meta">JapanMed AI 编辑部｜发布：{meta["published"]}｜资料核对：{meta["verified"]}｜编辑与医学合规审核，未经执业医师逐篇签署</p></header>',
          body_html(body),
@@ -128,7 +128,7 @@ def render_index(items):
     return ('<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
             f'<title>{T}</title><meta name="description" content="{e(desc)}"><meta name="robots" content="index,follow"><link rel="canonical" href="{url}">'
             '<link rel="stylesheet" href="/assets/jmai.css"><style>main.article{max-width:860px;margin:0 auto;padding:0 16px 48px;box-sizing:border-box}.guideList li{margin:18px 0;line-height:1.7}</style>' + ld(col) + '</head><body>'
-            '<div class="top"><div class="wrap nav navHome"><a class="brand" href="/">JapanMed AI<small>日本专家医疗决策平台</small></a><nav class="navMenu"><a href="/">首页</a><a href="/second-opinion/">二次会诊</a><a href="/checkup/qa/">二次会诊问答</a><a href="/bnct/">BNCT</a></nav></div></div>'
+            '<div class="top"><div class="wrap nav navHome"><a class="brand" href="/">JapanMed AI<small>日本医疗知识与预约协调服务平台</small></a><nav class="navMenu"><a href="/">首页</a><a href="/second-opinion/">二次会诊</a><a href="/checkup/qa/">二次会诊问答</a><a href="/bnct/">BNCT</a></nav></div></div>'
             f'<main class="article"><div class="crumb"><a href="/">首页</a> › <a href="/second-opinion/">日本专家第二意见</a> › {SERIES}</div><h1>{SERIES}</h1><p>{e(desc)}短问题可查看<a href="/checkup/qa/">癌症第二意见100问</a>。</p>'
             f'<ol class="guideList">{li}</ol><p class="small">本栏目为医学信息教育，不替代医生诊断或治疗决定。</p></main>'
             '<footer class="footer"><div class="wrap"><span class="footerBrand">JapanMedAI · 文腾株式会社</span></div></footer><script src="/assets/jmai-analytics.js"></script></body></html>\n')
